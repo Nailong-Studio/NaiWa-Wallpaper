@@ -1,7 +1,7 @@
 # 奶蛙艺术圣殿 · 素材仓库（wallpaper）
 
 <p align="center">
-  <a href="https://github.com/Nailong-Studio/wallpaper"><img src="https://img.shields.io/badge/素材总数-204-gold" alt="素材总数"></a>
+  <a href="https://github.com/Nailong-Studio/wallpaper"><img src="https://img.shields.io/badge/素材总数-215-gold" alt="素材总数"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/贡献-指南-green" alt="贡献指南"></a>
   <a href="https://github.com/Nailong-Studio/wallpaper/issues"><img src="https://img.shields.io/github/issues/Nailong-Studio/wallpaper" alt="Issues"></a>
@@ -19,9 +19,9 @@
 | 目录 | 内容 | 数量 |
 |---|---|---|
 | `classic/` | 圣典名画系列（奶蛙主演的古典名画再创作） | 38 |
-| `laugh-gallery/` | 大笑藏馆（全网搜集大笑奶蛙变体） | 19 |
-| `emotes/` | 表情收藏（奶蛙表情包 + 官方姿态，新旧共 41 件） | 41 |
-| `art/` | 艺术场景图（AI 生成，奶蛙生活场景/艺术脑洞） | 36 |
+| `laugh-gallery/` | 大笑藏馆（全网搜集大笑奶蛙变体） | 20 |
+| `emotes/` | 表情收藏（奶蛙表情包 + 官方姿态 + 立绘/动图） | 49 |
+| `art/` | 艺术场景图（AI 生成，奶蛙生活场景/艺术脑洞） | 38 |
 | `hd/` | 高清表情壁纸 | 22 |
 | `4k/` | 4K 大图（新标签页插件内置素材） | 5 |
 
@@ -30,7 +30,7 @@
 | `videos/` | 官方圣影视频（圣殿巡行 / 壁纸隧道 / 大笑藏馆巡展 / 大笑原片） | 4 |
 | `assets/` | 品牌资产（奶蛙 logo） | 1 |
 
-合计：195 件素材文件，每件配套同名 `.txt` 描述（与官网展厅叙事一致）。
+合计：215 件素材文件，每件配套同名 `.txt` 描述（与官网展厅叙事一致）。
 
 ## 命名规范
 
