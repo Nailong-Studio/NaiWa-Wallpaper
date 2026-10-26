@@ -26,10 +26,13 @@ CATS = [
     ('4k', '4K 大图', '新标签页插件内置 4K 素材'),
     ('frames', '视频帧图', '圣影抽帧与竖屏壁纸'),
     ('videos', '官方圣影', '圣殿巡行、壁纸隧道、大笑巡展与原片'),
+    ('fan-videos', '同人短片', '粉丝二创的奶蛙短片与场景动画'),
+    ('audio', '音效语音', '奶蛙笑声、语音与可用音效'),
     ('assets', '品牌资产', '奶蛙 logo 与品牌图'),
 ]
-MEDIA = {'.jpg', '.jpeg', '.png', '.webp', '.gif', '.mp4', '.webm'}
+MEDIA = {'.jpg', '.jpeg', '.png', '.webp', '.gif', '.mp4', '.webm', '.mp3', '.wav', '.ogg', '.m4a'}
 VIDEO = {'.mp4', '.webm'}
+AUDIO = {'.mp3', '.wav', '.ogg', '.m4a'}
 
 
 def title_of(stem):
@@ -62,6 +65,17 @@ def make_thumb(src, dst):
             im.thumbnail((480, 480), Image.LANCZOS)
             im.convert('RGB').save(dst, 'WEBP', quality=80, method=6)
             return im.size
+    if src.suffix.lower() in AUDIO:
+        with tempfile.TemporaryDirectory() as td:
+            wave = Path(td) / 'wave.png'
+            subprocess.run(['ffmpeg', '-v', 'error', '-i', str(src), '-filter_complex',
+                            'showwavespic=s=960x540:colors=#FFD54F', '-frames:v', '1', str(wave)], check=False)
+            if wave.exists():
+                im = Image.open(wave).convert('RGB')
+                im.thumbnail((480, 480), Image.LANCZOS)
+                im.save(dst, 'WEBP', quality=80, method=6)
+                return im.size
+        return None
     im = Image.open(src)
     if getattr(im, 'is_animated', False):
         im.seek(0)
@@ -86,7 +100,9 @@ def scan():
                 'id': rel, 'category': cid, 'categoryName': cname,
                 'title': title_of(p.stem), 'file': rel,
                 'raw': RAW + urllib.parse.quote(rel), 'thumb': th,
-                'type': 'video' if p.suffix.lower() in VIDEO else ('gif' if p.suffix.lower() == '.gif' else 'image'),
+                'type': ('video' if p.suffix.lower() in VIDEO else
+                         ('audio' if p.suffix.lower() in AUDIO else
+                          ('gif' if p.suffix.lower() == '.gif' else 'image'))),
                 'bytes': p.stat().st_size,
                 'narrative': narrative_of(p),
             })
