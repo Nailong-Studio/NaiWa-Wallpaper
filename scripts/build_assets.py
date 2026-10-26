@@ -16,7 +16,7 @@ import urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = 'https://raw.githubusercontent.com/Nailong-Studio/wallpaper/main/'
+RAW = 'https://nailong-wallpaper.pages.dev/'
 CATS = [
     ('classic', '圣典名画', '奶蛙主演的西方名画再创作'),
     ('laugh-gallery', '大笑藏馆', '全网搜集的大笑奶蛙变体'),
