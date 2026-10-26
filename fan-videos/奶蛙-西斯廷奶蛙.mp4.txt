@@ -5,3 +5,5 @@
 来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/video/奶蛙神圣合集/西斯廷奶蛙.mp4
 版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。
 许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。
+
+备注：视频原声中的第三方音乐/音效权利未单独核实；如权利人异议，请开 Issue 下架。

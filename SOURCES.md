@@ -11,6 +11,8 @@
 | [TarelX/Milk-Frog](https://github.com/TarelX/Milk-Frog) | **MIT** | 12 件 PNG | `NOTICE.md`：代码、角色设计、动画帧、道具图与设计文档统一 MIT，作者 Ti |
 | [WencueCryforme/NaiWa-Universe](https://github.com/WencueCryforme/NaiWa-Universe) | **MIT** | 9 图 + 2 短片 + 1 音频 | README/LICENSE：仓库 MIT；`COPYRIGHT` 声明奶蛙为粉丝二创形象，不属于任何个人 |
 
+> 注：Wencue 的两段同人短片原声可能包含第三方音乐/音效，其权利未单独核实；如权利人异议，我们会下架对应文件。
+
 ### 分类明细
 
 | 分类 | 数量 | 来源 |
