@@ -1,0 +1,7 @@
+奶蛙-悠闲站立 · 奶蛙艺术圣殿 · 表情收藏
+
+双手自然垂下，微微歪头——奶蛙的默认状态：不急，先站一会儿。
+
+来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/idle.png
+版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。

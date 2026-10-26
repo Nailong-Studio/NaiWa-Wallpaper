@@ -1,0 +1,9 @@
+奶蛙-桌宠笑声 · 奶蛙艺术圣殿 · 音效语音
+
+一段 1.8 秒的奶蛙笑声，短促、干净、无背景音乐，适合做提示音与剪辑点。
+22050 Hz 单声道 WAV。
+
+来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input
+版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。
+原始文件：assets/pet/sounds/laugh.wav

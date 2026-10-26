@@ -1,0 +1,8 @@
+奶蛙-果冻桌宠立绘 · 奶蛙艺术圣殿 · 艺术场景
+
+1024×1536 透明立绘：奶蛙单脚点地、双臂张开，像刚学会站立的果冻。
+来自 BongoCat 风格奶蛙桌宠的项目图标，适合做头像、贴纸与桌宠皮肤。
+
+来源：woainiunai/milk-frog-desktoppet（MIT）· https://github.com/woainiunai/milk-frog-desktoppet/blob/main/assets/icon.png
+版权：woainiunai；仓库以 MIT 许可发布，未对 assets/ 作额外限制。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。

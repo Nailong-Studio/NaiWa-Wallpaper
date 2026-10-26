@@ -1,5 +1,14 @@
 # 变更日志 · 奶蛙素材仓库
 
+## v2.7（2026-10-26）· 桌宠动作包（第二批 16 件）
+
+- **`pet/` 新分类**：待机 / 捧腹大笑 / 倾听 / 躺平 四态循环 GIF（19/25/22/8 帧合成）+ 每态 2 张 180×180 透明动作帧，共 14 件
+- **`art/` 新增 1 件**：1024×1536「奶蛙-果冻桌宠立绘」
+- **`audio/` 新增 1 件**：1.8 秒「奶蛙-桌宠笑声」WAV（22050 Hz 单声道）
+- **许可复核**：本批仅收录 `liaosongjie/Codex-Voice-Input`（`ASSET-NOTICE.md` 明确动画帧与音频 MIT）与 `woainiunai/milk-frog-desktoppet`（MIT）两处来源；`syydaniel/naiwa-beyond` 的 `images/` 为 all rights reserved，`jiasjdia/naiwa`、`hardworkingwhale/naiwa` 无有效再分发许可，均排除
+- **脚本修复**：`build_assets.py` 的缩略图生成支持 GIF 透明调色板（此前透明 GIF 缩略图会被填成白底）
+- 全仓素材总数 247 → **263**，`assets.json` 与 `thumbs/` 同步重建
+
 ## v2.6（2026-10-26）· 资源清单与缩略图
 
 - **`assets.json`**：215 件素材的机器可读清单（分类/标题/叙事/类型/体积/尺寸/原图直链/缩略图）

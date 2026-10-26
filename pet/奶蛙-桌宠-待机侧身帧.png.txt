@@ -1,0 +1,9 @@
+奶蛙-桌宠-待机侧身帧 · 奶蛙艺术圣殿 · 桌宠动作
+
+待机帧 · 侧身：重心换到另一只脚，圆肚跟着晃了一下。
+180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
+
+来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input
+版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。
+原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/idle/012.png
