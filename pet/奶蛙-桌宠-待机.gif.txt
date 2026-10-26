@@ -1,0 +1,9 @@
+奶蛙-桌宠-待机 · 奶蛙艺术圣殿 · 桌宠动作
+
+待机循环：奶蛙原地轻轻换重心、左右张望，随时等你点它一下。
+由 liaosongjie/Codex-Voice-Input 的 19 张 MIT 授权动画帧合成，180×180、循环播放。
+
+来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input
+版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。
+原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/idle/

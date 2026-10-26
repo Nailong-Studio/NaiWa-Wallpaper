@@ -2,7 +2,20 @@
 
 本文件记录 2026-10「同人素材批次」的调研、收录与排除依据。奶蛙是民间二创形象；本批素材只从**许可证明确允许再分发**的开源仓库收录，并在每件素材的同名 `.txt` 中保留来源与许可。角色原型权利仍归原权利人，如权利人认为不宜收录，请开 Issue，我们会下架。
 
-## 本批收录（32 件）
+## 第二批 · 桌宠动作包（16 件）
+
+| 来源仓库 | 许可 | 收录数量 | 许可依据 |
+|---|---|---|---|
+| [liaosongjie/Codex-Voice-Input](https://github.com/liaosongjie/Codex-Voice-Input) | **MIT** | 14 件（10 PNG 动作帧 + 4 循环 GIF） | `assets/pet/ASSET-NOTICE.md`：奶蛙源视频、动画与笑声由作者原创，派生动画帧与 `sounds/laugh.wav` 以 MIT 分发 |
+| [woainiunai/milk-frog-desktoppet](https://github.com/woainiunai/milk-frog-desktoppet) | **MIT** | 1 件 1024×1536 立绘 | 仓库 LICENSE 为 MIT，README 与 LICENSE 均未对 `assets/` 作额外限制 |
+| liaosongjie/Codex-Voice-Input | **MIT** | 1 件 `audio/`（1.8s 笑声 WAV） | 同上 `ASSET-NOTICE.md` 明确 `sounds/laugh.wav` 以 MIT 分发 |
+
+- 新增分类：`pet/`「桌宠动作」——由 19 / 25 / 22 / 8 张动画帧合成的待机、捧腹大笑、倾听、躺平四态循环 GIF，以及每态 2 张透明动作帧。
+- GIF 以调色板索引 255 标记透明，缩略图沿用源帧透明通道；`scripts/build_assets.py` 同步修正了 GIF 透明缩略图转 RGB 丢通道的问题。
+- 精确去重：本批 16 件与仓库既有 247 件做 Git blob SHA1 比对，0 重复。
+- 许可复核淘汰：`syydaniel/naiwa-beyond`（`images/` 声明 all rights reserved）、`hedong433664/naiwa-pet`（素材派生自本仓库，无新增）、`jiasjdia/naiwa`、`hardworkingwhale/naiwa`（无许可 / 保留所有权利）均未收录。
+
+## 第一批 · 同人素材（32 件）
 
 | 来源仓库 | 许可 | 收录数量 | 许可依据 |
 |---|---|---|---|
@@ -63,4 +76,4 @@
 
 - 本批按分类拆分 commit：`laugh-gallery` / `emotes` / `art` / `fan-videos` / `audio`，可逐类审阅。
 - 每件素材的同名 `.txt` 末尾均有来源、许可与下架声明。
-- `python3 scripts/build_assets.py --check` 可在本地复核 247 件素材、分类计数与缩略图完整性。
+- `python3 scripts/build_assets.py --check` 可在本地复核 263 件素材、分类计数与缩略图完整性。

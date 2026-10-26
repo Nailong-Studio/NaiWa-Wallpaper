@@ -21,6 +21,7 @@ CATS = [
     ('classic', '圣典名画', '奶蛙主演的西方名画再创作'),
     ('laugh-gallery', '大笑藏馆', '全网搜集的大笑奶蛙变体'),
     ('emotes', '表情收藏', '表情包、官方姿态、立绘与动图'),
+    ('pet', '桌宠动作', '桌宠动画帧与待机/大笑/倾听/躺平循环 GIF'),
     ('art', '艺术场景', 'AI 生成的生活场景与艺术脑洞'),
     ('hd', '高清壁纸', '高清表情壁纸'),
     ('4k', '4K 大图', '新标签页插件内置 4K 素材'),
@@ -79,7 +80,10 @@ def make_thumb(src, dst):
     im = Image.open(src)
     if getattr(im, 'is_animated', False):
         im.seek(0)
-    im = im.convert('RGBA' if 'A' in im.getbands() else 'RGB')
+    if im.mode == 'P' and 'transparency' in im.info:
+        im = im.convert('RGBA')
+    else:
+        im = im.convert('RGBA' if 'A' in im.getbands() else 'RGB')
     im.thumbnail((480, 480), Image.LANCZOS)
     im.save(dst, 'WEBP', quality=80, method=6)
     return im.size
