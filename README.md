@@ -5,6 +5,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/贡献-指南-green" alt="贡献指南"></a>
   <a href="https://github.com/Nailong-Studio/wallpaper/issues"><img src="https://img.shields.io/github/issues/Nailong-Studio/wallpaper" alt="Issues"></a>
+  <a href="assets.json"><img src="https://img.shields.io/badge/资源清单-assets.json-gold" alt="资源清单"></a>
 </p>
 
 > 本仓库为「奶蛙艺术圣殿」官网（[NaiLong-Universe](https://github.com/Nailong-Studio/NaiLong-Universe)）的全部素材源。
@@ -31,6 +32,13 @@
 合计：215 件素材文件，每件配套同名 `.txt` 描述（与官网展厅叙事一致）。
 
 > `4k/` 系列的 5 张大图同时是 **[奶蛙壁纸插件](https://github.com/Nailong-Studio/naiwa-wallpaper)** 的内置素材（仓库根目录即扩展本体，`chrome://extensions` 加载解压目录即可）。要换图、改图、加图，都在这个素材仓库做，插件侧只管取用。
+
+## 资源清单与缩略图
+
+- **`assets.json`**：全仓 215 件素材的机器可读清单——分类、标题、叙事、类型、体积、尺寸、原图直链与缩略图路径，供官网「圣物全图鉴」、壁纸插件与第三方项目直接取用。
+- **`thumbs/`**：每件素材对应的 480px WebP 缩略图，官网以它做 215 件素材总览，避免加载数百 MB 原图。
+- 重新生成：`python3 scripts/build_assets.py`；只校验：`python3 scripts/build_assets.py --check`；同步到官网：`python3 scripts/build_assets.py --site ../NaiLong-Universe/docs`。
+- GitHub Actions 会在素材、清单或脚本变更时自动运行 `Assets Check`，保证清单、缩略图与实际文件一致。
 
 ## 命名规范
 
