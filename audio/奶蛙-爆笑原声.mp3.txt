@@ -1,0 +1,7 @@
+奶蛙-爆笑原声 · 奶蛙艺术圣殿 · 音效语音
+
+一段 14 秒的奶蛙爆笑原声，适合做铃声、提示音或剪辑素材；快乐可以直接听。
+
+来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/sound/奶蛙爆笑合集/奶蛙爆笑.mp3
+版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。
