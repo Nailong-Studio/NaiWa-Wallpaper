@@ -1,0 +1,7 @@
+奶蛙-悬停大笑 · 奶蛙艺术圣殿 · 表情收藏
+
+悬在半空也能笑出声，地心引力拦不住奶蛙的快乐。
+
+来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/hover-laugh.gif
+版权：sandytruant/codex-pet-naiwa（MIT）。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。

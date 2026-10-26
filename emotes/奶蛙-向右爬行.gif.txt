@@ -1,0 +1,7 @@
+奶蛙-向右爬行 · 奶蛙艺术圣殿 · 表情收藏
+
+换个方向继续爬，快乐不分左右。
+
+来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/crawl-right.gif
+版权：sandytruant/codex-pet-naiwa（MIT）。
+许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。
