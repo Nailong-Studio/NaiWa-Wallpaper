@@ -69,7 +69,7 @@
 | [LynnShaw/naiwa-pet](https://github.com/LynnShaw/naiwa-pet) | 无许可证 | 无法确认再分发授权 |
 | [DylanShek/naiwa-for-codex](https://github.com/DylanShek/naiwa-for-codex) | 无许可证 | 无法确认再分发授权 |
 | [lyhkevin/Codex_pet_naiwa](https://github.com/lyhkevin/Codex_pet_naiwa) | 无许可证 | 无法确认再分发授权 |
-| [GeorgeNaNN/nailong-memes](https://github.com/GeorgeNaNN/nailong-memes) | MIT | 内容为官方奶龙表情包，不符合“奶蛙”形象要求 |
+| [GeorgeNaNN/nailoong-memes](https://github.com/GeorgeNaNN/nailoong-memes) | MIT | 内容为官方奶龙表情包，不符合“奶蛙”形象要求 |
 | 官方奶龙素材 | 版权保留 | 按要求不收录官方素材 |
 
 ## 审核建议

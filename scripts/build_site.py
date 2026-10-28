@@ -63,7 +63,7 @@ footer a{color:var(--gold)}
     <a href="assets.json">机器可读清单 · assets.json</a>
     <a href="thumbs/" target="_blank" rel="noopener">缩略图库</a>
     <a href="https://github.com/Nailong-Studio/wallpaper" target="_blank" rel="noopener">GitHub 库房</a>
-    <a href="https://nailong-universe.pages.dev/" target="_blank" rel="noopener">返回圣殿</a>
+    <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">返回圣殿</a>
   </nav>
   <main class="grid">
 __CARDS__

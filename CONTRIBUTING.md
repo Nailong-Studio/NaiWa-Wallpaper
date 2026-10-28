@@ -6,7 +6,7 @@
 
 1. **命名**：`分类_主题_序号` 中文命名，前缀一律「奶蛙-」。
    - ✅ `奶蛙-弯腰大笑.png`
-   - ❌ `IMG_0001.png` / `nailong.jpg` / `milk_frog_v3.png`
+   - ❌ `IMG_0001.png` / `nailoong.jpg` / `milk_frog_v3.png`
 2. **分类**：按内容放对目录——
    - `classic/` 名画再创作（奶蛙版蒙娜丽莎，懂的都懂）
    - `laugh-gallery/` 大笑藏馆（捧腹大笑变体，本仓灵魂所在）

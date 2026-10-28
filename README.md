@@ -5,7 +5,7 @@
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/贡献-指南-green" alt="贡献指南"></a>
   <a href="https://github.com/Nailong-Studio/wallpaper/issues"><img src="https://img.shields.io/github/issues/Nailong-Studio/wallpaper" alt="Issues"></a>
   <a href="assets.json"><img src="https://img.shields.io/badge/资源清单-assets.json-gold" alt="资源清单"></a>
-  <a href="https://nailong-studio.github.io/NaiLong-Universe/"> <img src="https://img.shields.io/badge/交付对象-奶蛙艺术圣殿-FFD700" alt="交付对象"></a>
+  <a href="https://nailong-studio.github.io/NaiLoong-Universe/"> <img src="https://img.shields.io/badge/交付对象-奶蛙艺术圣殿-FFD700" alt="交付对象"></a>
 </p>
 
 > **库房重地，闲人免进——但你是股东，所以请进。**
@@ -14,7 +14,7 @@
 > 库房只做一件事：把每一张奶蛙图登记在册，配好档案，然后交出去。
 > 奶蛙的编制为：黄色、圆润、浅米色腹部、绿色眼圈、灰褐色小爪。不合编制的图不予入库。
 
-> **香油钱箱在这里**：素材免费拿，快乐不限量。拿完回主仓 [NaiLong-Universe](https://github.com/Nailong-Studio/NaiLong-Universe) 点个 ⭐，库房管理员会记住你的工号。
+> **香油钱箱在这里**：素材免费拿，快乐不限量。拿完回主仓 [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe) 点个 ⭐，库房管理员会记住你的工号。
 
 > **想交货？看 [CONTRIBUTING.md](CONTRIBUTING.md)——交货即入股，库房不设试用期。**
 
@@ -48,7 +48,7 @@
 - **`assets.json`**：全库机器可读清单——分类、标题、叙事、类型、体积、尺寸、原图直链与缩略图路径。官网「圣物全图鉴」、壁纸插件与第三方项目均以此为准。
 - **`thumbs/`**：每件素材的 480px WebP 缩略图；音频则生成波形图。用于总览页，避免为了看一眼而搬运整仓原图。
 - **`SOURCES.md`**：来源、许可与排除名单。每批入库都有据可查，不搞口头承诺。
-- **重新生成**：`python3 scripts/build_assets.py`；**只校验**：`python3 scripts/build_assets.py --check`；**同步到官网**：`python3 scripts/build_assets.py --site ../NaiLong-Universe/docs`。
+- **重新生成**：`python3 scripts/build_assets.py`；**只校验**：`python3 scripts/build_assets.py --check`；**同步到官网**：`python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs`。
 - **`Assets Check` CI**：素材、清单或脚本有变动时自动核对数量、分类、缩略图完整性与孤儿文件。库房不养闲文件。
 
 ---
@@ -111,6 +111,6 @@
 
 **库房长明，欢迎交货。**
 
-拿图请随意，[点星](https://github.com/Nailong-Studio/NaiLong-Universe) 请顺手。
+拿图请随意，[点星](https://github.com/Nailong-Studio/NaiLoong-Universe) 请顺手。
 
 </div>

@@ -6,27 +6,27 @@
 
 ```
 emotes/
-├── nailong-02.jpeg    # 粉色换色版捧腹大笑（猎奇变体）
-├── nailong-03.jpeg    # 奶龙抱胸微笑
-├── nailong-04.jpeg    # 奶龙沉思托腮
-├── nailong-05.jpeg    # 奶龙嘲讽大笑+手指指人
-├── nailong-06.jpeg    # 奶龙震惊抱头
-├── nailong-07.jpeg    # 奶龙圣诞帽仰卧大笑
-├── nailong-08.jpeg    # 奶龙躺平得意大笑
-├── nailong-09.gif     # 奶龙捧腹大笑动图（绿幕抠像版）
-├── nailong-10.jpeg    # 奶龙圣诞帽开怀大笑
-├── nailong-11.jpeg    # 奶龙圣诞帽狂喜露牙大笑
-├── nailong-12.jpeg    # 奶龙圣诞帽捧腹大笑
-├── nailong-13.gif     # 大奶龙指脑袋得意大笑（带小奶龙）
-├── nailong-20.png     # 奶龙举"奶家人"旗帜
-├── nailong-21.gif     # 奶龙捧腹大笑 GIF（可灵AI生成）
-├── nailong-22.gif     # 奶龙捧红心大笑
-├── nailong-23.gif     # 奶龙抱胸大笑脚怼镜头
-├── nailong-24.gif     # 简化Q版奶龙捧腹大笑
-├── nailong-25-emote.jpg # 奶龙捧腹大笑静图
-├── nailong-26.gif     # 奶龙捧腹大笑 GIF
-├── nailong-27-emote.jpg # 奶龙圣诞服捧腹大笑（豆包AI生成）
-└── nailong-28.gif     # 奶龙狂笑到抽搐
+├── nailoong-02.jpeg    # 粉色换色版捧腹大笑（猎奇变体）
+├── nailoong-03.jpeg    # 奶龙抱胸微笑
+├── nailoong-04.jpeg    # 奶龙沉思托腮
+├── nailoong-05.jpeg    # 奶龙嘲讽大笑+手指指人
+├── nailoong-06.jpeg    # 奶龙震惊抱头
+├── nailoong-07.jpeg    # 奶龙圣诞帽仰卧大笑
+├── nailoong-08.jpeg    # 奶龙躺平得意大笑
+├── nailoong-09.gif     # 奶龙捧腹大笑动图（绿幕抠像版）
+├── nailoong-10.jpeg    # 奶龙圣诞帽开怀大笑
+├── nailoong-11.jpeg    # 奶龙圣诞帽狂喜露牙大笑
+├── nailoong-12.jpeg    # 奶龙圣诞帽捧腹大笑
+├── nailoong-13.gif     # 大奶龙指脑袋得意大笑（带小奶龙）
+├── nailoong-20.png     # 奶龙举"奶家人"旗帜
+├── nailoong-21.gif     # 奶龙捧腹大笑 GIF（可灵AI生成）
+├── nailoong-22.gif     # 奶龙捧红心大笑
+├── nailoong-23.gif     # 奶龙抱胸大笑脚怼镜头
+├── nailoong-24.gif     # 简化Q版奶龙捧腹大笑
+├── nailoong-25-emote.jpg # 奶龙捧腹大笑静图
+├── nailoong-26.gif     # 奶龙捧腹大笑 GIF
+├── nailoong-27-emote.jpg # 奶龙圣诞服捧腹大笑（豆包AI生成）
+└── nailoong-28.gif     # 奶龙狂笑到抽搐
 
 ## 奶蛙表情（2026 新增）
 

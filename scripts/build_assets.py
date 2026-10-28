@@ -4,7 +4,7 @@
 用法：
   python3 scripts/build_assets.py            # 生成清单与缩略图
   python3 scripts/build_assets.py --check    # 只校验清单/缩略图是否齐全
-  python3 scripts/build_assets.py --site ../NaiLong-Universe/docs  # 同步到官网
+  python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs  # 同步到官网
 """
 import argparse
 import json
@@ -16,7 +16,7 @@ import urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = 'https://nailong-wallpaper.pages.dev/'
+RAW = 'https://nailoong-wallpaper.pages.dev/'
 CATS = [
     ('classic', '圣典名画', '奶蛙主演的西方名画再创作'),
     ('laugh-gallery', '大笑藏馆', '全网搜集的大笑奶蛙变体'),
