@@ -3,61 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>奶蛙艺术圣殿 · 库房</title>
-<meta name="description" content="奶蛙艺术圣殿的公开库房：素材清单、缩略图与原图直链，取用请自便。">
+<title>奶蛙素材库 · 取货窗口</title>
+<meta name="description" content="奶蛙素材仓库的公开索引：317 件素材、15 个分类，附目录结构与机器可读清单。">
 <style>
-:root{--void:#0B0806;--gold:#D9B45B;--gold2:#FFD54F;--ivory:#EDE4D0;--dim:#B8A175;--line:rgba(217,180,91,.28)}
+:root{--bg:#0d0b09;--fg:#e8e0cf;--gold:#d9b45b;--dim:#8a7f68;--line:#2a231a}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:radial-gradient(120% 80% at 50% 0,#1a1209 0,var(--void) 55%);color:var(--ivory);
-font-family:"Noto Serif SC","Songti SC",serif;line-height:1.9;min-height:100vh;padding:clamp(24px,5vw,64px)}
-.wrap{max-width:1120px;margin:0 auto}
-.kicker{color:var(--gold);letter-spacing:.5em;font-size:.74rem;text-indent:.5em}
-h1{font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:.16em;color:var(--gold2);font-weight:600;margin:14px 0 10px}
-.lead{color:rgba(237,228,208,.8);font-size:.88rem;max-width:62ch}
-.nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 34px}
-.nav a{color:var(--gold2);text-decoration:none;border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.76rem;letter-spacing:.06em}
-.nav a:hover{border-color:var(--gold)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:2px;overflow:hidden;text-decoration:none;color:inherit;
-background:linear-gradient(165deg,rgba(217,180,91,.06),rgba(11,8,6,.5));transition:transform .3s,border-color .3s}
-.card:hover{transform:translateY(-3px);border-color:var(--gold)}
-.card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#1a140d}
-.card__body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px}
-.card__body b{color:var(--gold2);font-size:.9rem;letter-spacing:.08em;font-weight:500}
-.card__body i{font-style:normal;color:var(--dim);font-size:.72rem;line-height:1.7}
-footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font-size:.72rem;letter-spacing:.05em}
+body{background:var(--bg);color:var(--fg);font:15px/1.7 "Noto Sans SC",-apple-system,"Segoe UI",sans-serif;padding:clamp(20px,4vw,56px)}
+.wrap{max-width:980px;margin:0 auto}
+h1{font-size:clamp(1.4rem,3vw,2rem);letter-spacing:.06em;color:var(--gold);font-weight:600;margin-bottom:6px}
+.sub{color:var(--dim);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px}
+p.lead{color:#c3b9a4;font-size:.92rem;max-width:70ch;margin-bottom:26px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.links a{color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:6px 12px;font-size:.78rem;border-radius:2px}
+.links a:hover{border-color:var(--gold)}
+h2{font-size:.82rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase;margin:32px 0 12px;font-weight:500}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{text-align:left;color:var(--dim);font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px 6px 0;border-bottom:1px solid var(--line)}
+td{padding:9px 10px 9px 0;border-bottom:1px solid rgba(42,35,26,.6);vertical-align:top}
+td code{color:var(--gold);font-size:.8rem}
+td:nth-child(3),td:nth-child(4){white-space:nowrap;color:var(--dim)}
+td:last-child{color:#a99f8c;font-size:.78rem}
+pre{background:#141109;border:1px solid var(--line);padding:16px;overflow-x:auto;font-size:.78rem;line-height:1.6;color:#b8ad95;margin-bottom:10px}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:.74rem}
 footer a{color:var(--gold)}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p class="kicker">NAIWA RELIQUARY</p>
-  <h1>奶蛙艺术圣殿 · 库房</h1>
-  <p class="lead">本页是库房的公开窗口。所有素材均按厅登记在册，配来源、许可与档案；取用请自便，转载请先读许可。<br>
-  库房不设门禁，也不提供讲解员——每件素材的档案就是讲解员。</p>
-  <nav class="nav">
-    <a href="assets.json">机器可读清单 · assets.json</a>
-    <a href="thumbs/" target="_blank" rel="noopener">缩略图库</a>
-    <a href="https://github.com/Nailong-Studio/wallpaper" target="_blank" rel="noopener">GitHub 库房</a>
-    <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">返回圣殿</a>
-  </nav>
-  <main class="grid">
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/classic" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/classic/奶蛙-丘比蛙唤醒普绪蛙-02.webp" alt="圣典名画"><span class="card__body"><b>圣典名画</b><i>奶蛙主演的西方名画再创作</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/laugh-gallery" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/laugh-gallery/奶蛙-亮黄站姿.webp" alt="大笑藏馆"><span class="card__body"><b>大笑藏馆</b><i>全网搜集的大笑奶蛙变体</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/emotes" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/emotes/奶蛙-伸手醒来.webp" alt="表情收藏"><span class="card__body"><b>表情收藏</b><i>表情包、官方姿态、立绘与动图</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/pet" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/pet/奶蛙-桌宠-倾听.webp" alt="桌宠动作"><span class="card__body"><b>桌宠动作</b><i>桌宠动画帧与待机/大笑/倾听/躺平循环 GIF</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/art" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/art/奶蛙-厨师烹饪.webp" alt="艺术场景"><span class="card__body"><b>艺术场景</b><i>AI 生成的生活场景与艺术脑洞</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/hd" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/hd/奶蛙-高清-01.webp" alt="高清壁纸"><span class="card__body"><b>高清壁纸</b><i>高清表情壁纸</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/4k" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/4k/奶蛙-4K-叉腰指点-03.webp" alt="4K 大图"><span class="card__body"><b>4K 大图</b><i>新标签页插件内置 4K 素材</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/frames" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/frames/奶蛙-帧图-奶蛙的永恒-14s.webp" alt="视频帧图"><span class="card__body"><b>视频帧图</b><i>圣影抽帧与竖屏壁纸</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/videos" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/videos/奶蛙-圣殿巡行.webp" alt="官方圣影"><span class="card__body"><b>官方圣影</b><i>圣殿巡行、壁纸隧道、大笑巡展与原片</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/fan-videos" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/fan-videos/奶蛙-宿舍熄灯后.webp" alt="同人短片"><span class="card__body"><b>同人短片</b><i>粉丝二创的奶蛙短片与场景动画</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/audio" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/audio/奶蛙-桌宠笑声.webp" alt="音效语音"><span class="card__body"><b>音效语音</b><i>奶蛙笑声、语音与可用音效</i></span></a>
-<a class="card" href="https://github.com/Nailong-Studio/wallpaper/tree/main/assets" target="_blank" rel="noopener"><img loading="lazy" src="thumbs/assets/奶蛙-logo.webp" alt="品牌资产"><span class="card__body"><b>品牌资产</b><i>奶蛙 logo 与品牌图</i></span></a>
-  </main>
+  <h1>奶蛙素材库</h1>
+  <div class="sub">NAIWA ASSET VAULT · 取货窗口</div>
+  <p class="lead">这里是<b>素材仓库</b>，不是展厅。总共 317 件素材，按分类平铺存放；每件都配同名 <code>.txt</code> 档案（叙事 / 来源 / 许可）。
+  想看策展过的成品，请去 <a href="https://nailoong-universe.pages.dev/" style="color:var(--gold)">奶蛙艺术圣殿</a>。</p>
+
+  <div class="links">
+    <a href="assets.json">assets.json · 机器可读清单</a>
+    <a href="https://github.com/Nailong-Studio/wallpaper" target="_blank" rel="noopener">GitHub 仓库</a>
+    <a href="https://naiwa-wallpaper.pages.dev/" target="_blank" rel="noopener">壁纸扩展</a>
+    <a href="https://github.com/Nailong-Studio/wallpaper/releases" target="_blank" rel="noopener">打包下载</a>
+  </div>
+
+  <h2>分类一览</h2>
+  <table>
+    <thead><tr><th>目录</th><th>分类</th><th>件数</th><th>体积</th><th>格式</th><th>说明</th></tr></thead>
+    <tbody>
+<tr><td><code>classic/</code></td><td>圣典名画</td><td>38</td><td>14.8 MB</td><td>jpg×38</td><td>奶蛙主演的西方名画再创作</td></tr>
+<tr><td><code>laugh-gallery/</code></td><td>大笑藏馆</td><td>22</td><td>4.3 MB</td><td>png×19 / jpg×3</td><td>全网搜集的大笑奶蛙变体</td></tr>
+<tr><td><code>emotes/</code></td><td>表情收藏</td><td>67</td><td>28.3 MB</td><td>png×27 / gif×19 / jpeg×10 / jpg×8 / webp×3</td><td>表情包、官方姿态、立绘与动图</td></tr>
+<tr><td><code>poses/</code></td><td>姿势立绘</td><td>24</td><td>1.1 MB</td><td>webp×24</td><td>3D 奶蛙换装立绘：职业、道具与表情</td></tr>
+<tr><td><code>poses-wall/</code></td><td>姿势壁纸</td><td>24</td><td>844 KB</td><td>webp×24</td><td>3D 立绘合成的 1080×1920 竖屏壁纸</td></tr>
+<tr><td><code>pet/</code></td><td>桌宠动作</td><td>14</td><td>588 KB</td><td>png×10 / gif×4</td><td>桌宠动画帧与待机/大笑/倾听/躺平循环 GIF</td></tr>
+<tr><td><code>art/</code></td><td>艺术场景</td><td>48</td><td>199.6 MB</td><td>png×33 / jpg×15</td><td>AI 生成的生活场景与艺术脑洞</td></tr>
+<tr><td><code>hd/</code></td><td>高清壁纸</td><td>22</td><td>2.8 MB</td><td>jpg×22</td><td>1920×1080 桌面壁纸</td></tr>
+<tr><td><code>4k/</code></td><td>4K 大图</td><td>5</td><td>1.9 MB</td><td>jpg×5</td><td>4K 级大图，适合大屏</td></tr>
+<tr><td><code>mobile/</code></td><td>手机壁纸</td><td>6</td><td>1.1 MB</td><td>webp×6</td><td>1080×1936 竖屏，手机与平板</td></tr>
+<tr><td><code>frames/</code></td><td>视频帧图</td><td>38</td><td>75.9 MB</td><td>png×38</td><td>圣影抽帧与竖屏壁纸</td></tr>
+<tr><td><code>videos/</code></td><td>官方圣影</td><td>4</td><td>15.4 MB</td><td>mp4×4</td><td>圣殿巡行、壁纸隧道、大笑巡展与原片</td></tr>
+<tr><td><code>fan-videos/</code></td><td>同人短片</td><td>2</td><td>6.5 MB</td><td>mp4×2</td><td>粉丝二创的奶蛙短片与场景动画</td></tr>
+<tr><td><code>audio/</code></td><td>音效语音</td><td>2</td><td>300 KB</td><td>wav×1 / mp3×1</td><td>奶蛙笑声、语音与可用音效</td></tr>
+<tr><td><code>assets/</code></td><td>品牌资产</td><td>1</td><td>45 KB</td><td>jpg×1</td><td>奶蛙 logo 与品牌图</td></tr>
+    </tbody>
+  </table>
+
+  <h2>取用方式</h2>
+  <pre># 单件直链（GitHub raw，跟随改名跳转）
+https://raw.githubusercontent.com/Nailong-Studio/wallpaper/main/&lt;分类&gt;/&lt;文件名&gt;
+
+# 或走 Cloudflare 图床（已开 CORS，可直接当壁纸 URL）
+https://nailoong-wallpaper.pages.dev/&lt;分类&gt;/&lt;文件名&gt;
+
+# 按清单程序化取用
+curl -s https://nailoong-wallpaper.pages.dev/../assets.json
+</pre>
+
   <footer>
-    原图直链遵循 <code>assets.json</code> 中的 <code>raw</code> 字段。奶蛙为民间二创形象，角色原型权利归原权利人；
-    若你是权利人并认为某件不宜收录，请开 Issue，我们会核实后下架。本库房不做商业用途。
+    素材共 317 件，版本 3.0.0，更新于 2026-10-29。
+    奶蛙为民间二创形象，角色原型权利归原权利人；本库只收录许可允许再分发的素材，逐件来源见同名 <code>.txt</code>。
+    若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/wallpaper/issues">Issue</a>，核实后下架。
   </footer>
 </div>
 </body>

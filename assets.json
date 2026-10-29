@@ -1,10 +1,10 @@
 {
   "name": "奶蛙艺术圣殿 · 素材总清单",
   "repo": "Nailong-Studio/wallpaper",
-  "sourceVersion": "2.8.0",
+  "sourceVersion": "3.0.0",
   "generated": "2026-10-29",
   "rawBase": "https://nailoong-wallpaper.pages.dev/",
-  "total": 293,
+  "total": 317,
   "categories": [
     {
       "id": "classic",
@@ -28,6 +28,12 @@
       "id": "poses",
       "name": "姿势立绘",
       "desc": "3D 奶蛙换装立绘：职业、道具与表情",
+      "count": 24
+    },
+    {
+      "id": "poses-wall",
+      "name": "姿势壁纸",
+      "desc": "3D 立绘合成的 1080×1920 竖屏壁纸",
       "count": 24
     },
     {
@@ -104,7 +110,9 @@
       "bytes": 198999,
       "narrative": "丘比特的金箭换成了奶蛙的圆手，沉睡的普绪蛙被轻轻拍醒——梦醒了，笑也就醒了。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-之死.jpg",
@@ -118,7 +126,9 @@
       "bytes": 389816,
       "narrative": "浴缸里的最后时刻，奶蛙安详闭眼，手中还攥着那封「快乐」的信。殉道，殉的是笑容。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-之筏.jpg",
@@ -132,7 +142,9 @@
       "bytes": 521872,
       "narrative": "漂流的木筏上，奶蛙在桅顶举起一面黄旗。绝境里的希望，是它圆滚滚的背影。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-以利蛙在迦密山.jpg",
@@ -146,7 +158,9 @@
       "bytes": 504537,
       "narrative": "迦密山巅，烈焰自天而降。奶蛙立于火前，胸口的圣徽映出整座山的黄昏。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-创造奶蛙-02.jpg",
@@ -160,7 +174,9 @@
       "bytes": 418057,
       "narrative": "指尖将触未触，神与奶蛙隔着光对望。宇宙的第一粒快乐，就从这里被点亮。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-华盛奶在蒙茅斯-02.jpg",
@@ -174,7 +190,9 @@
       "bytes": 473868,
       "narrative": "蒙茅斯的冬夜，奶蛙乘舟踏雪而来。战旗猎猎，它把出征走成了春游。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-变容（纯享版）.jpg",
@@ -188,7 +206,9 @@
       "bytes": 522572,
       "narrative": "奶蛙-变容（纯享版）——奶蛙主演的古典名画再创作，庄严被一只奶蛙重新加冕。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-召唤奶蛙.jpg",
@@ -202,7 +222,9 @@
       "bytes": 316261,
       "narrative": "长桌旁，门徒们屏息围坐。奶蛙应声而来，把晚餐摆成了家宴。圣餐从此改名「奶里奶气」。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-圣奶蛙归信.jpg",
@@ -216,7 +238,9 @@
       "bytes": 412612,
       "narrative": "一束光从天顶倾泻，奶蛙跌进光里。归信的那一刻，连影子都成了暖黄。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-圣母怜奶蛙.jpg",
@@ -230,7 +254,9 @@
       "bytes": 397131,
       "narrative": "穹顶之下，圣母怀抱着小小的奶蛙圣像。哀伤被重新裱进暖黄的光里——这一次，连怜爱也奶里奶气。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-在塔楼阶梯上的会面.jpg",
@@ -244,7 +270,9 @@
       "bytes": 498313,
       "narrative": "螺旋阶梯的转角，奶蛙与访客遥遥相望。台阶被它坐软，相逢被它放慢。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-复活.jpg",
@@ -258,7 +286,9 @@
       "bytes": 420940,
       "narrative": "墓门推开，奶蛙睁开眼。复活的第一个念头：先笑一声，告诉人间不必怕。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-夜巡-02.jpg",
@@ -272,7 +302,9 @@
       "bytes": 315736,
       "narrative": "伦勃朗《夜巡》竖屏版——夜色队伍里，奶蛙举枪站得笔直，阴影都被它照暖。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-大天使长的最后审判.jpg",
@@ -286,7 +318,9 @@
       "bytes": 202625,
       "narrative": "末日号角吹响，烈焰中的众生换上了同款黄脸。审判长是奶蛙——最后的罪名，只有一条：不够快乐。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-天使向奶蛙显现.jpg",
@@ -300,7 +334,9 @@
       "bytes": 527252,
       "narrative": "云海圣光之间，天使报来喜讯。奶蛙听完，决定把消息再咀嚼一会儿。福音，就此成立。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-天启四奶蛙.jpg",
@@ -314,7 +350,9 @@
       "bytes": 485747,
       "narrative": "雪山荒原上，四骑士策马而来。走近才看清，马背上是四只抱团取暖的奶蛙。末日，被可爱化了。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶撒之死.jpg",
@@ -328,7 +366,9 @@
       "bytes": 416296,
       "narrative": "元老院的长桌，最后一刀落下。奶蛙倒在白色长袍里，嘴角还留着笑——凯撒从没想过，死也能死得奶里奶气。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶破蛙在军校.jpg",
@@ -342,7 +382,9 @@
       "bytes": 393772,
       "narrative": "军校课堂，奶破蛙正襟危坐。胸前的勋章黄得发亮，全班的军姿都软了几分。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶破蛙在战场.jpg",
@@ -356,7 +398,9 @@
       "bytes": 456845,
       "narrative": "炮火连天的山坡，奶破蛙勒马而立。硝烟滚滚，它笑着把战场看成了烟火大会。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶破蛙的加冕典礼.jpg",
@@ -370,7 +414,9 @@
       "bytes": 626738,
       "narrative": "宫廷灯火通明，贵族齐聚加冕礼。主角破例把王冠戴歪了一点——庄严，但不耽误快乐。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶破蛙的诞生.jpg",
@@ -384,7 +430,9 @@
       "bytes": 229315,
       "narrative": "神迹之夜，奶蛙破壳而生。星群俯身围观，第一声啼哭是奶里奶气的。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶破蛙翻越阿尔卑斯山.jpg",
@@ -398,7 +446,9 @@
       "bytes": 423980,
       "narrative": "翻越阿尔卑斯的奶蛙坐骑昂首嘶鸣。山巅风雪刺骨，它的笑自带春意。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-奶西分海.jpg",
@@ -412,7 +462,9 @@
       "bytes": 249548,
       "narrative": "红海为奶蛙让路，浪墙向两侧退开。海底的鱼群探出头，看它踩着干地，一路笑到对岸。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-帝国成立.jpg",
@@ -426,7 +478,9 @@
       "bytes": 561510,
       "narrative": "帝国加冕，奶蛙亲手把皇冠戴到自己头上——戴歪了。庄严的史册，从此多了一页歪的快乐。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-恋人怀中.jpg",
@@ -440,7 +494,9 @@
       "bytes": 399236,
       "narrative": "相拥的恋人剪影里，奶蛙依偎怀中。爱情柔软得像奶黄，甜得不肯撒手。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-投降.jpg",
@@ -454,7 +510,9 @@
       "bytes": 649527,
       "narrative": "白旗举得最高，奶蛙弯腰投降。认输也要认得体面：笑到露牙，是它唯一的战败宣言。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-撑阳伞的奶蛙-02.jpg",
@@ -468,7 +526,9 @@
       "bytes": 536457,
       "narrative": "印象派的阳光里，奶蛙撑起阳伞。裙摆是云做的，影子是光画的。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-最唐的晚餐-02.jpg",
@@ -482,7 +542,9 @@
       "bytes": 320084,
       "narrative": "奶蛙-最唐的晚餐-02——奶蛙主演的古典名画再创作，庄严被一只奶蛙重新加冕。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-朝圣.jpg",
@@ -496,7 +558,9 @@
       "bytes": 182056,
       "narrative": "朝圣路上，奶蛙背着行囊一步一拜。每一拜都笑着，像在给大地递糖。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-树荫下的奶蛙.jpg",
@@ -510,7 +574,9 @@
       "bytes": 608875,
       "narrative": "树荫斑驳，奶蛙仰面躺在草地上。光斑落满肚皮，它数着光点，数着数着就笑了。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-渡河.jpg",
@@ -524,7 +590,9 @@
       "bytes": 447883,
       "narrative": "涉水过河，水只没到奶蛙的肚皮。快乐浮在水面，它踩出一路涟漪。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-游到海水泛白.jpg",
@@ -538,7 +606,9 @@
       "bytes": 322587,
       "narrative": "一头扎进海里的奶蛙，奶蛙-游到海水泛白。快乐没有岸，那就一直游下去。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-直到死亡将我们分开-02.jpg",
@@ -552,7 +622,9 @@
       "bytes": 188429,
       "narrative": "婚礼誓言被改写：奶蛙-直到死亡将我们分开-02——在这之前，先笑完这一场。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-自由引导奶蛙.jpg",
@@ -566,7 +638,9 @@
       "bytes": 478121,
       "narrative": "自由女神高举旗帜，奶蛙冲在最前引路。人人都是主角，快乐是唯一的纲领。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-赞歌就是勇气的赞歌.jpg",
@@ -580,7 +654,9 @@
       "bytes": 330845,
       "narrative": "奶蛙引吭高歌，声浪卷过整面画布。勇气的赞歌，原来是一首跑调的快乐。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-迎着阳光盛大逃亡.jpg",
@@ -594,7 +670,9 @@
       "bytes": 508752,
       "narrative": "迎着光盛大逃亡，奶蛙把背影留给追兵，把笑留给太阳。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-阿齐姆与泽莉卡.jpg",
@@ -608,7 +686,9 @@
       "bytes": 194127,
       "narrative": "海边的情侣并肩看潮，浪花替他们说完情话。奶蛙在画框外，负责笑。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "classic/奶蛙-雷帝杀龙.jpg",
@@ -622,7 +702,9 @@
       "bytes": 380977,
       "narrative": "雷帝挥剑斩向恶龙，恶龙看见奶蛙先笑为敬。胜负未分，杀气先被可爱化解。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-亮黄站姿.png",
@@ -636,7 +718,9 @@
       "bytes": 173682,
       "narrative": "标准的亮黄站姿，绿眼圆睁——奶蛙最本真的模样。",
       "width": 358,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-仰头捧腹大笑.jpg",
@@ -650,7 +734,9 @@
       "bytes": 64936,
       "narrative": "仰头、眯眼、捧腹，笑到整个人往后仰——奶蛙的快乐不需要理由。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/奶蛙爆笑合集/奶蛙仰头捧腹大笑.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 320,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-叉腰指点.png",
@@ -664,7 +750,9 @@
       "bytes": 126109,
       "narrative": "叉腰指点，笑里带三分指点江山的豪气。",
       "width": 480,
-      "height": 474
+      "height": 474,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-双V大笑.png",
@@ -678,7 +766,9 @@
       "bytes": 139966,
       "narrative": "双手比出双 V，大笑的胜利者姿态。",
       "width": 480,
-      "height": 476
+      "height": 476,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-哪吒.png",
@@ -692,7 +782,9 @@
       "bytes": 170078,
       "narrative": "哪吒发髻、火焰纹、红马甲，神话里的奶蛙合掌大笑。",
       "width": 400,
-      "height": 470
+      "height": 470,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-四肢着地.png",
@@ -706,7 +798,9 @@
       "bytes": 43474,
       "narrative": "四肢着地大笑成一座雕塑，快乐就地生根。",
       "width": 200,
-      "height": 200
+      "height": 200,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-圣诞老人.png",
@@ -720,7 +814,9 @@
       "bytes": 193031,
       "narrative": "圣诞老人装束，双手交叠，节日的快乐提前送达。",
       "width": 480,
-      "height": 478
+      "height": 478,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-弯腰大笑.png",
@@ -734,7 +830,9 @@
       "bytes": 515683,
       "narrative": "躬着身子笑到直不起来，快乐重到需要弯腰托住。",
       "width": 360,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-彩虹渐变.png",
@@ -748,7 +846,9 @@
       "bytes": 596509,
       "narrative": "彩虹渐变潮玩款，七彩叠在黄皮肤上。",
       "width": 480,
-      "height": 416
+      "height": 416,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-抱头大笑.png",
@@ -762,7 +862,9 @@
       "bytes": 40355,
       "narrative": "双手抱头大笑，笑意从头顶炸开。",
       "width": 227,
-      "height": 228
+      "height": 228,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-抱婴大笑.png",
@@ -776,7 +878,9 @@
       "bytes": 128661,
       "narrative": "怀里抱着小奶蛙一起大笑，快乐会传染。",
       "width": 269,
-      "height": 448
+      "height": 448,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-拍墙大笑.jpg",
@@ -790,7 +894,9 @@
       "bytes": 485213,
       "narrative": "一只手撑墙，一只手捂肚，笑到站不稳；墙没事，奶蛙先笑软了。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/奶蛙爆笑合集/奶蛙拍墙大笑.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 240,
-      "height": 240
+      "height": 240,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-指你大笑.png",
@@ -804,7 +910,9 @@
       "bytes": 164777,
       "narrative": "伸出手指指向你，笑你，也笑自己。",
       "width": 476,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-橙肤捧腹.png",
@@ -818,7 +926,9 @@
       "bytes": 216331,
       "narrative": "橙色变体捧腹大笑，暖色调的快乐加倍。",
       "width": 444,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-狐面和服.png",
@@ -832,7 +942,9 @@
       "bytes": 453304,
       "narrative": "狐狸面具配和服头纱，东瀛风的奶蛙也笑得端庄。",
       "width": 387,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-白肤捧腹.png",
@@ -846,7 +958,9 @@
       "bytes": 156891,
       "narrative": "白色变体捧腹大笑，奶蛙的另一副面孔。",
       "width": 480,
-      "height": 429
+      "height": 429,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-眯眼张嘴.png",
@@ -860,7 +974,9 @@
       "bytes": 52572,
       "narrative": "眯眼张嘴，笑成一弯快乐的月牙。",
       "width": 384,
-      "height": 216
+      "height": 216,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-粉肤捧腹.png",
@@ -874,7 +990,9 @@
       "bytes": 251771,
       "narrative": "粉色变体捧腹大笑，换个肤色，快乐不打折。",
       "width": 480,
-      "height": 460
+      "height": 460,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-红晕大笑特写.jpg",
@@ -888,7 +1006,9 @@
       "bytes": 76234,
       "narrative": "特写：奶蛙闭眼开怀大笑，脸鼓红晕，笑意从屏幕里溢出来。\n2560×1440 · JPEG · 来源：百度图片（i1.hdslb.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-银河隐藏款.png",
@@ -902,7 +1022,9 @@
       "bytes": 128808,
       "narrative": "星空文案的隐藏款，每 3.1415926 光年才出现一次。",
       "width": 300,
-      "height": 300
+      "height": 300,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-雀跃.png",
@@ -916,7 +1038,9 @@
       "bytes": 182951,
       "narrative": "双臂张开单脚跃起，快乐到飞起来。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "laugh-gallery/奶蛙-静站绿眼.png",
@@ -930,7 +1054,9 @@
       "bytes": 113958,
       "narrative": "安安静静站着，绿眼平静，笑藏在肚子里。",
       "width": 480,
-      "height": 470
+      "height": 470,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-伸手醒来.gif",
@@ -944,7 +1070,9 @@
       "bytes": 32824,
       "narrative": "刚睡醒就伸出手，像在说：新的一天，先握个爪。\n来源：Maple498/nai-wa-codex-pet（CC BY 4.0）· https://github.com/Maple498/nai-wa-codex-pet/blob/main/assets/first-awake-hand-reach.gif\n署名：“奶蛙 Codex Pet”像素动画，来源于 Maple498/nai-wa-codex-pet，采用 CC BY 4.0；本仓仅重命名文件，未修改画面。\n许可：CC BY 4.0；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-侧立.png",
@@ -958,7 +1086,9 @@
       "bytes": 63459,
       "narrative": "侧身而立，双手放在肚前，安静又圆润。\n注：本件为 `emotes/奶蛙-表情-22.gif` 的首帧静态版，两者属同一画面的静/动双态。",
       "width": 320,
-      "height": 302
+      "height": 302,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-动图-含泪.gif",
@@ -972,7 +1102,9 @@
       "bytes": 559189,
       "narrative": "动图：奶蛙眼眶含泪、泪珠滑落，委屈巴巴的循环表情。无水印、无字幕。\n640×640 · GIF 动图 · 来源：百度图片（pic.rmb.bdstatic.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-动图-张口大笑.gif",
@@ -986,7 +1118,9 @@
       "bytes": 394542,
       "narrative": "动图：奶蛙仰头张口大笑，循环播放。全网筛选出的无水印、无字幕版本。\n500×500 · GIF 动图 · 来源：新浪图床（n.sinaimg.cn） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-动图-西装捂脸.gif",
@@ -1000,7 +1134,9 @@
       "bytes": 1681063,
       "narrative": "动图：西装革履的奶蛙双手捂脸，社畜式崩溃循环。无水印、无字幕。\n428×428 · GIF 动图 · 来源：百度图片（pic.rmb.bdstatic.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 428,
-      "height": 428
+      "height": 428,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-双V吐舌.png",
@@ -1014,7 +1150,9 @@
       "bytes": 400510,
       "narrative": "双 V 手势配吐舌，活泼到没边。",
       "width": 480,
-      "height": 224
+      "height": 224,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-吐舌比心.png",
@@ -1028,7 +1166,9 @@
       "bytes": 124130,
       "narrative": "歪头吐舌，双手比心——奶蛙的专属告白。",
       "width": 453,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-向右爬行.gif",
@@ -1042,7 +1182,9 @@
       "bytes": 46017,
       "narrative": "换个方向继续爬，快乐不分左右。\n来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/crawl-right.gif\n版权：sandytruant/codex-pet-naiwa（MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-向左爬行.gif",
@@ -1056,7 +1198,9 @@
       "bytes": 46379,
       "narrative": "四肢着地，向左匍匐——奶蛙的潜行模式，目标：零食。\n来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/crawl-left.gif\n版权：sandytruant/codex-pet-naiwa（MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-咬手沉思.jpg",
@@ -1070,7 +1214,9 @@
       "bytes": 187035,
       "narrative": "表情：奶蛙啃着爪子陷入沉思，配圆角白框与深蓝底，自带表情包版式。\n2560×1440 · JPEG · 来源：百度图片（i2.hdslb.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-好奇的小奶蛙.jpg",
@@ -1084,7 +1230,9 @@
       "bytes": 14711,
       "narrative": "歪着脑袋，眼睛睁圆：世界这么大，为什么不能先笑一笑？\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/小奶蛙的日常生活/小奶蛙的好奇思考.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 392
+      "height": 392,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-委屈低落.png",
@@ -1098,7 +1246,9 @@
       "bytes": 684591,
       "narrative": "嘴角向下，眼神湿漉漉——不是难过，是在等你哄。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/sad.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-姿态-侧躺.png",
@@ -1112,7 +1262,9 @@
       "bytes": 435187,
       "narrative": "奶蛙-姿态-侧躺：官方预览姿态之一（原始文件名 mf-pose-lying），1024×1024 透明底裸图——奶蛙身体横向舒展地躺卧。适合二次创作与合成。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-姿态-挥手.png",
@@ -1126,7 +1278,9 @@
       "bytes": 439952,
       "narrative": "奶蛙-姿态-挥手：官方预览姿态之一（原始文件名 mf-pose-wave），1024×1024 透明底裸图——奶蛙高举一侧手臂打招呼。适合二次创作与合成。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-姿态-翻滚.png",
@@ -1140,7 +1294,9 @@
       "bytes": 507226,
       "narrative": "奶蛙-姿态-翻滚：官方预览姿态之一（原始文件名 mf-pose-rolling），1262×1262 透明底裸图——奶蛙团身翻滚的姿态。适合二次创作与合成。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-姿态-露肚.png",
@@ -1154,7 +1310,9 @@
       "bytes": 568533,
       "narrative": "奶蛙-姿态-露肚：官方预览姿态之一（原始文件名 mf-pose-belly），1024×1024 透明底裸图——奶蛙正面站姿、露出米色腹部。适合二次创作与合成。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-左右张望.gif",
@@ -1168,7 +1326,9 @@
       "bytes": 49813,
       "narrative": "左看看、右看看，像在确认圣殿里有没有人偷看它摸鱼。\n来源：Maple498/nai-wa-codex-pet（CC BY 4.0）· https://github.com/Maple498/nai-wa-codex-pet/blob/main/assets/approval-look-around.gif\n署名：“奶蛙 Codex Pet”像素动画，来源于 Maple498/nai-wa-codex-pet，采用 CC BY 4.0；本仓仅重命名文件，未修改画面。\n许可：CC BY 4.0；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-开心挥手.png",
@@ -1182,7 +1342,9 @@
       "bytes": 647674,
       "narrative": "抬起小爪子打招呼，嘴角上扬——今天也要把好心情分你一半。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/happy.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-微愠.png",
@@ -1196,7 +1358,9 @@
       "bytes": 68105,
       "narrative": "脸颊泛红，眉头微蹙，生气的奶蛙也可爱。",
       "width": 342,
-      "height": 224
+      "height": 224,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-悠闲站立.png",
@@ -1210,7 +1374,9 @@
       "bytes": 696265,
       "narrative": "双手自然垂下，微微歪头——奶蛙的默认状态：不急，先站一会儿。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/idle.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-悬停大笑.gif",
@@ -1224,7 +1390,9 @@
       "bytes": 37576,
       "narrative": "悬在半空也能笑出声，地心引力拦不住奶蛙的快乐。\n来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/hover-laugh.gif\n版权：sandytruant/codex-pet-naiwa（MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-打哈欠.png",
@@ -1238,7 +1406,9 @@
       "bytes": 703230,
       "narrative": "嘴巴张成一个大圆，眼睛眯成缝——困意来了，快乐先打个盹。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/yawn.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-托腮.png",
@@ -1252,7 +1422,9 @@
       "bytes": 155767,
       "narrative": "单手托腮，微笑地看着世界。",
       "width": 480,
-      "height": 456
+      "height": 456,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-托腮思考像素.gif",
@@ -1266,7 +1438,9 @@
       "bytes": 42569,
       "narrative": "托腮、眯眼、认真思考——像素奶蛙也有大智慧。\n来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/thinking.gif\n版权：sandytruant/codex-pet-naiwa（MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-挖鼻孔的小奶蛙.jpg",
@@ -1280,7 +1454,9 @@
       "bytes": 55048,
       "narrative": "手指点在鼻尖，表情无辜又欠揍——奶蛙式「我才没有在搞笑」。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/小奶蛙的日常生活/小奶蛙挖鼻孔.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 435
+      "height": 435,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-捧腹大笑像素.gif",
@@ -1294,7 +1470,9 @@
       "bytes": 43400,
       "narrative": "像素风也挡不住的捧腹大笑，八位机的快乐同样高清。\n来源：Maple498/nai-wa-codex-pet（CC BY 4.0）· https://github.com/Maple498/nai-wa-codex-pet/blob/main/assets/hover-belly-laugh.gif\n署名：“奶蛙 Codex Pet”像素动画，来源于 Maple498/nai-wa-codex-pet，采用 CC BY 4.0；本仓仅重命名文件，未修改画面。\n许可：CC BY 4.0；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-斜眼吐舌.jpg",
@@ -1308,7 +1486,9 @@
       "bytes": 76528,
       "narrative": "表情：奶蛙斜眼向上、吐着舌头，一副得瑟又欠揍的小表情。\n1500×1500 · JPEG · 来源：百度图片（bkimg.cdn.bcebos.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-桌边微笑.jpg",
@@ -1322,7 +1502,9 @@
       "bytes": 206260,
       "narrative": "奶蛙趴在木桌边露出眯眼微笑，像在等你投喂的居家照。\n1440×2508 · JPEG · 来源：百度图片（pic.rmb.bdstatic.com 百家号图床） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 276,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-气鼓鼓.png",
@@ -1336,7 +1518,9 @@
       "bytes": 129887,
       "narrative": "抿嘴皱眉，气鼓鼓的奶蛙。",
       "width": 480,
-      "height": 424
+      "height": 424,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-点鼻.png",
@@ -1350,7 +1534,9 @@
       "bytes": 150693,
       "narrative": "手指点着鼻尖，俏皮小动作。",
       "width": 465,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-疑惑.png",
@@ -1364,7 +1550,9 @@
       "bytes": 445645,
       "narrative": "歪头皱眉，头顶冒出一个大问号。",
       "width": 458,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-眨眼卖萌.png",
@@ -1378,7 +1566,9 @@
       "bytes": 696771,
       "narrative": "一只眼闭上，一只眼睁着——奶蛙式 wink，专治不开心。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/blink-v2.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-立正的小奶蛙.jpg",
@@ -1392,7 +1582,9 @@
       "bytes": 13336,
       "narrative": "站得笔直，双手贴好——今天也是一只守规矩的小奶蛙。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/小奶蛙的日常生活/小奶蛙立正了.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 419,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-立绘-招手.png",
@@ -1406,7 +1598,9 @@
       "bytes": 5640534,
       "narrative": "白底全身立绘：奶蛙站姿抬起右爪招手，浅米肚皮、绿眼、灰爪俱全。全网筛选的高清无字无水印版本，可作官方立绘资源使用。\n4096×4096 · PNG · 来源：百度图片（bkimg.cdn.bcebos.com 词条图 CDN） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-立绘-站立.png",
@@ -1420,7 +1614,9 @@
       "bytes": 661746,
       "narrative": "黑底全身立绘：奶蛙正身站立、双眼平视，构图干净，适合贴纸与抠图二次创作。\n1242×1242 · PNG · 来源：百度图片（pics0.baidu.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-立绘-雀跃.png",
@@ -1434,7 +1630,9 @@
       "bytes": 335673,
       "narrative": "黑底全身立绘：奶蛙双臂张开腾空跃起，单脚离地的动感姿态。\n1000×1000 · PNG · 来源：必应图片（bkimg.cdn.bcebos.com 词条图 CDN） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-红晕托颌.png",
@@ -1448,7 +1646,9 @@
       "bytes": 32939,
       "narrative": "手托下巴，脸颊泛红，害羞的模样。",
       "width": 175,
-      "height": 175
+      "height": 175,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-胜利欢呼.png",
@@ -1462,7 +1662,9 @@
       "bytes": 816304,
       "narrative": "双手高举，笑得见牙不见眼——赢了，当然要大声庆祝。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/victory-v2.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-自信叉腰.png",
@@ -1476,7 +1678,9 @@
       "bytes": 725427,
       "narrative": "叉腰站定，眼神笃定——奶蛙对今天的自己很满意。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/confident.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-01.jpeg",
@@ -1490,7 +1694,9 @@
       "bytes": 46430,
       "narrative": "奶蛙-表情-01：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。\n注：本件与 `laugh-gallery/奶蛙-粉肤捧腹.png` 为同一形象构图的不同分辨率版本，分属表情收藏与大笑藏馆两个系列。",
       "width": 480,
-      "height": 471
+      "height": 471,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-02.jpeg",
@@ -1504,7 +1710,9 @@
       "bytes": 37375,
       "narrative": "奶蛙-表情-02：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-03.jpeg",
@@ -1518,7 +1726,9 @@
       "bytes": 40753,
       "narrative": "奶蛙-表情-03：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 475
+      "height": 475,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-04.jpeg",
@@ -1532,7 +1742,9 @@
       "bytes": 43251,
       "narrative": "奶蛙-表情-04：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 474
+      "height": 474,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-05.jpeg",
@@ -1546,7 +1758,9 @@
       "bytes": 44390,
       "narrative": "奶蛙-表情-05：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 478
+      "height": 478,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-06.jpeg",
@@ -1560,7 +1774,9 @@
       "bytes": 54614,
       "narrative": "奶蛙-表情-06：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 477
+      "height": 477,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-07.jpeg",
@@ -1574,7 +1790,9 @@
       "bytes": 40970,
       "narrative": "奶蛙-表情-07：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 478
+      "height": 478,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-08.gif",
@@ -1588,7 +1806,9 @@
       "bytes": 4527389,
       "narrative": "奶蛙-表情-08：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 300,
-      "height": 300
+      "height": 300,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-09.jpeg",
@@ -1602,7 +1822,9 @@
       "bytes": 48446,
       "narrative": "奶蛙-表情-09：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 473
+      "height": 473,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-10.jpeg",
@@ -1616,7 +1838,9 @@
       "bytes": 47727,
       "narrative": "奶蛙-表情-10：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 473
+      "height": 473,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-11.jpeg",
@@ -1630,7 +1854,9 @@
       "bytes": 51154,
       "narrative": "奶蛙-表情-11：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 472
+      "height": 472,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-12.gif",
@@ -1644,7 +1870,9 @@
       "bytes": 325092,
       "narrative": "奶蛙-表情-12：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 169,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-13.png",
@@ -1658,7 +1886,9 @@
       "bytes": 8090,
       "narrative": "奶蛙-表情-13：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 431
+      "height": 431,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-14.gif",
@@ -1672,7 +1902,9 @@
       "bytes": 714250,
       "narrative": "奶蛙-表情-14：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 216,
-      "height": 216
+      "height": 216,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-15.png",
@@ -1686,7 +1918,9 @@
       "bytes": 105033,
       "narrative": "奶蛙-表情-15：奶蛙表情素材（496×504 静图；原文件误标为 .gif 且仅含单帧，v2.5 转为 PNG），馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 472,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-16.gif",
@@ -1700,7 +1934,9 @@
       "bytes": 968974,
       "narrative": "奶蛙-表情-16：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 399
+      "height": 399,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-17.gif",
@@ -1714,7 +1950,9 @@
       "bytes": 815359,
       "narrative": "奶蛙-表情-17：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 288,
-      "height": 324
+      "height": 324,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-18.jpg",
@@ -1728,7 +1966,9 @@
       "bytes": 7126,
       "narrative": "奶蛙-表情-18：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 360,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-19.gif",
@@ -1742,7 +1982,9 @@
       "bytes": 922791,
       "narrative": "奶蛙-表情-19：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 288,
-      "height": 384
+      "height": 384,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-20.jpg",
@@ -1756,7 +1998,9 @@
       "bytes": 11800,
       "narrative": "奶蛙-表情-20：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-21.gif",
@@ -1770,7 +2014,9 @@
       "bytes": 958275,
       "narrative": "奶蛙-表情-21：奶蛙表情素材，馆藏表情系列之一，用于日常斗图与情绪表达。",
       "width": 240,
-      "height": 240
+      "height": 240,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-22.gif",
@@ -1784,7 +2030,9 @@
       "bytes": 797481,
       "narrative": "奶蛙-表情-22：200×189 / 7.2 秒循环动图，网络收集的奶蛙动图素材，用于日常斗图与情绪表达。",
       "width": 200,
-      "height": 189
+      "height": 189,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-23.webp",
@@ -1798,7 +2046,9 @@
       "bytes": 1968,
       "narrative": "奶蛙-表情-23：200×207 带透明通道的静态表情。原始下载文件后缀为 .jpg，实为 WebP，入仓已按真实格式改正。网络收集，用于日常斗图与二次创作。",
       "width": 200,
-      "height": 207
+      "height": 207,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-24.webp",
@@ -1812,7 +2062,9 @@
       "bytes": 4024,
       "narrative": "奶蛙-表情-24：200×200 方形静态表情（WebP），网络收集，用于日常斗图与二次创作。",
       "width": 200,
-      "height": 200
+      "height": 200,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-表情-25.webp",
@@ -1826,7 +2078,9 @@
       "bytes": 4718,
       "narrative": "奶蛙-表情-25：497×504 带透明通道的静态表情。原始下载文件后缀为 .jpg，实为 WebP，入仓已按真实格式改正。网络收集，用于日常斗图与二次创作。\n同批另一件 200×203 版本与本件为同一图的两个分辨率（逐格比对一致），按去重原则仅入库本高清版。",
       "width": 473,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-蹲坐托腮.png",
@@ -1840,7 +2094,9 @@
       "bytes": 197441,
       "narrative": "蹲坐在地，双手托腮，温顺等夸奖。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-露齿大笑.png",
@@ -1854,7 +2110,9 @@
       "bytes": 133031,
       "narrative": "矮胖身材，张嘴露齿，笑得很用力。",
       "width": 480,
-      "height": 433
+      "height": 433,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "emotes/奶蛙-鼓腮得意.gif",
@@ -1868,7 +2126,9 @@
       "bytes": 49242,
       "narrative": "鼓起腮帮子，眼神得意——这是奶蛙版的「我超厉害」。\n来源：Maple498/nai-wa-codex-pet（CC BY 4.0）· https://github.com/Maple498/nai-wa-codex-pet/blob/main/assets/completed-puffed-cheeks.gif\n署名：“奶蛙 Codex Pet”像素动画，来源于 Maple498/nai-wa-codex-pet，采用 CC BY 4.0；本仓仅重命名文件，未修改画面。\n许可：CC BY 4.0；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 192,
-      "height": 208
+      "height": 208,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-倾听.gif",
@@ -1882,7 +2142,9 @@
       "bytes": 147672,
       "narrative": "倾听循环：侧过身、眯起眼，像在认真听你说话，听着听着自己先笑了。\n由 liaosongjie/Codex-Voice-Input 的 22 张 MIT 授权动画帧合成，180×180、循环播放。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/listen/",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-倾听大笑帧.png",
@@ -1896,7 +2158,9 @@
       "bytes": 15398,
       "narrative": "倾听帧 · 大笑：听着听着没忍住，直接笑弯了腰。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/listen/018.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-倾听帧.png",
@@ -1910,7 +2174,9 @@
       "bytes": 14977,
       "narrative": "倾听帧：身体前倾、嘴角上扬，已经准备好笑出声。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/listen/010.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-大笑仰头帧.png",
@@ -1924,7 +2190,9 @@
       "bytes": 15219,
       "narrative": "大笑帧 · 仰头：整个人向后折成一张弓，笑声先于身体到达。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/target/022.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-大笑帧.png",
@@ -1938,7 +2206,9 @@
       "bytes": 16528,
       "narrative": "大笑帧：双手抱头、嘴巴张到最大，笑到失控的瞬间。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/target/014.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-待机.gif",
@@ -1952,7 +2222,9 @@
       "bytes": 119484,
       "narrative": "待机循环：奶蛙原地轻轻换重心、左右张望，随时等你点它一下。\n由 liaosongjie/Codex-Voice-Input 的 19 张 MIT 授权动画帧合成，180×180、循环播放。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/idle/",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-待机侧身帧.png",
@@ -1966,7 +2238,9 @@
       "bytes": 13637,
       "narrative": "待机帧 · 侧身：重心换到另一只脚，圆肚跟着晃了一下。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/idle/012.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-待机帧.png",
@@ -1980,7 +2254,9 @@
       "bytes": 13432,
       "narrative": "待机帧：站定、双手交叠在奶油色肚皮前，眼神无辜。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/idle/006.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-忙碌帧.png",
@@ -1994,7 +2270,9 @@
       "bytes": 14398,
       "narrative": "忙碌帧：抬手打招呼，像在说「我在忙，但可以为你暂停」。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/busy/002.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-忙碌挥手帧.png",
@@ -2008,7 +2286,9 @@
       "bytes": 11961,
       "narrative": "忙碌帧 · 挥手：整只蛙向后仰，挥手的幅度比身体还大。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/busy/005.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-捧腹大笑.gif",
@@ -2022,7 +2302,9 @@
       "bytes": 173875,
       "narrative": "捧腹大笑循环：仰头、弯腰、抱肚，笑到整个人往后仰——奶蛙的招牌动作。\n由 liaosongjie/Codex-Voice-Input 的 25 张 MIT 授权动画帧合成，180×180、循环播放。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/target/",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-躺平.gif",
@@ -2036,7 +2318,9 @@
       "bytes": 24877,
       "narrative": "躺平循环：四脚朝天摊在地上，失败也不忘保持圆润。\n由 liaosongjie/Codex-Voice-Input 的 8 张 MIT 授权动画帧合成，180×180、循环播放。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/error/",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-躺平帧.png",
@@ -2050,7 +2334,9 @@
       "bytes": 10446,
       "narrative": "躺平帧：侧躺在地、四肢摊开，彻底放弃抵抗。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/error/003.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "pet/奶蛙-桌宠-躺平翻身帧.png",
@@ -2064,7 +2350,9 @@
       "bytes": 10447,
       "narrative": "躺平帧 · 翻身：连翻身都懒得用力，眼睛还睁着。\n180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始帧：https://github.com/liaosongjie/Codex-Voice-Input/blob/main/assets/pet/error/006.png",
       "width": 180,
-      "height": 180
+      "height": 180,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-厨师烹饪.jpg",
@@ -2078,7 +2366,9 @@
       "bytes": 363033,
       "narrative": "厨房场景：奶蛙戴厨师帽、握汤勺张罗翻炒，青花瓷碗与虾仁入镜，烟火气十足。AI 生成。\n2560×1440 · JPEG · 来源：百度图片（i2.hdslb.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-喝奶茶的小奶蛙.jpg",
@@ -2092,7 +2382,9 @@
       "bytes": 61069,
       "narrative": "捧着一杯奶茶，吸管比脸还认真——小奶蛙的下午茶仪式。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/小奶蛙的日常生活/小奶蛙喝奶茶.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-忧郁雨夜.jpg",
@@ -2106,7 +2398,9 @@
       "bytes": 681245,
       "narrative": "雨夜的冷色调里，奶蛙抱着肚子望向远处；快乐角色偶尔也需要一场安静的雨。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/奶蛙的日常生活/奶蛙的忧郁雨夜.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 301,
-      "height": 300
+      "height": 300,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-打盹.png",
@@ -2120,7 +2414,9 @@
       "bytes": 621703,
       "narrative": "缩成一团，呼吸慢慢——圣殿也有午休时间。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/sleep.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-托腮思索.jpg",
@@ -2134,7 +2430,9 @@
       "bytes": 27312,
       "narrative": "托着腮，眼神飘向远方——不是在发呆，是在给下一个笑点排队。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/奶蛙的日常生活/奶蛙的思索.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 465,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-捧杯小憩.png",
@@ -2148,7 +2446,9 @@
       "bytes": 665043,
       "narrative": "双手捧着杯子，热气腾腾——忙里偷闲的最佳姿势。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/eat.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-果冻桌宠立绘.png",
@@ -2162,7 +2462,9 @@
       "bytes": 2188627,
       "narrative": "1024×1536 透明立绘：奶蛙单脚点地、双臂张开，像刚学会站立的果冻。\n来自 BongoCat 风格奶蛙桌宠的项目图标，适合做头像、贴纸与桌宠皮肤。\n来源：woainiunai/milk-frog-desktoppet（MIT）· https://github.com/woainiunai/milk-frog-desktoppet/blob/main/assets/icon.png\n版权：woainiunai；仓库以 MIT 许可发布，未对 assets/ 作额外限制。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 320,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-樱花都市.jpg",
@@ -2176,7 +2478,9 @@
       "bytes": 569986,
       "narrative": "都市夜景：樱花与紫藤垂落河畔，霓虹楼宇倒映水面，奶蛙站在石板路边。AI 生成。\n2560×1440 · JPEG · 来源：百度图片（i0.hdslb.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-泡泡浴.png",
@@ -2190,7 +2494,9 @@
       "bytes": 856496,
       "narrative": "满头泡泡，笑得开心——洗掉烦恼，留下奶蛙。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/bath-happy.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-看书.png",
@@ -2204,7 +2510,9 @@
       "bytes": 718279,
       "narrative": "捧着一本小书，认真得像在考试——其实在看笑话集。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/study.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-背书包上学.jpg",
@@ -2218,7 +2526,9 @@
       "bytes": 11494,
       "narrative": "背上小书包，迈着短腿去上学；知识要装，快乐也要装。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/meme/小奶蛙的日常生活/背书包的奶蛙.jpg\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 470,
-      "height": 438
+      "height": 438,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-01.png",
@@ -2232,7 +2542,9 @@
       "bytes": 5970776,
       "narrative": "奶蛙-艺术-01：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-02.png",
@@ -2246,7 +2558,9 @@
       "bytes": 7441223,
       "narrative": "奶蛙-艺术-02：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 267,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-03.png",
@@ -2260,7 +2574,9 @@
       "bytes": 6153325,
       "narrative": "奶蛙-艺术-03：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-04.png",
@@ -2274,7 +2590,9 @@
       "bytes": 6473320,
       "narrative": "奶蛙-艺术-04：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-05.png",
@@ -2288,7 +2606,9 @@
       "bytes": 6594820,
       "narrative": "奶蛙-艺术-05：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-06.png",
@@ -2302,7 +2622,9 @@
       "bytes": 7696354,
       "narrative": "奶蛙-艺术-06：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-07.png",
@@ -2316,7 +2638,9 @@
       "bytes": 5838050,
       "narrative": "奶蛙-艺术-07：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-08.png",
@@ -2330,7 +2654,9 @@
       "bytes": 5225270,
       "narrative": "奶蛙-艺术-08：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-09.png",
@@ -2344,7 +2670,9 @@
       "bytes": 1788658,
       "narrative": "奶蛙-艺术-09：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-10.png",
@@ -2358,7 +2686,9 @@
       "bytes": 5730198,
       "narrative": "奶蛙-艺术-10：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-11.png",
@@ -2372,7 +2702,9 @@
       "bytes": 7518606,
       "narrative": "奶蛙-艺术-11：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-12.png",
@@ -2386,7 +2718,9 @@
       "bytes": 9655909,
       "narrative": "奶蛙-艺术-12：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-13.png",
@@ -2400,7 +2734,9 @@
       "bytes": 1745689,
       "narrative": "奶蛙-艺术-13：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-14.png",
@@ -2414,7 +2750,9 @@
       "bytes": 4829930,
       "narrative": "奶蛙-艺术-14：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-15.png",
@@ -2428,7 +2766,9 @@
       "bytes": 6254059,
       "narrative": "奶蛙-艺术-15：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-16.png",
@@ -2442,7 +2782,9 @@
       "bytes": 8259421,
       "narrative": "奶蛙-艺术-16：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-17.png",
@@ -2456,7 +2798,9 @@
       "bytes": 6819983,
       "narrative": "奶蛙-艺术-17：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-18.png",
@@ -2470,7 +2814,9 @@
       "bytes": 7117892,
       "narrative": "奶蛙-艺术-18：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-19.png",
@@ -2484,7 +2830,9 @@
       "bytes": 6713801,
       "narrative": "奶蛙-艺术-19：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-20.png",
@@ -2498,7 +2846,9 @@
       "bytes": 5058661,
       "narrative": "奶蛙-艺术-20：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-21.jpg",
@@ -2512,7 +2862,9 @@
       "bytes": 9672270,
       "narrative": "奶蛙-艺术-21：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-22.png",
@@ -2526,7 +2878,9 @@
       "bytes": 5000924,
       "narrative": "奶蛙-艺术-22：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-23.png",
@@ -2540,7 +2894,9 @@
       "bytes": 5791349,
       "narrative": "奶蛙-艺术-23：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-24.png",
@@ -2554,7 +2910,9 @@
       "bytes": 6051417,
       "narrative": "奶蛙-艺术-24：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-25.jpg",
@@ -2568,7 +2926,9 @@
       "bytes": 9810055,
       "narrative": "奶蛙-艺术-25：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-26.png",
@@ -2582,7 +2942,9 @@
       "bytes": 6057048,
       "narrative": "奶蛙-艺术-26：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-27.jpg",
@@ -2596,7 +2958,9 @@
       "bytes": 1242696,
       "narrative": "奶蛙-艺术-27：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-28.png",
@@ -2610,7 +2974,9 @@
       "bytes": 5615444,
       "narrative": "奶蛙-艺术-28：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-29.jpg",
@@ -2624,7 +2990,9 @@
       "bytes": 739678,
       "narrative": "奶蛙-艺术-29：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-30.jpg",
@@ -2638,7 +3006,9 @@
       "bytes": 2606467,
       "narrative": "奶蛙-艺术-30：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-31.jpg",
@@ -2652,7 +3022,9 @@
       "bytes": 3504055,
       "narrative": "奶蛙-艺术-31：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-32.jpg",
@@ -2666,7 +3038,9 @@
       "bytes": 3263572,
       "narrative": "奶蛙-艺术-32：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-33.jpg",
@@ -2680,7 +3054,9 @@
       "bytes": 3167426,
       "narrative": "奶蛙-艺术-33：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-34.jpg",
@@ -2694,7 +3070,9 @@
       "bytes": 3157118,
       "narrative": "奶蛙-艺术-34：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-35.png",
@@ -2708,7 +3086,9 @@
       "bytes": 5566717,
       "narrative": "奶蛙-艺术-35：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-艺术-36.png",
@@ -2722,7 +3102,9 @@
       "bytes": 7683804,
       "narrative": "奶蛙-艺术-36：奶蛙 AI 艺术场景图，馆藏艺术衍生。",
       "width": 268,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "art/奶蛙-记笔记.png",
@@ -2736,7 +3118,9 @@
       "bytes": 698299,
       "narrative": "一手拿板一手拿笔，记下今天的快乐 KPI。\n来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/work.png\n版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-01.jpg",
@@ -2750,7 +3134,9 @@
       "bytes": 109236,
       "narrative": "奶蛙-高清-01：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-02.jpg",
@@ -2764,7 +3150,9 @@
       "bytes": 108724,
       "narrative": "奶蛙-高清-02：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-03.jpg",
@@ -2778,7 +3166,9 @@
       "bytes": 83100,
       "narrative": "奶蛙-高清-03：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-04.jpg",
@@ -2792,7 +3182,9 @@
       "bytes": 98373,
       "narrative": "奶蛙-高清-04：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-05.jpg",
@@ -2806,7 +3198,9 @@
       "bytes": 103696,
       "narrative": "奶蛙-高清-05：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-06.jpg",
@@ -2820,7 +3214,9 @@
       "bytes": 106661,
       "narrative": "奶蛙-高清-06：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-07.jpg",
@@ -2834,7 +3230,9 @@
       "bytes": 121058,
       "narrative": "奶蛙-高清-07：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-08.jpg",
@@ -2848,7 +3246,9 @@
       "bytes": 100119,
       "narrative": "奶蛙-高清-08：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-09.jpg",
@@ -2862,7 +3262,9 @@
       "bytes": 117878,
       "narrative": "奶蛙-高清-09：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-10.jpg",
@@ -2876,7 +3278,9 @@
       "bytes": 105619,
       "narrative": "奶蛙-高清-10：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-11.jpg",
@@ -2890,7 +3294,9 @@
       "bytes": 108384,
       "narrative": "奶蛙-高清-11：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-12.jpg",
@@ -2904,7 +3310,9 @@
       "bytes": 115722,
       "narrative": "奶蛙-高清-12：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-13.jpg",
@@ -2918,7 +3326,9 @@
       "bytes": 177346,
       "narrative": "奶蛙-高清-13：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-14.jpg",
@@ -2932,7 +3342,9 @@
       "bytes": 91436,
       "narrative": "奶蛙-高清-14：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-15.jpg",
@@ -2946,7 +3358,9 @@
       "bytes": 123782,
       "narrative": "奶蛙-高清-15：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-16.jpg",
@@ -2960,7 +3374,9 @@
       "bytes": 139444,
       "narrative": "奶蛙-高清-16：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-17.jpg",
@@ -2974,7 +3390,9 @@
       "bytes": 249918,
       "narrative": "奶蛙-高清-17：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-18.jpg",
@@ -2988,7 +3406,9 @@
       "bytes": 168497,
       "narrative": "奶蛙-高清-18：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-19.jpg",
@@ -3002,7 +3422,9 @@
       "bytes": 95782,
       "narrative": "奶蛙-高清-19：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-20.jpg",
@@ -3016,7 +3438,9 @@
       "bytes": 161065,
       "narrative": "奶蛙-高清-20：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-21.jpg",
@@ -3030,7 +3454,9 @@
       "bytes": 121029,
       "narrative": "奶蛙-高清-21：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "hd/奶蛙-高清-22.jpg",
@@ -3044,7 +3470,9 @@
       "bytes": 309000,
       "narrative": "奶蛙-高清-22：奶蛙高清表情壁纸，馆藏高清素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "4k/奶蛙-4K-叉腰指点-03.jpg",
@@ -3058,7 +3486,9 @@
       "bytes": 428674,
       "narrative": "叉腰指点：左手叉腰、右手指向前方，张嘴露牙大笑，全身立姿，灰爪与脚掌同色。\n奶蛙艺术圣殿 · 指点系列。这一张是奶蛙少有的「主动出击」姿态，笑得很张狂，也很像在跟谁分享刚发现的大笑点。\n分辨率：3840×3790 · 格式：JPEG · 用途：奶蛙壁纸浏览器新标签页插件（Nailong-Studio/naiwa-wallpaper）内置素材",
       "width": 480,
-      "height": 474
+      "height": 474,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "4k/奶蛙-4K-张臂平衡-05.jpg",
@@ -3072,7 +3502,9 @@
       "bytes": 310995,
       "narrative": "张臂平衡：张开双臂单腿站立，重心歪着，绿眼圆睁、露齿笑，灰爪张开。\n奶蛙艺术圣殿 · 平衡系列。竖构图 2880×3840，手机与竖屏显示器上最能撑满画面的一张。\n分辨率：2880×3840 · 格式：JPEG · 用途：奶蛙壁纸浏览器新标签页插件（Nailong-Studio/naiwa-wallpaper）内置素材",
       "width": 360,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "4k/奶蛙-4K-托腮沉思-04.jpg",
@@ -3086,7 +3518,9 @@
       "bytes": 355288,
       "narrative": "托腮沉思：侧身单手托腮，绿眼斜视上方，抿嘴不语，浅米腹占了大半画面。\n奶蛙艺术圣殿 · 沉思系列。全仓唯一一张安静的奶蛙，手支着下巴想事情的样子，配深夜当新标签页很合适。\n分辨率：3840×3616 · 格式：JPEG · 用途：奶蛙壁纸浏览器新标签页插件（Nailong-Studio/naiwa-wallpaper）内置素材",
       "width": 480,
-      "height": 452
+      "height": 452,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "4k/奶蛙-4K-抱头震惊-02.jpg",
@@ -3100,7 +3534,9 @@
       "bytes": 439838,
       "narrative": "抱头震惊：双手抱头立在原地，绿眼圆睁、嘴巴微张，浅米腹圆鼓，灰爪压在头顶。\n奶蛙艺术圣殿 · 震惊系列。表情克制但眼神诚实——那种「我刚意识到事情不妙」的瞬间，被 4K 完整留住了。\n分辨率：3840×3822 · 格式：JPEG · 用途：奶蛙壁纸浏览器新标签页插件（Nailong-Studio/naiwa-wallpaper）内置素材",
       "width": 480,
-      "height": 478
+      "height": 478,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "4k/奶蛙-4K-捶头大笑-01.jpg",
@@ -3114,7 +3550,9 @@
       "bytes": 405744,
       "narrative": "捶头大笑：双手抱头、仰头张口大笑，眼睛笑成一条缝，灰爪按在脑袋上，浅米腹一起颤。\n奶蛙艺术圣殿 · 捶头大笑系列第一作。全网流传的捶笑姿势 4K 复刻，牙口完整、笑意到位，是奶蛙表情库里最有辨识度的一张。\n分辨率：3840×3826 · 格式：JPEG · 用途：奶蛙壁纸浏览器新标签页插件（Nailong-Studio/naiwa-wallpaper）内置素材",
       "width": 480,
-      "height": 478
+      "height": 478,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-奶蛙的永恒-14s.png",
@@ -3128,7 +3566,9 @@
       "bytes": 1384202,
       "narrative": "奶蛙-帧图-奶蛙的永恒-14s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 275
+      "height": 275,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-10s.png",
@@ -3142,7 +3582,9 @@
       "bytes": 1457446,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-10s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-20s.png",
@@ -3156,7 +3598,9 @@
       "bytes": 1471079,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-20s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-30s.png",
@@ -3170,7 +3614,9 @@
       "bytes": 805763,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-30s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-40s.png",
@@ -3184,7 +3630,9 @@
       "bytes": 1037210,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-40s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-50s.png",
@@ -3198,7 +3646,9 @@
       "bytes": 1529359,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-50s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-60s.png",
@@ -3212,7 +3662,9 @@
       "bytes": 1156372,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-60s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-70s.png",
@@ -3226,7 +3678,9 @@
       "bytes": 1172962,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-70s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-孤独奶蛙主义-80s.png",
@@ -3240,7 +3694,9 @@
       "bytes": 1199102,
       "narrative": "奶蛙-帧图-孤独奶蛙主义-80s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-0.5s.png",
@@ -3254,7 +3710,9 @@
       "bytes": 1870829,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-0.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-11s.png",
@@ -3268,7 +3726,9 @@
       "bytes": 2576241,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-11s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-12s.png",
@@ -3282,7 +3742,9 @@
       "bytes": 3781186,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-12s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-13s.png",
@@ -3296,7 +3758,9 @@
       "bytes": 1204485,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-13s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-14s.png",
@@ -3310,7 +3774,9 @@
       "bytes": 2353310,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-14s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-15.5s.png",
@@ -3324,7 +3790,9 @@
       "bytes": 3052870,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-15.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-16.5s.png",
@@ -3338,7 +3806,9 @@
       "bytes": 2696418,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-16.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-17.5s.png",
@@ -3352,7 +3822,9 @@
       "bytes": 2214737,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-17.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-18.5s.png",
@@ -3366,7 +3838,9 @@
       "bytes": 3118000,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-18.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-20s.png",
@@ -3380,7 +3854,9 @@
       "bytes": 3116407,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-20s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-21.5s.png",
@@ -3394,7 +3870,9 @@
       "bytes": 2219761,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-21.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-23s.png",
@@ -3408,7 +3886,9 @@
       "bytes": 1954418,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-23s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-24.5s.png",
@@ -3422,7 +3902,9 @@
       "bytes": 4325172,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-24.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-25.5s.png",
@@ -3436,7 +3918,9 @@
       "bytes": 2280478,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-25.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-25s.png",
@@ -3450,7 +3934,9 @@
       "bytes": 2857309,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-25s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-26.5s.png",
@@ -3464,7 +3950,9 @@
       "bytes": 3873916,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-26.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-26s.png",
@@ -3478,7 +3966,9 @@
       "bytes": 1482614,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-26s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-27.5s.png",
@@ -3492,7 +3982,9 @@
       "bytes": 2660331,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-27.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-27s.png",
@@ -3506,7 +3998,9 @@
       "bytes": 3141500,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-27s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-28.5s.png",
@@ -3520,7 +4014,9 @@
       "bytes": 1164647,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-28.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-28s.png",
@@ -3534,7 +4030,9 @@
       "bytes": 1336203,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-28s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-2s.png",
@@ -3548,7 +4046,9 @@
       "bytes": 1550070,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-2s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-3s.png",
@@ -3562,7 +4062,9 @@
       "bytes": 1765964,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-3s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-4s.png",
@@ -3576,7 +4078,9 @@
       "bytes": 1732609,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-4s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-5s.png",
@@ -3590,7 +4094,9 @@
       "bytes": 1775825,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-6.5s.png",
@@ -3604,7 +4110,9 @@
       "bytes": 2003744,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-6.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-7.5s.png",
@@ -3618,7 +4126,9 @@
       "bytes": 2081241,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-7.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-9.5s.png",
@@ -3632,7 +4142,9 @@
       "bytes": 2469148,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-9.5s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "frames/奶蛙-帧图-最伟大的奶蛙-9s.png",
@@ -3646,7 +4158,9 @@
       "bytes": 1731409,
       "narrative": "奶蛙-帧图-最伟大的奶蛙-9s：奶蛙视频帧图/壁纸，馆藏衍生素材。",
       "width": 270,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "videos/奶蛙-圣殿巡行.mp4",
@@ -3660,7 +4174,9 @@
       "bytes": 3605169,
       "narrative": "官方圣影 · 一：巨型奶蛙缓步巡行圣殿——从审判大厅到圣光天际，镜头仰望它的足迹。圣殿巡行重构版，替换旧版游动形象。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "videos/奶蛙-壁纸隧道.mp4",
@@ -3674,7 +4190,9 @@
       "bytes": 1570199,
       "narrative": "官方圣影 · 二：穿过奶蛙壁纸的隧道，每一步都踩在快乐上。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "videos/奶蛙-大笑.mp4",
@@ -3688,7 +4206,9 @@
       "bytes": 5568570,
       "narrative": "15.4 秒连续大笑原片：单一奶蛙角色的连续大笑动画，1080×1474 / 30fps / 含原声。\n音频为约 5 Hz 的连续笑声音节节奏；全片无字幕、无水印，属可直接二次剪辑的裸片素材。\n规格：HEVC + AAC，5.23 MiB。sha256 前 8 位 1c05a2a8（社区流传的副本与本片字节一致，入仓前已比对去重）。",
       "width": 352,
-      "height": 480
+      "height": 480,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "videos/奶蛙-大笑藏馆巡展.mp4",
@@ -3702,7 +4222,9 @@
       "bytes": 5382701,
       "narrative": "巡展圣影 · 三：大笑藏馆巡展——十二幕真实圣像的 ken burns 巡礼，推拉之间，快乐全程不打烊。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "fan-videos/奶蛙-宿舍熄灯后.mp4",
@@ -3716,7 +4238,9 @@
       "bytes": 2954140,
       "narrative": "熄灯后的宿舍，奶蛙们还在悄悄活动——校园夜谈的快乐续摊。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/video/奶蛙的校园生活/奶蛙宿舍熄灯后.mp4\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n备注：视频原声中的第三方音乐/音效权利未单独核实；如权利人异议，请开 Issue 下架。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "fan-videos/奶蛙-西斯廷奶蛙.mp4",
@@ -3730,7 +4254,9 @@
       "bytes": 3837949,
       "narrative": "当西斯廷穹顶被奶蛙占领：一群黄色小身影在壁画与廊柱间巡游，庄严与爆笑同框。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/video/奶蛙神圣合集/西斯廷奶蛙.mp4\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n备注：视频原声中的第三方音乐/音效权利未单独核实；如权利人异议，请开 Issue 下架。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "audio/奶蛙-桌宠笑声.wav",
@@ -3744,7 +4270,9 @@
       "bytes": 79504,
       "narrative": "一段 1.8 秒的奶蛙笑声，短促、干净、无背景音乐，适合做提示音与剪辑点。\n22050 Hz 单声道 WAV。\n来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input\n版权：liaosongjie；`assets/pet/ASSET-NOTICE.md` 明确声明奶蛙动画帧与 laugh.wav 由作者原创并以 MIT 分发。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。\n原始文件：assets/pet/sounds/laugh.wav",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "audio/奶蛙-爆笑原声.mp3",
@@ -3758,7 +4286,9 @@
       "bytes": 228186,
       "narrative": "一段 14 秒的奶蛙爆笑原声，适合做铃声、提示音或剪辑素材；快乐可以直接听。\n来源：WencueCryforme/NaiWa-Universe（MIT）· https://github.com/WencueCryforme/NaiWa-Universe/blob/main/dist/sound/奶蛙爆笑合集/奶蛙爆笑.mp3\n版权：WencueCryforme/NaiWa-Universe（MIT）；COPYRIGHT 声明奶蛙为粉丝二创形象。\n许可：MIT；奶蛙为民间二创形象，如权利人认为不宜收录，请开 Issue，我们会下架。",
       "width": 480,
-      "height": 270
+      "height": 270,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "assets/奶蛙-logo.jpg",
@@ -3772,7 +4302,9 @@
       "bytes": 46096,
       "narrative": "品牌标识：奶蛙捧腹大笑特写构图，黄圆润身体、浅米肚皮、绿眼灰爪，用于官网与插件角标。\n格式：JPEG · 用途：NaiLoong-Universe 官网 / naiwa-wallpaper 插件品牌资产",
       "width": 480,
-      "height": 461
+      "height": 461,
+      "license": "见同名 .txt",
+      "source": "奶蛙艺术圣殿"
     },
     {
       "id": "poses/奶蛙-姿势-修女式.webp",
@@ -4253,6 +4785,390 @@
       "height": 1936,
       "license": "MIT",
       "source": "junjunya2020/nailegewa"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-上班族.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "上班族",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-上班族.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%B8%8A%E7%8F%AD%E6%97%8F.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-上班族.webp",
+      "type": "image",
+      "bytes": 44132,
+      "narrative": "以「上班族」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-举旗.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "举旗",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-举旗.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%B8%BE%E6%97%97.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-举旗.webp",
+      "type": "image",
+      "bytes": 23574,
+      "narrative": "以「举旗」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-举杯招手.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "举杯招手",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-举杯招手.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%B8%BE%E6%9D%AF%E6%8B%9B%E6%89%8B.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-举杯招手.webp",
+      "type": "image",
+      "bytes": 30014,
+      "narrative": "以「举杯招手」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-侦探.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "侦探",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-侦探.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%BE%A6%E6%8E%A2.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-侦探.webp",
+      "type": "image",
+      "bytes": 36442,
+      "narrative": "以「侦探」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-修女式.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "修女式",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-修女式.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%BF%AE%E5%A5%B3%E5%BC%8F.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-修女式.webp",
+      "type": "image",
+      "bytes": 35466,
+      "narrative": "以「修女式」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-出诊.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "出诊",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-出诊.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%87%BA%E8%AF%8A.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-出诊.webp",
+      "type": "image",
+      "bytes": 36710,
+      "narrative": "以「出诊」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-厨师.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "厨师",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-厨师.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%8E%A8%E5%B8%88.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-厨师.webp",
+      "type": "image",
+      "bytes": 33140,
+      "narrative": "以「厨师」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-双份薯条.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "双份薯条",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-双份薯条.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%8F%8C%E4%BB%BD%E8%96%AF%E6%9D%A1.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-双份薯条.webp",
+      "type": "image",
+      "bytes": 32240,
+      "narrative": "以「双份薯条」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-听诊式.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "听诊式",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-听诊式.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%90%AC%E8%AF%8A%E5%BC%8F.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-听诊式.webp",
+      "type": "image",
+      "bytes": 36206,
+      "narrative": "以「听诊式」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-啃香肠.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "啃香肠",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-啃香肠.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%95%83%E9%A6%99%E8%82%A0.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-啃香肠.webp",
+      "type": "image",
+      "bytes": 25310,
+      "narrative": "以「啃香肠」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-喝饮料.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "喝饮料",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-喝饮料.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%96%9D%E9%A5%AE%E6%96%99.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-喝饮料.webp",
+      "type": "image",
+      "bytes": 30134,
+      "narrative": "以「喝饮料」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-委屈.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "委屈",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-委屈.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%A7%94%E5%B1%88.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-委屈.webp",
+      "type": "image",
+      "bytes": 24094,
+      "narrative": "以「委屈」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-学生.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "学生",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-学生.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%AD%A6%E7%94%9F.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-学生.webp",
+      "type": "image",
+      "bytes": 46880,
+      "narrative": "以「学生」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-抱兔兔.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "抱兔兔",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-抱兔兔.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%8A%B1%E5%85%94%E5%85%94.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-抱兔兔.webp",
+      "type": "image",
+      "bytes": 28268,
+      "narrative": "以「抱兔兔」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-拄杖.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "拄杖",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-拄杖.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%8B%84%E6%9D%96.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-拄杖.webp",
+      "type": "image",
+      "bytes": 39826,
+      "narrative": "以「拄杖」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-捧炸鸡.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "捧炸鸡",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-捧炸鸡.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%8D%A7%E7%82%B8%E9%B8%A1.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-捧炸鸡.webp",
+      "type": "image",
+      "bytes": 46534,
+      "narrative": "以「捧炸鸡」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-摄影师.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "摄影师",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-摄影师.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%91%84%E5%BD%B1%E5%B8%88.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-摄影师.webp",
+      "type": "image",
+      "bytes": 35982,
+      "narrative": "以「摄影师」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-朋克头.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "朋克头",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-朋克头.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%9C%8B%E5%85%8B%E5%A4%B4.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-朋克头.webp",
+      "type": "image",
+      "bytes": 54586,
+      "narrative": "以「朋克头」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-炸鸡加可乐.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "炸鸡加可乐",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-炸鸡加可乐.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%82%B8%E9%B8%A1%E5%8A%A0%E5%8F%AF%E4%B9%90.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-炸鸡加可乐.webp",
+      "type": "image",
+      "bytes": 48168,
+      "narrative": "以「炸鸡加可乐」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-爆米花.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "爆米花",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-爆米花.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%88%86%E7%B1%B3%E8%8A%B1.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-爆米花.webp",
+      "type": "image",
+      "bytes": 28804,
+      "narrative": "以「爆米花」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-甜筒.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "甜筒",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-甜筒.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%94%9C%E7%AD%92.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-甜筒.webp",
+      "type": "image",
+      "bytes": 34926,
+      "narrative": "以「甜筒」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-看杂志.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "看杂志",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-看杂志.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%9C%8B%E6%9D%82%E5%BF%97.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-看杂志.webp",
+      "type": "image",
+      "bytes": 46568,
+      "narrative": "以「看杂志」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-绅士.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "绅士",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-绅士.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%BB%85%E5%A3%AB.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-绅士.webp",
+      "type": "image",
+      "bytes": 35908,
+      "narrative": "以「绅士」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
+    },
+    {
+      "id": "poses-wall/poses__奶蛙-姿势壁纸-薯条.webp",
+      "category": "poses-wall",
+      "categoryName": "姿势壁纸",
+      "title": "薯条",
+      "file": "poses-wall/poses__奶蛙-姿势壁纸-薯条.webp",
+      "raw": "https://nailoong-wallpaper.pages.dev/poses-wall/poses__%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E8%96%AF%E6%9D%A1.webp",
+      "thumb": "thumbs/poses-wall/poses__奶蛙-姿势壁纸-薯条.webp",
+      "type": "image",
+      "bytes": 30812,
+      "narrative": "以「薯条」立绘合成的竖屏壁纸：深色渐变背景 + 主体辉光，1080×1920 直接可用。",
+      "width": 1080,
+      "height": 1920,
+      "license": "MIT",
+      "source": "66970010-boop/frog-miner（立绘）+ 本仓库合成"
     }
   ]
 }
