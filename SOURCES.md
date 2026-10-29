@@ -36,6 +36,31 @@
 | `fan-videos/` | 2 | WencueCryforme（西斯廷奶蛙、宿舍熄灯后） |
 | `audio/` | 1 | WencueCryforme（奶蛙爆笑原声） |
 
+
+## 第三批 · 3D 立绘与竖屏场景（30 件，2026-10）
+
+官方站 milkyfrog.com 为设计师李想的商业站点，页脚为「© 2026 naiwa · 保留所有权利」，全站未提供素材包、
+未开放任何仓库、未给出素材授权条款，因此**不抓取、不收录**。本批只从许可证明确的开源仓库收录。
+
+| 来源仓库 | 许可 | 收录数量 | 许可依据 |
+|---|---|---|---|
+| [66970010-boop/frog-miner](https://github.com/66970010-boop/frog-miner) | **MIT** | 24 件 3D 姿势立绘（`poses/`） | 仓库 `LICENSE` 为 MIT，`Copyright (c) 2026 66970010-boop (original author of frog-miner)`；README 的 Contributors 明示作者负责游戏创意、美术与核心实现 |
+| [junjunya2020/nailegewa](https://github.com/junjunya2020/nailegewa) | **MIT** | 6 件 1080×1936 竖屏场景（`mobile/`） | 仓库 `LICENSE` 为 MIT，`Copyright (c) 2026 junjunya2020` |
+
+### 派生作品
+
+| 产物 | 数量 | 说明 |
+|---|---|---|
+| `poses-wall/` | 24 件 | 以 `poses/` 的 3D 立绘为主体，本仓库加渐变背景与主体辉光合成的 1080×1920 竖屏壁纸；立绘权利仍按上游 MIT 处理 |
+
+### 为什么只收这两个仓库
+
+- 三消类 `nailegewa` 与挖矿类 `frog-miner` 是 GitHub 上仅有的两个「MIT + 含成规模奶蛙美术」的仓库；
+- 其余奶蛙相关仓库要么无 LICENSE（`yhsome/BigNaiWa`、`yhsome/Nai2048`、`yhsome/SmallNaiWa`、
+  `22hewang/naiwa-ultimate`、`LynnShaw/naiwa-pet`），要么 GPL（`CHENGONGSHUO/Naiwa`、
+  `SbongeBobybl/NaiWaChatPet`），与本库 MIT 授权不兼容；
+- 官网与 App Store 素材为商业版权，全部不收录。
+
 ## 去重与筛选
 
 - **精确去重**：将每件候选文件计算 Git blob SHA1，与 wallpaper `main` 全量 215 件比对。
