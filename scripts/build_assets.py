@@ -7,6 +7,7 @@
   python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs  # 同步到官网
 """
 import argparse
+import datetime
 import json
 import re
 import shutil
@@ -21,10 +22,12 @@ CATS = [
     ('classic', '圣典名画', '奶蛙主演的西方名画再创作'),
     ('laugh-gallery', '大笑藏馆', '全网搜集的大笑奶蛙变体'),
     ('emotes', '表情收藏', '表情包、官方姿态、立绘与动图'),
+    ('poses', '姿势立绘', '3D 奶蛙换装立绘：职业、道具与表情'),
     ('pet', '桌宠动作', '桌宠动画帧与待机/大笑/倾听/躺平循环 GIF'),
     ('art', '艺术场景', 'AI 生成的生活场景与艺术脑洞'),
     ('hd', '高清壁纸', '高清表情壁纸'),
     ('4k', '4K 大图', '新标签页插件内置 4K 素材'),
+    ('mobile', '手机壁纸', '1080×1936 竖屏，手机与平板'),
     ('frames', '视频帧图', '圣影抽帧与竖屏壁纸'),
     ('videos', '官方圣影', '圣殿巡行、壁纸隧道、大笑巡展与原片'),
     ('fan-videos', '同人短片', '粉丝二创的奶蛙短片与场景动画'),
@@ -132,7 +135,7 @@ def build():
         'repo': 'Nailong-Studio/wallpaper',
         'sourceVersion': (ROOT / 'VERSION').read_text(encoding='utf-8').split()[0].lstrip('v')
         if (ROOT / 'VERSION').exists() else '',
-        'generated': '2026-10-26',
+        'generated': datetime.date.today().isoformat(),
         'rawBase': RAW,
         'total': len(items),
         'categories': [{'id': c, 'name': n, 'desc': d, 'count': counts.get(c, 0)} for c, n, d in CATS],
