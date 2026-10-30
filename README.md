@@ -8,6 +8,8 @@
   <a href="https://nailong-studio.github.io/NaiLoong-Universe/"> <img src="https://img.shields.io/badge/交付对象-奶蛙艺术圣殿-FFD700" alt="交付对象"></a>
 </p>
 
+> **主站**：<https://nailoong-wallpaper.pages.dev/> —— 素材直链与机器可读清单以此为准；GitHub 仅存源。
+
 > **库房重地，闲人免进——但你是股东，所以请进。**
 >
 > 本仓库是「奶蛙艺术圣殿」官网与「奶蛙壁纸」插件的唯一供货方。
