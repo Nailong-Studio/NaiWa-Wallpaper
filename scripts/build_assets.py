@@ -133,7 +133,7 @@ def build():
         counts[it['category']] = counts.get(it['category'], 0) + 1
     manifest = {
         'name': '奶蛙艺术圣殿 · 素材总清单',
-        'repo': 'Nailong-Studio/wallpaper',
+        'repo': 'Nailong-Studio/NaiWa-Wallpaper',
         'sourceVersion': (ROOT / 'VERSION').read_text(encoding='utf-8').split()[0].lstrip('v')
         if (ROOT / 'VERSION').exists() else '',
         'generated': datetime.date.today().isoformat(),

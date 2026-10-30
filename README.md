@@ -3,7 +3,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/贡献-指南-green" alt="贡献指南"></a>
-  <a href="https://github.com/Nailong-Studio/wallpaper/issues"><img src="https://img.shields.io/github/issues/Nailong-Studio/wallpaper" alt="Issues"></a>
+  <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues"><img src="https://img.shields.io/github/issues/Nailong-Studio/NaiWa-Wallpaper" alt="Issues"></a>
   <a href="assets.json"><img src="https://img.shields.io/badge/资源清单-assets.json-gold" alt="资源清单"></a>
   <a href="https://nailong-studio.github.io/NaiLoong-Universe/"> <img src="https://img.shields.io/badge/交付对象-奶蛙艺术圣殿-FFD700" alt="交付对象"></a>
 </p>
@@ -47,7 +47,7 @@
 
 每件素材配一份同名 `.txt` 档案，内容含：一句话叙事、来源、许可、署名与下架声明。档案不全的素材，按库房规定不予上架。
 
-> **[奶蛙壁纸插件](https://github.com/Nailong-Studio/naiwa-wallpaper)** 从本库取走 211 张可作壁纸的素材（横屏 / 竖屏 / 方形 / 4K / 姿势壁纸）。要换图、改图、加图，都在这个库房办手续，插件那边只管取货，不重复生产。
+> **[奶蛙壁纸插件](https://github.com/Nailong-Studio/NaiWa-NewTab)** 从本库取走 211 张可作壁纸的素材（横屏 / 竖屏 / 方形 / 4K / 姿势壁纸）。要换图、改图、加图，都在这个库房办手续，插件那边只管取货，不重复生产。
 
 **什么算「可作壁纸」**：短边 ≥ 720px 的位图，横屏（≥1.5:1）、竖屏（≤0.72:1）、近方形各成一组；纯表情小图、桌宠帧序列、音视频不入壁纸包。
 

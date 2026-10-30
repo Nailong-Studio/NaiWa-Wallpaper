@@ -81,9 +81,9 @@ footer a{{color:var(--gold)}}
 
   <div class="links">
     <a href="assets.json">assets.json · 机器可读清单</a>
-    <a href="https://github.com/Nailong-Studio/wallpaper" target="_blank" rel="noopener">GitHub 仓库</a>
+    <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">GitHub 仓库</a>
     <a href="https://naiwa-wallpaper.pages.dev/" target="_blank" rel="noopener">壁纸扩展</a>
-    <a href="https://github.com/Nailong-Studio/wallpaper/releases" target="_blank" rel="noopener">打包下载</a>
+    <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases" target="_blank" rel="noopener">打包下载</a>
   </div>
 
   <h2>分类一览</h2>
@@ -96,19 +96,19 @@ footer a{{color:var(--gold)}}
 
   <h2>取用方式</h2>
   <pre># 单件直链（GitHub raw，跟随改名跳转）
-https://raw.githubusercontent.com/Nailong-Studio/wallpaper/main/&lt;分类&gt;/&lt;文件名&gt;
+https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/&lt;分类&gt;/&lt;文件名&gt;
 
 # 或走 Cloudflare 图床（开 CORS，可直接当壁纸 URL）
 {manifest['rawBase']}&lt;分类&gt;/&lt;文件名&gt;
 
 # 按清单程序化取用
-curl -s https://raw.githubusercontent.com/Nailong-Studio/wallpaper/main/assets.json
+curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/assets.json
 </pre>
 
   <footer>
     素材 {manifest['total']} 件 · 版本 {manifest['sourceVersion']} · 更新于 {manifest['generated']}。
     奶蛙为民间二创形象，角色原型权利归原权利人；本库只收录许可允许再分发的素材，逐件来源见同名 <code>.txt</code>。
-    若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/wallpaper/issues">Issue</a>，核实后下架。
+    若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后下架。
   </footer>
 </div>
 </body>
