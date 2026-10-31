@@ -1,10 +1,10 @@
 {
   "name": "奶蛙艺术圣殿 · 素材总清单",
   "repo": "Nailong-Studio/NaiWa-Wallpaper",
-  "sourceVersion": "3.1.0",
+  "sourceVersion": "3.2.0",
   "generated": "2026-10-31",
   "rawBase": "https://nailoong-wallpaper.pages.dev/",
-  "total": 385,
+  "total": 388,
   "categories": [
     {
       "id": "classic",
@@ -76,7 +76,7 @@
       "id": "videos",
       "name": "官方圣影",
       "desc": "圣殿巡行、壁纸隧道、大笑巡展与原片",
-      "count": 4
+      "count": 7
     },
     {
       "id": "fan-videos",
@@ -6257,6 +6257,54 @@
       "height": 1240,
       "license": "MIT",
       "source": "lin-alg/NaiLoong"
+    },
+    {
+      "id": "videos/奶蛙-圣殿序曲.mp4",
+      "category": "videos",
+      "categoryName": "官方圣影",
+      "title": "圣殿序曲（网页版）",
+      "file": "videos/奶蛙-圣殿序曲.mp4",
+      "raw": "https://nailoong-wallpaper.pages.dev/videos/%E5%A5%B6%E8%9B%99-%E5%9C%A3%E6%AE%BF%E5%BA%8F%E6%9B%B2.mp4",
+      "thumb": "thumbs/videos/奶蛙-圣殿序曲.webp",
+      "type": "video",
+      "bytes": 7228440,
+      "narrative": "四幕式展馆短片：序·开门 / 一·圣典 / 二·众生 / 三·收束。20 镜 38.6 秒，原创配乐。",
+      "width": 1920,
+      "height": 1080,
+      "license": "MIT",
+      "source": "NaiWa-Wallpaper 自制"
+    },
+    {
+      "id": "videos/奶蛙-圣殿序曲-高清.mp4",
+      "category": "videos",
+      "categoryName": "官方圣影",
+      "title": "圣殿序曲（高清存档）",
+      "file": "videos/奶蛙-圣殿序曲-高清.mp4",
+      "raw": "https://nailoong-wallpaper.pages.dev/videos/%E5%A5%B6%E8%9B%99-%E5%9C%A3%E6%AE%BF%E5%BA%8F%E6%9B%B2-%E9%AB%98%E6%B8%85.mp4",
+      "thumb": "thumbs/videos/奶蛙-圣殿序曲.webp",
+      "type": "video",
+      "bytes": 18829625,
+      "narrative": "同片高清存档版，3.9 Mbps，适合下载收藏。",
+      "width": 1920,
+      "height": 1080,
+      "license": "MIT",
+      "source": "NaiWa-Wallpaper 自制"
+    },
+    {
+      "id": "videos/奶蛙-圣殿序曲-封面.jpg",
+      "category": "videos",
+      "categoryName": "官方圣影",
+      "title": "圣殿序曲 · 封面",
+      "file": "videos/奶蛙-圣殿序曲-封面.jpg",
+      "raw": "https://nailoong-wallpaper.pages.dev/videos/%E5%A5%B6%E8%9B%99-%E5%9C%A3%E6%AE%BF%E5%BA%8F%E6%9B%B2-%E5%B0%81%E9%9D%A2.jpg",
+      "thumb": "thumbs/videos/奶蛙-圣殿序曲-封面.webp",
+      "type": "image",
+      "bytes": 170834,
+      "narrative": "圣殿序曲封面帧。",
+      "width": 1920,
+      "height": 1080,
+      "license": "MIT",
+      "source": "NaiWa-Wallpaper 自制"
     }
   ]
 }
