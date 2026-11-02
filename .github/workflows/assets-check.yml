@@ -48,3 +48,41 @@ jobs:
         run: python3 -m pip install --quiet pillow
       - name: Verify assets.json and thumbnails
         run: python3 scripts/build_assets.py --check
+
+      # The manifest is a public contract: 387 items, 15 categories, every raw
+      # URL on the CDN host. Catch drift before consumers (museum, extension).
+      - name: Verify manifest contract
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from pathlib import Path
+
+          data = json.loads(Path('assets.json').read_text(encoding='utf-8'))
+          problems = []
+
+          if data.get('total') != len(data.get('items', [])):
+              problems.append(f"total {data.get('total')} != {len(data['items'])} items")
+
+          if len(data.get('categories', [])) != 15:
+              problems.append(f"expected 15 categories, found {len(data.get('categories', []))}")
+
+          base = data.get('rawBase', '')
+          if not base.startswith('https://'):
+              problems.append(f"rawBase is not https: {base!r}")
+
+          ids = [i['id'] for i in data['items']]
+          if len(ids) != len(set(ids)):
+              problems.append('duplicate item ids')
+
+          for item in data['items']:
+              if not item.get('raw', '').startswith(base):
+                  problems.append(f"{item['id']}: raw URL not on rawBase")
+                  break
+              if not item.get('thumb'):
+                  problems.append(f"{item['id']}: missing thumb")
+                  break
+
+          for p in problems:
+              print('FAIL', p)
+          sys.exit(1 if problems else 0)
+          PY
