@@ -98,8 +98,8 @@ python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs   # push to the
 ```
 
 The `Assets Check` workflow runs `--check` whenever assets, the manifest or the
-script change, and fails on count mismatches, category drift, missing thumbnails
-or orphan files.
+script change, and fails on count or category drift, missing thumbnails, orphan files, stale
+dimensions, or records without `license` / `source`.
 
 ## Naming
 

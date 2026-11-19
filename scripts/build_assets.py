@@ -175,6 +175,24 @@ def build():
         if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
             make_thumb(src, dst)
         it['width'], it['height'] = media_size(src, dst)
+    for it in manifest.get('items', []):
+        if not it.get('license') or it['license'] == '未标注':
+            errors.append('missing license: ' + it['file'])
+        if not it.get('source'):
+            errors.append('missing source: ' + it['file'])
+        if it.get('form') not in ('naiwa', 'anthro'):
+            errors.append('bad form: ' + it['file'])
+        if not it.get('narrative'):
+            errors.append('empty narrative: ' + it['file'])
+        if it['type'] == 'image':
+            try:
+                with Image.open(ROOT / it['file']) as im:
+                    if im.size != (it['width'], it['height']):
+                        errors.append('stale size: %s %sx%s != %sx%s' % (
+                            it['file'], it['width'], it['height'], im.width, im.height))
+            except Exception as exc:
+                errors.append('unreadable image: %s (%s)' % (it['file'], exc))
+
     counts = {}
     for it in items:
         counts[it['category']] = counts.get(it['category'], 0) + 1
@@ -210,6 +228,24 @@ def check(manifest):
     actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'thumbs').rglob('*.webp')}
     if actual - expected:
         errors.append(f'orphan thumbs: {len(actual - expected)}')
+    for it in manifest.get('items', []):
+        if not it.get('license') or it['license'] == '未标注':
+            errors.append('missing license: ' + it['file'])
+        if not it.get('source'):
+            errors.append('missing source: ' + it['file'])
+        if it.get('form') not in ('naiwa', 'anthro'):
+            errors.append('bad form: ' + it['file'])
+        if not it.get('narrative'):
+            errors.append('empty narrative: ' + it['file'])
+        if it['type'] == 'image':
+            try:
+                with Image.open(ROOT / it['file']) as im:
+                    if im.size != (it['width'], it['height']):
+                        errors.append('stale size: %s %sx%s != %sx%s' % (
+                            it['file'], it['width'], it['height'], im.width, im.height))
+            except Exception as exc:
+                errors.append('unreadable image: %s (%s)' % (it['file'], exc))
+
     counts = {}
     for it in items:
         counts[it['category']] = counts.get(it['category'], 0) + 1
