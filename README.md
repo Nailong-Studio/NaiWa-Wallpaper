@@ -2,7 +2,7 @@
 
 # NaiWa Wallpaper · Asset Warehouse
 
-**381 assets, 15 categories, one machine-readable manifest. The single source of supply for the museum and the browser extension.**
+**405 assets, 15 categories, one machine-readable manifest. The single source of supply for the museum and the browser extension.**
 
 [![Stars](https://img.shields.io/github/stars/Nailong-Studio/NaiWa-Wallpaper?style=for-the-badge&label=Star&color=FFD700&logo=github)](https://github.com/Nailong-Studio/NaiWa-Wallpaper/stargazers)
 [![Live index](https://img.shields.io/badge/live%20index-nailoong--wallpaper.pages.dev-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://nailoong-wallpaper.pages.dev/)
@@ -48,7 +48,7 @@ touching this repository at all.
 
 | Directory | Contents | Count |
 | --- | --- | --- |
-| `classic/` | Western masterpieces re-signed by NaiWa | 38 |
+| `classic/` | World masterpieces re-signed by NaiWa | 62 |
 | `laugh-gallery/` | Laughing variants collected from across the web | 22 |
 | `emotes/` | Sticker packs, official poses, animated emotes | 69 |
 | `poses/` | 3D costume poses — professions, props, expressions | 24 |
