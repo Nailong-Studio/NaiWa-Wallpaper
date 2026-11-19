@@ -77,8 +77,8 @@ portrait (≤0.72:1) and near-square. Pure emote thumbnails, desktop-pet frame
 sequences, audio and video are excluded from the wallpaper pack.
 
 The browser extension [NaiWa-NewTab](https://github.com/Nailong-Studio/NaiWa-NewTab)
-takes 212 of these — 73 landscape, 75 portrait, 35 square, 5 4K, 24 pose
-wallpapers. Change the art here; the extension only displays it.
+takes a 212-image snapshot of these (as of v3.2.0) — 73 landscape, 75 portrait,
+35 square, 5 4K, 24 pose wallpapers. Change the art here; the extension only displays it.
 
 ## Manifest and records
 
@@ -87,7 +87,9 @@ wallpapers. Change the art here; the extension only displays it.
 | `assets.json` | The machine-readable inventory: category, title, narrative, type, size, dimensions, raw URL, thumbnail path |
 | `thumbs/` | 480 px WebP thumbnails, one per asset; audio gets a waveform instead |
 | `SOURCES.md` | Sources, licences and the exclusion list, batch by batch |
+| `DUPLICATES.md` | Known near-duplicate groups (38 groups / 98 images at v3.2.1), all intentional derivations |
 | `scripts/build_assets.py` | Regenerates the manifest, thumbnails and index page |
+| `scripts/duplicates.py` | Read-only near-duplicate scan (dHash + SHA-256) |
 
 ```bash
 python3 scripts/build_assets.py            # regenerate everything

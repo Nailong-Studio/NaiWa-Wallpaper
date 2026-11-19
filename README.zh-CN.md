@@ -101,7 +101,7 @@
 
 
 
-> **[奶蛙壁纸插件](https://github.com/Nailong-Studio/NaiWa-NewTab)** 从本库取走 212 张可作壁纸的素材（横屏 / 竖屏 / 方形 / 4K / 姿势壁纸）。要换图、改图、加图，都在这个库房办手续，插件那边只管取货，不重复生产。
+> **[奶蛙壁纸插件](https://github.com/Nailong-Studio/NaiWa-NewTab)** 从本库取走 212 张可作壁纸的素材（该数为 v3.2.0 时的取货快照；横屏 / 竖屏 / 方形 / 4K / 姿势壁纸）。要换图、改图、加图，都在这个库房办手续，插件那边只管取货，不重复生产。
 
 
 
@@ -122,6 +122,8 @@
 - **`thumbs/`**：每件素材的 480px WebP 缩略图；音频则生成波形图。用于总览页，避免为了看一眼而搬运整仓原图。
 
 - **`SOURCES.md`**：来源、许可与排除名单。每批入库都有据可查，不搞口头承诺。
+
+- **`DUPLICATES.md`**：近似重复基线——38 组 98 张，均为换色、裁切、4K 放大或逐帧派生；附判定表与 `scripts/duplicates.py` 复查脚本。
 
 - **重新生成**：`python3 scripts/build_assets.py`；**只校验**：`python3 scripts/build_assets.py --check`；**同步到官网**：`python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs`。
 
