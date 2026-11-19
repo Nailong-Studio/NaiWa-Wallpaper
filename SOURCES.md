@@ -204,6 +204,7 @@
 
 | 来源 | 许可状态 | 排除原因 |
 
+| [amatate/milk-frog-museum](https://github.com/amatate/milk-frog-museum) | 无 LICENSE；`data/catalogue.json` 的 `museum.rightsNote` 明确「本馆不为第三方内容授予开放许可」 | 837 张藏品整馆未收录 |
 |---|---|---|
 
 | [Trafalgar2000/naiwa-desktop-pet](https://github.com/Trafalgar2000/naiwa-desktop-pet) | 代码 MIT | `ASSETS-NOTICE.md` 明确 `assets/` 角色图片不在 MIT 范围 |
