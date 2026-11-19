@@ -48,12 +48,59 @@ def title_of(stem):
     return s.replace('-', ' · ').strip() or stem
 
 
+PROV = re.compile(r'^(来源|许可|版权|用途|署名|分辨率|格式)\s*[：:]')
+
+
 def narrative_of(p):
     t = p.with_name(p.name + '.txt')
     if not t.exists():
         return ''
     lines = [x.strip() for x in t.read_text(encoding='utf-8', errors='ignore').splitlines() if x.strip()]
-    return '\n'.join(lines[1:]).strip() if len(lines) > 1 else (lines[0] if lines else '')
+    body = []
+    for line in lines[1:]:
+        if PROV.match(line):
+            break
+        body.append(line)
+    return '\n'.join(body).strip() if body else (lines[0] if lines else '')
+
+
+def field_of(p, key):
+    """读取同名 .txt 里 `字段：值` 形式的记录（来源 / 许可）。"""
+    t = p.with_name(p.name + '.txt')
+    if not t.exists():
+        return ''
+    m = re.search(rf'^\s*{key}\s*[：:]?\s*(.+)$', t.read_text(encoding='utf-8', errors='ignore'), re.M)
+    return m.group(1).strip() if m else ''
+
+
+def license_of(p):
+    v = field_of(p, '许可')
+    return v.split('；')[0].split(';')[0].strip() if v else '未标注'
+
+
+def source_of(p):
+    v = field_of(p, '来源')
+    return v.split('·')[0].strip() if v else '奶蛙艺术圣殿'
+
+
+def media_size(src, thumb):
+    """真实素材尺寸：图片读原图，视频读视频流，音频无尺寸。"""
+    suf = src.suffix.lower()
+    if suf in VIDEO:
+        try:
+            out = subprocess.check_output([
+                'ffprobe', '-v', 'error', '-select_streams', 'v:0',
+                '-show_entries', 'stream=width,height', '-of', 'json', str(src)
+            ])
+            st = json.loads(out)['streams'][0]
+            return int(st['width']), int(st['height'])
+        except Exception:
+            with Image.open(thumb) as im:
+                return im.size
+    if suf in AUDIO:
+        return None, None
+    with Image.open(src) as im:
+        return im.size
 
 
 def make_thumb(src, dst):
@@ -113,6 +160,9 @@ def scan():
                           ('gif' if p.suffix.lower() == '.gif' else 'image'))),
                 'bytes': p.stat().st_size,
                 'narrative': narrative_of(p),
+                'license': license_of(p),
+                'source': source_of(p),
+                'form': ('anthro' if cid in ('poses', 'poses-wall') else 'naiwa'),
             })
     return items
 
@@ -122,12 +172,9 @@ def build():
     for it in items:
         src = ROOT / it['file']
         dst = ROOT / it['thumb']
-        size = make_thumb(src, dst) if (not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime) else None
-        if size:
-            it['width'], it['height'] = size
-        else:
-            with Image.open(dst) as im:
-                it['width'], it['height'] = im.size
+        if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
+            make_thumb(src, dst)
+        it['width'], it['height'] = media_size(src, dst)
     counts = {}
     for it in items:
         counts[it['category']] = counts.get(it['category'], 0) + 1
