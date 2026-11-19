@@ -49,7 +49,7 @@ jobs:
       - name: Verify assets.json and thumbnails
         run: python3 scripts/build_assets.py --check
 
-      # The manifest is a public contract: 387 items, 15 categories, every raw
+      # The manifest is a public contract: 410 items, 15 categories, every raw
       # URL on the CDN host. Catch drift before consumers (museum, extension).
       - name: Verify manifest contract
         run: |

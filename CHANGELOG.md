@@ -1,5 +1,11 @@
 # 变更日志 · 奶蛙素材仓库
 
+## v3.2.3（2026-11-20）
+
+- **新增 5 件「模式切换」表情**：来自 [WencueCryforme/NaiWa-Universe](https://github.com/WencueCryforme/NaiWa-Universe)（MIT，作者声明不主张版权）——妖娆、平静、蕉绿、天使、霸者五种形态，原图 1075–2047 px，绿圈眼与浅米色肚皮完整，无第三方水印。
+- **总量 405 → 410 件**：`emotes/` 由 69 件增至 74 件。
+- **排除**：`Trafalgar2000/naiwa-desktop-pet` 的 6 张 3D 立绘（`ASSETS-NOTICE.md` 明确 MIT 不覆盖 `assets/`）；同仓「川大」「奶龙」「奶蛋」混合主题，以及红/紫等偏离形象编制的变体。
+
 ## v3.2.2（2026-11-20）
 
 - **新增 24 件圣典名画**：来自 [nit5607/naiwa-art-style](https://github.com/nit5607/naiwa-art-style)（MIT），24 幅世界名画的奶蛙二创——蒙娜丽莎、星月夜、呐喊、神奈川冲浪里、千里江山图、沃霍尔波普四联等，原尺寸 896–1376 px 入库，无社媒水印。
