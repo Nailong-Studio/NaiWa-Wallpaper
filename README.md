@@ -26,6 +26,12 @@ The split is deliberate: **this repo registers and delivers, that repo narrates.
 live index is now a nine-settlement island over the same 410 files — browse, read a
 label, then take the file.
 
+The landing page stays cheap on purpose: one 56 KB display-font subset served from
+`fonts/`, system fonts for body copy, no third-party font CDN; the first four
+thumbnails load eager, the rest are lazy; media URLs carry the release version and
+`_headers` caches media for a week with background revalidation while HTML and
+`assets.json` revalidate on every visit.
+
 ## Take what you need
 
 Three ways in, pick whichever fits:

@@ -1,0 +1,70 @@
+# Cloudflare Pages headers
+# Long-lived immutable caching only for content-addressed-ish static assets.
+# HTML and the manifest always revalidate so new inventory shows up immediately.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: SAMEORIGIN
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets.json
+  Cache-Control: public, max-age=0, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/thumbs/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/classic/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/laugh-gallery/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/emotes/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/poses/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/poses-wall/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/pet/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/art/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/hd/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/4k/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/mobile/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/frames/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/videos/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/fan-videos/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/audio/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/assets/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

@@ -49,6 +49,14 @@ by_cat = {}
 for it in items:
     by_cat.setdefault(it['category'], []).append(it)
 
+VER = manifest['sourceVersion']
+
+
+def bust(u):
+    if not u:
+        return u
+    return u + ('&' if '?' in u else '?') + 'v=' + VER
+
 
 def kb(n):
     return '%.0f KB' % (n / 1024) if n < 1024 * 1024 else '%.1f MB' % (n / 1048576)
@@ -63,7 +71,7 @@ for z in ZONES:
     zone_payload.append({
         'id': z['id'], 'name': z['name'], 'desc': z['desc'], 'icon': z['icon'],
         'count': len(sub), 'cats': z['cats'],
-        'cover': cover['thumb'] if cover else '',
+        'cover': bust(cover['thumb']) if cover else '',
         'coverAlt': cover['title'] if cover else '',
         'bytes': sum(it.get('bytes', 0) for it in sub),
         'xy': [z['x'], z['y']],
@@ -73,9 +81,9 @@ slim = []
 for it in items:
     slim.append({
         'i': it['id'], 'c': it['category'], 'cn': it['categoryName'],
-        't': it['title'], 'th': it['thumb'], 'w': it.get('width'),
+        't': it['title'], 'th': bust(it['thumb']), 'w': it.get('width'),
         'h': it.get('height'), 'ty': it['type'], 'n': it.get('narrative', ''),
-        'l': it.get('license', ''), 's': it.get('source', ''), 'r': it.get('raw', ''),
+        'l': it.get('license', ''), 's': it.get('source', ''), 'r': bust(it.get('raw', '')),
     })
 
 cat_count = len([c for c in manifest['categories'] if c.get('count')])
@@ -101,18 +109,30 @@ HTML = r'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>奶蛙世界 · __TOTAL__ 件藏品长成的岛</title>
 <meta name="description" content="奶蛙世界：__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影，附机器可读清单。">
+<meta name="theme-color" content="#0d0c09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6efdd" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://nailoong-wallpaper.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="奶蛙世界 · __TOTAL__ 件藏品长成的岛">
+<meta property="og:description" content="__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影。">
+<meta property="og:url" content="https://nailoong-wallpaper.pages.dev/">
+<meta property="og:image" content="https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B8%98%E6%AF%94%E7%89%B9%E4%B8%8E%E6%99%AE%E7%BB%AA%E5%85%8B.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="__FAVICON__">
-<link rel="preconnect" href="https://miaoda.feishu.cn">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<link rel="preload" href="fonts/zcool-kuaile-display.woff2?v=__VERSION__" as="font" type="font/woff2" crossorigin>
+<script>
+(function(){try{var t=localStorage.getItem('naiwa-world-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
 <style>
+@font-face{font-family:"ZCOOL KuaiLe";src:url("fonts/zcool-kuaile-display.woff2?v=__VERSION__") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 :root{
   --bg:#0d0c09;--bg2:#13110c;--panel:#191610;--panel2:#211c13;
   --ink:#efe5cf;--muted:#a79b82;--line:#342b1d;--dim:#7f735d;
   --gold:#f1c24d;--green:#7cc36a;--sea:#081a1c;--sea2:#0d2426;
   --sand:#d9c08a;--land:#33503a;--land2:#416647;--sea-line:#2b5a5f;
   --shadow:0 22px 60px rgba(0,0,0,.45);
-  --display:"ZCOOL KuaiLe","Noto Sans SC",system-ui,sans-serif;
-  --body:"Noto Sans SC",-apple-system,"Segoe UI",sans-serif;
+  --display:"ZCOOL KuaiLe","STKaiti","KaiTi","PingFang SC","Microsoft YaHei",sans-serif;
+  --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
   color-scheme:dark;
 }
 html[data-theme="light"]{
@@ -536,7 +556,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
           <h2>藏品<em>滩</em></h2>
           <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <p id="count" class="count">正在数藏品……</p>
+        <p id="count" class="count" aria-live="polite">正在数藏品……</p>
       </div>
       <div class="filters">
         <label class="search">
@@ -634,8 +654,10 @@ function filtered() {
 }
 function card(it, idx) {
   const dim = it.w && it.h ? it.w + ' × ' + it.h : (it.ty === 'video' ? '影像' : '音频');
+  const eager = idx < 4;
+  const dims = (it.ty === 'image' && it.w && it.h) ? ' width="' + it.w + '" height="' + it.h + '"' : '';
   return '<button class="card" type="button" data-idx="' + idx + '">' +
-    '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy" decoding="async"></figure>' +
+    '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '"' + dims + ' loading="' + (eager ? 'eager' : 'lazy') + '"' + (eager ? ' fetchpriority="high"' : '') + ' decoding="async"></figure>' +
     '<div class="card__body"><div class="card__cat">' + esc(it.cn) + '</div>' +
     '<div class="card__title">' + esc(it.t) + '</div>' +
     '<div class="card__dim">' + dim + '</div></div></button>';
@@ -690,17 +712,15 @@ function renderToday() {
   }
   const main = picked[0];
   const mainHtml = '<article class="today-main">' +
-    '<figure><img src="' + esc(main.r || main.th) + '" alt="' + esc(main.t) + '" loading="lazy"></figure>' +
+    '<figure><img src="' + esc(main.th) + '" alt="' + esc(main.t) + '" loading="lazy" decoding="async"></figure>' +
     '<h3>' + esc(main.t) + '</h3><p>' + esc(main.n) + '</p>' +
     '<a href="#collection" data-today="' + esc(main.i) + '">去藏品滩找它</a></article>';
   const sideHtml = '<div class="today-side">' + picked.slice(1).map(function (it) {
     return '<a class="today-mini" href="#collection" data-today="' + esc(it.i) + '">' +
-      '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy"></figure>' +
+      '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy" decoding="async"></figure>' +
       '<div><h4>' + esc(it.t) + '</h4><p>' + esc(it.n) + '</p></div></a>';
   }).join('') + '</div>';
   document.getElementById('todayGrid').innerHTML = mainHtml + sideHtml;
-  const mainImg = document.querySelector('.today-main img');
-  if (mainImg) mainImg.addEventListener('error', function () { this.src = main.th; }, { once: true });
 }
 document.getElementById('todayGrid').addEventListener('click', function (e) {
   const a = e.target.closest('[data-today]');
@@ -754,9 +774,7 @@ function setTheme(t) {
   themeBtn.setAttribute('aria-pressed', t === 'light' ? 'true' : 'false');
   try { localStorage.setItem('naiwa-world-theme', t); } catch (e) {}
 }
-let stored = null;
-try { stored = localStorage.getItem('naiwa-world-theme'); } catch (e) {}
-setTheme(stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+setTheme(root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
 themeBtn.addEventListener('click', function () {
   setTheme(root.dataset.theme === 'light' ? 'dark' : 'light');
 });
