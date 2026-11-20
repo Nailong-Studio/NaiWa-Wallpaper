@@ -22,6 +22,12 @@
 
 > **主站**：<https://nailoong-wallpaper.pages.dev/> —— 素材直链与机器可读清单以此为准；GitHub 仅存源。
 
+## 桌面版
+
+`desktop/` 目录是 **NaiWa Wallpaper v0.0.3**，一个 Windows 10/11 与 Linux 桌面壁纸客户端，使用本仓库精选的 205 张壁纸。它和网站、浏览器扩展相互独立：无账号、无网络请求、无遥测。
+
+Windows / Linux 便携包见 [desktop-v0.0.3 Release](https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases/tag/desktop-v0.0.3)。
+
 > **库房重地，闲人免进——但你是股东，所以请进。**
 
 >

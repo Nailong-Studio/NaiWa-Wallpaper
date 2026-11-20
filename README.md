@@ -36,6 +36,15 @@ thumbnails load eager, the rest are lazy; media URLs carry the release version a
 `_headers` caches media for a week with background revalidation while HTML and
 `assets.json` revalidate on every visit.
 
+## Desktop client
+
+`desktop/` contains **NaiWa Wallpaper v0.0.3**, a Windows 10/11 and Linux desktop
+client for the 205 curated wallpapers in this warehouse. It is separate from the
+website and the browser extension: no account, no network calls, no telemetry.
+
+Download the portable Windows / Linux builds from the
+[desktop-v0.0.3 release](https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases/tag/desktop-v0.0.3).
+
 ## Take what you need
 
 Three ways in, pick whichever fits:

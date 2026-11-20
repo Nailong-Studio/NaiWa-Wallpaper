@@ -1,0 +1,308 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:NaiWaWallpaper.ViewModels"
+        xmlns:models="using:NaiWaWallpaper.Models"
+        x:Class="NaiWaWallpaper.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Width="1360" Height="860"
+        MinWidth="1080" MinHeight="680"
+        WindowStartupLocation="CenterScreen"
+        Title="NaiWa Wallpaper · 奶蛙壁纸"
+        Background="#F3E8D5"
+        Icon="avares://NaiWaWallpaper/Assets/logo.ico"
+        FontFamily="Microsoft YaHei UI, Noto Sans CJK SC, sans-serif">
+  <Window.Resources>
+    <SolidColorBrush x:Key="Cream" Color="#F3E8D5"/>
+    <SolidColorBrush x:Key="Paper" Color="#FBF5E9"/>
+    <SolidColorBrush x:Key="Ink" Color="#211A13"/>
+    <SolidColorBrush x:Key="Muted" Color="#766754"/>
+    <SolidColorBrush x:Key="Gold" Color="#B9892D"/>
+    <SolidColorBrush x:Key="Line" Color="#D8C5A8"/>
+    <SolidColorBrush x:Key="Dark" Color="#1B1610"/>
+  </Window.Resources>
+
+  <Window.Styles>
+    <Style Selector="TextBlock">
+      <Setter Property="Foreground" Value="{StaticResource Ink}"/>
+    </Style>
+    <Style Selector="TextBlock.eyebrow">
+      <Setter Property="FontSize" Value="11"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="LetterSpacing" Value="2"/>
+      <Setter Property="Foreground" Value="{StaticResource Gold}"/>
+    </Style>
+    <Style Selector="TextBlock.h1">
+      <Setter Property="FontSize" Value="46"/>
+      <Setter Property="FontWeight" Value="Black"/>
+      <Setter Property="LineHeight" Value="58"/>
+      <Setter Property="LetterSpacing" Value="-1"/>
+    </Style>
+    <Style Selector="TextBlock.muted">
+      <Setter Property="Foreground" Value="{StaticResource Muted}"/>
+    </Style>
+    <Style Selector="TextBlock.section">
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="LetterSpacing" Value="1.4"/>
+      <Setter Property="Foreground" Value="{StaticResource Muted}"/>
+    </Style>
+    <Style Selector="Button.cat">
+      <Setter Property="HorizontalContentAlignment" Value="Left"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="Padding" Value="10,9"/>
+      <Setter Property="Margin" Value="0,0,0,2"/>
+      <Setter Property="CornerRadius" Value="2"/>
+      <Setter Property="Foreground" Value="{StaticResource Ink}"/>
+      <Setter Property="FontSize" Value="13"/>
+    </Style>
+    <Style Selector="Button.cat:pointerover">
+      <Setter Property="Background" Value="#E8D8BF"/>
+    </Style>
+    <Style Selector="Button.cat.selected">
+      <Setter Property="Background" Value="{StaticResource Ink}"/>
+      <Setter Property="Foreground" Value="#FFF8EA"/>
+    </Style>
+    <Style Selector="Button.ghost">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="2"/>
+      <Setter Property="Padding" Value="13,7"/>
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Foreground" Value="{StaticResource Ink}"/>
+    </Style>
+    <Style Selector="Button.ghost:pointerover">
+      <Setter Property="BorderBrush" Value="{StaticResource Gold}"/>
+      <Setter Property="Background" Value="#F7EBD9"/>
+    </Style>
+    <Style Selector="Button.primary">
+      <Setter Property="Background" Value="{StaticResource Ink}"/>
+      <Setter Property="Foreground" Value="#FFF9ED"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="CornerRadius" Value="2"/>
+      <Setter Property="Padding" Value="16,11"/>
+      <Setter Property="FontSize" Value="13"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    <Style Selector="Button.primary:pointerover">
+      <Setter Property="Background" Value="{StaticResource Gold}"/>
+    </Style>
+    <Style Selector="Button.link">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="Padding" Value="0"/>
+      <Setter Property="FontSize" Value="11"/>
+      <Setter Property="Foreground" Value="{StaticResource Muted}"/>
+    </Style>
+    <Style Selector="Button.link:pointerover">
+      <Setter Property="Foreground" Value="{StaticResource Gold}"/>
+    </Style>
+    <Style Selector="TextBox.search">
+      <Setter Property="Background" Value="{StaticResource Paper}"/>
+      <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="2"/>
+      <Setter Property="Padding" Value="12,8"/>
+      <Setter Property="FontSize" Value="13"/>
+      <Setter Property="MinWidth" Value="250"/>
+    </Style>
+    <Style Selector="ListBox">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="Padding" Value="0"/>
+    </Style>
+    <Style Selector="ListBoxItem">
+      <Setter Property="Padding" Value="0"/>
+      <Setter Property="Margin" Value="0"/>
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="CornerRadius" Value="2"/>
+      <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+      <Setter Property="FocusAdorner" Value="{x:Null}"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}"
+                  CornerRadius="{TemplateBinding CornerRadius}"
+                  Padding="{TemplateBinding Padding}">
+            <ContentPresenter Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Stretch"/>
+          </Border>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    <Style Selector="ListBoxItem:pointerover">
+      <Setter Property="Background" Value="#F3E3C9"/>
+    </Style>
+    <Style Selector="ListBoxItem:selected">
+      <Setter Property="Background" Value="#E7D3B2"/>
+      <Setter Property="BorderBrush" Value="{StaticResource Gold}"/>
+      <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    <Style Selector="ListBoxItem:selected:pointerover">
+      <Setter Property="Background" Value="#E7D3B2"/>
+      <Setter Property="BorderBrush" Value="{StaticResource Gold}"/>
+      <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    <Style Selector="ComboBox">
+      <Setter Property="Background" Value="{StaticResource Paper}"/>
+      <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="CornerRadius" Value="2"/>
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Padding" Value="8,5"/>
+    </Style>
+  </Window.Styles>
+
+  <Grid RowDefinitions="*,34">
+    <Grid Grid.Row="0" ColumnDefinitions="252,*">
+      <!-- left rail -->
+      <Border Grid.Column="0" Background="#EFE2CD" BorderBrush="{StaticResource Line}" BorderThickness="0,0,1,0">
+        <Grid RowDefinitions="Auto,Auto,*,Auto" Margin="22,24,20,20">
+          <StackPanel Grid.Row="0" Spacing="14">
+            <StackPanel Orientation="Horizontal" Spacing="11">
+              <Border Width="34" Height="34" Background="{StaticResource Ink}" BorderBrush="{StaticResource Gold}" BorderThickness="1" CornerRadius="2">
+                <Image Source="avares://NaiWaWallpaper/Assets/logo.png" Stretch="UniformToFill"/>
+              </Border>
+              <StackPanel VerticalAlignment="Center" Spacing="1">
+                <TextBlock Text="奶蛙壁纸" FontSize="19" FontWeight="Black" LetterSpacing="0.5"/>
+                <TextBlock Text="NAIWA WALLPAPER" FontSize="9" FontWeight="SemiBold" LetterSpacing="2" Foreground="{StaticResource Gold}"/>
+              </StackPanel>
+            </StackPanel>
+            <Border Height="1" Background="{StaticResource Line}"/>
+          </StackPanel>
+
+          <StackPanel Grid.Row="1" Margin="0,20,0,0" Spacing="4">
+            <TextBlock Text="壁纸类别" Classes="section" Margin="10,0,0,8"/>
+            <Button x:Name="CatAll" Tag="all" Classes="cat" Content="全部壁纸  ·  205" Click="OnCategoryClick"/>
+            <Button x:Name="CatDesktop" Tag="desktop" Classes="cat" Content="桌面横屏  ·  73" Click="OnCategoryClick"/>
+            <Button x:Name="CatVertical" Tag="vertical" Classes="cat" Content="手机竖屏  ·  69" Click="OnCategoryClick"/>
+            <Button x:Name="CatSquare" Tag="square" Classes="cat" Content="方形大图  ·  34" Click="OnCategoryClick"/>
+            <Button x:Name="Cat4k" Tag="4k" Classes="cat" Content="4K 巨幕  ·  5" Click="OnCategoryClick"/>
+            <Button x:Name="CatPoses" Tag="poses" Classes="cat" Content="姿势壁纸  ·  24" Click="OnCategoryClick"/>
+            <Border Height="1" Background="{StaticResource Line}" Margin="10,10,10,8"/>
+            <Button x:Name="CatFav" Tag="favorites" Classes="cat" Content="我的收藏  ·  0" Click="OnCategoryClick"/>
+          </StackPanel>
+
+          <StackPanel Grid.Row="2" VerticalAlignment="Bottom" Spacing="10">
+            <Border Height="1" Background="{StaticResource Line}"/>
+            <TextBlock Text="自动轮换" Classes="section" Margin="0,4,0,0"/>
+            <ComboBox x:Name="AutoBox" SelectionChanged="OnAutoChanged">
+              <ComboBoxItem Content="关闭"/>
+              <ComboBoxItem Content="每 30 分钟"/>
+              <ComboBoxItem Content="每小时"/>
+              <ComboBoxItem Content="每天"/>
+            </ComboBox>
+            <Button Classes="link" Content="打开素材目录  ↗" HorizontalAlignment="Left" Click="OnOpenFolder"/>
+          </StackPanel>
+
+          <StackPanel Grid.Row="3" Margin="0,18,0,0" Spacing="5">
+            <Border Height="1" Background="{StaticResource Line}" Margin="0,0,0,8"/>
+            <TextBlock Text="205 张壁纸 · 本地离线" FontSize="11" Foreground="{StaticResource Muted}"/>
+            <TextBlock Text="v0.0.3 · Windows / Linux" FontSize="10" Foreground="{StaticResource Muted}"/>
+          </StackPanel>
+        </Grid>
+      </Border>
+
+      <!-- main -->
+      <Grid Grid.Column="1" RowDefinitions="Auto,*">
+        <Border Grid.Row="0" Padding="34,28,34,22" BorderBrush="{StaticResource Line}" BorderThickness="0,0,0,1">
+          <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,Auto">
+            <StackPanel Grid.Row="0" Grid.Column="0" Spacing="8">
+              <TextBlock Text="NAIWA WALLPAPER  /  WALLPAPER LIBRARY" Classes="eyebrow"/>
+              <TextBlock Text="把奶蛙，放到桌面上。" Classes="h1"/>
+              <TextBlock Text="选一张，预览，设为桌面壁纸。没有账号，没有广告，不联网。" Classes="muted" FontSize="13"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Spacing="10" VerticalAlignment="Top">
+              <TextBox x:Name="SearchBox" Classes="search" Watermark="搜索标题 / 类别 / 来源" TextChanged="OnSearchChanged"/>
+              <Button Classes="ghost" Content="随机一张" Click="OnRandomClick"/>
+            </StackPanel>
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" ColumnDefinitions="*,Auto" Margin="0,24,0,0">
+              <StackPanel Orientation="Horizontal" Spacing="12">
+                <TextBlock Text="{Binding CountText}" FontSize="12" FontWeight="Bold"/>
+                <TextBlock Text="·" FontSize="12" Foreground="{StaticResource Gold}"/>
+                <TextBlock Text="{Binding LibraryName}" Classes="muted" FontSize="12"/>
+              </StackPanel>
+              <TextBlock Grid.Column="1" Text="选中即预览" FontSize="11" Foreground="{StaticResource Muted}"/>
+            </Grid>
+          </Grid>
+        </Border>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,366">
+          <Grid Grid.Column="0" Margin="30,24,18,20" RowDefinitions="*">
+            <ListBox x:Name="WallList" ItemsSource="{Binding Visible}" SelectedItem="{Binding Selected, Mode=TwoWay}"
+                     SelectionChanged="OnSelectionChanged"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto">
+              <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+              </ListBox.ItemsPanel>
+              <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="models:WallpaperItem">
+                  <Border Width="208" Margin="0,0,12,16" Padding="0" Background="{StaticResource Paper}" BorderBrush="{StaticResource Line}" BorderThickness="1" CornerRadius="2">
+                    <StackPanel>
+                      <Border Height="124" ClipToBounds="True" Background="#1B1610">
+                        <Image Source="{Binding Thumb}" Stretch="Uniform"/>
+                      </Border>
+                      <StackPanel Margin="10,9,10,10" Spacing="2">
+                        <TextBlock Text="{Binding DisplayTitle}" FontSize="13" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
+                        <TextBlock Text="{Binding MetaLine}" FontSize="10" Foreground="{StaticResource Muted}" TextTrimming="CharacterEllipsis"/>
+                      </StackPanel>
+                    </StackPanel>
+                  </Border>
+                </DataTemplate>
+              </ListBox.ItemTemplate>
+            </ListBox>
+            <StackPanel x:Name="EmptyPanel" Grid.Row="0" IsVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="8">
+              <TextBlock x:Name="EmptyTitle" Text="{Binding EmptyTitle}" FontSize="22" FontWeight="Black" HorizontalAlignment="Center"/>
+              <TextBlock x:Name="EmptyBody" Text="{Binding EmptyBody}" Classes="muted" FontSize="12" HorizontalAlignment="Center"/>
+            </StackPanel>
+          </Grid>
+
+          <!-- detail -->
+          <Border x:Name="DetailPanel" Grid.Column="1" Margin="0,24,26,20" Background="{StaticResource Paper}" BorderBrush="{StaticResource Line}" BorderThickness="1" CornerRadius="2">
+            <Grid RowDefinitions="Auto,Auto,*,Auto" Margin="18,18,18,16">
+              <Border Grid.Row="0" Height="278" Background="{StaticResource Dark}" ClipToBounds="True" CornerRadius="1">
+                <Image x:Name="DetailImage" Source="{Binding Selected.Preview}" Stretch="Uniform"/>
+              </Border>
+
+              <StackPanel Grid.Row="1" Margin="0,15,0,0" Spacing="5">
+                <TextBlock Text="{Binding Selected.CategoryLabel}" Classes="eyebrow"/>
+                <TextBlock Text="{Binding Selected.DisplayTitle}" FontSize="25" FontWeight="Black" LineHeight="31" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding Selected.DetailMeta}" FontSize="11" Foreground="{StaticResource Muted}"/>
+              </StackPanel>
+
+              <StackPanel Grid.Row="2" Margin="0,14,0,0" Spacing="8">
+                <Border Height="1" Background="{StaticResource Line}"/>
+                <TextBlock Text="{Binding Selected.Source}" FontSize="11" Foreground="{StaticResource Muted}" TextWrapping="Wrap"/>
+                <TextBlock Text="本地原件直接解码；设为桌面时自动转成高质量 JPG。" FontSize="10" Foreground="{StaticResource Muted}" TextWrapping="Wrap"/>
+              </StackPanel>
+
+              <StackPanel Grid.Row="3" Spacing="8" Margin="0,14,0,0">
+                <Button x:Name="SetButton" Classes="primary" Content="设为桌面壁纸" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Click="OnSetClick"/>
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                  <Button Grid.Column="0" Classes="ghost" Content="{Binding FavoriteButtonText}" HorizontalContentAlignment="Center" Click="OnFavoriteClick"/>
+                  <Button Grid.Column="1" Classes="ghost" Content="下一张  →" HorizontalContentAlignment="Center" Click="OnNextClick"/>
+                </Grid>
+              </StackPanel>
+            </Grid>
+          </Border>
+        </Grid>
+      </Grid>
+    </Grid>
+
+    <!-- status bar -->
+    <Border Grid.Row="1" Background="{StaticResource Ink}" Padding="22,0">
+      <Grid ColumnDefinitions="*,Auto">
+        <TextBlock Text="{Binding Status}" Foreground="#EADCC8" FontSize="11" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Text="NAIWA WALLPAPER · LOCAL WALLPAPER CLIENT" Foreground="#A99478" FontSize="9" LetterSpacing="1" VerticalAlignment="Center"/>
+      </Grid>
+    </Border>
+  </Grid>
+</Window>
