@@ -1,21 +1,52 @@
 #!/usr/bin/env python3
-"""生成库房公开索引页（index.html），供 Cloudflare Pages / GitHub Pages 直接托管。
+"""生成奶蛙世界首页（index.html），供 Cloudflare Pages 直接托管。
 
-定位：这是**素材仓库的取货窗口**，不是展馆。只列目录、件数、体积、格式与取用方式，
-不铺大图墙——展示交给奶蛙艺术圣殿（NaiLoong-Universe）。
+定位：素材库不再只是取货窗口，而是一座由 410 件藏品长成的岛：
+九座聚落、今日三件、可搜索的藏品滩，以及留给开发者的取货口。
 
 用法：python3 scripts/build_site.py
 """
-import html
 import json
 import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 manifest = json.loads((ROOT / 'assets.json').read_text(encoding='utf-8'))
+items = manifest['items']
 
+ZONES = [
+    dict(id='museum', name='名画圣殿', icon='frame', cats=['classic'],
+         desc='世界名画被奶蛙重新签了名。', x=22, y=23,
+         cover='classic/奶蛙-蒙娜丽莎.jpg'),
+    dict(id='laugh', name='大笑山谷', icon='laugh', cats=['laugh-gallery'],
+         desc='笑声从山谷滚下来，捡一只带走。', x=49, y=17,
+         cover='laugh-gallery/奶蛙-仰头捧腹大笑.jpg'),
+    dict(id='emotes', name='表情集市', icon='sticker', cats=['emotes'],
+         desc='摊位上摆着今天所有的心情。', x=77, y=25,
+         cover='emotes/奶蛙-表情-妖娆模式.webp'),
+    dict(id='poses', name='姿势花园', icon='pose', cats=['poses', 'poses-wall'],
+         desc='换装、道具、棚拍，站成一排。', x=15, y=51,
+         cover='poses/奶蛙-姿势-上班族.webp'),
+    dict(id='pet', name='桌宠牧场', icon='paw', cats=['pet'],
+         desc='会动的小家伙，在屏幕上散步。', x=47, y=46,
+         cover='pet/奶蛙-桌宠-大笑帧.png'),
+    dict(id='art', name='奇想原野', icon='spark', cats=['art'],
+         desc='AI 长出的生活场景与怪点子。', x=82, y=53,
+         cover='art/奶蛙-喝奶茶的小奶蛙.jpg'),
+    dict(id='wall', name='壁纸海岸', icon='wave', cats=['hd', '4k', 'mobile'],
+         desc='横屏、竖屏、4K，把海贴到屏幕上。', x=24, y=78,
+         cover='4k/奶蛙-4K-托腮沉思-04.jpg'),
+    dict(id='film', name='圣影剧场', icon='film', cats=['frames', 'videos', 'fan-videos'],
+         desc='抽帧、短片、同人影像，循环放映。', x=55, y=81,
+         cover='frames/奶蛙-帧图-奶蛙的永恒-14s.png'),
+    dict(id='archive', name='档案馆', icon='box', cats=['audio', 'assets'],
+         desc='logo、笑声与所有底片。', x=82, y=75,
+         cover='assets/奶蛙-logo.jpg'),
+]
+
+by_file = {it['file']: it for it in items}
 by_cat = {}
-for it in manifest['items']:
+for it in items:
     by_cat.setdefault(it['category'], []).append(it)
 
 
@@ -23,96 +54,775 @@ def kb(n):
     return '%.0f KB' % (n / 1024) if n < 1024 * 1024 else '%.1f MB' % (n / 1048576)
 
 
-rows = []
-for c in manifest['categories']:
-    sub = by_cat.get(c['id'], [])
-    if not sub:
-        continue
-    exts = {}
-    for x in sub:
-        ext = os.path.splitext(x['file'])[1].lower().lstrip('.')
-        exts[ext] = exts.get(ext, 0) + 1
-    ext_txt = ' / '.join('%s×%d' % (k, v) for k, v in sorted(exts.items(), key=lambda kv: -kv[1]))
-    rows.append(
-        '<tr><td><code>%s/</code></td><td>%s</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>'
-        % (c['id'], html.escape(c['name']), len(sub), kb(sum(x['bytes'] for x in sub)),
-           ext_txt, html.escape(c['desc']))
-    )
+zone_payload = []
+for z in ZONES:
+    sub = [it for it in items if it['category'] in z['cats']]
+    cover = by_file.get(z['cover'])
+    if not cover or not cover.get('thumb'):
+        cover = next((it for it in sub if it.get('thumb') and it['type'] == 'image'), sub[0] if sub else None)
+    zone_payload.append({
+        'id': z['id'], 'name': z['name'], 'desc': z['desc'], 'icon': z['icon'],
+        'count': len(sub), 'cats': z['cats'],
+        'cover': cover['thumb'] if cover else '',
+        'coverAlt': cover['title'] if cover else '',
+        'bytes': sum(it.get('bytes', 0) for it in sub),
+        'xy': [z['x'], z['y']],
+    })
 
-rows_txt = '\n'.join(rows)
-cat_count = len([c for c in manifest['categories'] if c['count']])
+slim = []
+for it in items:
+    slim.append({
+        'i': it['id'], 'c': it['category'], 'cn': it['categoryName'],
+        't': it['title'], 'th': it['thumb'], 'w': it.get('width'),
+        'h': it.get('height'), 'ty': it['type'], 'n': it.get('narrative', ''),
+        'l': it.get('license', ''), 's': it.get('source', ''), 'r': it.get('raw', ''),
+    })
 
-page = f"""<!DOCTYPE html>
-<html lang="zh-CN">
+cat_count = len([c for c in manifest['categories'] if c.get('count')])
+
+
+def js_json(obj):
+    return json.dumps(obj, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+
+
+FAVICON = (
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E"
+    "%3Crect width='64' height='64' rx='14' fill='%2312100b'/%3E"
+    "%3Cpath d='M32 9c12 0 21 8 21 20 0 11-9 18-21 18S11 39 11 20C11 8 20 2 32 2Z' fill='%23FFD54F'/%3E"
+    "%3Ccircle cx='23' cy='23' r='7' fill='%2366BB6A'/%3E%3Ccircle cx='41' cy='23' r='7' fill='%2366BB6A'/%3E"
+    "%3Ccircle cx='23' cy='23' r='3' fill='%2313120d'/%3E%3Ccircle cx='41' cy='23' r='3' fill='%2313120d'/%3E"
+    "%3Cellipse cx='32' cy='43' rx='13' ry='10' fill='%23F2E3BE'/%3E%3C/svg%3E"
+)
+
+HTML = r'''<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>奶蛙素材库 · 取货窗口</title>
-<meta name="description" content="奶蛙素材仓库索引：{manifest['total']} 件素材、{cat_count} 个分类，附分类表、目录结构与机器可读清单。">
+<title>奶蛙世界 · __TOTAL__ 件藏品长成的岛</title>
+<meta name="description" content="奶蛙世界：__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影，附机器可读清单。">
+<link rel="icon" href="__FAVICON__">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
 <style>
-:root{{--bg:#0d0b09;--fg:#e8e0cf;--gold:#d9b45b;--dim:#8a7f68;--line:#2a231a}}
-*{{box-sizing:border-box;margin:0;padding:0}}
-body{{background:var(--bg);color:var(--fg);font:15px/1.7 "Noto Sans SC",-apple-system,"Segoe UI",sans-serif;padding:clamp(20px,4vw,56px)}}
-.wrap{{max-width:980px;margin:0 auto}}
-h1{{font-size:clamp(1.4rem,3vw,2rem);letter-spacing:.06em;color:var(--gold);font-weight:600;margin-bottom:6px}}
-.sub{{color:var(--dim);font-size:.8rem;letter-spacing:.14em;margin-bottom:24px}}
-p.lead{{color:#c3b9a4;font-size:.92rem;max-width:72ch;margin-bottom:24px}}
-.links{{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}}
-.links a{{color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:6px 12px;font-size:.78rem}}
-.links a:hover{{border-color:var(--gold)}}
-h2{{font-size:.78rem;letter-spacing:.2em;color:var(--dim);margin:30px 0 12px;font-weight:500}}
-table{{width:100%;border-collapse:collapse;font-size:.82rem}}
-th{{text-align:left;color:var(--dim);font-weight:500;font-size:.7rem;letter-spacing:.1em;padding:6px 10px 6px 0;border-bottom:1px solid var(--line)}}
-td{{padding:9px 10px 9px 0;border-bottom:1px solid rgba(42,35,26,.6);vertical-align:top}}
-td code{{color:var(--gold);font-size:.8rem}}
-td:nth-child(3),td:nth-child(4){{white-space:nowrap;color:var(--dim)}}
-td:last-child{{color:#a99f8c;font-size:.78rem}}
-pre{{background:#141109;border:1px solid var(--line);padding:16px;overflow-x:auto;font-size:.76rem;line-height:1.7;color:#b8ad95}}
-footer{{margin-top:38px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:.74rem}}
-footer a{{color:var(--gold)}}
+:root{
+  --bg:#0d0c09;--bg2:#13110c;--panel:#191610;--panel2:#211c13;
+  --ink:#efe5cf;--muted:#a79b82;--line:#342b1d;--dim:#7f735d;
+  --gold:#f1c24d;--green:#7cc36a;--sea:#081a1c;--sea2:#0d2426;
+  --sand:#d9c08a;--land:#33503a;--land2:#416647;--sea-line:#2b5a5f;
+  --shadow:0 22px 60px rgba(0,0,0,.45);
+  --display:"ZCOOL KuaiLe","Noto Sans SC",system-ui,sans-serif;
+  --body:"Noto Sans SC",-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#f6efdd;--bg2:#efe4cb;--panel:#fffaf0;--panel2:#f7ecd6;
+  --ink:#2d2618;--muted:#74684f;--line:#d8c7a4;--dim:#9b8a6a;
+  --gold:#a86f0d;--green:#4c8a3b;--sea:#a9d5d6;--sea2:#bfe1df;
+  --sand:#edd8a7;--land:#8db06a;--land2:#9fc07a;--sea-line:#79b6ba;
+  --shadow:0 20px 44px rgba(88,68,30,.16);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.75 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.skip{position:absolute;left:-999px;top:8px;z-index:20;background:var(--gold);color:var(--bg);padding:8px 14px}
+.skip:focus{left:8px}
+
+.wrap{width:min(1240px,92vw);margin:0 auto}
+
+/* ===== 顶栏 ===== */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top__in{width:min(1240px,92vw);margin:0 auto;display:flex;align-items:center;gap:28px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:21px;letter-spacing:.04em;white-space:nowrap}
+.brand svg{width:30px;height:30px;flex:none}
+.brand b{font-weight:400}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.nav a{text-decoration:none;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .25s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{right:0}
+.theme{flex:none;margin-left:auto;width:38px;height:38px;border:1px solid var(--line);background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.theme:hover{color:var(--gold);border-color:var(--gold)}
+.theme svg{width:18px;height:18px}
+.theme .moon{display:none}
+html[data-theme="light"] .theme .moon{display:block}
+html[data-theme="light"] .theme .sun{display:none}
+
+/* ===== 门厅 ===== */
+.hero{position:relative;overflow:hidden;padding:clamp(28px,4vw,56px) 0 clamp(34px,5vw,72px)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:center;min-height:calc(100vh - 66px)}
+.kicker{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;color:var(--muted);margin-bottom:22px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(58px,8.4vw,112px);line-height:.94;letter-spacing:.02em;color:var(--gold)}
+.hero h1 span{display:block}
+.hero h1 span:last-child{margin-left:.32em;color:var(--ink)}
+.lede{margin:26px 0 0;max-width:30em;color:var(--muted);font-size:clamp(15px,1.5vw,17px);line-height:1.85}
+.lede b{color:var(--ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0 0;max-width:560px}
+.stat{background:var(--bg);padding:12px 14px}
+.stat strong{display:block;font-family:var(--display);font-size:26px;line-height:1.1;color:var(--gold);font-weight:400}
+.stat span{display:block;font-size:11px;color:var(--muted);letter-spacing:.08em;margin-top:3px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg);text-decoration:none;padding:13px 22px;font-size:14px;font-weight:500;letter-spacing:.04em;border:1px solid var(--gold);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.link{font-size:13px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.link:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ===== 地图 ===== */
+.map-wrap{position:relative;border:1px solid var(--line);background:var(--sea);box-shadow:var(--shadow);aspect-ratio:1000/640}
+.map-wrap::before,.map-wrap::after{content:"";position:absolute;width:26px;height:26px;border:1px solid var(--gold);opacity:.55;pointer-events:none}
+.map-wrap::before{left:8px;top:8px;border-right:0;border-bottom:0}
+.map-wrap::after{right:8px;bottom:8px;border-left:0;border-top:0}
+.map{width:100%;height:100%;display:block}
+.map .sea{fill:var(--sea)}
+.map .sea-ring{fill:none;stroke:var(--sea-line);stroke-width:1;opacity:.45}
+.map .wave{fill:none;stroke:var(--sea-line);stroke-width:2;stroke-linecap:round;opacity:.5}
+.map .island-sand{fill:var(--sand)}
+.map .island-land{fill:var(--land)}
+.map .hill{fill:var(--land2);opacity:.9}
+.map .trail{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:3 9;stroke-linecap:round;opacity:.65}
+.map .tree-canopy{fill:var(--land2)}
+.map .tree-trunk{fill:#6b5433}
+.map .contour{fill:none;stroke:var(--sand);stroke-width:1.5;opacity:.18}
+.map .coast{fill:none;stroke:var(--sand);stroke-width:2;opacity:.32}
+.map .lake{fill:var(--sea)}
+.map .lake-shore{fill:none;stroke:var(--sand);stroke-width:3;opacity:.65}
+.map .river{fill:none;stroke:var(--sea);stroke-width:9;stroke-linecap:round;opacity:.85}
+.map .peak{fill:var(--land2);stroke:var(--gold);stroke-width:1;opacity:.55}
+.map .snow{fill:var(--sand);opacity:.6}
+.map .house-body{fill:var(--sand)}
+.map .house-roof{fill:#8a5a32}
+.map .boat{fill:var(--sand);stroke:#6b5433;stroke-width:1.5}
+.map .map-label{fill:var(--sea-line);font-family:var(--display);font-size:22px;letter-spacing:.16em;opacity:.55}
+.map .map-label--small{font-size:15px;letter-spacing:.1em;opacity:.7;fill:var(--sand)}
+.map .compass{fill:none;stroke:var(--gold);opacity:.5}
+.map .compass-fill{fill:var(--gold);opacity:.5}
+.pins{position:absolute;inset:0}
+.pin{position:absolute;left:calc(var(--x) * 1%);top:calc(var(--y) * 1%);transform:translate(-50%,-50%);background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;padding:0;color:var(--ink)}
+.pin__dot{width:42px;height:42px;border-radius:50%;background:var(--panel);border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .2s,background .2s}
+.pin__dot svg{width:20px;height:20px}
+.pin__label{font-size:12px;line-height:1.2;background:color-mix(in srgb,var(--panel) 88%,transparent);border:1px solid var(--line);padding:2px 7px;white-space:nowrap;color:var(--ink)}
+.pin__label small{color:var(--muted);margin-left:4px;font-size:10px}
+.pin:hover .pin__dot,.pin:focus-visible .pin__dot{transform:scale(1.12);background:var(--gold);color:var(--bg)}
+.pin:hover .pin__label{border-color:var(--gold)}
+.map-strip{display:none}
+.map-note{position:absolute;left:14px;bottom:12px;font-size:11px;color:var(--muted);background:color-mix(in srgb,var(--sea) 84%,transparent);padding:3px 8px;border:1px solid var(--sea-line);max-width:70%}
+
+/* ===== 区块骨架 ===== */
+.section{padding:clamp(54px,7vw,96px) 0;border-top:1px solid var(--line)}
+section[id]{scroll-margin-top:74px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:38px}
+.head h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1;letter-spacing:.03em}
+.head h2 em{font-style:normal;color:var(--gold)}
+.head p{max-width:38ch;color:var(--muted);font-size:13px;line-height:1.8;text-align:right}
+.squiggle{display:block;width:112px;height:8px;margin-top:12px;color:var(--gold);opacity:.75}
+
+/* ===== 九座聚落 ===== */
+.zones{background:var(--bg2)}
+.zone-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.zone{display:grid;grid-template-columns:104px minmax(0,1fr);gap:18px;align-items:center;background:var(--bg2);padding:18px;text-decoration:none;position:relative;transition:background .2s}
+.zone:hover{background:var(--panel)}
+.zone:hover .zone__cover img{transform:scale(1.04)}
+.zone__cover{width:104px;height:104px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.zone__cover img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.zone__meta small{display:block;font-size:11px;color:var(--muted);letter-spacing:.12em}
+.zone__meta h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.2;margin:4px 0 5px;color:var(--ink)}
+.zone__meta p{font-size:12px;color:var(--muted);line-height:1.65}
+.zone__count{font-size:12px;color:var(--gold);margin-top:6px;display:block}
+
+/* ===== 今日三件 ===== */
+.today-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);align-items:start}
+.today-main{position:relative}
+.today-main figure{aspect-ratio:4/3;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.today-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.today-main:hover img{transform:scale(1.03)}
+.today-main h3{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,38px);line-height:1.15;margin:18px 0 8px}
+.today-main p{color:var(--muted);font-size:14px;line-height:1.85;max-width:42em}
+.today-main a{display:inline-block;margin-top:12px;font-size:12px;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
+.today-side{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.today-mini{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;align-items:center;background:var(--bg2);padding:14px;text-decoration:none;transition:background .2s}
+.today-mini:hover{background:var(--panel)}
+.today-mini figure{width:132px;height:100px;overflow:hidden;background:var(--panel)}
+.today-mini img{width:100%;height:100%;object-fit:cover}
+.today-mini h4{font-family:var(--display);font-weight:400;font-size:19px;line-height:1.25;margin-bottom:4px}
+.today-mini p{font-size:12px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ===== 藏品滩 ===== */
+.collection{background:var(--bg2)}
+.filters{display:grid;gap:16px;margin-bottom:26px}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 2px;max-width:520px}
+.search svg{width:18px;height:18px;color:var(--muted);flex:none}
+.search input{width:100%;min-width:0;background:none;border:0;outline:0;font-size:14px;color:var(--ink);padding:4px 0}
+.search input::placeholder{color:var(--dim)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);font-size:12px;padding:7px 12px;cursor:pointer;letter-spacing:.04em}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.chip:hover{border-color:var(--gold);color:var(--ink)}
+.count{font-size:12px;color:var(--muted);letter-spacing:.04em}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.card{background:var(--panel);border:1px solid var(--line);text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;transition:border-color .2s,transform .2s;overflow:hidden}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card figure{width:100%;aspect-ratio:4/3;background:var(--bg);display:grid;place-items:center;overflow:hidden}
+.card figure img{width:100%;height:100%;object-fit:contain}
+.card__body{padding:10px 12px 13px;border-top:1px solid var(--line)}
+.card__cat{font-size:10px;letter-spacing:.1em;color:var(--gold)}
+.card__title{font-size:13px;line-height:1.4;margin-top:3px;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card__dim{font-size:10px;color:var(--dim);margin-top:5px}
+.more{display:flex;justify-content:center;margin-top:34px}
+.more button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:11px 26px;font-size:13px;letter-spacing:.06em;cursor:pointer}
+.more button:hover{border-color:var(--gold);color:var(--gold)}
+.more button[hidden]{display:none}
+
+/* ===== 取货口 ===== */
+.take{background:var(--bg)}
+.take details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}
+.take summary{cursor:pointer;font-family:var(--display);font-size:24px;color:var(--ink);list-style:none;display:flex;align-items:center;gap:12px}
+.take summary::-webkit-details-marker{display:none}
+.take summary span{width:22px;height:22px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);font-size:14px}
+.take[open] summary span{transform:rotate(45deg)}
+.take__body{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;margin-top:26px}
+.take pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;font-size:12px;line-height:1.9;color:var(--muted)}
+.take pre b{color:var(--gold);font-weight:400}
+.take__links{display:flex;flex-direction:column;gap:10px;font-size:13px}
+.take__links a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:8px;color:var(--muted)}
+.take__links a:hover{color:var(--gold);border-color:var(--gold)}
+.take__links small{display:block;color:var(--dim);font-size:11px;margin-top:2px}
+
+/* ===== 页脚 ===== */
+footer{border-top:1px solid var(--line);padding:26px 0 34px;font-size:12px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:28px;align-items:flex-start}
+.foot p{max-width:62ch;line-height:1.8}
+.foot a{color:var(--gold);text-decoration:none}
+.foot__meta{text-align:right;white-space:nowrap;font-size:11px;line-height:1.8}
+
+/* ===== 灯箱 ===== */
+dialog{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:0;width:min(1080px,94vw);max-height:90vh;margin:auto;box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
+.lb{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);min-height:420px}
+.lb figure{background:var(--bg);display:grid;place-items:center;padding:18px;max-height:84vh;overflow:hidden}
+.lb figure img{max-height:78vh;width:auto;max-width:100%;object-fit:contain}
+.lb__copy{padding:clamp(22px,3vw,38px);overflow-y:auto;max-height:84vh;border-left:1px solid var(--line)}
+.lb__cat{font-size:11px;letter-spacing:.12em;color:var(--gold)}
+.lb h3{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:8px 0 14px}
+.lb p{font-size:13px;line-height:1.9;color:var(--muted)}
+.lb dl{display:grid;grid-template-columns:64px minmax(0,1fr);gap:7px 12px;margin:20px 0;font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+.lb dt{color:var(--dim)}
+.lb dd{color:var(--ink);word-break:break-word}
+.lb a{display:inline-block;margin-top:6px;font-size:12px;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
+.lb__close{position:absolute;right:10px;top:10px;width:36px;height:36px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer;display:grid;place-items:center}
+.lb__close:hover{color:var(--gold);border-color:var(--gold)}
+.lb__close svg{width:16px;height:16px}
+
+/* ===== 响应 ===== */
+@media (max-width:1080px){
+  .hero__grid{grid-template-columns:1fr;min-height:0;gap:36px}
+  .hero h1{font-size:clamp(56px,12vw,92px)}
+  .lede{max-width:44em}
+  .map-wrap{max-width:820px}
+  .zone-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .take__body{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .top__in{gap:12px;height:58px}
+  .brand{font-size:18px}
+  .brand svg{width:26px;height:26px}
+  .nav{display:none}
+  .hero{padding-top:24px}
+  .hero h1{font-size:clamp(52px,16vw,78px)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}
+  .map-wrap{aspect-ratio:4/3}
+  .pin__dot{width:34px;height:34px}
+  .pin__dot svg{width:17px;height:17px}
+  .pin__label{display:none}
+  .map-strip{display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;scrollbar-width:none}
+  .map-strip::-webkit-scrollbar{display:none}
+  .strip{flex:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:12px;padding:8px 12px;white-space:nowrap;cursor:pointer}
+  .strip b{color:var(--gold);font-weight:500;margin-left:4px}
+  .map-note{font-size:10px;max-width:86%}
+  .head{flex-direction:column;align-items:flex-start;gap:12px}
+  .head p{text-align:left}
+  .zone-grid{grid-template-columns:1fr}
+  .zone{grid-template-columns:88px minmax(0,1fr);padding:14px}
+  .zone__cover{width:88px;height:88px}
+  .today-grid{grid-template-columns:1fr}
+  .today-main figure{aspect-ratio:4/3}
+  .today-mini{grid-template-columns:104px minmax(0,1fr)}
+  .today-mini figure{width:104px;height:92px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card__title{font-size:12px}
+  .lb{grid-template-columns:1fr}
+  .lb__copy{border-left:0;border-top:1px solid var(--line);max-height:none}
+  .lb figure{max-height:48vh;padding:10px}
+  .lb figure img{max-height:44vh}
+  .foot{flex-direction:column}
+  .foot__meta{text-align:left;white-space:normal}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>奶蛙素材库</h1>
-  <div class="sub">NAIWA ASSET VAULT · 取货窗口</div>
-  <p class="lead">这里是<b>素材仓库</b>，不是展厅：{manifest['total']} 件素材按分类平铺存放，每件配同名 <code>.txt</code> 档案（叙事 / 来源 / 许可）。
-  看策展过的成品，请去 <a href="https://nailoong-universe.pages.dev/" style="color:var(--gold)">奶蛙艺术圣殿</a>。</p>
+<a class="skip" href="#main">跳到正文</a>
 
-  <div class="links">
-    <a href="assets.json">assets.json · 机器可读清单</a>
-    <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">GitHub 仓库</a>
-    <a href="https://naiwa-wallpaper.pages.dev/" target="_blank" rel="noopener">壁纸扩展</a>
-    <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases" target="_blank" rel="noopener">打包下载</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 16l4-5 3 3 2-2 3 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-laugh" viewBox="0 0 24 24"><path d="M4 12c0 5 3.6 8 8 8s8-3 8-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 9h.01M16 9h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-sticker" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 14c1.4 1.6 2.8 2.4 4 2.4s2.6-.8 4-2.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9h.01M15 9h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-pose" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 10v6m0 0l-3 5m3-5l3 5M7 12h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="5" ry="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 13c2-2.4 4-2.4 6 0s4 2.4 6 0 4-2.4 6 0M3 18c2-2.4 4-2.4 6 0s4 2.4 6 0 4-2.4 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l5 3-5 3V9Z" fill="currentColor"/><path d="M3 9h2M19 9h2M3 15h2M19 15h2" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 8l8-4 8 4v9l-8 4-8-4V8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8l8 4 8-4M12 12v9" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-naiwa" viewBox="0 0 64 64"><path d="M32 8c12 0 21 8 21 20 0 11-9 18-21 18S11 39 11 20C11 8 20 2 32 2Z" fill="#FFD54F"/><circle cx="23" cy="23" r="7" fill="#66BB6A"/><circle cx="41" cy="23" r="7" fill="#66BB6A"/><circle cx="23" cy="23" r="3" fill="#14120c"/><circle cx="41" cy="23" r="3" fill="#14120c"/><ellipse cx="32" cy="43" rx="13" ry="10" fill="#F2E3BE"/><path d="M8 54c8-4 16-5 24-2s16 2 24-1" fill="none" stroke="#FFD54F" stroke-width="3" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top__in">
+    <a class="brand" href="#top"><svg><use href="#i-naiwa" xlink:href="#i-naiwa"/></svg><b>奶蛙世界</b></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#zones">聚落</a>
+      <a href="#today">今日</a>
+      <a href="#collection">藏品滩</a>
+      <a href="#take">取货口</a>
+      <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="切换明暗主题" aria-pressed="false">
+      <svg class="sun"><use href="#i-sun" xlink:href="#i-sun"/></svg>
+      <svg class="moon"><use href="#i-moon" xlink:href="#i-moon"/></svg>
+    </button>
   </div>
+</header>
 
-  <h2>分类一览</h2>
-  <table>
-    <thead><tr><th>目录</th><th>分类</th><th>件数</th><th>体积</th><th>格式</th><th>说明</th></tr></thead>
-    <tbody>
-{rows_txt}
-    </tbody>
-  </table>
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <div class="kicker">奶蛙世界 · NAIWA WORLD</div>
+        <h1><span>奶蛙</span><span>世界</span></h1>
+        <p class="lede">__TOTAL__ 件藏品没有锁在仓库里。它们长成了一座岛：九座聚落、十五种分类，从名画到桌宠，从表情到圣影。点一下地图，就落到你想去的那一滩。</p>
+        <div class="stats" aria-label="世界概况">
+          <div class="stat"><strong>__TOTAL__</strong><span>件藏品</span></div>
+          <div class="stat"><strong>9</strong><span>座聚落</span></div>
+          <div class="stat"><strong>__CAT_COUNT__</strong><span>种分类</span></div>
+          <div class="stat"><strong>__VERSION__</strong><span>当前版本</span></div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#zones">沿着地图走 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="link" href="#today">先看今日三件</a>
+        </div>
+      </div>
 
-  <h2>取用方式</h2>
-  <pre># 单件直链（GitHub raw，跟随改名跳转）
+      <div class="map-wrap" aria-label="奶蛙世界地图">
+        <svg class="map" viewBox="0 0 1000 640" role="img" aria-label="九座聚落分布在一座岛上">
+          <rect class="sea" width="1000" height="640"/>
+          <g class="wave" aria-hidden="true">
+            <path d="M40 96q18-14 36 0t36 0"/><path d="M84 560q18-14 36 0t36 0"/><path d="M886 118q18-14 36 0t36 0"/>
+            <path d="M916 566q18-14 36 0t36 0"/><path d="M62 300q18-14 36 0t36 0"/><path d="M876 330q18-14 36 0t36 0"/>
+            <path d="M420 56q18-14 36 0t36 0"/><path d="M470 602q18-14 36 0t36 0"/>
+          </g>
+          <path class="sea-ring" d="M120 330c0-160 160-250 380-250s400 110 400 260-190 240-400 240S120 470 120 330Z"/>
+          <path class="island-sand" d="M172 352c-24-72 17-150 102-188 68-30 133-18 198-40 75-25 160-16 230 22s132 96 144 168c13 74-30 137-94 174-68 39-138 48-208 32-74-17-130 24-208 9-82-16-142-101-164-196Z"/>
+          <path class="island-land" d="M196 350c-20-64 20-132 96-166 63-27 124-16 186-37 70-23 150-14 214 22s120 86 130 152c11 65-28 120-86 152-63 35-128 43-192 29-68-15-120 22-192 8-74-15-130-92-154-170Z"/>
+          <path class="coast" d="M225 345c-14-56 24-118 92-148 60-26 118-15 178-35 68-23 142-13 202 21s112 82 122 144c10 60-28 112-82 142-60 33-120 40-180 27-64-14-112 20-178 7-68-14-124-88-144-158Z"/>
+          <path class="contour" d="M300 330c60-20 120 0 160-30"/>
+          <path class="contour" d="M650 300c50 30 90 70 110 110"/>
+          <path class="contour" d="M360 470c60 30 120 20 160 40"/>
+          <g class="peaks" aria-hidden="true">
+            <path class="peak" d="M270 292 300 232 330 292Z"/><path class="snow" d="M290 252 300 232 310 252 302 248 296 254Z"/>
+            <path class="peak" d="M330 300 354 258 378 300Z"/><path class="snow" d="M347 271 354 258 361 271 355 268 350 273Z"/>
+            <path class="peak" d="M376 292 398 252 420 292Z"/><path class="snow" d="M392 265 398 252 404 265 399 262 395 267Z"/>
+          </g>
+          <g class="houses" aria-hidden="true">
+            <g transform="translate(198 196)"><rect class="house-body" x="-8" y="-5" width="16" height="11"/><path class="house-roof" d="M-11-5 0-15 11-5Z"/></g>
+            <g transform="translate(742 214)"><rect class="house-body" x="-8" y="-5" width="16" height="11"/><path class="house-roof" d="M-11-5 0-15 11-5Z"/></g>
+            <g transform="translate(178 368)"><rect class="house-body" x="-8" y="-5" width="16" height="11"/><path class="house-roof" d="M-11-5 0-15 11-5Z"/></g>
+            <g transform="translate(790 404)"><rect class="house-body" x="-8" y="-5" width="16" height="11"/><path class="house-roof" d="M-11-5 0-15 11-5Z"/></g>
+            <g transform="translate(604 486)"><rect class="house-body" x="-8" y="-5" width="16" height="11"/><path class="house-roof" d="M-11-5 0-15 11-5Z"/></g>
+          </g>
+          <ellipse class="lake" cx="565" cy="382" rx="96" ry="50"/>
+          <ellipse class="lake-shore" cx="565" cy="382" rx="96" ry="50"/>
+          <ellipse class="hill" cx="565" cy="382" rx="18" ry="11"/>
+          <path class="river" d="M565 432c-7 28 18 54 40 78"/>
+          <text class="map-label map-label--small" x="516" y="392">奶蛙湖</text>
+          <g class="boat" transform="translate(110 424)" aria-hidden="true">
+            <path d="M-18 0q18 10 36 0l-6 10h-24Z"/><path d="M0-2V-26L14-2Z" fill="none" stroke="#6b5433" stroke-width="1.5"/>
+          </g>
+          <g class="tree" transform="translate(620 300)"><path class="tree-trunk" d="M0 11v-8"/><circle class="tree-canopy" cx="0" cy="-2" r="8"/><circle class="tree-canopy" cx="-7" cy="3" r="5"/><circle class="tree-canopy" cx="7" cy="3" r="5"/></g>
+          <g class="tree" transform="translate(660 452)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+          <g class="tree" transform="translate(380 402)"><path class="tree-trunk" d="M0 11v-8"/><circle class="tree-canopy" cx="0" cy="-2" r="8"/><circle class="tree-canopy" cx="-7" cy="3" r="5"/><circle class="tree-canopy" cx="7" cy="3" r="5"/></g>
+          <g class="tree" transform="translate(520 470)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+          <g class="tree" transform="translate(252 472)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+          <g class="tree" transform="translate(706 486)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+          <g clip-path="url(#islandClip)">
+            <path class="hill" d="M292 302c26-42 78-58 116-34 30 19 34 60 8 82-30 25-90 22-112-6-12-15-15-31-12-42Z"/>
+            <path class="hill" d="M520 250c22-33 64-42 92-20 24 19 22 52-2 68-28 19-72 13-88-8-9-12-10-28-2-40Z"/>
+            <path class="hill" d="M648 380c18-27 52-34 76-17 20 15 18 42-2 56-23 16-60 11-73-6-7-10-8-23-1-33Z"/>
+            <g class="tree" transform="translate(250 404)"><path class="tree-trunk" d="M0 12v-9"/><circle class="tree-canopy" cx="0" cy="-2" r="9"/><circle class="tree-canopy" cx="-8" cy="3" r="6"/><circle class="tree-canopy" cx="8" cy="3" r="6"/></g>
+            <g class="tree" transform="translate(292 434)"><path class="tree-trunk" d="M0 11v-8"/><circle class="tree-canopy" cx="0" cy="-2" r="8"/><circle class="tree-canopy" cx="-7" cy="3" r="5"/><circle class="tree-canopy" cx="7" cy="3" r="5"/></g>
+            <g class="tree" transform="translate(366 458)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+            <g class="tree" transform="translate(420 240)"><path class="tree-trunk" d="M0 11v-8"/><circle class="tree-canopy" cx="0" cy="-2" r="8"/><circle class="tree-canopy" cx="-7" cy="3" r="5"/><circle class="tree-canopy" cx="7" cy="3" r="5"/></g>
+            <g class="tree" transform="translate(700 300)"><path class="tree-trunk" d="M0 12v-9"/><circle class="tree-canopy" cx="0" cy="-2" r="9"/><circle class="tree-canopy" cx="-8" cy="3" r="6"/><circle class="tree-canopy" cx="8" cy="3" r="6"/></g>
+            <g class="tree" transform="translate(746 336)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+            <g class="tree" transform="translate(760 460)"><path class="tree-trunk" d="M0 11v-8"/><circle class="tree-canopy" cx="0" cy="-2" r="8"/><circle class="tree-canopy" cx="-7" cy="3" r="5"/><circle class="tree-canopy" cx="7" cy="3" r="5"/></g>
+            <g class="tree" transform="translate(324 514)"><path class="tree-trunk" d="M0 10v-7"/><circle class="tree-canopy" cx="0" cy="-2" r="7"/><circle class="tree-canopy" cx="-6" cy="2" r="4"/><circle class="tree-canopy" cx="6" cy="2" r="4"/></g>
+          </g>
+          <path class="trail" d="M220 150c80-30 180-45 260-40 100 10 170 35 240 75 60 35 50 115 20 185-25 70-60 95-120 95-95 5-180 5-270 0-70-10-110-70-100-130 10-60 20-140 70-180Z"/>
+          <g class="compass" transform="translate(90 540)">
+            <circle r="26" fill="none" stroke-width="1"/><circle r="18" fill="none" stroke-width="1" opacity=".6"/>
+            <path class="compass-fill" d="M0-22 5 2 0-2-5 2Z"/><path d="M0 22 4 4 0 7-4 4Z" fill="none" stroke-width="1"/>
+          </g>
+          <text class="map-label" x="52" y="70" transform="rotate(-6 52 70)">奶蛙洋</text>
+          <text class="map-label" x="812" y="58" transform="rotate(4 812 58)">大笑湾</text>
+          <text class="map-label" x="792" y="600" transform="rotate(-3 792 600)">软糖海峡</text>
+          <defs><clipPath id="islandClip"><path d="M196 350c-20-64 20-132 96-166 63-27 124-16 186-37 70-23 150-14 214 22s120 86 130 152c11 65-28 120-86 152-63 35-128 43-192 29-68-15-120 22-192 8-74-15-130-92-154-170Z"/></clipPath></defs>
+        </svg>
+        <div class="pins">__PINS__</div>
+        <p class="map-note">点击任一聚落，滩上只留下那一类。</p>
+      </div>
+      <div class="map-strip" aria-label="聚落快捷入口">__MAP_STRIP__</div>
+    </div>
+  </section>
+
+  <section class="section zones" id="zones">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>九座<em>聚落</em></h2>
+          <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p>每座聚落按类别定居。点进去，下面的藏品滩会自动只留下这一类的居民。</p>
+      </div>
+      <div class="zone-grid" id="zoneGrid">__ZONE_CARDS__</div>
+    </div>
+  </section>
+
+  <section class="section" id="today">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>今日<em>三件</em></h2>
+          <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p>每天从藏品里挑三件，按日期轮换。今天先看这几件，再决定从哪一滩开始。</p>
+      </div>
+      <div class="today-grid" id="todayGrid"></div>
+    </div>
+  </section>
+
+  <section class="section collection" id="collection">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>藏品<em>滩</em></h2>
+          <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p id="count" class="count">正在数藏品……</p>
+      </div>
+      <div class="filters">
+        <label class="search">
+          <svg><use href="#i-search" xlink:href="#i-search"/></svg>
+          <input id="q" type="search" placeholder="搜标题、展签、来源" aria-label="搜索藏品" autocomplete="off">
+        </label>
+        <div class="chips" id="chips" role="group" aria-label="按聚落筛选"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="more"><button id="more" type="button">再拾 24 件</button></div>
+    </div>
+  </section>
+
+  <section class="section take" id="take">
+    <div class="wrap">
+      <details>
+        <summary><span>+</span>取货口 · 给开发者</summary>
+        <div class="take__body">
+          <pre># 单件直链（GitHub raw，跟随改名跳转）
 https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/&lt;分类&gt;/&lt;文件名&gt;
 
 # 或走 Cloudflare 图床（开 CORS，可直接当壁纸 URL）
-{manifest['rawBase']}&lt;分类&gt;/&lt;文件名&gt;
+__RAW_BASE__&lt;分类&gt;/&lt;文件名&gt;
 
 # 按清单程序化取用
-curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/assets.json
-</pre>
+curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/assets.json</pre>
+          <div class="take__links">
+            <a href="assets.json">assets.json · __TOTAL__ 件全量清单<small>标题 / 尺寸 / 展签 / 许可 / 来源</small></a>
+            <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">GitHub 仓库<small>Nailong-Studio/NaiWa-Wallpaper</small></a>
+            <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases" target="_blank" rel="noopener">打包下载<small>Release 附件</small></a>
+            <a href="https://naiwa-wallpaper.pages.dev/" target="_blank" rel="noopener">奶蛙壁纸扩展<small>新标签页内置 __EXT_COUNT__ 张</small></a>
+            <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">奶蛙艺术圣殿<small>策展过的成品展厅</small></a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    素材 {manifest['total']} 件 · 版本 {manifest['sourceVersion']} · 更新于 {manifest['generated']}。
-    奶蛙为民间二创形象，角色原型权利归原权利人；本库只收录许可允许再分发的素材，逐件来源见同名 <code>.txt</code>。
-    若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后下架。
-  </footer>
-</div>
+<footer>
+  <div class="wrap foot">
+    <p>奶蛙是民间二创形象，角色原型权利归原权利人。本库只收录许可允许再分发的素材，逐件来源与许可见同名 <code>.txt</code>。若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后下架。</p>
+    <div class="foot__meta">__TOTAL__ 件藏品 · v__VERSION__ · __DATE__<br>NAIWA WORLD / Nailong-Studio</div>
+  </div>
+</footer>
+
+<dialog id="lightbox" aria-label="藏品详情">
+  <button class="lb__close" id="lbClose" type="button" aria-label="关闭"><svg><use href="#i-close" xlink:href="#i-close"/></svg></button>
+  <div class="lb">
+    <figure><img id="lbImg" alt=""></figure>
+    <div class="lb__copy">
+      <div class="lb__cat" id="lbCat"></div>
+      <h3 id="lbTitle"></h3>
+      <p id="lbNarr"></p>
+      <dl>
+        <dt>尺寸</dt><dd id="lbDim">—</dd>
+        <dt>许可</dt><dd id="lbLicense">—</dd>
+        <dt>来源</dt><dd id="lbSource">—</dd>
+      </dl>
+      <a id="lbRaw" href="#" target="_blank" rel="noopener">打开原件 ↗</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const ZONES = __ZONES_JSON__;
+const ITEMS = __ITEMS_JSON__;
+const TOTAL = __TOTAL__;
+const EXT_COUNT = __EXT_COUNT__;
+const grid = document.getElementById('grid');
+const chips = document.getElementById('chips');
+const countEl = document.getElementById('count');
+const moreBtn = document.getElementById('more');
+const q = document.getElementById('q');
+const state = { zone: 'all', q: '', shown: 24 };
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+function zoneOf(id) { return ZONES.find(function (z) { return z.id === id; }); }
+function inZone(it) {
+  if (state.zone === 'all') return true;
+  const z = zoneOf(state.zone);
+  return z ? z.cats.indexOf(it.c) > -1 : true;
+}
+function filtered() {
+  const needle = state.q.trim().toLowerCase();
+  return ITEMS.filter(function (it) {
+    if (!inZone(it)) return false;
+    if (!needle) return true;
+    return (it.t + ' ' + it.n + ' ' + it.s + ' ' + it.cn).toLowerCase().indexOf(needle) > -1;
+  });
+}
+function card(it, idx) {
+  const dim = it.w && it.h ? it.w + ' × ' + it.h : (it.ty === 'video' ? '影像' : '音频');
+  return '<button class="card" type="button" data-idx="' + idx + '">' +
+    '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy" decoding="async"></figure>' +
+    '<div class="card__body"><div class="card__cat">' + esc(it.cn) + '</div>' +
+    '<div class="card__title">' + esc(it.t) + '</div>' +
+    '<div class="card__dim">' + dim + '</div></div></button>';
+}
+function render() {
+  const list = filtered();
+  const slice = list.slice(0, state.shown);
+  grid.innerHTML = slice.map(card).join('');
+  countEl.textContent = '滩上 ' + list.length + ' 件 · 已铺开 ' + slice.length + ' 件';
+  moreBtn.hidden = slice.length >= list.length;
+  moreBtn.textContent = '再拾 ' + Math.min(24, list.length - slice.length) + ' 件';
+}
+function setZone(id) {
+  state.zone = id;
+  state.shown = 24;
+  Array.from(chips.children).forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.zone === id ? 'true' : 'false');
+  });
+  render();
+}
+function buildChips() {
+  const all = document.createElement('button');
+  all.className = 'chip'; all.type = 'button'; all.dataset.zone = 'all';
+  all.textContent = '全部 ' + TOTAL; all.setAttribute('aria-pressed', 'true');
+  chips.appendChild(all);
+  ZONES.forEach(function (z) {
+    const b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.dataset.zone = z.id;
+    b.textContent = z.name + ' ' + z.count; b.setAttribute('aria-pressed', 'false');
+    chips.appendChild(b);
+  });
+  chips.addEventListener('click', function (e) {
+    const b = e.target.closest('.chip');
+    if (b) setZone(b.dataset.zone);
+  });
+}
+
+// ===== 今日三件 =====
+function renderToday() {
+  const pool = ITEMS.filter(function (it) {
+    return it.ty === 'image' && it.w >= 900 && it.n && it.n.length > 16;
+  });
+  if (!pool.length) return;
+  const d = new Date();
+  const seed = d.getFullYear() * 372 + (d.getMonth() + 1) * 31 + d.getDate();
+  const picked = [];
+  for (let k = 0; k < 3; k++) {
+    let idx = (seed * 7 + k * 137) % pool.length;
+    let guard = 0;
+    while (picked.indexOf(pool[idx]) > -1 && guard < pool.length) { idx = (idx + 1) % pool.length; guard++; }
+    picked.push(pool[idx]);
+  }
+  const main = picked[0];
+  const mainHtml = '<article class="today-main">' +
+    '<figure><img src="' + esc(main.r || main.th) + '" alt="' + esc(main.t) + '" loading="lazy"></figure>' +
+    '<h3>' + esc(main.t) + '</h3><p>' + esc(main.n) + '</p>' +
+    '<a href="#collection" data-today="' + esc(main.i) + '">去藏品滩找它</a></article>';
+  const sideHtml = '<div class="today-side">' + picked.slice(1).map(function (it) {
+    return '<a class="today-mini" href="#collection" data-today="' + esc(it.i) + '">' +
+      '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy"></figure>' +
+      '<div><h4>' + esc(it.t) + '</h4><p>' + esc(it.n) + '</p></div></a>';
+  }).join('') + '</div>';
+  document.getElementById('todayGrid').innerHTML = mainHtml + sideHtml;
+  const mainImg = document.querySelector('.today-main img');
+  if (mainImg) mainImg.addEventListener('error', function () { this.src = main.th; }, { once: true });
+}
+document.getElementById('todayGrid').addEventListener('click', function (e) {
+  const a = e.target.closest('[data-today]');
+  if (!a) return;
+  e.preventDefault();
+  const it = ITEMS.find(function (x) { return x.i === a.dataset.today; });
+  if (it) { openItem(it); }
+});
+
+// ===== 灯箱 =====
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+function openItem(it) {
+  lbCat.textContent = it.cn;
+  lbTitle.textContent = it.t;
+  lbNarr.textContent = it.n || '这件还没有展签。';
+  lbDim.textContent = (it.w && it.h) ? it.w + ' × ' + it.h : (it.ty === 'video' ? '影像' : '音频');
+  lbLicense.textContent = it.l || '见同名 .txt';
+  lbSource.textContent = it.s || '—';
+  lbRaw.href = it.r || '#';
+  lbImg.alt = it.t;
+  lbImg.dataset.full = it.r || '';
+  lbImg.src = it.th;
+  if (it.r && it.r !== it.th) {
+    const full = new Image();
+    full.onload = function () {
+      if (lb.open && lbImg.dataset.full === it.r) lbImg.src = it.r;
+    };
+    full.src = it.r;
+  }
+  lb.showModal();
+}
+grid.addEventListener('click', function (e) {
+  const b = e.target.closest('.card');
+  if (!b) return;
+  const list = filtered();
+  const it = list[Number(b.dataset.idx)];
+  if (it) openItem(it);
+});
+document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && lb.open) lb.close();
+});
+
+// ===== 主题 =====
+const root = document.documentElement;
+const themeBtn = document.getElementById('theme');
+function setTheme(t) {
+  root.dataset.theme = t;
+  themeBtn.setAttribute('aria-pressed', t === 'light' ? 'true' : 'false');
+  try { localStorage.setItem('naiwa-world-theme', t); } catch (e) {}
+}
+let stored = null;
+try { stored = localStorage.getItem('naiwa-world-theme'); } catch (e) {}
+setTheme(stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+themeBtn.addEventListener('click', function () {
+  setTheme(root.dataset.theme === 'light' ? 'dark' : 'light');
+});
+
+// ===== 交互装配 =====
+document.getElementById('zoneGrid').addEventListener('click', function (e) {
+  const a = e.target.closest('.zone');
+  if (!a) return;
+  e.preventDefault();
+  setZone(a.dataset.zone);
+  document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelectorAll('.pin,.strip').forEach(function (p) {
+  p.addEventListener('click', function () {
+    setZone(p.dataset.zone);
+    document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+q.addEventListener('input', function () {
+  state.q = q.value; state.shown = 24; render();
+});
+moreBtn.addEventListener('click', function () {
+  state.shown += 24; render();
+});
+
+buildChips();
+renderToday();
+render();
+</script>
 </body>
 </html>
-"""
+'''
+
+PINS = []
+ZONE_CARDS = []
+for z in zone_payload:
+    PINS.append(
+        '<button class="pin" type="button" data-zone="%s" style="--x:%s;--y:%s" aria-label="%s，%d 件">'
+        '<span class="pin__dot"><svg><use href="#i-%s" xlink:href="#i-%s"/></svg></span>'
+        '<span class="pin__label">%s<small>%d</small></span></button>'
+        % (z['id'], z['xy'][0], z['xy'][1], z['name'], z['count'], z['icon'], z['icon'], z['name'], z['count'])
+    )
+    ZONE_CARDS.append(
+        '<a class="zone" href="#collection" data-zone="%s">'
+        '<div class="zone__cover"><img src="%s" alt="%s" loading="lazy" decoding="async"></div>'
+        '<div class="zone__meta"><h3>%s</h3><p>%s</p>'
+        '<span class="zone__count">%d 件 · %s</span></div></a>'
+        % (z['id'], z['cover'], z['coverAlt'], z['name'], z['desc'], z['count'], kb(z['bytes']))
+    )
+
+MAP_STRIP = []
+for z in zone_payload:
+    MAP_STRIP.append('<button class="strip" type="button" data-zone="%s">%s<b>%d</b></button>'
+                     % (z['id'], z['name'], z['count']))
+
+EXT_COUNT = 206  # NaiWa-NewTab v1.7.4 的线上清单
+
+page = (HTML
+        .replace('__PINS__', '\n'.join(PINS))
+        .replace('__MAP_STRIP__', ''.join(MAP_STRIP))
+        .replace('__ZONE_CARDS__', '\n'.join(ZONE_CARDS))
+        .replace('__ZONES_JSON__', js_json(zone_payload))
+        .replace('__ITEMS_JSON__', js_json(slim))
+        .replace('__FAVICON__', FAVICON)
+        .replace('__RAW_BASE__', manifest['rawBase'])
+        .replace('__CAT_COUNT__', str(cat_count))
+        .replace('__VERSION__', manifest['sourceVersion'])
+        .replace('__DATE__', manifest['generated'])
+        .replace('__EXT_COUNT__', str(EXT_COUNT))
+        .replace('__TOTAL__', str(manifest['total'])))
+
 (ROOT / 'index.html').write_text(page, encoding='utf-8')
-print('index.html written: %d items, %d categories' % (manifest['total'], cat_count))
+print('index.html written: %d items, %d zones, %d categories, %.1f KB'
+      % (manifest['total'], len(zone_payload), cat_count, len(page.encode('utf-8')) / 1024))

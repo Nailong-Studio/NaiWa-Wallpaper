@@ -17,12 +17,14 @@
 
 ## What this is
 
-A warehouse, not a gallery. This repository stores the raw NaiWa assets —
+A warehouse with a map at the door. This repository stores the raw NaiWa assets —
 paintings, stickers, 3D poses, animated frames, wallpapers, short films — with a
 licence record for every single file. Curation, storytelling and presentation
 happen in the museum repository, [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe).
 
-The split is deliberate: **this repo registers and delivers, that repo narrates.**
+The split is deliberate: **this repo registers and delivers, that repo narrates.** The
+live index is now a nine-settlement island over the same 410 files — browse, read a
+label, then take the file.
 
 ## Take what you need
 
@@ -35,7 +37,7 @@ curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/as
 # 2. Direct file access through the CDN
 https://nailoong-wallpaper.pages.dev/<category>/<filename>
 
-# 3. Browse the index page
+# 3. Browse the index as a world map
 open https://nailoong-wallpaper.pages.dev/
 ```
 

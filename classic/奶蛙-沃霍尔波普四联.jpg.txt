@@ -1,6 +1,6 @@
 奶蛙-沃霍尔波普四联 · 奶蛙艺术圣殿 · 圣典名画系列
 
-同一张奶蛙脸重复四次，换成荧光粉、蓝、橙、黄四套配色。
+同一张奶蛙脸重复四次：青、蓝、紫、黄四只奶蛙，分别压在玫红、黄绿、橙、青的背景上。
 来源：nit5607/naiwa-art-style（MIT）· https://github.com/nit5607/naiwa-art-style/blob/main/showcase/24_warhol_pop_grid.jpg
 版权：nit5607/naiwa-art-style（MIT）
 许可：MIT
