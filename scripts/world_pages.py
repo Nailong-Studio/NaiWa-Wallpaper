@@ -414,7 +414,7 @@ FOOTER = r'''<footer>
   <div class="star-callout__copy">
     <span class="star-callout__mark" aria-hidden="true">★</span>
     <div>
-      <strong>如果这些奶蛙帮你省了找图的时间，去 GitHub 给三个项目各点一颗 Star。</strong>
+      <strong>如果这些奶蛙让你笑了一下，去 GitHub 给五个项目各点一颗 Star。</strong>
       <small>Star 是公开的收藏，不用打赏，也不用注册新账号。</small>
     </div>
   </div>
@@ -422,6 +422,8 @@ FOOTER = r'''<footer>
     <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">素材仓库 ↗</a>
     <a href="https://github.com/Nailong-Studio/NaiWa-NewTab" target="_blank" rel="noopener">新标签页扩展 ↗</a>
     <a href="https://github.com/Nailong-Studio/NaiLoong-Universe" target="_blank" rel="noopener">艺术圣殿 ↗</a>
+    <a href="https://github.com/Nailong-Studio/naiwa" target="_blank" rel="noopener">像素游戏 ↗</a>
+    <a href="https://github.com/Nailong-Studio/naiwa-pixel-stickers" target="_blank" rel="noopener">像素表情技能 ↗</a>
   </div>
 </div>
   <div class="wrap foot">

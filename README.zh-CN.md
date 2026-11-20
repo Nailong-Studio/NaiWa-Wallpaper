@@ -265,7 +265,7 @@ Windows / Linux 便携包见 [desktop-v0.0.3 Release](https://github.com/Nailong
 
 
 
-拿图请随意，[点星](https://github.com/Nailong-Studio/NaiLoong-Universe) 请顺手。
+拿图请随意。如果奶蛙系列让你笑了一下，给五个项目各点一颗 Star：[素材仓库](https://github.com/Nailong-Studio/NaiWa-Wallpaper)、[艺术圣殿](https://github.com/Nailong-Studio/NaiLoong-Universe)、[新标签页扩展](https://github.com/Nailong-Studio/NaiWa-NewTab)、[像素游戏](https://github.com/Nailong-Studio/naiwa)、[像素表情技能](https://github.com/Nailong-Studio/naiwa-pixel-stickers)。
 
 
 

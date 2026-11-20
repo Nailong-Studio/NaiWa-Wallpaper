@@ -119,6 +119,6 @@ dotnet publish src/NaiWaWallpaper.csproj -c Release -r linux-x64 --self-containe
 - Windows：`%LocalAppData%\NaiWaWallpaper`
 - Linux：`~/.local/share/NaiWaWallpaper`
 
-## 给项目点 Star
+## 给五个奶蛙项目点 Star
 
-如果奶蛙桌面帮你省了找壁纸的时间，去 [NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper) 给仓库点一颗 Star。桌面端源码也在同一个仓库的 `desktop/` 目录。
+如果奶蛙桌面帮你省了找壁纸的时间，去 GitHub 给五个项目各点一颗 Star：[素材仓库](https://github.com/Nailong-Studio/NaiWa-Wallpaper)、[艺术圣殿](https://github.com/Nailong-Studio/NaiLoong-Universe)、[新标签页扩展](https://github.com/Nailong-Studio/NaiWa-NewTab)、[像素游戏](https://github.com/Nailong-Studio/naiwa)、[像素表情技能](https://github.com/Nailong-Studio/naiwa-pixel-stickers)。桌面端源码也在素材仓库的 `desktop/` 目录。
