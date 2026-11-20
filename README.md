@@ -98,7 +98,7 @@ portrait (≤0.72:1) and near-square. Pure emote thumbnails, desktop-pet frame
 sequences, audio and video are excluded from the wallpaper pack.
 
 The browser extension [NaiWa-NewTab](https://github.com/Nailong-Studio/NaiWa-NewTab)
-takes 205 of these (v1.7.5) — 73 landscape, 69 portrait,
+takes 205 of these (v1.7.6) — 73 landscape, 69 portrait,
 34 square, 5 4K, 24 pose wallpapers. Change the art here; the extension only displays it.
 
 ## Manifest and records

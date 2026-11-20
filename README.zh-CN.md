@@ -111,7 +111,7 @@ Windows / Linux 便携包见 [desktop-v0.0.3 Release](https://github.com/Nailong
 
 
 
-> **[奶蛙壁纸插件](https://github.com/Nailong-Studio/NaiWa-NewTab)** 从本库取走 206 张可作壁纸的素材（v1.7.4 起；横屏 / 竖屏 / 方形 / 4K / 姿势壁纸）。要换图、改图、加图，都在这个库房办手续，插件那边只管取货，不重复生产。
+> **[奶蛙壁纸插件](https://github.com/Nailong-Studio/NaiWa-NewTab)** 从本库取走 205 张可作壁纸的素材（v1.7.6 起；横屏 / 竖屏 / 方形 / 4K / 姿势壁纸）。要换图、改图、加图，都在这个库房办手续，插件那边只管取货，不重复生产。
 
 
 
