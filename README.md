@@ -100,12 +100,15 @@ takes 206 of these (v1.7.4) — 73 landscape, 69 portrait,
 | `thumbs/` | 480 px WebP thumbnails, one per asset; audio gets a waveform instead |
 | `SOURCES.md` | Sources, licences and the exclusion list, batch by batch |
 | `DUPLICATES.md` | Known near-duplicate groups (38 groups / 98 images at v3.2.1), all intentional derivations |
-| `scripts/build_assets.py` | Regenerates the manifest, thumbnails and index page |
+| `scripts/build_assets.py` | Regenerates the manifest and thumbnails; validates the inventory |
+| `scripts/build_site.py` | Builds the portal home, zones directory, today page, collection page and take page |
+| `scripts/world_pages.py` | Templates and page shell for the four inner pages |
 | `scripts/duplicates.py` | Read-only near-duplicate scan (dHash + SHA-256) |
 
 ```bash
 python3 scripts/build_assets.py            # regenerate everything
 python3 scripts/build_assets.py --check    # verify only, no writes
+python3 scripts/build_site.py              # rebuild the portal and four inner pages
 python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs   # push to the museum
 ```
 

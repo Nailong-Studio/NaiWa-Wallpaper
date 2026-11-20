@@ -129,7 +129,7 @@
 
 - **`DUPLICATES.md`**：近似重复基线——38 组 98 张，均为换色、裁切、4K 放大或逐帧派生；附判定表与 `scripts/duplicates.py` 复查脚本。
 
-- **重新生成**：`python3 scripts/build_assets.py`；**只校验**：`python3 scripts/build_assets.py --check`；**同步到官网**：`python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs`。
+- **重新生成素材**：`python3 scripts/build_assets.py`；**只校验**：`python3 scripts/build_assets.py --check`；**重建站点**：`python3 scripts/build_site.py`；**同步到官网**：`python3 scripts/build_assets.py --site ../NaiLoong-Universe/docs`。
 
 - **`Assets Check` CI**：素材、清单或脚本有变动时自动核对数量、分类、缩略图完整性、孤儿文件、尺寸是否与原件一致，以及每件是否带 `license` / `source`。库房不养闲文件。
 

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日三件 · 奶蛙世界</title>
+<meta name="description" content="奶蛙世界今天轮到的三件藏品。每天按日期更换，看完可以从这里去藏品滩。">
+<meta name="theme-color" content="#0d0c09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6efdd" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://nailoong-wallpaper.pages.dev/today">
+<meta property="og:type" content="website">
+<meta property="og:title" content="今日三件 · 奶蛙世界">
+<meta property="og:description" content="奶蛙世界今天轮到的三件藏品。每天按日期更换，看完可以从这里去藏品滩。">
+<meta property="og:url" content="https://nailoong-wallpaper.pages.dev/today">
+<meta property="og:image" content="https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B8%98%E6%AF%94%E7%89%B9%E4%B8%8E%E6%99%AE%E7%BB%AA%E5%85%8B.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312100b'/%3E%3Cpath d='M32 9c12 0 21 8 21 20 0 11-9 18-21 18S11 39 11 20C11 8 20 2 32 2Z' fill='%23FFD54F'/%3E%3Ccircle cx='23' cy='23' r='7' fill='%2366BB6A'/%3E%3Ccircle cx='41' cy='23' r='7' fill='%2366BB6A'/%3E%3Ccircle cx='23' cy='23' r='3' fill='%2313120d'/%3E%3Ccircle cx='41' cy='23' r='3' fill='%2313120d'/%3E%3Cellipse cx='32' cy='43' rx='13' ry='10' fill='%23F2E3BE'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/zcool-kuaile-display.woff2?v=0.0.1" as="font" type="font/woff2" crossorigin>
+<script>
+(function(){try{var t=localStorage.getItem('naiwa-world-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<style>
+@font-face{font-family:"ZCOOL KuaiLe";src:url("fonts/zcool-kuaile-display.woff2?v=0.0.1") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+:root{
+  --bg:#0d0c09;--bg2:#13110c;--panel:#191610;--panel2:#211c13;
+  --ink:#efe5cf;--muted:#a79b82;--line:#342b1d;--dim:#7f735d;
+  --gold:#f1c24d;--green:#7cc36a;
+  --shadow:0 22px 60px rgba(0,0,0,.45);
+  --display:"ZCOOL KuaiLe","STKaiti","KaiTi","PingFang SC","Microsoft YaHei",sans-serif;
+  --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#f6efdd;--bg2:#efe4cb;--panel:#fffaf0;--panel2:#f7ecd6;
+  --ink:#2d2618;--muted:#74684f;--line:#d8c7a4;--dim:#9b8a6a;
+  --gold:#a86f0d;--green:#4c8a3b;
+  --shadow:0 20px 44px rgba(88,68,30,.16);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.75 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;z-index:20;background:var(--gold);color:var(--bg);padding:8px 14px}
+.skip:focus{left:8px}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+
+/* ===== 顶栏 ===== */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top__in{width:min(1240px,92vw);margin:0 auto;display:flex;align-items:center;gap:28px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:21px;letter-spacing:.04em;white-space:nowrap}
+.brand svg{width:30px;height:30px;flex:none}
+.brand b{font-weight:400}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.nav a{text-decoration:none;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .25s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{right:0}
+.nav a[aria-current="page"]{color:var(--ink)}
+.theme{flex:none;margin-left:auto;width:38px;height:38px;border:1px solid var(--line);background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.theme:hover{color:var(--gold);border-color:var(--gold)}
+.theme svg{width:18px;height:18px}
+.theme .moon{display:none}
+html[data-theme="light"] .theme .moon{display:block}
+html[data-theme="light"] .theme .sun{display:none}
+.menu{flex:none;display:none;width:38px;height:38px;border:1px solid var(--line);background:transparent;place-items:center;align-content:center;cursor:pointer;color:var(--muted)}
+.menu:hover{color:var(--gold);border-color:var(--gold)}
+.menu span{display:block;width:15px;height:1px;background:currentColor;margin:2px 0;transition:transform .2s,opacity .2s}
+.menu[aria-expanded="true"] span:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-3px) rotate(-45deg)}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:var(--bg)}
+.mobile-menu nav{width:min(1240px,92vw);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.mobile-menu a{padding:13px 2px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.04em;color:var(--muted);text-decoration:none}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu a[aria-current="page"]{color:var(--ink)}
+
+/* ===== 内页门头 ===== */
+.page-hero{padding:clamp(40px,6vw,72px) 0 clamp(28px,4vw,44px);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:11px;letter-spacing:.04em;color:var(--dim);margin-bottom:22px}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--gold)}
+.kicker{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;color:var(--muted);margin-bottom:16px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+.page-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(48px,7.4vw,92px);line-height:.98;letter-spacing:.01em;color:var(--ink)}
+.page-hero h1 em{font-style:normal;color:var(--gold);white-space:nowrap}
+.page-hero .lede{max-width:44em;margin-top:20px;color:var(--muted);font-size:clamp(14px,1.5vw,16px);line-height:1.85}
+.page-hero .hero-meta{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-top:24px;font-size:12px}
+.page-hero .hero-meta a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+.section{padding:clamp(36px,6vw,64px) 0;border-bottom:1px solid var(--line)}
+.page-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px 28px;padding-top:28px;margin-top:12px;font-size:12px;color:var(--muted)}
+.page-foot p{max-width:40ch;line-height:1.8}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg);text-decoration:none;padding:11px 18px;font-size:13px;font-weight:500;letter-spacing:.04em;border:1px solid var(--gold);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.link{font-size:13px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.link:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ===== 聚落目录 ===== */
+.zone-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.zone{display:grid;grid-template-columns:104px minmax(0,1fr) 20px;gap:18px;align-items:center;background:var(--bg2);padding:18px;text-decoration:none;position:relative;transition:background .2s}
+.zone:hover{background:var(--panel)}
+.zone:hover .zone__cover img{transform:scale(1.04)}
+.zone__cover{width:104px;height:104px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.zone__cover img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.zone__meta{min-width:0}
+.zone__meta small{display:block;font-size:10px;color:var(--dim);letter-spacing:.12em}
+.zone__meta h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.2;margin:4px 0 5px;color:var(--ink)}
+.zone__meta p{font-size:12px;color:var(--muted);line-height:1.65}
+.zone__count{font-size:12px;color:var(--gold);margin-top:6px;display:block}
+.zone__go{font-size:14px;color:var(--gold);text-align:right;white-space:nowrap}
+.zone__go::after{content:" →";font-size:11px}
+
+/* ===== 今日三件 ===== */
+.today-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);align-items:start}
+.today-main{position:relative}
+.today-main figure{aspect-ratio:4/3;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.today-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.today-main:hover img{transform:scale(1.03)}
+.today-main h3{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,38px);line-height:1.15;margin:18px 0 8px}
+.today-main p{color:var(--muted);font-size:14px;line-height:1.85;max-width:42em}
+.today-main a{display:inline-block;margin-top:12px;font-size:12px;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
+.today-side{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.today-mini{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;align-items:center;background:var(--bg2);padding:14px;text-decoration:none;transition:background .2s}
+.today-mini:hover{background:var(--panel)}
+.today-mini figure{width:132px;height:100px;overflow:hidden;background:var(--panel)}
+.today-mini img{width:100%;height:100%;object-fit:cover}
+.today-mini h4{font-family:var(--display);font-weight:400;font-size:19px;line-height:1.25;margin-bottom:4px}
+.today-mini p{font-size:12px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ===== 藏品滩 ===== */
+.collection-page{padding:clamp(28px,5vw,52px) 0 clamp(50px,7vw,86px)}
+.collection-bar{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}
+.count{font-size:12px;color:var(--muted);letter-spacing:.04em}
+.filters{display:grid;gap:15px;margin-bottom:26px}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 2px;max-width:620px;transition:border-color .2s}
+.search:focus-within{border-color:var(--gold)}
+.search:focus-within svg{color:var(--gold)}
+.search svg{width:18px;height:18px;color:var(--muted);flex:none}
+.search input{width:100%;min-width:0;background:none;border:0;outline:0;font-size:14px;color:var(--ink);padding:4px 0}
+.search input::placeholder{color:var(--dim)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);font-size:11px;padding:6px 10px;cursor:pointer;letter-spacing:.03em}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.chip:hover{border-color:var(--gold);color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;transition:border-color .2s,transform .2s;overflow:hidden}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card figure{width:100%;aspect-ratio:4/3;background:var(--bg);display:grid;place-items:center;overflow:hidden}
+.card figure img{width:100%;height:100%;object-fit:contain}
+.card__body{padding:10px 12px 13px;border-top:1px solid var(--line)}
+.card__cat{font-size:10px;letter-spacing:.1em;color:var(--gold)}
+.card__title{font-size:13px;line-height:1.4;margin-top:3px;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card__dim{font-size:10px;color:var(--dim);margin-top:5px}
+.more{display:flex;justify-content:center;margin-top:34px}
+.more button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:11px 26px;font-size:13px;letter-spacing:.06em;cursor:pointer}
+.more button:hover{border-color:var(--gold);color:var(--gold)}
+.more button[hidden]{display:none}
+.empty{border:1px solid var(--line);background:var(--panel);padding:34px 20px;margin-top:26px;text-align:center}
+.empty p{color:var(--muted);font-size:13px;line-height:1.8}
+.empty button{margin-top:14px;border:1px solid var(--gold);background:transparent;color:var(--gold);padding:9px 18px;font-size:12px;cursor:pointer}
+.empty button:hover{background:var(--gold);color:var(--bg)}
+
+/* ===== 取货口 ===== */
+.take-page{padding:clamp(32px,5vw,56px) 0 clamp(54px,7vw,86px)}
+.take-panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,44px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(24px,4vw,38px) 0}
+.take-copy,.take-links{min-width:0}
+.take-copy h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.15;margin-bottom:10px}
+.take-copy p{font-size:13px;line-height:1.8;color:var(--muted);max-width:38em}
+.take-copy p + p{margin-top:8px}
+.take-pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;max-width:100%;font-size:12px;line-height:1.9;color:var(--muted);margin-top:20px}
+.take-pre b{color:var(--gold);font-weight:400}
+.take-list{border-top:1px solid var(--line)}
+.take-list a{display:grid;grid-template-columns:minmax(0,1fr) 18px;gap:12px;align-items:center;text-decoration:none;padding:13px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:13px;transition:color .2s,padding .2s}
+.take-list a:hover{color:var(--gold);padding-left:8px}
+.take-list a small{display:block;color:var(--dim);font-size:11px;margin-top:2px;line-height:1.5}
+.take-list a span{color:var(--gold);text-align:right}
+.take-note{margin-top:20px;font-size:12px;line-height:1.8;color:var(--dim)}
+
+/* ===== 页脚 ===== */
+footer{border-top:1px solid var(--line);padding:26px 0 34px;font-size:12px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:28px;align-items:flex-start}
+.foot p{max-width:62ch;line-height:1.8}
+.foot a{color:var(--gold);text-decoration:none}
+.foot__meta{text-align:right;white-space:nowrap;font-size:11px;line-height:1.8}
+
+/* ===== 灯箱 ===== */
+dialog{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:0;width:min(1080px,94vw);max-height:90vh;margin:auto;box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
+.lb{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);min-height:420px}
+.lb figure{background:var(--bg);display:grid;place-items:center;padding:18px;max-height:84vh;overflow:hidden}
+.lb figure img{max-height:78vh;width:auto;max-width:100%;object-fit:contain}
+.lb figure img[hidden]{display:none}
+.lb figure video{display:block;width:100%;height:auto;max-height:78vh;background:#000}
+.lb figure video[hidden]{display:none}
+.lb audio{display:block;width:100%;margin:14px 0 2px}
+.lb audio[hidden]{display:none}
+.lb__copy{padding:clamp(22px,3vw,38px);overflow-y:auto;max-height:84vh;border-left:1px solid var(--line)}
+.lb__cat{font-size:11px;letter-spacing:.12em;color:var(--gold)}
+.lb h3{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:8px 0 14px}
+.lb p{font-size:13px;line-height:1.9;color:var(--muted)}
+.lb dl{display:grid;grid-template-columns:64px minmax(0,1fr);gap:7px 12px;margin:20px 0;font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+.lb dt{color:var(--dim)}
+.lb dd{color:var(--ink);word-break:break-word}
+.lb a{display:inline-block;margin-top:6px;font-size:12px;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
+.lb__close{position:absolute;right:10px;top:10px;width:36px;height:36px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer;display:grid;place-items:center}
+.lb__close:hover{color:var(--gold);border-color:var(--gold)}
+.lb__close svg{width:16px;height:16px}
+
+/* ===== 响应 ===== */
+@media (max-width:1080px){
+  .zone-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .today-grid{grid-template-columns:1fr}
+  .today-side{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .take-panel{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .top__in{gap:12px;height:58px}
+  .brand{font-size:18px}
+  .brand svg{width:26px;height:26px}
+  .nav{display:none}
+  .menu{display:grid}
+  .mobile-menu:not([hidden]){display:block}
+  .page-hero h1{font-size:clamp(42px,13vw,64px)}
+  .zone-grid{grid-template-columns:1fr}
+  .zone{grid-template-columns:82px minmax(0,1fr) 16px;gap:13px;padding:14px}
+  .zone__cover{width:82px;height:82px}
+  .zone__meta h3{font-size:20px}
+  .zone__go{font-size:12px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card__title{font-size:12px}
+  .today-side{grid-template-columns:1fr}
+  .today-mini{grid-template-columns:104px minmax(0,1fr)}
+  .today-mini figure{width:104px;height:92px}
+  .collection-bar{display:block}
+  .collection-bar .link{display:inline-block;margin-top:8px}
+  .lb{grid-template-columns:1fr}
+  .lb__copy{border-left:0;border-top:1px solid var(--line);max-height:none}
+  .lb figure{max-height:48vh;padding:10px}
+  .lb figure img{max-height:44vh}
+  .lb figure video{max-height:44vh}
+  .foot{flex-direction:column}
+  .foot__meta{text-align:left;white-space:normal}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 16l4-5 3 3 2-2 3 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-laugh" viewBox="0 0 24 24"><path d="M4 12c0 5 3.6 8 8 8s8-3 8-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 9h.01M16 9h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-sticker" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 14c1.4 1.6 2.8 2.4 4 2.4s2.6-.8 4-2.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9h.01M15 9h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-pose" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 10v6m0 0l-3 5m3-5l3 5M7 12h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="5" ry="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 13c2-2.4 4-2.4 6 0s4 2.4 6 0 4-2.4 6 0M3 18c2-2.4 4-2.4 6 0s4 2.4 6 0 4-2.4 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l5 3-5 3V9Z" fill="currentColor"/><path d="M3 9h2M19 9h2M3 15h2M19 15h2" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 8l8-4 8 4v9l-8 4-8-4V8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8l8 4 8-4M12 12v9" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-naiwa" viewBox="0 0 64 64"><path d="M32 8c12 0 21 8 21 20 0 11-9 18-21 18S11 39 11 20C11 8 20 2 32 2Z" fill="#FFD54F"/><circle cx="23" cy="23" r="7" fill="#66BB6A"/><circle cx="41" cy="23" r="7" fill="#66BB6A"/><circle cx="23" cy="23" r="3" fill="#14120c"/><circle cx="41" cy="23" r="3" fill="#14120c"/><ellipse cx="32" cy="43" rx="13" ry="10" fill="#F2E3BE"/><path d="M8 54c8-4 16-5 24-2s16 2 24-1" fill="none" stroke="#FFD54F" stroke-width="3" stroke-linecap="round"/></symbol>
+</svg>
+<header class="top">
+  <div class="top__in">
+    <a class="brand" href="index.html"><svg><use href="#i-naiwa" xlink:href="#i-naiwa"/></svg><b>奶蛙世界</b></a>
+    <nav class="nav" aria-label="主导航"><a href="zones.html">聚落</a>
+      <a href="history.html">简史</a>
+      <a href="today.html" aria-current="page">今日</a>
+      <a href="collection.html">藏品滩</a>
+      <a href="take.html">取货口</a>
+      <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a></nav>
+    <button class="theme" id="theme" type="button" aria-label="切换明暗主题" aria-pressed="false">
+      <svg class="sun"><use href="#i-sun" xlink:href="#i-sun"/></svg>
+      <svg class="moon"><use href="#i-moon" xlink:href="#i-moon"/></svg>
+    </button>
+    <button class="menu" id="menu" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileNav" hidden>
+    <nav aria-label="手机导航"><a href="zones.html">聚落</a>
+      <a href="history.html">简史</a>
+      <a href="today.html" aria-current="page">今日</a>
+      <a href="collection.html">藏品滩</a>
+      <a href="take.html">取货口</a>
+      <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a></nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">奶蛙世界</a><span>/</span><span>今日三件</span></div>
+    <div class="kicker">THREE TODAY / 今日三件</div>
+    <h1>今天轮到<em>这三件。</em></h1>
+    <p class="lede">按日期轮换，不按热度，也不做推荐榜。看完就关门，想看更多再去藏品滩。</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="today-grid" id="todayGrid"></div>
+    <div class="page-foot"><p>这三件只负责今天。明天再进来，会换成另外三件。</p><a class="btn" href="collection.html">去藏品滩看全部 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <p>奶蛙是民间二创形象，角色原型权利归原权利人。本库只收录许可允许再分发的素材，逐件来源与许可见同名 <code>.txt</code>。若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后下架。</p>
+    <div class="foot__meta">406 件藏品 · v0.0.1 · 2026-11-20<br><a href="index.html">奶蛙世界</a> / <a href="history.html">奶蛙简史</a> / NAIWA WORLD</div>
+  </div>
+</footer>
+<dialog id="lightbox" aria-label="藏品详情">
+  <button class="lb__close" id="lbClose" type="button" aria-label="关闭"><svg><use href="#i-close" xlink:href="#i-close"/></svg></button>
+  <div class="lb">
+    <figure>
+      <img id="lbImg" alt="">
+      <video id="lbVideo" controls playsinline preload="metadata" hidden></video>
+    </figure>
+    <div class="lb__copy">
+      <div class="lb__cat" id="lbCat"></div>
+      <h3 id="lbTitle"></h3>
+      <p id="lbNarr"></p>
+      <audio id="lbAudio" controls preload="metadata" hidden></audio>
+      <dl>
+        <dt>尺寸</dt><dd id="lbDim">—</dd>
+        <dt>许可</dt><dd id="lbLicense">—</dd>
+        <dt>来源</dt><dd id="lbSource">—</dd>
+      </dl>
+      <a id="lbRaw" href="#" target="_blank" rel="noopener">打开原件 ↗</a>
+    </div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var root=document.documentElement;
+  var themeBtn=document.getElementById('theme');
+  function setTheme(t){
+    root.dataset.theme=t;
+    if(themeBtn) themeBtn.setAttribute('aria-pressed',t==='light'?'true':'false');
+    try{localStorage.setItem('naiwa-world-theme',t);}catch(e){}
+  }
+  setTheme(root.dataset.theme||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
+  if(themeBtn) themeBtn.addEventListener('click',function(){setTheme(root.dataset.theme==='light'?'dark':'light');});
+
+  var menuBtn=document.getElementById('menu');
+  var mobileNav=document.getElementById('mobileNav');
+  function setMenu(open){
+    if(!menuBtn||!mobileNav) return;
+    mobileNav.hidden=!open;
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    menuBtn.setAttribute('aria-label',open?'收起导航':'展开导航');
+  }
+  if(menuBtn&&mobileNav){
+    menuBtn.addEventListener('click',function(){setMenu(mobileNav.hidden);});
+    mobileNav.addEventListener('click',function(e){if(e.target.closest('a')) setMenu(false);});
+    document.addEventListener('click',function(e){
+      if(mobileNav.hidden) return;
+      if(!e.target.closest('#mobileNav')&&!e.target.closest('#menu')) setMenu(false);
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&!mobileNav.hidden){setMenu(false);menuBtn.focus();}
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+  const POOL = [{"i":"classic/奶蛙-丘比特与普绪克.jpg","c":"classic","cn":"圣典名画","t":"丘比特与普绪克","th":"thumbs/classic/奶蛙-丘比特与普绪克.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"带翼的奶蛙把普绪克抱起来，脚边丢着箭囊、长矛和头盔。它没管地上的武器，抱着人往外走。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B8%98%E6%AF%94%E7%89%B9%E4%B8%8E%E6%99%AE%E7%BB%AA%E5%85%8B.jpg?v=0.0.1"},{"i":"classic/奶蛙-丘比蛙唤醒普绪蛙-02.jpg","c":"classic","cn":"圣典名画","t":"丘比蛙唤醒普绪蛙 02","th":"thumbs/classic/奶蛙-丘比蛙唤醒普绪蛙-02.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"带翅膀的奶蛙俯下身，握住躺着那只的手腕。两只都睁着眼。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B8%98%E6%AF%94%E8%9B%99%E5%94%A4%E9%86%92%E6%99%AE%E7%BB%AA%E8%9B%99-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-之死.jpg","c":"classic","cn":"圣典名画","t":"之死","th":"thumbs/classic/奶蛙-之死.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"牢房里，奶蛙坐在床沿，举杯喝下毒芹。门徒围在床边哭。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B9%8B%E6%AD%BB.jpg?v=0.0.1"},{"i":"classic/奶蛙-之筏.jpg","c":"classic","cn":"圣典名画","t":"之筏","th":"thumbs/classic/奶蛙-之筏.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"木筏在浪里漂，奶蛙爬上桅杆，举起一面黄旗。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B9%8B%E7%AD%8F.jpg?v=0.0.1"},{"i":"classic/奶蛙-以利蛙在迦密山.jpg","c":"classic","cn":"圣典名画","t":"以利蛙在迦密山","th":"thumbs/classic/奶蛙-以利蛙在迦密山.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"迦密山顶燃着火，奶蛙站在火前，胸口挂圣徽。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%BB%A5%E5%88%A9%E8%9B%99%E5%9C%A8%E8%BF%A6%E5%AF%86%E5%B1%B1.jpg?v=0.0.1"},{"i":"classic/奶蛙-创造奶蛙-02.jpg","c":"classic","cn":"圣典名画","t":"创造奶蛙 02","th":"thumbs/classic/奶蛙-创造奶蛙-02.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"指尖快碰上，神和奶蛙隔着光对望。神身后挤着一群小奶蛙。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%88%9B%E9%80%A0%E5%A5%B6%E8%9B%99-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-创造奶蛙-03.jpg","c":"classic","cn":"圣典名画","t":"创造奶蛙 03","th":"thumbs/classic/奶蛙-创造奶蛙-03.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"山崖上的奶蛙斜卧着伸出手，云端的老者伸出食指，两只指尖差一点碰上。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%88%9B%E9%80%A0%E5%A5%B6%E8%9B%99-03.jpg?v=0.0.1"},{"i":"classic/奶蛙-千里江山图.jpg","c":"classic","cn":"圣典名画","t":"千里江山图","th":"thumbs/classic/奶蛙-千里江山图.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"青绿山水层层展开，一只奶蛙乘小舟漂在江心。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%8D%83%E9%87%8C%E6%B1%9F%E5%B1%B1%E5%9B%BE.jpg?v=0.0.1"},{"i":"classic/奶蛙-华盛奶在蒙茅斯-02.jpg","c":"classic","cn":"圣典名画","t":"华盛奶在蒙茅斯 02","th":"thumbs/classic/奶蛙-华盛奶在蒙茅斯-02.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"冬夜，奶蛙乘船过河，船上插着战旗。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%8D%8E%E7%9B%9B%E5%A5%B6%E5%9C%A8%E8%92%99%E8%8C%85%E6%96%AF-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-变容（纯享版）.jpg","c":"classic","cn":"圣典名画","t":"变容（纯享版）","th":"thumbs/classic/奶蛙-变容（纯享版）.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"古典名画再创作，奶蛙站在原本属于神的位置。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%8F%98%E5%AE%B9%EF%BC%88%E7%BA%AF%E4%BA%AB%E7%89%88%EF%BC%89.jpg?v=0.0.1"},{"i":"classic/奶蛙-召唤奶蛙.jpg","c":"classic","cn":"圣典名画","t":"召唤奶蛙","th":"thumbs/classic/奶蛙-召唤奶蛙.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"长桌旁围坐着门徒，奶蛙走进来，把晚餐摆成一桌家常菜。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%8F%AC%E5%94%A4%E5%A5%B6%E8%9B%99.jpg?v=0.0.1"},{"i":"classic/奶蛙-圣奶蛙归信.jpg","c":"classic","cn":"圣典名画","t":"圣奶蛙归信","th":"thumbs/classic/奶蛙-圣奶蛙归信.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"一束光从穹顶照下来，奶蛙跪在光里。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%9C%A3%E5%A5%B6%E8%9B%99%E5%BD%92%E4%BF%A1.jpg?v=0.0.1"},{"i":"classic/奶蛙-圣母怜奶蛙.jpg","c":"classic","cn":"圣典名画","t":"圣母怜奶蛙","th":"thumbs/classic/奶蛙-圣母怜奶蛙.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"穹顶下，圣母抱着小奶蛙，画面是暖黄色。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%9C%A3%E6%AF%8D%E6%80%9C%E5%A5%B6%E8%9B%99.jpg?v=0.0.1"},{"i":"classic/奶蛙-在塔楼阶梯上的会面.jpg","c":"classic","cn":"圣典名画","t":"在塔楼阶梯上的会面","th":"thumbs/classic/奶蛙-在塔楼阶梯上的会面.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"螺旋楼梯转角，奶蛙和一个访客面对面站着，中间隔几级台阶。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%9C%A8%E5%A1%94%E6%A5%BC%E9%98%B6%E6%A2%AF%E4%B8%8A%E7%9A%84%E4%BC%9A%E9%9D%A2.jpg?v=0.0.1"},{"i":"classic/奶蛙-夜巡-02.jpg","c":"classic","cn":"圣典名画","t":"夜巡 02","th":"thumbs/classic/奶蛙-夜巡-02.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"《夜巡》的竖屏版。奶蛙举枪站在队伍里，背景压得很暗。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A4%9C%E5%B7%A1-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-夜鹰.jpg","c":"classic","cn":"圣典名画","t":"夜鹰","th":"thumbs/classic/奶蛙-夜鹰.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"深夜餐馆里，奶蛙独自坐在吧台前，窗外街灯泛着绿光。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A4%9C%E9%B9%B0.jpg?v=0.0.1"},{"i":"classic/奶蛙-大天使长的最后审判.jpg","c":"classic","cn":"圣典名画","t":"大天使长的最后审判","th":"thumbs/classic/奶蛙-大天使长的最后审判.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"长翅膀的奶蛙举剑，一只脚踩在倒下的同类身上。背景是火光和红布。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A4%A7%E5%A4%A9%E4%BD%BF%E9%95%BF%E7%9A%84%E6%9C%80%E5%90%8E%E5%AE%A1%E5%88%A4.jpg?v=0.0.1"},{"i":"classic/奶蛙-大碗岛的星期天下午.jpg","c":"classic","cn":"圣典名画","t":"大碗岛的星期天下午","th":"thumbs/classic/奶蛙-大碗岛的星期天下午.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"河岸草地上，奶蛙们撑伞、遛狗、躺卧，午后的光斑落在身上。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A4%A7%E7%A2%97%E5%B2%9B%E7%9A%84%E6%98%9F%E6%9C%9F%E5%A4%A9%E4%B8%8B%E5%8D%88.jpg?v=0.0.1"},{"i":"classic/奶蛙-天使向奶蛙显现.jpg","c":"classic","cn":"圣典名画","t":"天使向奶蛙显现","th":"thumbs/classic/奶蛙-天使向奶蛙显现.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"云层和光里，天使张开翅膀，向奶蛙低头。奶蛙坐着听。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A4%A9%E4%BD%BF%E5%90%91%E5%A5%B6%E8%9B%99%E6%98%BE%E7%8E%B0.jpg?v=0.0.1"},{"i":"classic/奶蛙-天启四奶蛙.jpg","c":"classic","cn":"圣典名画","t":"天启四奶蛙","th":"thumbs/classic/奶蛙-天启四奶蛙.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"雪原上，四匹马并排跑来，每匹背上驮着一只奶蛙。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A4%A9%E5%90%AF%E5%9B%9B%E5%A5%B6%E8%9B%99.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶撒之死.jpg","c":"classic","cn":"圣典名画","t":"奶撒之死","th":"thumbs/classic/奶蛙-奶撒之死.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"元老院的长桌旁，奶蛙倒在白袍里，嘴角还带着笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E6%92%92%E4%B9%8B%E6%AD%BB.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶破蛙在军校.jpg","c":"classic","cn":"圣典名画","t":"奶破蛙在军校","th":"thumbs/classic/奶蛙-奶破蛙在军校.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"军校课堂上，奶破蛙坐在前排，胸前挂一枚勋章。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E7%A0%B4%E8%9B%99%E5%9C%A8%E5%86%9B%E6%A0%A1.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶破蛙在战场.jpg","c":"classic","cn":"圣典名画","t":"奶破蛙在战场","th":"thumbs/classic/奶蛙-奶破蛙在战场.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"山坡上炮火连天，奶破蛙骑马站在队伍前面。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E7%A0%B4%E8%9B%99%E5%9C%A8%E6%88%98%E5%9C%BA.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶破蛙在阿尔科拉桥.jpg","c":"classic","cn":"圣典名画","t":"奶破蛙在阿尔科拉桥","th":"thumbs/classic/奶蛙-奶破蛙在阿尔科拉桥.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"桥上，奶蛙一手举旗，一手按着剑柄，身后的人往前冲。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E7%A0%B4%E8%9B%99%E5%9C%A8%E9%98%BF%E5%B0%94%E7%A7%91%E6%8B%89%E6%A1%A5.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶破蛙的加冕典礼.jpg","c":"classic","cn":"圣典名画","t":"奶破蛙的加冕典礼","th":"thumbs/classic/奶蛙-奶破蛙的加冕典礼.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"宫廷加冕礼上，奶蛙把王冠戴歪了一点。旁边的贵族站得笔直。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E7%A0%B4%E8%9B%99%E7%9A%84%E5%8A%A0%E5%86%95%E5%85%B8%E7%A4%BC.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶破蛙翻越阿尔卑斯山.jpg","c":"classic","cn":"圣典名画","t":"奶破蛙翻越阿尔卑斯山","th":"thumbs/classic/奶蛙-奶破蛙翻越阿尔卑斯山.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"风雪里，奶蛙骑在马上，马前蹄抬起，杖尖指向山口。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E7%A0%B4%E8%9B%99%E7%BF%BB%E8%B6%8A%E9%98%BF%E5%B0%94%E5%8D%91%E6%96%AF%E5%B1%B1.jpg?v=0.0.1"},{"i":"classic/奶蛙-奶西分海.jpg","c":"classic","cn":"圣典名画","t":"奶西分海","th":"thumbs/classic/奶蛙-奶西分海.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"红海从中间分开，两边的水立成墙。奶蛙踩着干海底走过去，鱼群从水墙里探出头。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%A5%B6%E8%A5%BF%E5%88%86%E6%B5%B7.jpg?v=0.0.1"},{"i":"classic/奶蛙-宋画楼阁.jpg","c":"classic","cn":"圣典名画","t":"宋画楼阁","th":"thumbs/classic/奶蛙-宋画楼阁.webp?v=0.0.1","w":1200,"h":896,"ty":"image","n":"松荫下的水阁里，老翁斟茶，奶蛙端坐对面，窗外月色与山雾连成一片。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%AE%8B%E7%94%BB%E6%A5%BC%E9%98%81.jpg?v=0.0.1"},{"i":"classic/奶蛙-帝国成立.jpg","c":"classic","cn":"圣典名画","t":"帝国成立","th":"thumbs/classic/奶蛙-帝国成立.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"奶蛙把皇冠戴到自己头上，歪了。它没有扶正。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E5%B8%9D%E5%9B%BD%E6%88%90%E7%AB%8B.jpg?v=0.0.1"},{"i":"classic/奶蛙-恋人怀中.jpg","c":"classic","cn":"圣典名画","t":"恋人怀中","th":"thumbs/classic/奶蛙-恋人怀中.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"一对恋人抱在一起，奶蛙夹在中间，贴在胸口。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%81%8B%E4%BA%BA%E6%80%80%E4%B8%AD.jpg?v=0.0.1"},{"i":"classic/奶蛙-撑阳伞的奶蛙-02.jpg","c":"classic","cn":"圣典名画","t":"撑阳伞的奶蛙 02","th":"thumbs/classic/奶蛙-撑阳伞的奶蛙-02.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"草地上，奶蛙撑开一把阳伞，裙摆铺在光斑里。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%92%91%E9%98%B3%E4%BC%9E%E7%9A%84%E5%A5%B6%E8%9B%99-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-星月夜.jpg","c":"classic","cn":"圣典名画","t":"星月夜","th":"thumbs/classic/奶蛙-星月夜.webp?v=0.0.1","w":1200,"h":896,"ty":"image","n":"夜空卷成漩涡，两颗巨大的绿圈眼睛浮在星云里，柏树在下方伸向天空。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%98%9F%E6%9C%88%E5%A4%9C.jpg?v=0.0.1"},{"i":"classic/奶蛙-最唐的晚餐-02.jpg","c":"classic","cn":"圣典名画","t":"最唐的晚餐 02","th":"thumbs/classic/奶蛙-最唐的晚餐-02.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"《最后的晚餐》再创作，奶蛙坐在长桌中央。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%9C%80%E5%94%90%E7%9A%84%E6%99%9A%E9%A4%90-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-最唐的晚餐-03.jpg","c":"classic","cn":"圣典名画","t":"最唐的晚餐 03","th":"thumbs/classic/奶蛙-最唐的晚餐-03.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"长桌两边坐满奶蛙，中间那只摊开双手。桌上摆着面包和酒。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%9C%80%E5%94%90%E7%9A%84%E6%99%9A%E9%A4%90-03.jpg?v=0.0.1"},{"i":"classic/奶蛙-朝圣.jpg","c":"classic","cn":"圣典名画","t":"朝圣","th":"thumbs/classic/奶蛙-朝圣.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"火海尽头升起一枚十字光影，几只小奶蛙朝着那片白金色的门，一步步走过去。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%9C%9D%E5%9C%A3.jpg?v=0.0.1"},{"i":"classic/奶蛙-树荫下的奶蛙.jpg","c":"classic","cn":"圣典名画","t":"树荫下的奶蛙","th":"thumbs/classic/奶蛙-树荫下的奶蛙.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"奶蛙仰面躺在草地上，树影落在肚皮上。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%A0%91%E8%8D%AB%E4%B8%8B%E7%9A%84%E5%A5%B6%E8%9B%99.jpg?v=0.0.1"},{"i":"classic/奶蛙-沃霍尔波普四联.jpg","c":"classic","cn":"圣典名画","t":"沃霍尔波普四联","th":"thumbs/classic/奶蛙-沃霍尔波普四联.webp?v=0.0.1","w":1024,"h":1024,"ty":"image","n":"同一张奶蛙脸重复四次：青、蓝、紫、黄四只奶蛙，分别压在玫红、黄绿、橙、青的背景上。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%B2%83%E9%9C%8D%E5%B0%94%E6%B3%A2%E6%99%AE%E5%9B%9B%E8%81%94.jpg?v=0.0.1"},{"i":"classic/奶蛙-海崖上的安眠.jpg","c":"classic","cn":"圣典名画","t":"海崖上的安眠","th":"thumbs/classic/奶蛙-海崖上的安眠.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"海崖边，奶蛙母亲伸手护着躺下的小奶蛙，旁边的小天使吹号角。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%B5%B7%E5%B4%96%E4%B8%8A%E7%9A%84%E5%AE%89%E7%9C%A0.jpg?v=0.0.1"},{"i":"classic/奶蛙-海边的房间.jpg","c":"classic","cn":"圣典名画","t":"海边的房间","th":"thumbs/classic/奶蛙-海边的房间.webp?v=0.0.1","w":1200,"h":896,"ty":"image","n":"空房间里，奶蛙坐在门口望向海，阳光在地上切出一块亮。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%B5%B7%E8%BE%B9%E7%9A%84%E6%88%BF%E9%97%B4.jpg?v=0.0.1"},{"i":"classic/奶蛙-渡河.jpg","c":"classic","cn":"圣典名画","t":"渡河","th":"thumbs/classic/奶蛙-渡河.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"奶蛙涉水过河，水只到肚皮。它每走一步，水面就晃一圈。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E6%B8%A1%E6%B2%B3.jpg?v=0.0.1"},{"i":"classic/奶蛙-直到死亡将我们分开-02.jpg","c":"classic","cn":"圣典名画","t":"直到死亡将我们分开 02","th":"thumbs/classic/奶蛙-直到死亡将我们分开-02.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"婚礼场景再创作。奶蛙站在誓言前，笑还没收住。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E7%9B%B4%E5%88%B0%E6%AD%BB%E4%BA%A1%E5%B0%86%E6%88%91%E4%BB%AC%E5%88%86%E5%BC%80-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-睡莲.jpg","c":"classic","cn":"圣典名画","t":"睡莲","th":"thumbs/classic/奶蛙-睡莲.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"池塘铺满睡莲，一只奶蛙从叶间探出头，水面映着紫粉色的天光。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E7%9D%A1%E8%8E%B2.jpg?v=0.0.1"},{"i":"classic/奶蛙-神奈川冲浪里.jpg","c":"classic","cn":"圣典名画","t":"神奈川冲浪里","th":"thumbs/classic/奶蛙-神奈川冲浪里.webp?v=0.0.1","w":1376,"h":768,"ty":"image","n":"巨浪卷起，奶蛙们乘着小船在浪脊下穿行，远处富士山静静露头。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E7%A5%9E%E5%A5%88%E5%B7%9D%E5%86%B2%E6%B5%AA%E9%87%8C.jpg?v=0.0.1"},{"i":"classic/奶蛙-维纳斯的诞生.jpg","c":"classic","cn":"圣典名画","t":"维纳斯的诞生","th":"thumbs/classic/奶蛙-维纳斯的诞生.webp?v=0.0.1","w":1200,"h":896,"ty":"image","n":"奶蛙站在贝壳上，风神与花神在两侧吹送，海面泛着金光。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E7%BB%B4%E7%BA%B3%E6%96%AF%E7%9A%84%E8%AF%9E%E7%94%9F.jpg?v=0.0.1"},{"i":"classic/奶蛙-自由引导奶蛙-02.jpg","c":"classic","cn":"圣典名画","t":"自由引导奶蛙 02","th":"thumbs/classic/奶蛙-自由引导奶蛙-02.webp?v=0.0.1","w":1200,"h":896,"ty":"image","n":"奶蛙举旗踏过街垒，身后跟着拿枪的人群，硝烟里露出半座城。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E8%87%AA%E7%94%B1%E5%BC%95%E5%AF%BC%E5%A5%B6%E8%9B%99-02.jpg?v=0.0.1"},{"i":"classic/奶蛙-自由引导奶蛙.jpg","c":"classic","cn":"圣典名画","t":"自由引导奶蛙","th":"thumbs/classic/奶蛙-自由引导奶蛙.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"自由女神举旗，奶蛙走在队伍最前面。画面里没人看镜头。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E8%87%AA%E7%94%B1%E5%BC%95%E5%AF%BC%E5%A5%B6%E8%9B%99.jpg?v=0.0.1"},{"i":"classic/奶蛙-萨达纳帕勒斯之死.jpg","c":"classic","cn":"圣典名画","t":"萨达纳帕勒斯之死","th":"thumbs/classic/奶蛙-萨达纳帕勒斯之死.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"城里烧起来，穿红衣的奶蛙王俯身抱住白衣女子，身后是倒塌的宫殿和列队的士兵。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E8%90%A8%E8%BE%BE%E7%BA%B3%E5%B8%95%E5%8B%92%E6%96%AF%E4%B9%8B%E6%AD%BB.jpg?v=0.0.1"},{"i":"classic/奶蛙-记忆的永恒.jpg","c":"classic","cn":"圣典名画","t":"记忆的永恒","th":"thumbs/classic/奶蛙-记忆的永恒.webp?v=0.0.1","w":1200,"h":896,"ty":"image","n":"荒原上，融化的钟表挂在树枝和桌沿，一只奶蛙软软地摊在台面上。","l":"MIT","s":"nit5607/naiwa-art-style（MIT）","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E8%AE%B0%E5%BF%86%E7%9A%84%E6%B0%B8%E6%81%92.jpg?v=0.0.1"},{"i":"classic/奶蛙-迎着阳光盛大逃亡.jpg","c":"classic","cn":"圣典名画","t":"迎着阳光盛大逃亡","th":"thumbs/classic/奶蛙-迎着阳光盛大逃亡.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"奶蛙背对追兵，朝太阳的方向跑，脸上带笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E8%BF%8E%E7%9D%80%E9%98%B3%E5%85%89%E7%9B%9B%E5%A4%A7%E9%80%83%E4%BA%A1.jpg?v=0.0.1"},{"i":"classic/奶蛙-雷帝杀子.jpg","c":"classic","cn":"圣典名画","t":"雷帝杀子","th":"thumbs/classic/奶蛙-雷帝杀子.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"昏暗的宫室里，奶蛙抱着满头血的小奶蛙，表情惊惶。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E9%9B%B7%E5%B8%9D%E6%9D%80%E5%AD%90.jpg?v=0.0.1"},{"i":"laugh-gallery/奶蛙-仰头捧腹大笑.jpg","c":"laugh-gallery","cn":"大笑藏馆","t":"仰头捧腹大笑","th":"thumbs/laugh-gallery/奶蛙-仰头捧腹大笑.webp?v=0.0.1","w":1200,"h":1800,"ty":"image","n":"仰头、眯眼、双手捧腹，身体向后仰。","l":"MIT","s":"WencueCryforme/NaiWa-Universe（MIT）","r":"https://nailoong-wallpaper.pages.dev/laugh-gallery/%E5%A5%B6%E8%9B%99-%E4%BB%B0%E5%A4%B4%E6%8D%A7%E8%85%B9%E5%A4%A7%E7%AC%91.jpg?v=0.0.1"},{"i":"laugh-gallery/奶蛙-弯腰大笑.png","c":"laugh-gallery","cn":"大笑藏馆","t":"弯腰大笑","th":"thumbs/laugh-gallery/奶蛙-弯腰大笑.webp?v=0.0.1","w":1080,"h":1440,"ty":"image","n":"弯着腰笑，手按在肚子上，头快低到膝盖。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/laugh-gallery/%E5%A5%B6%E8%9B%99-%E5%BC%AF%E8%85%B0%E5%A4%A7%E7%AC%91.png?v=0.0.1"},{"i":"laugh-gallery/奶蛙-彩虹渐变.png","c":"laugh-gallery","cn":"大笑藏馆","t":"彩虹渐变","th":"thumbs/laugh-gallery/奶蛙-彩虹渐变.webp?v=0.0.1","w":1080,"h":935,"ty":"image","n":"彩虹渐变的表面，七色压在黄色身体上。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/laugh-gallery/%E5%A5%B6%E8%9B%99-%E5%BD%A9%E8%99%B9%E6%B8%90%E5%8F%98.png?v=0.0.1"},{"i":"emotes/奶蛙-咬手沉思.jpg","c":"emotes","cn":"表情收藏","t":"咬手沉思","th":"thumbs/emotes/奶蛙-咬手沉思.webp?v=0.0.1","w":2560,"h":1440,"ty":"image","n":"奶蛙咬着爪子，配圆角白框和深蓝底。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%92%AC%E6%89%8B%E6%B2%89%E6%80%9D.jpg?v=0.0.1"},{"i":"emotes/奶蛙-委屈低落.png","c":"emotes","cn":"表情收藏","t":"委屈低落","th":"thumbs/emotes/奶蛙-委屈低落.webp?v=0.0.1","w":1254,"h":1254,"ty":"image","n":"嘴角向下，眼睛湿着，站在原地看着镜头。","l":"MIT","s":"TarelX/Milk-Frog（MIT）","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%A7%94%E5%B1%88%E4%BD%8E%E8%90%BD.png?v=0.0.1"},{"i":"emotes/奶蛙-姿态-侧躺.png","c":"emotes","cn":"表情收藏","t":"姿态 · 侧躺","th":"thumbs/emotes/奶蛙-姿态-侧躺.webp?v=0.0.1","w":1024,"h":1024,"ty":"image","n":"透明底，奶蛙横着躺下。原始文件名 mf-pose-lying。1024×1024。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E6%80%81-%E4%BE%A7%E8%BA%BA.png?v=0.0.1"},{"i":"emotes/奶蛙-姿态-挥手.png","c":"emotes","cn":"表情收藏","t":"姿态 · 挥手","th":"thumbs/emotes/奶蛙-姿态-挥手.webp?v=0.0.1","w":1024,"h":1024,"ty":"image","n":"透明底，奶蛙举起一只爪子打招呼。原始文件名 mf-pose-wave。1024×1024。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E6%80%81-%E6%8C%A5%E6%89%8B.png?v=0.0.1"},{"i":"emotes/奶蛙-姿态-翻滚.png","c":"emotes","cn":"表情收藏","t":"姿态 · 翻滚","th":"thumbs/emotes/奶蛙-姿态-翻滚.webp?v=0.0.1","w":1262,"h":1262,"ty":"image","n":"透明底，奶蛙团身翻滚。原始文件名 mf-pose-rolling。1262×1262。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E6%80%81-%E7%BF%BB%E6%BB%9A.png?v=0.0.1"},{"i":"emotes/奶蛙-姿态-露肚.png","c":"emotes","cn":"表情收藏","t":"姿态 · 露肚","th":"thumbs/emotes/奶蛙-姿态-露肚.webp?v=0.0.1","w":1024,"h":1024,"ty":"image","n":"透明底，正面站姿，米色肚皮露出来。原始文件名 mf-pose-belly。1024×1024。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E6%80%81-%E9%9C%B2%E8%82%9A.png?v=0.0.1"},{"i":"emotes/奶蛙-眨眼卖萌.png","c":"emotes","cn":"表情收藏","t":"眨眼卖萌","th":"thumbs/emotes/奶蛙-眨眼卖萌.webp?v=0.0.1","w":1254,"h":1254,"ty":"image","n":"一只眼闭着，一只眼睁着，嘴角上扬。","l":"MIT","s":"TarelX/Milk-Frog（MIT）","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E7%9C%A8%E7%9C%BC%E5%8D%96%E8%90%8C.png?v=0.0.1"},{"i":"emotes/奶蛙-立绘-站立.png","c":"emotes","cn":"表情收藏","t":"立绘 · 站立","th":"thumbs/emotes/奶蛙-立绘-站立.webp?v=0.0.1","w":1242,"h":1242,"ty":"image","n":"黑底全身立绘，正面站立，双眼平视。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E7%AB%8B%E7%BB%98-%E7%AB%99%E7%AB%8B.png?v=0.0.1"},{"i":"emotes/奶蛙-立绘-雀跃.png","c":"emotes","cn":"表情收藏","t":"立绘 · 雀跃","th":"thumbs/emotes/奶蛙-立绘-雀跃.webp?v=0.0.1","w":1000,"h":1000,"ty":"image","n":"黑底全身立绘，双臂张开，单脚离地。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E7%AB%8B%E7%BB%98-%E9%9B%80%E8%B7%83.png?v=0.0.1"},{"i":"emotes/奶蛙-胜利欢呼.png","c":"emotes","cn":"表情收藏","t":"胜利欢呼","th":"thumbs/emotes/奶蛙-胜利欢呼.webp?v=0.0.1","w":1254,"h":1254,"ty":"image","n":"双臂高举，嘴张得很大，眼睛笑成缝。","l":"MIT","s":"TarelX/Milk-Frog（MIT）","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%83%9C%E5%88%A9%E6%AC%A2%E5%91%BC.png?v=0.0.1"},{"i":"emotes/奶蛙-表情-04.jpeg","c":"emotes","cn":"表情收藏","t":"表情 04","th":"thumbs/emotes/奶蛙-表情-04.webp?v=0.0.1","w":1080,"h":1066,"ty":"image","n":"一只手叉腰，另一只手指向右边，嘴张开。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-04.jpeg?v=0.0.1"},{"i":"emotes/奶蛙-表情-06.jpeg","c":"emotes","cn":"表情收藏","t":"表情 06","th":"thumbs/emotes/奶蛙-表情-06.webp?v=0.0.1","w":1080,"h":1073,"ty":"image","n":"戴圣诞帽，侧躺，双手放在肚子上，张嘴笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-06.jpeg?v=0.0.1"},{"i":"emotes/奶蛙-表情-09.jpeg","c":"emotes","cn":"表情收藏","t":"表情 09","th":"thumbs/emotes/奶蛙-表情-09.webp?v=0.0.1","w":1080,"h":1064,"ty":"image","n":"戴圣诞帽，双手在肚子前交叠，张嘴笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-09.jpeg?v=0.0.1"},{"i":"emotes/奶蛙-表情-10.jpeg","c":"emotes","cn":"表情收藏","t":"表情 10","th":"thumbs/emotes/奶蛙-表情-10.webp?v=0.0.1","w":1080,"h":1064,"ty":"image","n":"戴圣诞帽，双手交叠在肚子前，微笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-10.jpeg?v=0.0.1"},{"i":"emotes/奶蛙-表情-11.jpeg","c":"emotes","cn":"表情收藏","t":"表情 11","th":"thumbs/emotes/奶蛙-表情-11.webp?v=0.0.1","w":1080,"h":1063,"ty":"image","n":"戴圣诞帽，双手按着肚子，头偏向一边。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-11.jpeg?v=0.0.1"},{"i":"emotes/奶蛙-表情-平静模式.webp","c":"emotes","cn":"表情收藏","t":"表情 · 平静模式","th":"thumbs/emotes/奶蛙-表情-平静模式.webp?v=0.0.1","w":1075,"h":1075,"ty":"image","n":"蓝色版本，侧身站着，绿眼看向远处，嘴闭着。","l":"MIT / 作者声明不主张版权（WencueCryforme/NaiWa-Universe）","s":"WencueCryforme/NaiWa-Universe（GitHub）","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-%E5%B9%B3%E9%9D%99%E6%A8%A1%E5%BC%8F.webp?v=0.0.1"},{"i":"emotes/奶蛙-表情-蕉绿模式.webp","c":"emotes","cn":"表情收藏","t":"表情 · 蕉绿模式","th":"thumbs/emotes/奶蛙-表情-蕉绿模式.webp?v=0.0.1","w":2047,"h":2047,"ty":"image","n":"通体蕉绿，坐在地上，浅米色肚皮摊开。","l":"MIT / 作者声明不主张版权（WencueCryforme/NaiWa-Universe）","s":"WencueCryforme/NaiWa-Universe（GitHub）","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-%E8%95%89%E7%BB%BF%E6%A8%A1%E5%BC%8F.webp?v=0.0.1"},{"i":"emotes/奶蛙-表情-霸者模式.webp","c":"emotes","cn":"表情收藏","t":"表情 · 霸者模式","th":"thumbs/emotes/奶蛙-表情-霸者模式.webp?v=0.0.1","w":1080,"h":1084,"ty":"image","n":"银蓝铠甲披上身，双臂抱胸，黄皮肤和绿眼睛从盔甲缝里露出来。","l":"MIT / 作者声明不主张版权（WencueCryforme/NaiWa-Universe）","s":"WencueCryforme/NaiWa-Universe（GitHub）","r":"https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E8%A1%A8%E6%83%85-%E9%9C%B8%E8%80%85%E6%A8%A1%E5%BC%8F.webp?v=0.0.1"},{"i":"poses/奶蛙-姿势-修女式.webp","c":"poses","cn":"姿势立绘","t":"姿势 · 修女式","th":"thumbs/poses/奶蛙-姿势-修女式.webp?v=0.0.1","w":1059,"h":1679,"ty":"image","n":"黑袍白领，双手合十，站在浅色背景前。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/poses/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF-%E4%BF%AE%E5%A5%B3%E5%BC%8F.webp?v=0.0.1"},{"i":"poses/奶蛙-姿势-喝饮料.webp","c":"poses","cn":"姿势立绘","t":"姿势 · 喝饮料","th":"thumbs/poses/奶蛙-姿势-喝饮料.webp?v=0.0.1","w":1080,"h":1080,"ty":"image","n":"咬着吸管，举着杯子，杯里是珍珠奶茶。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/poses/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF-%E5%96%9D%E9%A5%AE%E6%96%99.webp?v=0.0.1"},{"i":"poses/奶蛙-姿势-看杂志.webp","c":"poses","cn":"姿势立绘","t":"姿势 · 看杂志","th":"thumbs/poses/奶蛙-姿势-看杂志.webp?v=0.0.1","w":1080,"h":1080,"ty":"image","n":"抱着一本杂志低头看，封面印着奶蛙。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/poses/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF-%E7%9C%8B%E6%9D%82%E5%BF%97.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-上班族.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 上班族","th":"thumbs/poses-wall/奶蛙-姿势壁纸-上班族.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“上班族”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-上班族.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%B8%8A%E7%8F%AD%E6%97%8F.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-举旗.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 举旗","th":"thumbs/poses-wall/奶蛙-姿势壁纸-举旗.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“举旗”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-举旗.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%B8%BE%E6%97%97.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-举杯招手.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 举杯招手","th":"thumbs/poses-wall/奶蛙-姿势壁纸-举杯招手.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“举杯招手”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-举杯招手.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%B8%BE%E6%9D%AF%E6%8B%9B%E6%89%8B.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-侦探.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 侦探","th":"thumbs/poses-wall/奶蛙-姿势壁纸-侦探.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“侦探”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-侦探.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%BE%A6%E6%8E%A2.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-修女式.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 修女式","th":"thumbs/poses-wall/奶蛙-姿势壁纸-修女式.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“修女式”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-修女式.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E4%BF%AE%E5%A5%B3%E5%BC%8F.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-出诊.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 出诊","th":"thumbs/poses-wall/奶蛙-姿势壁纸-出诊.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“出诊”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-出诊.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%87%BA%E8%AF%8A.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-厨师.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 厨师","th":"thumbs/poses-wall/奶蛙-姿势壁纸-厨师.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“厨师”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-厨师.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%8E%A8%E5%B8%88.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-双份薯条.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 双份薯条","th":"thumbs/poses-wall/奶蛙-姿势壁纸-双份薯条.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“双份薯条”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-双份薯条.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%8F%8C%E4%BB%BD%E8%96%AF%E6%9D%A1.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-听诊式.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 听诊式","th":"thumbs/poses-wall/奶蛙-姿势壁纸-听诊式.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“听诊式”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-听诊式.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%90%AC%E8%AF%8A%E5%BC%8F.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-啃香肠.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 啃香肠","th":"thumbs/poses-wall/奶蛙-姿势壁纸-啃香肠.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“啃香肠”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-啃香肠.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%95%83%E9%A6%99%E8%82%A0.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-喝饮料.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 喝饮料","th":"thumbs/poses-wall/奶蛙-姿势壁纸-喝饮料.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“喝饮料”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-喝饮料.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%96%9D%E9%A5%AE%E6%96%99.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-委屈.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 委屈","th":"thumbs/poses-wall/奶蛙-姿势壁纸-委屈.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“委屈”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-委屈.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%A7%94%E5%B1%88.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-学生.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 学生","th":"thumbs/poses-wall/奶蛙-姿势壁纸-学生.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“学生”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-学生.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E5%AD%A6%E7%94%9F.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-抱兔兔.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 抱兔兔","th":"thumbs/poses-wall/奶蛙-姿势壁纸-抱兔兔.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“抱兔兔”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-抱兔兔.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%8A%B1%E5%85%94%E5%85%94.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-拄杖.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 拄杖","th":"thumbs/poses-wall/奶蛙-姿势壁纸-拄杖.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“拄杖”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-拄杖.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%8B%84%E6%9D%96.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-捧炸鸡.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 捧炸鸡","th":"thumbs/poses-wall/奶蛙-姿势壁纸-捧炸鸡.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“捧炸鸡”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-捧炸鸡.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%8D%A7%E7%82%B8%E9%B8%A1.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-摄影师.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 摄影师","th":"thumbs/poses-wall/奶蛙-姿势壁纸-摄影师.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“摄影师”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-摄影师.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%91%84%E5%BD%B1%E5%B8%88.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-朋克头.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 朋克头","th":"thumbs/poses-wall/奶蛙-姿势壁纸-朋克头.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“朋克头”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-朋克头.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E6%9C%8B%E5%85%8B%E5%A4%B4.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-炸鸡加可乐.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 炸鸡加可乐","th":"thumbs/poses-wall/奶蛙-姿势壁纸-炸鸡加可乐.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“炸鸡加可乐”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-炸鸡加可乐.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%82%B8%E9%B8%A1%E5%8A%A0%E5%8F%AF%E4%B9%90.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-爆米花.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 爆米花","th":"thumbs/poses-wall/奶蛙-姿势壁纸-爆米花.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“爆米花”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-爆米花.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%88%86%E7%B1%B3%E8%8A%B1.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-甜筒.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 甜筒","th":"thumbs/poses-wall/奶蛙-姿势壁纸-甜筒.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“甜筒”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-甜筒.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%94%9C%E7%AD%92.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-看杂志.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 看杂志","th":"thumbs/poses-wall/奶蛙-姿势壁纸-看杂志.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“看杂志”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-看杂志.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%9C%8B%E6%9D%82%E5%BF%97.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-绅士.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 绅士","th":"thumbs/poses-wall/奶蛙-姿势壁纸-绅士.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“绅士”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-绅士.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E7%BB%85%E5%A3%AB.webp?v=0.0.1"},{"i":"poses-wall/奶蛙-姿势壁纸-薯条.webp","c":"poses-wall","cn":"姿势壁纸","t":"姿势壁纸 · 薯条","th":"thumbs/poses-wall/奶蛙-姿势壁纸-薯条.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"“薯条”立绘，做成 1080×1920 竖屏壁纸。","l":"MIT","s":"本仓库由 poses/奶蛙-姿势-薯条.webp 派生合成","r":"https://nailoong-wallpaper.pages.dev/poses-wall/%E5%A5%B6%E8%9B%99-%E5%A7%BF%E5%8A%BF%E5%A3%81%E7%BA%B8-%E8%96%AF%E6%9D%A1.webp?v=0.0.1"},{"i":"art/奶蛙-厨师烹饪.jpg","c":"art","cn":"艺术场景","t":"厨师烹饪","th":"thumbs/art/奶蛙-厨师烹饪.webp?v=0.0.1","w":2560,"h":1440,"ty":"image","n":"厨房里，奶蛙戴厨师帽、握汤勺，旁边有青花瓷碗和虾仁。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E5%8E%A8%E5%B8%88%E7%83%B9%E9%A5%AA.jpg?v=0.0.1"},{"i":"art/奶蛙-樱花都市.jpg","c":"art","cn":"艺术场景","t":"樱花都市","th":"thumbs/art/奶蛙-樱花都市.webp?v=0.0.1","w":2560,"h":1440,"ty":"image","n":"夜里，樱花和紫藤垂在河边，霓虹楼宇倒映在水面，奶蛙站在石板路上。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E6%A8%B1%E8%8A%B1%E9%83%BD%E5%B8%82.jpg?v=0.0.1"},{"i":"art/奶蛙-艺术-01.png","c":"art","cn":"艺术场景","t":"艺术 01","th":"thumbs/art/奶蛙-艺术-01.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"水下沉着一只奶蛙，上方有光柱和气泡。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-01.png?v=0.0.1"},{"i":"art/奶蛙-艺术-03.png","c":"art","cn":"艺术场景","t":"艺术 03","th":"thumbs/art/奶蛙-艺术-03.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"深色水里，奶蛙张开四肢漂着，周围一圈圈涟漪。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-03.png?v=0.0.1"},{"i":"art/奶蛙-艺术-04.png","c":"art","cn":"艺术场景","t":"艺术 04","th":"thumbs/art/奶蛙-艺术-04.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"奶蛙站在浅海里，背对镜头，远处是海平线。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-04.png?v=0.0.1"},{"i":"art/奶蛙-艺术-05.png","c":"art","cn":"艺术场景","t":"艺术 05","th":"thumbs/art/奶蛙-艺术-05.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"夕阳下的田野，奶蛙站在土路上，远处有电线杆。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-05.png?v=0.0.1"},{"i":"art/奶蛙-艺术-07.png","c":"art","cn":"艺术场景","t":"艺术 07","th":"thumbs/art/奶蛙-艺术-07.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"奶蛙身上缠着电线，旁边散着手机和插头。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-07.png?v=0.0.1"},{"i":"art/奶蛙-艺术-10.png","c":"art","cn":"艺术场景","t":"艺术 10","th":"thumbs/art/奶蛙-艺术-10.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"奶蛙套着白色泳圈，漂在蓝色水面上。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-10.png?v=0.0.1"},{"i":"art/奶蛙-艺术-11.png","c":"art","cn":"艺术场景","t":"艺术 11","th":"thumbs/art/奶蛙-艺术-11.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"黑白城市街景上方，一只奶蛙从招牌边缘探出身子。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-11.png?v=0.0.1"},{"i":"art/奶蛙-艺术-12.png","c":"art","cn":"艺术场景","t":"艺术 12","th":"thumbs/art/奶蛙-艺术-12.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"奶蛙脸贴在贴满贴纸的墙上，画面被彩色字遮了一半。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-12.png?v=0.0.1"},{"i":"art/奶蛙-艺术-14.png","c":"art","cn":"艺术场景","t":"艺术 14","th":"thumbs/art/奶蛙-艺术-14.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"云层下，奶蛙站在湿地面，倒影清楚。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-14.png?v=0.0.1"},{"i":"art/奶蛙-艺术-15.png","c":"art","cn":"艺术场景","t":"艺术 15","th":"thumbs/art/奶蛙-艺术-15.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"屋顶上摆着红沙发，奶蛙坐在上面，背后是大片云。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-15.png?v=0.0.1"},{"i":"art/奶蛙-艺术-17.png","c":"art","cn":"艺术场景","t":"艺术 17","th":"thumbs/art/奶蛙-艺术-17.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"夜里，奶蛙坐在高楼边缘，下面是城市灯光。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-17.png?v=0.0.1"},{"i":"art/奶蛙-艺术-18.png","c":"art","cn":"艺术场景","t":"艺术 18","th":"thumbs/art/奶蛙-艺术-18.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"奶蛙站在摩天楼边缘，背后是雾中的楼群。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-18.png?v=0.0.1"},{"i":"art/奶蛙-艺术-20.png","c":"art","cn":"艺术场景","t":"艺术 20","th":"thumbs/art/奶蛙-艺术-20.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"盐湖上，奶蛙站在浅水里，倒影完整。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-20.png?v=0.0.1"},{"i":"art/奶蛙-艺术-21.jpg","c":"art","cn":"艺术场景","t":"艺术 21","th":"thumbs/art/奶蛙-艺术-21.webp?v=0.0.1","w":3072,"h":5504,"ty":"image","n":"绿色草坡上有一只很小的奶蛙，天上是厚云。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-21.jpg?v=0.0.1"},{"i":"art/奶蛙-艺术-22.png","c":"art","cn":"艺术场景","t":"艺术 22","th":"thumbs/art/奶蛙-艺术-22.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"蓝色水族箱前，奶蛙背对镜头，看里面的水母。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-22.png?v=0.0.1"},{"i":"art/奶蛙-艺术-23.png","c":"art","cn":"艺术场景","t":"艺术 23","th":"thumbs/art/奶蛙-艺术-23.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"暗房间里一束光从天花板打下来，奶蛙躺在光圈中央。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-23.png?v=0.0.1"},{"i":"art/奶蛙-艺术-25.jpg","c":"art","cn":"艺术场景","t":"艺术 25","th":"thumbs/art/奶蛙-艺术-25.webp?v=0.0.1","w":3072,"h":5504,"ty":"image","n":"奶蛙飘在山谷上方，背后是雪山和草地。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-25.jpg?v=0.0.1"},{"i":"art/奶蛙-艺术-27.jpg","c":"art","cn":"艺术场景","t":"艺术 27","th":"thumbs/art/奶蛙-艺术-27.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"白鸟背对镜头站在草丛前，奶蛙在后面。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-27.jpg?v=0.0.1"},{"i":"art/奶蛙-艺术-35.png","c":"art","cn":"艺术场景","t":"艺术 35","th":"thumbs/art/奶蛙-艺术-35.webp?v=0.0.1","w":1536,"h":2752,"ty":"image","n":"奶蛙挂在水泥楼板边缘，下面是一片雾。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/art/%E5%A5%B6%E8%9B%99-%E8%89%BA%E6%9C%AF-35.png?v=0.0.1"},{"i":"hd/奶蛙-高清-07.jpg","c":"hd","cn":"高清壁纸","t":"高清 07","th":"thumbs/hd/奶蛙-高清-07.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"戴圣诞帽，侧躺，双手放在肚子上笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/hd/%E5%A5%B6%E8%9B%99-%E9%AB%98%E6%B8%85-07.jpg?v=0.0.1"},{"i":"hd/奶蛙-高清-09.jpg","c":"hd","cn":"高清壁纸","t":"高清 09","th":"thumbs/hd/奶蛙-高清-09.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"绿幕前，戴圣诞帽，双手放在肚子上笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/hd/%E5%A5%B6%E8%9B%99-%E9%AB%98%E6%B8%85-09.jpg?v=0.0.1"},{"i":"hd/奶蛙-高清-10.jpg","c":"hd","cn":"高清壁纸","t":"高清 10","th":"thumbs/hd/奶蛙-高清-10.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"戴圣诞帽，双手交叠在肚子前，微笑。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/hd/%E5%A5%B6%E8%9B%99-%E9%AB%98%E6%B8%85-10.jpg?v=0.0.1"},{"i":"hd/奶蛙-高清-12.jpg","c":"hd","cn":"高清壁纸","t":"高清 12","th":"thumbs/hd/奶蛙-高清-12.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"戴圣诞帽，双手按着肚子，头偏向一边。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/hd/%E5%A5%B6%E8%9B%99-%E9%AB%98%E6%B8%85-12.jpg?v=0.0.1"},{"i":"hd/奶蛙-高清-13.jpg","c":"hd","cn":"高清壁纸","t":"高清 13","th":"thumbs/hd/奶蛙-高清-13.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"两只奶蛙挤在画面里，前面那只举着手机。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/hd/%E5%A5%B6%E8%9B%99-%E9%AB%98%E6%B8%85-13.jpg?v=0.0.1"},{"i":"hd/奶蛙-高清-17.jpg","c":"hd","cn":"高清壁纸","t":"高清 17","th":"thumbs/hd/奶蛙-高清-17.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"一只大爪子挡在镜头前，奶蛙从后面探头。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/hd/%E5%A5%B6%E8%9B%99-%E9%AB%98%E6%B8%85-17.jpg?v=0.0.1"},{"i":"4k/奶蛙-4K-叉腰指点-03.jpg","c":"4k","cn":"4K 大图","t":"4K · 叉腰指点 03","th":"thumbs/4k/奶蛙-4K-叉腰指点-03.webp?v=0.0.1","w":3840,"h":3790,"ty":"image","n":"左手叉腰，右手指向前方，张嘴露牙大笑。全身立姿，灰爪和脚掌同色。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/4k/%E5%A5%B6%E8%9B%99-4K-%E5%8F%89%E8%85%B0%E6%8C%87%E7%82%B9-03.jpg?v=0.0.1"},{"i":"4k/奶蛙-4K-张臂平衡-05.jpg","c":"4k","cn":"4K 大图","t":"4K · 张臂平衡 05","th":"thumbs/4k/奶蛙-4K-张臂平衡-05.webp?v=0.0.1","w":2880,"h":3840,"ty":"image","n":"张臂平衡：张开双臂单腿站立，重心歪着，绿眼圆睁、露齿笑，灰爪张开。\n奶蛙艺术圣殿 · 平衡系列。竖构图 2880×3840，手机与竖屏显示器上最能撑满画面的一张。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/4k/%E5%A5%B6%E8%9B%99-4K-%E5%BC%A0%E8%87%82%E5%B9%B3%E8%A1%A1-05.jpg?v=0.0.1"},{"i":"4k/奶蛙-4K-托腮沉思-04.jpg","c":"4k","cn":"4K 大图","t":"4K · 托腮沉思 04","th":"thumbs/4k/奶蛙-4K-托腮沉思-04.webp?v=0.0.1","w":3840,"h":3616,"ty":"image","n":"托腮沉思：侧身单手托腮，绿眼斜视上方，抿嘴不语，浅米腹占了大半画面。\n奶蛙艺术圣殿 · 沉思系列。全仓唯一一张安静的奶蛙，手支着下巴想事情的样子，配深夜当新标签页很合适。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/4k/%E5%A5%B6%E8%9B%99-4K-%E6%89%98%E8%85%AE%E6%B2%89%E6%80%9D-04.jpg?v=0.0.1"},{"i":"4k/奶蛙-4K-抱头震惊-02.jpg","c":"4k","cn":"4K 大图","t":"4K · 抱头震惊 02","th":"thumbs/4k/奶蛙-4K-抱头震惊-02.webp?v=0.0.1","w":3840,"h":3822,"ty":"image","n":"双手抱头，绿眼圆睁，嘴巴微张。浅米色肚子鼓起，灰爪压着头顶。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/4k/%E5%A5%B6%E8%9B%99-4K-%E6%8A%B1%E5%A4%B4%E9%9C%87%E6%83%8A-02.jpg?v=0.0.1"},{"i":"4k/奶蛙-4K-捶头大笑-01.jpg","c":"4k","cn":"4K 大图","t":"4K · 捶头大笑 01","th":"thumbs/4k/奶蛙-4K-捶头大笑-01.webp?v=0.0.1","w":3840,"h":3826,"ty":"image","n":"双手抱头，仰头张嘴笑，眼睛眯成一条缝。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/4k/%E5%A5%B6%E8%9B%99-4K-%E6%8D%B6%E5%A4%B4%E5%A4%A7%E7%AC%91-01.jpg?v=0.0.1"},{"i":"mobile/奶蛙-竖屏-海中浮游.webp","c":"mobile","cn":"手机壁纸","t":"竖屏 · 海中浮游","th":"thumbs/mobile/奶蛙-竖屏-海中浮游.webp?v=0.0.1","w":1080,"h":1936,"ty":"image","n":"半个身子泡在海里，阳光从背后打下来。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/mobile/%E5%A5%B6%E8%9B%99-%E7%AB%96%E5%B1%8F-%E6%B5%B7%E4%B8%AD%E6%B5%AE%E6%B8%B8.webp?v=0.0.1"},{"i":"mobile/奶蛙-竖屏-花田落日.webp","c":"mobile","cn":"手机壁纸","t":"竖屏 · 花田落日","th":"thumbs/mobile/奶蛙-竖屏-花田落日.webp?v=0.0.1","w":1080,"h":1936,"ty":"image","n":"从花田里跳起来，紫色晚霞铺在身后。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/mobile/%E5%A5%B6%E8%9B%99-%E7%AB%96%E5%B1%8F-%E8%8A%B1%E7%94%B0%E8%90%BD%E6%97%A5.webp?v=0.0.1"},{"i":"mobile/奶蛙-竖屏-草原小憩.webp","c":"mobile","cn":"手机壁纸","t":"竖屏 · 草原小憩","th":"thumbs/mobile/奶蛙-竖屏-草原小憩.webp?v=0.0.1","w":1080,"h":1936,"ty":"image","n":"躺在绿色草原上晒太阳，远处堆着积雨云。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/mobile/%E5%A5%B6%E8%9B%99-%E7%AB%96%E5%B1%8F-%E8%8D%89%E5%8E%9F%E5%B0%8F%E6%86%A9.webp?v=0.0.1"},{"i":"frames/奶蛙-帧图-奶蛙的永恒-14s.png","c":"frames","cn":"视频帧图","t":"奶蛙的永恒 · 14s","th":"thumbs/frames/奶蛙-帧图-奶蛙的永恒-14s.webp?v=0.0.1","w":1882,"h":1080,"ty":"image","n":"取自《奶蛙的永恒》14 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%A5%B6%E8%9B%99%E7%9A%84%E6%B0%B8%E6%81%92-14s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-10s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 10s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-10s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》10 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-10s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-20s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 20s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-20s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》20 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-20s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-30s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 30s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-30s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》30 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-30s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-40s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 40s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-40s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》40 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-40s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-50s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 50s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-50s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》50 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-50s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-60s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 60s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-60s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》60 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-60s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-70s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 70s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-70s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》70 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-70s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-孤独奶蛙主义-80s.png","c":"frames","cn":"视频帧图","t":"孤独奶蛙主义 · 80s","th":"thumbs/frames/奶蛙-帧图-孤独奶蛙主义-80s.webp?v=0.0.1","w":1280,"h":720,"ty":"image","n":"取自《孤独奶蛙主义》80 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E5%AD%A4%E7%8B%AC%E5%A5%B6%E8%9B%99%E4%B8%BB%E4%B9%89-80s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-0.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 0.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-0.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》0.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-0.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-2s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 2s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-2s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》2 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-2s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-3s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 3s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-3s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》3 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-3s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-4s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 4s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-4s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》4 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-4s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-6.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 6.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-6.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》6.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-6.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-7.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 7.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-7.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》7.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-7.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-11s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 11s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-11s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》11 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-11s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-12s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 12s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-12s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》12 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-12s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-13s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 13s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-13s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》13 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-13s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-14s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 14s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-14s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》14 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-14s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-15.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 15.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-15.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》15.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-15.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-16.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 16.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-16.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》16.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-16.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-17.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 17.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-17.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》17.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-17.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-18.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 18.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-18.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》18.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-18.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-20s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 20s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-20s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》20 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-20s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-21.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 21.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-21.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》21.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-21.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-23s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 23s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-23s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》23 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-23s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-24.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 24.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-24.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》24.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-24.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-25s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 25s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-25s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》25 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-25s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-25.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 25.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-25.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》25.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-25.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-26s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 26s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-26s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》26 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-26s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-26.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 26.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-26.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》26.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-26.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-27s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 27s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-27s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》27 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-27s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-27.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 27.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-27.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》27.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-27.5s.png?v=0.0.1"},{"i":"frames/奶蛙-帧图-最伟大的奶蛙-28.5s.png","c":"frames","cn":"视频帧图","t":"最伟大的奶蛙 · 28.5s","th":"thumbs/frames/奶蛙-帧图-最伟大的奶蛙-28.5s.webp?v=0.0.1","w":1080,"h":1920,"ty":"image","n":"取自《最伟大的奶蛙》28.5 秒处，单帧导出。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/frames/%E5%A5%B6%E8%9B%99-%E5%B8%A7%E5%9B%BE-%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%A5%B6%E8%9B%99-28.5s.png?v=0.0.1"},{"i":"videos/奶蛙-圣殿序曲-封面.jpg","c":"videos","cn":"官方圣影","t":"圣殿序曲 · 封面","th":"thumbs/videos/奶蛙-圣殿序曲-封面.webp?v=0.0.1","w":1920,"h":1080,"ty":"image","n":"四幕式展馆短片：序·开门 / 一·圣典 / 二·众生 / 三·收束，20 个镜头、37.1 秒。\n静态馆藏经推轨与虚化景深做成蒙太奇，配原创程序化生成配乐（D 小调持续音 + 钟琴泛音 + 低频脉冲），无第三方音乐。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/videos/%E5%A5%B6%E8%9B%99-%E5%9C%A3%E6%AE%BF%E5%BA%8F%E6%9B%B2-%E5%B0%81%E9%9D%A2.jpg?v=0.0.1"},{"i":"assets/奶蛙-logo.jpg","c":"assets","cn":"品牌资产","t":"logo","th":"thumbs/assets/奶蛙-logo.webp?v=0.0.1","w":1080,"h":1037,"ty":"image","n":"品牌标识：奶蛙捧腹大笑特写构图，黄圆润身体、浅米肚皮、绿眼灰爪，用于官网与插件角标。","l":"MIT（本仓库自制）","s":"奶蛙艺术圣殿","r":"https://nailoong-wallpaper.pages.dev/assets/%E5%A5%B6%E8%9B%99-logo.jpg?v=0.0.1"}];
+  const grid = document.getElementById('todayGrid');
+  const date = new Date();
+  const seed = date.getFullYear()*372 + (date.getMonth()+1)*31 + date.getDate();
+  const picked = [];
+  if(POOL.length){
+    for(let k=0;k<3;k++){
+      let idx=(seed*7+k*137)%POOL.length;
+      let guard=0;
+      while(picked.indexOf(POOL[idx])>-1 && guard<POOL.length){idx=(idx+1)%POOL.length;guard++;}
+      picked.push(POOL[idx]);
+    }
+  }
+  function esc(s){
+    return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  if(!picked.length){
+    grid.innerHTML='<p class="empty">今天没有可铺的图。</p>';
+  }else{
+    const main=picked[0];
+    const mainHtml='<article class="today-main">'+
+      '<figure><img src="'+esc(main.th)+'" alt="'+esc(main.t)+'" loading="eager" decoding="async"></figure>'+
+      '<h3>'+esc(main.t)+'</h3><p>'+esc(main.n)+'</p>'+
+      '<a href="#lightbox" data-today="'+esc(main.i)+'">看这一件</a></article>';
+    const sideHtml='<div class="today-side">'+picked.slice(1).map(function(it){
+      return '<a class="today-mini" href="#lightbox" data-today="'+esc(it.i)+'">'+
+        '<figure><img src="'+esc(it.th)+'" alt="'+esc(it.t)+'" loading="lazy" decoding="async"></figure>'+
+        '<div><h4>'+esc(it.t)+'</h4><p>'+esc(it.n)+'</p></div></a>';
+    }).join('')+'</div>';
+    grid.innerHTML=mainHtml+sideHtml;
+  }
+  grid.addEventListener('click',function(e){
+    const a=e.target.closest('[data-today]');
+    if(!a) return;
+    e.preventDefault();
+    const it=POOL.find(function(x){return x.i===a.dataset.today;});
+    if(it) openItem(it);
+  });
+
+  const lb=document.getElementById('lightbox');
+  const lbImg=document.getElementById('lbImg');
+  const lbVideo=document.getElementById('lbVideo');
+  const lbAudio=document.getElementById('lbAudio');
+  const lbCat=document.getElementById('lbCat');
+  const lbTitle=document.getElementById('lbTitle');
+  const lbNarr=document.getElementById('lbNarr');
+  const lbDim=document.getElementById('lbDim');
+  const lbLicense=document.getElementById('lbLicense');
+  const lbSource=document.getElementById('lbSource');
+  const lbRaw=document.getElementById('lbRaw');
+  function openItem(it){
+    const isVideo=it.ty==='video';
+    const isAudio=it.ty==='audio';
+    lbVideo.pause();lbAudio.pause();
+    lbImg.hidden=isVideo;
+    lbVideo.hidden=!isVideo;
+    lbAudio.hidden=!isAudio;
+    if(isVideo){lbVideo.poster=it.th;lbVideo.src=it.r;lbVideo.load();}
+    else{lbVideo.removeAttribute('src');lbVideo.load();}
+    if(isAudio){lbAudio.src=it.r;lbAudio.load();}
+    else{lbAudio.removeAttribute('src');lbAudio.load();}
+    lbCat.textContent=it.cn;
+    lbTitle.textContent=it.t;
+    lbNarr.textContent=it.n||'这件还没有展签。';
+    lbDim.textContent=(it.w&&it.h)?it.w+' × '+it.h:(isVideo?'影像':'音频');
+    lbLicense.textContent=it.l||'见同名 .txt';
+    lbSource.textContent=it.s||'—';
+    lbRaw.href=it.r||'#';
+    lbImg.alt=it.t;
+    lbImg.dataset.full=it.r||'';
+    lbImg.src=it.th;
+    if(!isVideo&&!isAudio&&it.r&&it.r!==it.th){
+      const full=new Image();
+      full.onload=function(){if(lb.open&&lbImg.dataset.full===it.r) lbImg.src=it.r;};
+      full.src=it.r;
+    }
+    lb.showModal();
+  }
+  document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+  lb.addEventListener('close',function(){lbVideo.pause();lbAudio.pause();});
+  lb.addEventListener('click',function(e){if(e.target===lb) lb.close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.open) lb.close();});
+})();
+</script>
+</body>
+</html>

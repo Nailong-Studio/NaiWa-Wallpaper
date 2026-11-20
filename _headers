@@ -20,7 +20,34 @@
 /history.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/zones
+  Cache-Control: public, max-age=0, must-revalidate
+
+/zones.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/today
+  Cache-Control: public, max-age=0, must-revalidate
+
+/today.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/collection
+  Cache-Control: public, max-age=0, must-revalidate
+
+/collection.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/take
+  Cache-Control: public, max-age=0, must-revalidate
+
+/take.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /404.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/sitemap.xml
   Cache-Control: public, max-age=0, must-revalidate
 
 /assets.json

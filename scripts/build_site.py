@@ -108,13 +108,13 @@ HTML = r'''<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>奶蛙世界 · __TOTAL__ 件藏品，九座聚落</title>
-<meta name="description" content="奶蛙世界：__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影，附机器可读清单。">
+<meta name="description" content="奶蛙世界：__TOTAL__ 件奶蛙藏品，九座聚落，一张地图。今日三件、藏品滩、取货口各自成页，想逛哪一处再进去。">
 <meta name="theme-color" content="#0d0c09" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f6efdd" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://nailoong-wallpaper.pages.dev/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="奶蛙世界 · __TOTAL__ 件藏品，九座聚落">
-<meta property="og:description" content="__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影。">
+<meta property="og:description" content="__TOTAL__ 件奶蛙藏品，九座聚落，一张地图。想看哪一处，点进去。">
 <meta property="og:url" content="https://nailoong-wallpaper.pages.dev/">
 <meta property="og:image" content="https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B8%98%E6%AF%94%E7%89%B9%E4%B8%8E%E6%99%AE%E7%BB%AA%E5%85%8B.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -240,7 +240,7 @@ html[data-theme="light"] .theme .sun{display:none}
 .map .compass{fill:none;stroke:var(--gold);opacity:.5}
 .map .compass-fill{fill:var(--gold);opacity:.5}
 .pins{position:absolute;inset:0}
-.pin{position:absolute;left:calc(var(--x) * 1%);top:calc(var(--y) * 1%);transform:translate(-50%,-50%);background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;padding:0;color:var(--ink)}
+.pin{position:absolute;left:calc(var(--x) * 1%);top:calc(var(--y) * 1%);transform:translate(-50%,-50%);background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;padding:0;color:var(--ink);text-decoration:none}
 .pin__dot{width:42px;height:42px;border-radius:50%;background:var(--panel);border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .2s,background .2s}
 .pin__dot svg{width:20px;height:20px}
 .pin__label{font-size:12px;line-height:1.2;background:color-mix(in srgb,var(--panel) 88%,transparent);border:1px solid var(--line);padding:2px 7px;white-space:nowrap;color:var(--ink)}
@@ -271,6 +271,22 @@ section[id]{scroll-margin-top:74px}
 .zone__meta h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.2;margin:4px 0 5px;color:var(--ink)}
 .zone__meta p{font-size:12px;color:var(--muted);line-height:1.65}
 .zone__count{font-size:12px;color:var(--gold);margin-top:6px;display:block}
+
+/* ===== 门厅入口 ===== */
+.doors{background:var(--bg2)}
+.doors .head{margin-bottom:18px}
+.door-list{border-top:1px solid var(--line)}
+.door{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:22px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,padding .2s}
+.door:hover{background:var(--panel);padding-left:14px;padding-right:14px}
+.door__idx{font-family:var(--display);font-size:24px;line-height:1;color:var(--gold);opacity:.85}
+.door__body{display:block;min-width:0}
+.door__body small{display:block;font-size:10px;letter-spacing:.14em;color:var(--dim);margin-bottom:3px}
+.door__body strong{display:block;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);line-height:1.2;font-weight:400;color:var(--ink)}
+.door__body span{display:block;font-size:12px;line-height:1.65;color:var(--muted);margin-top:4px}
+.door__go{font-size:12px;color:var(--gold);white-space:nowrap}
+.door__go::after{content:" ↗";font-size:11px}
+.doors__note{margin-top:22px;font-size:12px;color:var(--muted)}
+.doors__note a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
 
 /* ===== 今日三件 ===== */
 .today-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);align-items:start}
@@ -392,7 +408,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
   .pin__label{display:none}
   .map-strip{display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;scrollbar-width:none}
   .map-strip::-webkit-scrollbar{display:none}
-  .strip{flex:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:12px;padding:8px 12px;white-space:nowrap;cursor:pointer}
+  .strip{flex:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:12px;padding:8px 12px;white-space:nowrap;cursor:pointer;text-decoration:none}
   .strip b{color:var(--gold);font-weight:500;margin-left:4px}
   .map-note{font-size:10px;max-width:86%}
   .head{flex-direction:column;align-items:flex-start;gap:12px}
@@ -400,6 +416,9 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
   .zone-grid{grid-template-columns:1fr}
   .zone{grid-template-columns:88px minmax(0,1fr);padding:14px}
   .zone__cover{width:88px;height:88px}
+  .door{grid-template-columns:42px minmax(0,1fr);gap:14px;padding:17px 0}
+  .door__idx{font-size:20px}
+  .door__go{display:none}
   .today-grid{grid-template-columns:1fr}
   .today-main figure{aspect-ratio:4/3}
   .today-mini{grid-template-columns:104px minmax(0,1fr)}
@@ -442,13 +461,13 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
 
 <header class="top">
   <div class="top__in">
-    <a class="brand" href="#top"><svg><use href="#i-naiwa" xlink:href="#i-naiwa"/></svg><b>奶蛙世界</b></a>
+    <a class="brand" href="index.html"><svg><use href="#i-naiwa" xlink:href="#i-naiwa"/></svg><b>奶蛙世界</b></a>
     <nav class="nav" aria-label="主导航">
-      <a href="#zones">聚落</a>
+      <a href="zones.html">聚落</a>
       <a href="history.html">简史</a>
-      <a href="#today">今日</a>
-      <a href="#collection">藏品滩</a>
-      <a href="#take">取货口</a>
+      <a href="today.html">今日</a>
+      <a href="collection.html">藏品滩</a>
+      <a href="take.html">取货口</a>
       <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
     </nav>
     <button class="theme" id="theme" type="button" aria-label="切换明暗主题" aria-pressed="false">
@@ -461,11 +480,11 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
   </div>
   <div class="mobile-menu" id="mobileNav" hidden>
     <nav aria-label="手机导航">
-      <a href="#zones">聚落</a>
+      <a href="zones.html">聚落</a>
       <a href="history.html">简史</a>
-      <a href="#today">今日</a>
-      <a href="#collection">藏品滩</a>
-      <a href="#take">取货口</a>
+      <a href="today.html">今日</a>
+      <a href="collection.html">藏品滩</a>
+      <a href="take.html">取货口</a>
       <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
     </nav>
   </div>
@@ -477,7 +496,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
       <div class="hero__copy">
         <div class="kicker">奶蛙世界 · NAIWA WORLD</div>
         <h1><span>奶蛙</span><span>世界</span></h1>
-        <p class="lede">__TOTAL__ 件藏品，按九座聚落、十五类摆在岛上。名画、表情、桌宠、壁纸、圣影，点地图就落到想去的那一滩。</p>
+        <p class="lede">__TOTAL__ 件藏品，九座聚落，一张地图。门口只放路牌，不把货一次摊完；想看哪一滩，点进去。</p>
         <div class="stats" aria-label="世界概况">
           <div class="stat"><strong>__TOTAL__</strong><span>件藏品</span></div>
           <div class="stat"><strong>9</strong><span>座聚落</span></div>
@@ -485,9 +504,10 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
           <div class="stat"><strong>__VERSION__</strong><span>当前版本</span></div>
         </div>
         <div class="cta">
-          <a class="btn" href="#zones">沿着地图走 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn" href="zones.html">去九座聚落 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="link" href="today.html">今日三件</a>
+          <a class="link" href="collection.html">直接进藏品滩</a>
           <a class="link" href="history.html">读奶蛙简史</a>
-          <a class="link" href="#today">先看今日三件</a>
         </div>
       </div>
 
@@ -556,85 +576,23 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
           <defs><clipPath id="islandClip"><path d="M196 350c-20-64 20-132 96-166 63-27 124-16 186-37 70-23 150-14 214 22s120 86 130 152c11 65-28 120-86 152-63 35-128 43-192 29-68-15-120 22-192 8-74-15-130-92-154-170Z"/></clipPath></defs>
         </svg>
         <div class="pins">__PINS__</div>
-        <p class="map-note">点击任一聚落，滩上只留下那一类。</p>
+        <p class="map-note">点任一聚落，直接跳到筛好的那一滩。</p>
       </div>
       <div class="map-strip" aria-label="聚落快捷入口">__MAP_STRIP__</div>
     </div>
   </section>
 
-  <section class="section zones" id="zones">
+  <section class="section doors" id="doors">
     <div class="wrap">
       <div class="head">
         <div>
-          <h2>九座<em>聚落</em></h2>
+          <h2>从哪一扇<em>门</em>进</h2>
           <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <p>每座聚落管一类。点进去，下面的藏品滩只留这一类。</p>
+        <p>每扇门后面是一页自己的内容；门口不放清单，也不铺 406 张卡。</p>
       </div>
-      <div class="zone-grid" id="zoneGrid">__ZONE_CARDS__</div>
-    </div>
-  </section>
-
-  <section class="section" id="today">
-    <div class="wrap">
-      <div class="head">
-        <div>
-          <h2>今日<em>三件</em></h2>
-          <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <p>每天按日期轮换三件。先看这三件，再决定从哪一滩逛。</p>
-      </div>
-      <div class="today-grid" id="todayGrid"></div>
-    </div>
-  </section>
-
-  <section class="section collection" id="collection">
-    <div class="wrap">
-      <div class="head">
-        <div>
-          <h2>藏品<em>滩</em></h2>
-          <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <p id="count" class="count" aria-live="polite">正在数藏品……</p>
-      </div>
-      <div class="filters">
-        <label class="search">
-          <svg><use href="#i-search" xlink:href="#i-search"/></svg>
-          <input id="q" type="search" placeholder="搜标题、展签、来源" aria-label="搜索藏品" autocomplete="off">
-        </label>
-        <div class="chips" id="chips" role="group" aria-label="按聚落筛选"></div>
-      </div>
-      <div class="grid" id="grid"></div>
-      <div class="empty" id="empty" hidden>
-        <p>滩上没找到这一件。换个词，或者把筛子倒空。</p>
-        <button id="emptyReset" type="button">清空搜索和聚落</button>
-      </div>
-      <div class="more"><button id="more" type="button">再拾 24 件</button></div>
-    </div>
-  </section>
-
-  <section class="section take" id="take">
-    <div class="wrap">
-      <details>
-        <summary><span>+</span>取货口 · 给开发者</summary>
-        <div class="take__body">
-          <pre># 单件直链（GitHub raw，跟随改名跳转）
-https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/&lt;分类&gt;/&lt;文件名&gt;
-
-# 或走 Cloudflare 图床（开 CORS，可直接当壁纸 URL）
-__RAW_BASE__&lt;分类&gt;/&lt;文件名&gt;
-
-# 按清单程序化取用
-curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/assets.json</pre>
-          <div class="take__links">
-            <a href="assets.json">assets.json · __TOTAL__ 件全量清单<small>标题 / 尺寸 / 展签 / 许可 / 来源</small></a>
-            <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">GitHub 仓库<small>Nailong-Studio/NaiWa-Wallpaper</small></a>
-            <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases" target="_blank" rel="noopener">打包下载<small>Release 附件</small></a>
-            <a href="https://naiwa-wallpaper.pages.dev/" target="_blank" rel="noopener">奶蛙壁纸扩展<small>新标签页内置 __EXT_COUNT__ 张</small></a>
-            <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">奶蛙艺术圣殿<small>策展过的成品展厅</small></a>
-          </div>
-        </div>
-      </details>
+      <div class="door-list">__DOOR_LIST__</div>
+      <p class="doors__note">还没想好从哪走？<a href="zones.html">先看九座聚落的目录</a>，或者沿地图点一个图钉。</p>
     </div>
   </section>
 </main>
@@ -646,218 +604,7 @@ curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/as
   </div>
 </footer>
 
-<dialog id="lightbox" aria-label="藏品详情">
-  <button class="lb__close" id="lbClose" type="button" aria-label="关闭"><svg><use href="#i-close" xlink:href="#i-close"/></svg></button>
-  <div class="lb">
-    <figure>
-      <img id="lbImg" alt="">
-      <video id="lbVideo" controls playsinline preload="metadata" hidden></video>
-    </figure>
-    <div class="lb__copy">
-      <div class="lb__cat" id="lbCat"></div>
-      <h3 id="lbTitle"></h3>
-      <p id="lbNarr"></p>
-      <audio id="lbAudio" controls preload="metadata" hidden></audio>
-      <dl>
-        <dt>尺寸</dt><dd id="lbDim">—</dd>
-        <dt>许可</dt><dd id="lbLicense">—</dd>
-        <dt>来源</dt><dd id="lbSource">—</dd>
-      </dl>
-      <a id="lbRaw" href="#" target="_blank" rel="noopener">打开原件 ↗</a>
-    </div>
-  </div>
-</dialog>
-
 <script>
-const ZONES = __ZONES_JSON__;
-const ITEMS = __ITEMS_JSON__;
-const TOTAL = __TOTAL__;
-const EXT_COUNT = __EXT_COUNT__;
-const grid = document.getElementById('grid');
-const chips = document.getElementById('chips');
-const countEl = document.getElementById('count');
-const moreBtn = document.getElementById('more');
-const empty = document.getElementById('empty');
-const q = document.getElementById('q');
-const state = { zone: 'all', q: '', shown: 24 };
-
-function esc(s) {
-  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-  });
-}
-function zoneOf(id) { return ZONES.find(function (z) { return z.id === id; }); }
-function zoneNameOf(it) {
-  const z = ZONES.find(function (z) { return z.cats.indexOf(it.c) > -1; });
-  return z ? z.name : '';
-}
-function inZone(it) {
-  if (state.zone === 'all') return true;
-  const z = zoneOf(state.zone);
-  return z ? z.cats.indexOf(it.c) > -1 : true;
-}
-function filtered() {
-  const needle = state.q.trim().toLowerCase();
-  return ITEMS.filter(function (it) {
-    if (!inZone(it)) return false;
-    if (!needle) return true;
-    return (it.t + ' ' + it.n + ' ' + it.s + ' ' + it.cn + ' ' + zoneNameOf(it)).toLowerCase().indexOf(needle) > -1;
-  });
-}
-function card(it, idx) {
-  const dim = it.w && it.h ? it.w + ' × ' + it.h : (it.ty === 'video' ? '影像' : '音频');
-  const eager = idx < 4;
-  const dims = (it.ty === 'image' && it.w && it.h) ? ' width="' + it.w + '" height="' + it.h + '"' : '';
-  return '<button class="card" type="button" data-idx="' + idx + '">' +
-    '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '"' + dims + ' loading="' + (eager ? 'eager' : 'lazy') + '"' + (eager ? ' fetchpriority="high"' : '') + ' decoding="async"></figure>' +
-    '<div class="card__body"><div class="card__cat">' + esc(it.cn) + '</div>' +
-    '<div class="card__title">' + esc(it.t) + '</div>' +
-    '<div class="card__dim">' + dim + '</div></div></button>';
-}
-function render() {
-  const list = filtered();
-  const slice = list.slice(0, state.shown);
-  grid.innerHTML = slice.map(card).join('');
-  countEl.textContent = '滩上 ' + list.length + ' 件 · 已铺开 ' + slice.length + ' 件';
-  moreBtn.hidden = slice.length >= list.length;
-  moreBtn.textContent = '再拾 ' + Math.min(24, list.length - slice.length) + ' 件';
-  empty.hidden = list.length !== 0;
-}
-function setZone(id, resetSearch) {
-  state.zone = id;
-  state.shown = 24;
-  if (resetSearch) { state.q = ''; q.value = ''; }
-  Array.from(chips.children).forEach(function (b) {
-    b.setAttribute('aria-pressed', b.dataset.zone === id ? 'true' : 'false');
-  });
-  render();
-}
-function buildChips() {
-  const all = document.createElement('button');
-  all.className = 'chip'; all.type = 'button'; all.dataset.zone = 'all';
-  all.textContent = '全部 ' + TOTAL; all.setAttribute('aria-pressed', 'true');
-  chips.appendChild(all);
-  ZONES.forEach(function (z) {
-    const b = document.createElement('button');
-    b.className = 'chip'; b.type = 'button'; b.dataset.zone = z.id;
-    b.textContent = z.name + ' ' + z.count; b.setAttribute('aria-pressed', 'false');
-    chips.appendChild(b);
-  });
-  chips.addEventListener('click', function (e) {
-    const b = e.target.closest('.chip');
-    if (b) setZone(b.dataset.zone);
-  });
-}
-
-// ===== 今日三件 =====
-function renderToday() {
-  const pool = ITEMS.filter(function (it) {
-    return it.ty === 'image' && it.w >= 900 && it.n && it.n.length > 16;
-  });
-  if (!pool.length) return;
-  const d = new Date();
-  const seed = d.getFullYear() * 372 + (d.getMonth() + 1) * 31 + d.getDate();
-  const picked = [];
-  for (let k = 0; k < 3; k++) {
-    let idx = (seed * 7 + k * 137) % pool.length;
-    let guard = 0;
-    while (picked.indexOf(pool[idx]) > -1 && guard < pool.length) { idx = (idx + 1) % pool.length; guard++; }
-    picked.push(pool[idx]);
-  }
-  const main = picked[0];
-  const mainHtml = '<article class="today-main">' +
-    '<figure><img src="' + esc(main.th) + '" alt="' + esc(main.t) + '" loading="lazy" decoding="async"></figure>' +
-    '<h3>' + esc(main.t) + '</h3><p>' + esc(main.n) + '</p>' +
-    '<a href="#collection" data-today="' + esc(main.i) + '">看这一件</a></article>';
-  const sideHtml = '<div class="today-side">' + picked.slice(1).map(function (it) {
-    return '<a class="today-mini" href="#collection" data-today="' + esc(it.i) + '">' +
-      '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy" decoding="async"></figure>' +
-      '<div><h4>' + esc(it.t) + '</h4><p>' + esc(it.n) + '</p></div></a>';
-  }).join('') + '</div>';
-  document.getElementById('todayGrid').innerHTML = mainHtml + sideHtml;
-}
-document.getElementById('todayGrid').addEventListener('click', function (e) {
-  const a = e.target.closest('[data-today]');
-  if (!a) return;
-  e.preventDefault();
-  const it = ITEMS.find(function (x) { return x.i === a.dataset.today; });
-  if (it) { openItem(it); }
-});
-
-// ===== 灯箱 =====
-const lb = document.getElementById('lightbox');
-const lbImg = document.getElementById('lbImg');
-const lbVideo = document.getElementById('lbVideo');
-const lbAudio = document.getElementById('lbAudio');
-const lbCat = document.getElementById('lbCat');
-const lbTitle = document.getElementById('lbTitle');
-const lbNarr = document.getElementById('lbNarr');
-const lbDim = document.getElementById('lbDim');
-const lbLicense = document.getElementById('lbLicense');
-const lbSource = document.getElementById('lbSource');
-const lbRaw = document.getElementById('lbRaw');
-function openItem(it) {
-  const isVideo = it.ty === 'video';
-  const isAudio = it.ty === 'audio';
-  lbVideo.pause();
-  lbAudio.pause();
-  lbImg.hidden = isVideo;
-  lbVideo.hidden = !isVideo;
-  lbAudio.hidden = !isAudio;
-  if (isVideo) {
-    lbVideo.poster = it.th;
-    lbVideo.src = it.r;
-    lbVideo.load();
-  } else {
-    lbVideo.removeAttribute('src');
-    lbVideo.load();
-  }
-  if (isAudio) {
-    lbAudio.src = it.r;
-    lbAudio.load();
-  } else {
-    lbAudio.removeAttribute('src');
-    lbAudio.load();
-  }
-  lbCat.textContent = it.cn;
-  lbTitle.textContent = it.t;
-  lbNarr.textContent = it.n || '这件还没有展签。';
-  lbDim.textContent = (it.w && it.h) ? it.w + ' × ' + it.h : (isVideo ? '影像' : '音频');
-  lbLicense.textContent = it.l || '见同名 .txt';
-  lbSource.textContent = it.s || '—';
-  lbRaw.href = it.r || '#';
-  lbImg.alt = it.t;
-  lbImg.dataset.full = it.r || '';
-  lbImg.src = it.th;
-  if (!isVideo && !isAudio && it.r && it.r !== it.th) {
-    const full = new Image();
-    full.onload = function () {
-      if (lb.open && lbImg.dataset.full === it.r) lbImg.src = it.r;
-    };
-    full.src = it.r;
-  }
-  lb.showModal();
-}
-grid.addEventListener('click', function (e) {
-  const b = e.target.closest('.card');
-  if (!b) return;
-  const list = filtered();
-  const it = list[Number(b.dataset.idx)];
-  if (it) openItem(it);
-});
-document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
-lb.addEventListener('close', function () {
-  lbVideo.pause();
-  lbAudio.pause();
-});
-lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
-document.addEventListener('keydown', function (e) {
-  if (e.key !== 'Escape') return;
-  if (lb.open) lb.close();
-  if (mobileNav && !mobileNav.hidden) { setMenu(false); menuBtn.focus(); }
-});
-
-// ===== 主题 =====
 const root = document.documentElement;
 const themeBtn = document.getElementById('theme');
 function setTheme(t) {
@@ -870,7 +617,6 @@ themeBtn.addEventListener('click', function () {
   setTheme(root.dataset.theme === 'light' ? 'dark' : 'light');
 });
 
-// ===== 手机导航 =====
 const menuBtn = document.getElementById('menu');
 const mobileNav = document.getElementById('mobileNav');
 function setMenu(open) {
@@ -886,62 +632,42 @@ if (menuBtn && mobileNav) {
     if (mobileNav.hidden) return;
     if (!e.target.closest('#mobileNav') && !e.target.closest('#menu')) setMenu(false);
   });
-}
-
-document.getElementById('emptyReset').addEventListener('click', function () {
-  setZone('all', true);
-  q.focus();
-});
-
-// ===== 交互装配 =====
-document.getElementById('zoneGrid').addEventListener('click', function (e) {
-  const a = e.target.closest('.zone');
-  if (!a) return;
-  e.preventDefault();
-  setZone(a.dataset.zone, true);
-  document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
-});
-document.querySelectorAll('.pin,.strip').forEach(function (p) {
-  p.addEventListener('click', function () {
-    setZone(p.dataset.zone, true);
-    document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !mobileNav.hidden) { setMenu(false); menuBtn.focus(); }
   });
-});
-q.addEventListener('input', function () {
-  state.q = q.value; state.shown = 24; render();
-});
-moreBtn.addEventListener('click', function () {
-  state.shown += 24; render();
-});
-
-buildChips();
-renderToday();
-render();
+}
 </script>
 </body>
 </html>
 '''
 
+DOORS = [
+    ('zones.html', 'THE NINE', '九座聚落', '九张封面，九条去藏品滩的路。'),
+    ('today.html', 'THREE TODAY', '今日三件', '按日期轮换，今天只有三件。'),
+    ('collection.html', 'THE SHORE', '藏品滩', '%d 件，搜索、筛选、慢慢翻。' % len(slim)),
+    ('take.html', 'THE BACK DOOR', '取货口', '清单、直链、打包，给要拿去用的人。'),
+]
+DOOR_LIST = []
+for idx, (href, kicker, title, desc) in enumerate(DOORS, 1):
+    DOOR_LIST.append(
+        '<a class="door" href="%s"><span class="door__idx">%02d</span>'
+        '<span class="door__body"><small>%s</small><strong>%s</strong><span>%s</span></span>'
+        '<span class="door__go">进入</span></a>'
+        % (href, idx, kicker, title, desc)
+    )
+
 PINS = []
-ZONE_CARDS = []
 for z in zone_payload:
     PINS.append(
-        '<button class="pin" type="button" data-zone="%s" style="--x:%s;--y:%s" aria-label="%s，%d 件">'
+        '<a class="pin" href="collection.html?zone=%s" style="--x:%s;--y:%s" aria-label="%s，%d 件">'
         '<span class="pin__dot"><svg><use href="#i-%s" xlink:href="#i-%s"/></svg></span>'
-        '<span class="pin__label">%s<small>%d</small></span></button>'
+        '<span class="pin__label">%s<small>%d</small></span></a>'
         % (z['id'], z['xy'][0], z['xy'][1], z['name'], z['count'], z['icon'], z['icon'], z['name'], z['count'])
-    )
-    ZONE_CARDS.append(
-        '<a class="zone" href="#collection" data-zone="%s">'
-        '<div class="zone__cover"><img src="%s" alt="%s" loading="lazy" decoding="async"></div>'
-        '<div class="zone__meta"><h3>%s</h3><p>%s</p>'
-        '<span class="zone__count">%d 件 · %s</span></div></a>'
-        % (z['id'], z['cover'], z['coverAlt'], z['name'], z['desc'], z['count'], kb(z['bytes']))
     )
 
 MAP_STRIP = []
 for z in zone_payload:
-    MAP_STRIP.append('<button class="strip" type="button" data-zone="%s">%s<b>%d</b></button>'
+    MAP_STRIP.append('<a class="strip" href="collection.html?zone=%s">%s<b>%d</b></a>'
                      % (z['id'], z['name'], z['count']))
 
 EXT_COUNT = 205  # NaiWa-NewTab v1.7.5 的线上清单
@@ -949,17 +675,35 @@ EXT_COUNT = 205  # NaiWa-NewTab v1.7.5 的线上清单
 page = (HTML
         .replace('__PINS__', '\n'.join(PINS))
         .replace('__MAP_STRIP__', ''.join(MAP_STRIP))
-        .replace('__ZONE_CARDS__', '\n'.join(ZONE_CARDS))
-        .replace('__ZONES_JSON__', js_json(zone_payload))
-        .replace('__ITEMS_JSON__', js_json(slim))
+        .replace('__DOOR_LIST__', '\n'.join(DOOR_LIST))
         .replace('__FAVICON__', FAVICON)
-        .replace('__RAW_BASE__', manifest['rawBase'])
         .replace('__CAT_COUNT__', str(cat_count))
         .replace('__VERSION__', manifest['sourceVersion'])
         .replace('__DATE__', manifest['generated'])
-        .replace('__EXT_COUNT__', str(EXT_COUNT))
         .replace('__TOTAL__', str(manifest['total'])))
 
 (ROOT / 'index.html').write_text(page, encoding='utf-8')
 print('index.html written: %d items, %d zones, %d categories, %.1f KB'
       % (manifest['total'], len(zone_payload), cat_count, len(page.encode('utf-8')) / 1024))
+
+# 内页：聚落目录 / 今日三件 / 藏品滩 / 取货口
+from world_pages import build_pages
+
+pages = build_pages(manifest, zone_payload, slim, FAVICON, manifest['rawBase'], cat_count, EXT_COUNT)
+for name, content in pages.items():
+    (ROOT / name).write_text(content, encoding='utf-8')
+    print('%s written: %.1f KB' % (name, len(content.encode('utf-8')) / 1024))
+
+SITEMAP = '''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nailoong-wallpaper.pages.dev/</loc><lastmod>__DATE__</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://nailoong-wallpaper.pages.dev/zones</loc><lastmod>__DATE__</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://nailoong-wallpaper.pages.dev/today</loc><lastmod>__DATE__</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nailoong-wallpaper.pages.dev/collection</loc><lastmod>__DATE__</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://nailoong-wallpaper.pages.dev/take</loc><lastmod>__DATE__</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nailoong-wallpaper.pages.dev/history</loc><lastmod>__DATE__</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
+'''
+(ROOT / 'sitemap.xml').write_text(SITEMAP.replace('__DATE__', manifest['generated']), encoding='utf-8')
+print('sitemap.xml written')
+
