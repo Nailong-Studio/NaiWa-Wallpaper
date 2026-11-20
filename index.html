@@ -255,6 +255,16 @@ footer{border-top:1px solid var(--line);padding:26px 0 34px;font-size:12px;color
 .foot a{color:var(--gold);text-decoration:none}
 .foot__meta{text-align:right;white-space:nowrap;font-size:11px;line-height:1.8}
 
+/* ===== Star 引导 ===== */
+.star-callout{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--panel);border:1px solid var(--line);padding:18px 20px;margin:0 auto 24px}
+.star-callout__copy{display:flex;align-items:center;gap:12px;min-width:0}
+.star-callout__mark{color:var(--gold);font-size:22px;line-height:1;flex:none}
+.star-callout__copy strong{display:block;color:var(--ink);font-size:14px;line-height:1.5}
+.star-callout__copy small{display:block;color:var(--muted);font-size:11px;line-height:1.6;margin-top:3px}
+.star-callout__links{display:flex;flex-wrap:wrap;gap:8px;flex:none}
+.star-callout__links a{border:1px solid var(--line);border-radius:999px;color:var(--gold);font-size:11px;line-height:1;padding:9px 11px;text-decoration:none;white-space:nowrap;transition:border-color .2s,background .2s}
+.star-callout__links a:hover{border-color:var(--gold);background:var(--bg2)}
+
 /* ===== 灯箱 ===== */
 dialog{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:0;width:min(1080px,94vw);max-height:90vh;margin:auto;box-shadow:var(--shadow)}
 dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
@@ -293,6 +303,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
   .brand{font-size:18px}
   .brand svg{width:26px;height:26px}
   .nav{display:none}
+  .star-callout{flex-direction:column;align-items:flex-start;gap:12px}
   .menu{display:grid}
   .mobile-menu:not([hidden]){display:block}
   .hero{padding-top:24px}
@@ -365,6 +376,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
       <a href="collection.html">藏品滩</a>
       <a href="take.html">取货口</a>
       <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases/tag/desktop-v0.0.3" target="_blank" rel="noopener">桌面版 ↗</a>
+      <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">★ Star</a>
       <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
     </nav>
     <button class="theme" id="theme" type="button" aria-label="切换明暗主题" aria-pressed="false">
@@ -383,6 +395,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
       <a href="collection.html">藏品滩</a>
       <a href="take.html">取货口</a>
       <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases/tag/desktop-v0.0.3" target="_blank" rel="noopener">桌面版 ↗</a>
+      <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">★ Star</a>
       <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
     </nav>
   </div>
@@ -507,6 +520,20 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
 </main>
 
 <footer>
+<div class="wrap star-callout" aria-label="给项目点 Star">
+  <div class="star-callout__copy">
+    <span class="star-callout__mark" aria-hidden="true">★</span>
+    <div>
+      <strong>如果这些奶蛙帮你省了找图的时间，去 GitHub 给三个项目各点一颗 Star。</strong>
+      <small>Star 是公开的收藏，不用打赏，也不用注册新账号。</small>
+    </div>
+  </div>
+  <div class="star-callout__links">
+    <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper" target="_blank" rel="noopener">素材仓库 ↗</a>
+    <a href="https://github.com/Nailong-Studio/NaiWa-NewTab" target="_blank" rel="noopener">新标签页扩展 ↗</a>
+    <a href="https://github.com/Nailong-Studio/NaiLoong-Universe" target="_blank" rel="noopener">艺术圣殿 ↗</a>
+  </div>
+</div>
   <div class="wrap foot">
     <p>奶蛙是民间二创形象，角色原型权利归原权利人。本库只收录许可允许再分发的素材，逐件来源与许可见同名 <code>.txt</code>。若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后下架。</p>
     <div class="foot__meta">406 件藏品 · v0.0.1 · 2026-11-20<br><a href="history.html">奶蛙简史</a> · <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/releases/tag/desktop-v0.0.3" target="_blank" rel="noopener">桌面版 v0.0.3</a> / NAIWA WORLD / Nailong-Studio</div>
