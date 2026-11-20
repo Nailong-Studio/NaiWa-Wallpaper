@@ -1,10 +1,10 @@
 {
   "name": "奶蛙艺术圣殿 · 素材总清单",
   "repo": "Nailong-Studio/NaiWa-Wallpaper",
-  "sourceVersion": "3.2.5",
+  "sourceVersion": "3.2.6",
   "generated": "2026-11-20",
   "rawBase": "https://nailoong-wallpaper.pages.dev/",
-  "total": 410,
+  "total": 406,
   "categories": [
     {
       "id": "classic",
@@ -22,7 +22,7 @@
       "id": "emotes",
       "name": "表情收藏",
       "desc": "表情包、官方姿态、立绘与动图",
-      "count": 74
+      "count": 70
     },
     {
       "id": "poses",
@@ -1561,57 +1561,6 @@
       "height": 302
     },
     {
-      "id": "emotes/奶蛙-动图-含泪.gif",
-      "category": "emotes",
-      "categoryName": "表情收藏",
-      "title": "动图 · 含泪",
-      "file": "emotes/奶蛙-动图-含泪.gif",
-      "raw": "https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%8A%A8%E5%9B%BE-%E5%90%AB%E6%B3%AA.gif",
-      "thumb": "thumbs/emotes/奶蛙-动图-含泪.webp",
-      "type": "gif",
-      "bytes": 559189,
-      "narrative": "动图：奶蛙眼眶含泪、泪珠滑落，委屈巴巴的循环表情。无水印、无字幕。\n640×640 · GIF 动图 · 来源：百度图片（pic.rmb.bdstatic.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
-      "license": "MIT（本仓库自制）",
-      "source": "奶蛙艺术圣殿",
-      "form": "naiwa",
-      "width": 640,
-      "height": 640
-    },
-    {
-      "id": "emotes/奶蛙-动图-张口大笑.gif",
-      "category": "emotes",
-      "categoryName": "表情收藏",
-      "title": "动图 · 张口大笑",
-      "file": "emotes/奶蛙-动图-张口大笑.gif",
-      "raw": "https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%8A%A8%E5%9B%BE-%E5%BC%A0%E5%8F%A3%E5%A4%A7%E7%AC%91.gif",
-      "thumb": "thumbs/emotes/奶蛙-动图-张口大笑.webp",
-      "type": "gif",
-      "bytes": 394542,
-      "narrative": "动图：奶蛙仰头张口大笑，循环播放。全网筛选出的无水印、无字幕版本。\n500×500 · GIF 动图 · 来源：新浪图床（n.sinaimg.cn） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
-      "license": "MIT（本仓库自制）",
-      "source": "奶蛙艺术圣殿",
-      "form": "naiwa",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "id": "emotes/奶蛙-动图-西装捂脸.gif",
-      "category": "emotes",
-      "categoryName": "表情收藏",
-      "title": "动图 · 西装捂脸",
-      "file": "emotes/奶蛙-动图-西装捂脸.gif",
-      "raw": "https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E5%8A%A8%E5%9B%BE-%E8%A5%BF%E8%A3%85%E6%8D%82%E8%84%B8.gif",
-      "thumb": "thumbs/emotes/奶蛙-动图-西装捂脸.webp",
-      "type": "gif",
-      "bytes": 1681063,
-      "narrative": "动图：西装革履的奶蛙双手捂脸，社畜式崩溃循环。无水印、无字幕。\n428×428 · GIF 动图 · 来源：百度图片（pic.rmb.bdstatic.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
-      "license": "MIT（本仓库自制）",
-      "source": "奶蛙艺术圣殿",
-      "form": "naiwa",
-      "width": 428,
-      "height": 428
-    },
-    {
       "id": "emotes/奶蛙-双V吐舌.png",
       "category": "emotes",
       "categoryName": "表情收藏",
@@ -1967,23 +1916,6 @@
       "form": "naiwa",
       "width": 192,
       "height": 208
-    },
-    {
-      "id": "emotes/奶蛙-斜眼吐舌.jpg",
-      "category": "emotes",
-      "categoryName": "表情收藏",
-      "title": "斜眼吐舌",
-      "file": "emotes/奶蛙-斜眼吐舌.jpg",
-      "raw": "https://nailoong-wallpaper.pages.dev/emotes/%E5%A5%B6%E8%9B%99-%E6%96%9C%E7%9C%BC%E5%90%90%E8%88%8C.jpg",
-      "thumb": "thumbs/emotes/奶蛙-斜眼吐舌.webp",
-      "type": "image",
-      "bytes": 76528,
-      "narrative": "表情：奶蛙斜眼向上、吐着舌头，一副得瑟又欠揍的小表情。\n1500×1500 · JPEG · 来源：百度图片（bkimg.cdn.bcebos.com） · 用途：奶蛙艺术圣殿素材（Nailong-Studio/wallpaper）",
-      "license": "MIT（本仓库自制）",
-      "source": "奶蛙艺术圣殿",
-      "form": "naiwa",
-      "width": 1500,
-      "height": 1500
     },
     {
       "id": "emotes/奶蛙-桌边微笑.jpg",

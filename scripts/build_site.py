@@ -830,7 +830,7 @@ for z in zone_payload:
     MAP_STRIP.append('<button class="strip" type="button" data-zone="%s">%s<b>%d</b></button>'
                      % (z['id'], z['name'], z['count']))
 
-EXT_COUNT = 206  # NaiWa-NewTab v1.7.4 的线上清单
+EXT_COUNT = 205  # NaiWa-NewTab v1.7.5 的线上清单
 
 page = (HTML
         .replace('__PINS__', '\n'.join(PINS))

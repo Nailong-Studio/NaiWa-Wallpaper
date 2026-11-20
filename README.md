@@ -2,7 +2,7 @@
 
 # NaiWa Wallpaper · Asset Warehouse
 
-**410 assets, 15 categories, one machine-readable manifest. The single source of supply for the museum and the browser extension.**
+**406 assets, 15 categories, one machine-readable manifest. The single source of supply for the museum and the browser extension.**
 
 [![Stars](https://img.shields.io/github/stars/Nailong-Studio/NaiWa-Wallpaper?style=for-the-badge&label=Star&color=FFD700&logo=github)](https://github.com/Nailong-Studio/NaiWa-Wallpaper/stargazers)
 [![Live index](https://img.shields.io/badge/live%20index-nailoong--wallpaper.pages.dev-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://nailoong-wallpaper.pages.dev/)
@@ -23,7 +23,7 @@ licence record for every single file. Curation, storytelling and presentation
 happen in the museum repository, [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe).
 
 The split is deliberate: **this repo registers and delivers, that repo narrates.** The
-live index is now a nine-settlement island over the same 410 files — browse, read a
+live index is now a nine-settlement island over the same 406 files — browse, read a
 label, then take the file.
 
 The landing page stays cheap on purpose: one 56 KB display-font subset served from
@@ -58,7 +58,7 @@ touching this repository at all.
 | --- | --- | --- |
 | `classic/` | World masterpieces re-signed by NaiWa | 62 |
 | `laugh-gallery/` | Laughing variants collected from across the web | 22 |
-| `emotes/` | Sticker packs, official poses, animated emotes | 74 |
+| `emotes/` | Sticker packs, official poses, animated emotes | 70 |
 | `poses/` | 3D costume poses — professions, props, expressions | 24 |
 | `poses-wall/` | 1080×1920 vertical wallpapers composed from those poses | 24 |
 | `mobile/` | 1080×1936 vertical scenes | 6 |
