@@ -48,6 +48,12 @@ def title_of(stem):
     return s.replace('-', ' · ').strip() or stem
 
 
+def natural_key(name):
+    """Keep numbered sequences in numeric order (2s before 11s)."""
+    parts = re.split(r'(\d+(?:\.\d+)?)', name)
+    return [(0, float(p)) if p and p[0].isdigit() else (1, p.casefold()) for p in parts if p]
+
+
 PROV = re.compile(r'^(来源|许可|版权|用途|署名|分辨率|格式|注|备注)\s*[：:]|^\d+(?:\.\d+)?\s*×\s*\d+')
 
 
@@ -146,7 +152,7 @@ def scan():
         d = ROOT / cid
         if not d.exists():
             continue
-        for p in sorted(d.iterdir(), key=lambda x: x.name):
+        for p in sorted(d.iterdir(), key=lambda x: natural_key(x.name)):
             if not p.is_file() or p.suffix.lower() not in MEDIA:
                 continue
             rel = p.relative_to(ROOT).as_posix()

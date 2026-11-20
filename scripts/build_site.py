@@ -174,6 +174,16 @@ button,input{font:inherit;color:inherit}
 .theme .moon{display:none}
 html[data-theme="light"] .theme .moon{display:block}
 html[data-theme="light"] .theme .sun{display:none}
+.menu{flex:none;display:none;width:38px;height:38px;border:1px solid var(--line);background:transparent;place-items:center;align-content:center;cursor:pointer;color:var(--muted)}
+.menu:hover{color:var(--gold);border-color:var(--gold)}
+.menu span{display:block;width:15px;height:1px;background:currentColor;margin:2px 0;transition:transform .2s,opacity .2s}
+.menu[aria-expanded="true"] span:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-3px) rotate(-45deg)}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:var(--bg)}
+.mobile-menu nav{width:min(1240px,92vw);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.mobile-menu a{padding:13px 2px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.04em;color:var(--muted);text-decoration:none}
+.mobile-menu a:hover{color:var(--gold)}
 
 /* ===== 门厅 ===== */
 .hero{position:relative;overflow:hidden;padding:clamp(28px,4vw,56px) 0 clamp(34px,5vw,72px)}
@@ -282,7 +292,9 @@ section[id]{scroll-margin-top:74px}
 /* ===== 藏品滩 ===== */
 .collection{background:var(--bg2)}
 .filters{display:grid;gap:16px;margin-bottom:26px}
-.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 2px;max-width:520px}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:8px 2px;max-width:520px;transition:border-color .2s}
+.search:focus-within{border-color:var(--gold)}
+.search:focus-within svg{color:var(--gold)}
 .search svg{width:18px;height:18px;color:var(--muted);flex:none}
 .search input{width:100%;min-width:0;background:none;border:0;outline:0;font-size:14px;color:var(--ink);padding:4px 0}
 .search input::placeholder{color:var(--dim)}
@@ -304,6 +316,10 @@ section[id]{scroll-margin-top:74px}
 .more button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:11px 26px;font-size:13px;letter-spacing:.06em;cursor:pointer}
 .more button:hover{border-color:var(--gold);color:var(--gold)}
 .more button[hidden]{display:none}
+.empty{border:1px solid var(--line);background:var(--panel);padding:34px 20px;margin-top:26px;text-align:center}
+.empty p{color:var(--muted);font-size:13px;line-height:1.8}
+.empty button{margin-top:14px;border:1px solid var(--gold);background:transparent;color:var(--gold);padding:9px 18px;font-size:12px;cursor:pointer}
+.empty button:hover{background:var(--gold);color:var(--bg)}
 
 /* ===== 取货口 ===== */
 .take{background:var(--bg)}
@@ -311,7 +327,7 @@ section[id]{scroll-margin-top:74px}
 .take summary{cursor:pointer;font-family:var(--display);font-size:24px;color:var(--ink);list-style:none;display:flex;align-items:center;gap:12px}
 .take summary::-webkit-details-marker{display:none}
 .take summary span{width:22px;height:22px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);font-size:14px}
-.take[open] summary span{transform:rotate(45deg)}
+.take details[open] summary span{transform:rotate(45deg)}
 .take__body{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;margin-top:26px}
 .take pre{background:var(--panel);border:1px solid var(--line);padding:18px;overflow-x:auto;font-size:12px;line-height:1.9;color:var(--muted)}
 .take pre b{color:var(--gold);font-weight:400}
@@ -333,6 +349,11 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
 .lb{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);min-height:420px}
 .lb figure{background:var(--bg);display:grid;place-items:center;padding:18px;max-height:84vh;overflow:hidden}
 .lb figure img{max-height:78vh;width:auto;max-width:100%;object-fit:contain}
+.lb figure img[hidden]{display:none}
+.lb figure video{display:block;width:100%;height:auto;max-height:78vh;background:#000}
+.lb figure video[hidden]{display:none}
+.lb audio{display:block;width:100%;margin:14px 0 2px}
+.lb audio[hidden]{display:none}
 .lb__copy{padding:clamp(22px,3vw,38px);overflow-y:auto;max-height:84vh;border-left:1px solid var(--line)}
 .lb__cat{font-size:11px;letter-spacing:.12em;color:var(--gold)}
 .lb h3{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:8px 0 14px}
@@ -360,6 +381,8 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
   .brand{font-size:18px}
   .brand svg{width:26px;height:26px}
   .nav{display:none}
+  .menu{display:grid}
+  .mobile-menu:not([hidden]){display:block}
   .hero{padding-top:24px}
   .hero h1{font-size:clamp(52px,16vw,78px)}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}
@@ -387,6 +410,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
   .lb__copy{border-left:0;border-top:1px solid var(--line);max-height:none}
   .lb figure{max-height:48vh;padding:10px}
   .lb figure img{max-height:44vh}
+  .lb figure video{max-height:44vh}
   .foot{flex-direction:column}
   .foot__meta{text-align:left;white-space:normal}
 }
@@ -431,6 +455,19 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
       <svg class="sun"><use href="#i-sun" xlink:href="#i-sun"/></svg>
       <svg class="moon"><use href="#i-moon" xlink:href="#i-moon"/></svg>
     </button>
+    <button class="menu" id="menu" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileNav" hidden>
+    <nav aria-label="手机导航">
+      <a href="#zones">聚落</a>
+      <a href="history.html">简史</a>
+      <a href="#today">今日</a>
+      <a href="#collection">藏品滩</a>
+      <a href="#take">取货口</a>
+      <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
+    </nav>
   </div>
 </header>
 
@@ -568,6 +605,10 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
         <div class="chips" id="chips" role="group" aria-label="按聚落筛选"></div>
       </div>
       <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <p>滩上没找到这一件。换个词，或者把筛子倒空。</p>
+        <button id="emptyReset" type="button">清空搜索和聚落</button>
+      </div>
       <div class="more"><button id="more" type="button">再拾 24 件</button></div>
     </div>
   </section>
@@ -608,11 +649,15 @@ curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/as
 <dialog id="lightbox" aria-label="藏品详情">
   <button class="lb__close" id="lbClose" type="button" aria-label="关闭"><svg><use href="#i-close" xlink:href="#i-close"/></svg></button>
   <div class="lb">
-    <figure><img id="lbImg" alt=""></figure>
+    <figure>
+      <img id="lbImg" alt="">
+      <video id="lbVideo" controls playsinline preload="metadata" hidden></video>
+    </figure>
     <div class="lb__copy">
       <div class="lb__cat" id="lbCat"></div>
       <h3 id="lbTitle"></h3>
       <p id="lbNarr"></p>
+      <audio id="lbAudio" controls preload="metadata" hidden></audio>
       <dl>
         <dt>尺寸</dt><dd id="lbDim">—</dd>
         <dt>许可</dt><dd id="lbLicense">—</dd>
@@ -632,6 +677,7 @@ const grid = document.getElementById('grid');
 const chips = document.getElementById('chips');
 const countEl = document.getElementById('count');
 const moreBtn = document.getElementById('more');
+const empty = document.getElementById('empty');
 const q = document.getElementById('q');
 const state = { zone: 'all', q: '', shown: 24 };
 
@@ -641,6 +687,10 @@ function esc(s) {
   });
 }
 function zoneOf(id) { return ZONES.find(function (z) { return z.id === id; }); }
+function zoneNameOf(it) {
+  const z = ZONES.find(function (z) { return z.cats.indexOf(it.c) > -1; });
+  return z ? z.name : '';
+}
 function inZone(it) {
   if (state.zone === 'all') return true;
   const z = zoneOf(state.zone);
@@ -651,7 +701,7 @@ function filtered() {
   return ITEMS.filter(function (it) {
     if (!inZone(it)) return false;
     if (!needle) return true;
-    return (it.t + ' ' + it.n + ' ' + it.s + ' ' + it.cn).toLowerCase().indexOf(needle) > -1;
+    return (it.t + ' ' + it.n + ' ' + it.s + ' ' + it.cn + ' ' + zoneNameOf(it)).toLowerCase().indexOf(needle) > -1;
   });
 }
 function card(it, idx) {
@@ -671,10 +721,12 @@ function render() {
   countEl.textContent = '滩上 ' + list.length + ' 件 · 已铺开 ' + slice.length + ' 件';
   moreBtn.hidden = slice.length >= list.length;
   moreBtn.textContent = '再拾 ' + Math.min(24, list.length - slice.length) + ' 件';
+  empty.hidden = list.length !== 0;
 }
-function setZone(id) {
+function setZone(id, resetSearch) {
   state.zone = id;
   state.shown = 24;
+  if (resetSearch) { state.q = ''; q.value = ''; }
   Array.from(chips.children).forEach(function (b) {
     b.setAttribute('aria-pressed', b.dataset.zone === id ? 'true' : 'false');
   });
@@ -716,7 +768,7 @@ function renderToday() {
   const mainHtml = '<article class="today-main">' +
     '<figure><img src="' + esc(main.th) + '" alt="' + esc(main.t) + '" loading="lazy" decoding="async"></figure>' +
     '<h3>' + esc(main.t) + '</h3><p>' + esc(main.n) + '</p>' +
-    '<a href="#collection" data-today="' + esc(main.i) + '">去藏品滩找它</a></article>';
+    '<a href="#collection" data-today="' + esc(main.i) + '">看这一件</a></article>';
   const sideHtml = '<div class="today-side">' + picked.slice(1).map(function (it) {
     return '<a class="today-mini" href="#collection" data-today="' + esc(it.i) + '">' +
       '<figure><img src="' + esc(it.th) + '" alt="' + esc(it.t) + '" loading="lazy" decoding="async"></figure>' +
@@ -735,18 +787,49 @@ document.getElementById('todayGrid').addEventListener('click', function (e) {
 // ===== 灯箱 =====
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
+const lbVideo = document.getElementById('lbVideo');
+const lbAudio = document.getElementById('lbAudio');
+const lbCat = document.getElementById('lbCat');
+const lbTitle = document.getElementById('lbTitle');
+const lbNarr = document.getElementById('lbNarr');
+const lbDim = document.getElementById('lbDim');
+const lbLicense = document.getElementById('lbLicense');
+const lbSource = document.getElementById('lbSource');
+const lbRaw = document.getElementById('lbRaw');
 function openItem(it) {
+  const isVideo = it.ty === 'video';
+  const isAudio = it.ty === 'audio';
+  lbVideo.pause();
+  lbAudio.pause();
+  lbImg.hidden = isVideo;
+  lbVideo.hidden = !isVideo;
+  lbAudio.hidden = !isAudio;
+  if (isVideo) {
+    lbVideo.poster = it.th;
+    lbVideo.src = it.r;
+    lbVideo.load();
+  } else {
+    lbVideo.removeAttribute('src');
+    lbVideo.load();
+  }
+  if (isAudio) {
+    lbAudio.src = it.r;
+    lbAudio.load();
+  } else {
+    lbAudio.removeAttribute('src');
+    lbAudio.load();
+  }
   lbCat.textContent = it.cn;
   lbTitle.textContent = it.t;
   lbNarr.textContent = it.n || '这件还没有展签。';
-  lbDim.textContent = (it.w && it.h) ? it.w + ' × ' + it.h : (it.ty === 'video' ? '影像' : '音频');
+  lbDim.textContent = (it.w && it.h) ? it.w + ' × ' + it.h : (isVideo ? '影像' : '音频');
   lbLicense.textContent = it.l || '见同名 .txt';
   lbSource.textContent = it.s || '—';
   lbRaw.href = it.r || '#';
   lbImg.alt = it.t;
   lbImg.dataset.full = it.r || '';
   lbImg.src = it.th;
-  if (it.r && it.r !== it.th) {
+  if (!isVideo && !isAudio && it.r && it.r !== it.th) {
     const full = new Image();
     full.onload = function () {
       if (lb.open && lbImg.dataset.full === it.r) lbImg.src = it.r;
@@ -763,9 +846,15 @@ grid.addEventListener('click', function (e) {
   if (it) openItem(it);
 });
 document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+lb.addEventListener('close', function () {
+  lbVideo.pause();
+  lbAudio.pause();
+});
 lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && lb.open) lb.close();
+  if (e.key !== 'Escape') return;
+  if (lb.open) lb.close();
+  if (mobileNav && !mobileNav.hidden) { setMenu(false); menuBtn.focus(); }
 });
 
 // ===== 主题 =====
@@ -781,17 +870,40 @@ themeBtn.addEventListener('click', function () {
   setTheme(root.dataset.theme === 'light' ? 'dark' : 'light');
 });
 
+// ===== 手机导航 =====
+const menuBtn = document.getElementById('menu');
+const mobileNav = document.getElementById('mobileNav');
+function setMenu(open) {
+  if (!menuBtn || !mobileNav) return;
+  mobileNav.hidden = !open;
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menuBtn.setAttribute('aria-label', open ? '收起导航' : '展开导航');
+}
+if (menuBtn && mobileNav) {
+  menuBtn.addEventListener('click', function () { setMenu(mobileNav.hidden); });
+  mobileNav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('click', function (e) {
+    if (mobileNav.hidden) return;
+    if (!e.target.closest('#mobileNav') && !e.target.closest('#menu')) setMenu(false);
+  });
+}
+
+document.getElementById('emptyReset').addEventListener('click', function () {
+  setZone('all', true);
+  q.focus();
+});
+
 // ===== 交互装配 =====
 document.getElementById('zoneGrid').addEventListener('click', function (e) {
   const a = e.target.closest('.zone');
   if (!a) return;
   e.preventDefault();
-  setZone(a.dataset.zone);
+  setZone(a.dataset.zone, true);
   document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
 });
 document.querySelectorAll('.pin,.strip').forEach(function (p) {
   p.addEventListener('click', function () {
-    setZone(p.dataset.zone);
+    setZone(p.dataset.zone, true);
     document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
   });
 });

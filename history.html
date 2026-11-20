@@ -70,6 +70,16 @@ button{font:inherit;color:inherit}
 .theme .moon{display:none}
 html[data-theme="light"] .theme .moon{display:block}
 html[data-theme="light"] .theme .sun{display:none}
+.menu{flex:none;display:none;width:38px;height:38px;border:1px solid var(--line);background:transparent;place-items:center;align-content:center;cursor:pointer;color:var(--muted)}
+.menu:hover{color:var(--gold);border-color:var(--gold)}
+.menu span{display:block;width:15px;height:1px;background:currentColor;margin:2px 0;transition:transform .2s,opacity .2s}
+.menu[aria-expanded="true"] span:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-3px) rotate(-45deg)}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:var(--bg)}
+.mobile-menu nav{width:min(1160px,92vw);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.mobile-menu a{padding:13px 2px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.04em;color:var(--muted);text-decoration:none}
+.mobile-menu a:hover{color:var(--gold)}
 
 /* ===== 门厅 ===== */
 .hero{position:relative;overflow:hidden;padding:clamp(46px,7vw,96px) 0 clamp(30px,4vw,58px)}
@@ -245,6 +255,11 @@ footer{border-top:1px solid var(--line);padding:24px 0 30px}
   .factline div:not(:first-child){padding-left:0}
   .foot__meta{text-align:left;white-space:normal}
 }
+@media (max-width:760px){
+  .nav{display:none}
+  .menu{display:grid}
+  .mobile-menu:not([hidden]){display:block}
+}
 @media (max-width:560px){
   .nav{display:none}
   .top__in{height:60px}
@@ -289,12 +304,26 @@ footer{border-top:1px solid var(--line);padding:24px 0 30px}
       <a href="history.html" aria-current="page">简史</a>
       <a href="index.html#today">今日</a>
       <a href="index.html#collection">藏品滩</a>
+      <a href="index.html#take">取货口</a>
       <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
     </nav>
     <button class="theme" id="theme" type="button" aria-label="切换明暗主题" aria-pressed="false">
       <svg class="sun"><use href="#i-sun" xlink:href="#i-sun"/></svg>
       <svg class="moon"><use href="#i-moon" xlink:href="#i-moon"/></svg>
     </button>
+    <button class="menu" id="menu" type="button" aria-label="展开导航" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileNav" hidden>
+    <nav aria-label="手机导航">
+      <a href="index.html#zones">聚落</a>
+      <a href="history.html" aria-current="page">简史</a>
+      <a href="index.html#today">今日</a>
+      <a href="index.html#collection">藏品滩</a>
+      <a href="index.html#take">取货口</a>
+      <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
+    </nav>
   </div>
 </header>
 
@@ -549,7 +578,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 30px}
 <footer>
   <div class="wrap foot">
     <p>奶蛙是民间二创形象，角色原型权利归原权利人。本页只记传播史，不做官方设定；引用与图片仅用于说明。若你是权利人并认为某处不宜展示，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后调整。</p>
-    <div class="foot__meta">NAIWA CHRONICLE · v3.2.8<br>2026-11-20 / Nailong-Studio</div>
+    <div class="foot__meta">NAIWA CHRONICLE · v3.2.9<br>2026-11-20 / Nailong-Studio</div>
   </div>
 </footer>
 
@@ -563,6 +592,26 @@ function setTheme(t){
 }
 setTheme(root.dataset.theme||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
 themeBtn.addEventListener('click',function(){setTheme(root.dataset.theme==='light'?'dark':'light');});
+
+const menuBtn=document.getElementById('menu');
+const mobileNav=document.getElementById('mobileNav');
+function setMenu(open){
+  if(!menuBtn||!mobileNav) return;
+  mobileNav.hidden=!open;
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  menuBtn.setAttribute('aria-label',open?'收起导航':'展开导航');
+}
+if(menuBtn&&mobileNav){
+  menuBtn.addEventListener('click',function(){setMenu(mobileNav.hidden);});
+  mobileNav.addEventListener('click',function(e){if(e.target.closest('a')) setMenu(false);});
+  document.addEventListener('click',function(e){
+    if(mobileNav.hidden) return;
+    if(!e.target.closest('#mobileNav')&&!e.target.closest('#menu')) setMenu(false);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!mobileNav.hidden){setMenu(false);menuBtn.focus();}
+  });
+}
 </script>
 </body>
 </html>
