@@ -26,6 +26,10 @@ The split is deliberate: **this repo registers and delivers, that repo narrates.
 live index is now a nine-settlement island over the same 406 files — browse, read a
 label, then take the file.
 
+A separate [NaiWa Chronicle](https://nailoong-wallpaper.pages.dev/history.html) records
+how the character spread from an AI accident to an internet folk university. It is an
+annex to the warehouse, not a change to its cataloguing job.
+
 The landing page stays cheap on purpose: one 56 KB display-font subset served from
 `fonts/`, system fonts for body copy, no third-party font CDN; the first four
 thumbnails load eager, the rest are lazy; media URLs carry the release version and

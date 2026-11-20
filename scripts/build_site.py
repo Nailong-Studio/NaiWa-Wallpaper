@@ -421,6 +421,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
     <a class="brand" href="#top"><svg><use href="#i-naiwa" xlink:href="#i-naiwa"/></svg><b>奶蛙世界</b></a>
     <nav class="nav" aria-label="主导航">
       <a href="#zones">聚落</a>
+      <a href="history.html">简史</a>
       <a href="#today">今日</a>
       <a href="#collection">藏品滩</a>
       <a href="#take">取货口</a>
@@ -448,6 +449,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
         </div>
         <div class="cta">
           <a class="btn" href="#zones">沿着地图走 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="link" href="history.html">读奶蛙简史</a>
           <a class="link" href="#today">先看今日三件</a>
         </div>
       </div>
@@ -599,7 +601,7 @@ curl -s https://raw.githubusercontent.com/Nailong-Studio/NaiWa-Wallpaper/main/as
 <footer>
   <div class="wrap foot">
     <p>奶蛙是民间二创形象，角色原型权利归原权利人。本库只收录许可允许再分发的素材，逐件来源与许可见同名 <code>.txt</code>。若你是权利人并认为某件不宜收录，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后下架。</p>
-    <div class="foot__meta">__TOTAL__ 件藏品 · v__VERSION__ · __DATE__<br>NAIWA WORLD / Nailong-Studio</div>
+    <div class="foot__meta">__TOTAL__ 件藏品 · v__VERSION__ · __DATE__<br><a href="history.html">奶蛙简史</a> / NAIWA WORLD / Nailong-Studio</div>
   </div>
 </footer>
 

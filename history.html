@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>奶蛙简史 · 从 AI 事故到互联网民间大学</title>
+<meta name="description" content="奶蛙简史：2024 年星野 App 的一次 AI 生成偏差，如何长成 2026 年的表情包、校园立牌、奶蛙学与名画博物馆。非官方档案，标注证据强度。">
+<meta name="theme-color" content="#0d0c09" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6efdd" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://nailoong-wallpaper.pages.dev/history.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="奶蛙简史 · 从 AI 事故到互联网民间大学">
+<meta property="og:description" content="一条从 2024 年 10 月 2 日开始的非官方时间线：AI 误读、捧腹大笑、官方切割、校园立牌、奶蛙学与博物馆。">
+<meta property="og:url" content="https://nailoong-wallpaper.pages.dev/history.html">
+<meta property="og:image" content="https://nailoong-wallpaper.pages.dev/thumbs/classic/%E5%A5%B6%E8%9B%99-%E8%92%99%E5%A8%9C%E4%B8%BD%E8%8E%8E.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312100b'/%3E%3Cpath d='M32 9c12 0 21 8 21 20 0 11-9 18-21 18S11 39 11 20C11 8 20 2 32 2Z' fill='%23FFD54F'/%3E%3Ccircle cx='23' cy='23' r='7' fill='%2366BB6A'/%3E%3Ccircle cx='41' cy='23' r='7' fill='%2366BB6A'/%3E%3Ccircle cx='23' cy='23' r='3' fill='%2313120d'/%3E%3Ccircle cx='41' cy='23' r='3' fill='%2313120d'/%3E%3Cellipse cx='32' cy='43' rx='13' ry='10' fill='%23F2E3BE'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/zcool-kuaile-display.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+(function(){try{var t=localStorage.getItem('naiwa-world-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<style>
+@font-face{font-family:"ZCOOL KuaiLe";src:url("fonts/zcool-kuaile-display.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+:root{
+  --bg:#0d0c09;--bg2:#13110c;--panel:#191610;--panel2:#211c13;
+  --ink:#efe5cf;--muted:#a79b82;--line:#342b1d;--dim:#7f735d;
+  --gold:#f1c24d;--jade:#7cc36a;--clay:#e08a63;--paper:#f2e3be;
+  --shadow:0 20px 58px rgba(0,0,0,.42);
+  --display:"ZCOOL KuaiLe","STKaiti","KaiTi","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC",serif;
+  --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#f6efdd;--bg2:#efe4cb;--panel:#fffaf0;--panel2:#f7ecd6;
+  --ink:#2d2618;--muted:#74684f;--line:#d8c7a4;--dim:#9b8a6a;
+  --gold:#a86f0d;--jade:#4c8a3b;--clay:#b44f32;--paper:#fdf6e7;
+  --shadow:0 18px 36px rgba(88,68,30,.14);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.75 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;z-index:30;background:var(--gold);color:var(--bg);padding:8px 14px}
+.skip:focus{left:8px}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+
+/* ===== 顶栏 ===== */
+.top{position:sticky;top:0;z-index:12;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top__in{width:min(1160px,92vw);margin:0 auto;display:flex;align-items:center;gap:24px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:21px;letter-spacing:.04em;white-space:nowrap}
+.brand svg{width:30px;height:30px;flex:none}
+.brand b{font-weight:400}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:13px;letter-spacing:.04em;color:var(--muted)}
+.nav a{text-decoration:none;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .25s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{right:0}
+.nav a[aria-current="page"]{color:var(--ink)}
+.nav a[aria-current="page"]::after{right:0}
+.theme{flex:none;margin-left:auto;width:38px;height:38px;border:1px solid var(--line);background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.theme:hover{color:var(--gold);border-color:var(--gold)}
+.theme svg{width:18px;height:18px}
+.theme .moon{display:none}
+html[data-theme="light"] .theme .moon{display:block}
+html[data-theme="light"] .theme .sun{display:none}
+
+/* ===== 门厅 ===== */
+.hero{position:relative;overflow:hidden;padding:clamp(46px,7vw,96px) 0 clamp(30px,4vw,58px)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(var(--line) .7px,transparent .7px);background-size:13px 13px;mask-image:linear-gradient(to bottom,black,transparent 78%)}
+.hero__grid{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.76fr);gap:clamp(28px,6vw,88px);align-items:center}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--gold);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.eyebrow span{color:var(--muted);letter-spacing:.08em}
+.eyebrow i{display:inline-block;width:28px;height:1px;background:var(--gold);font-style:normal}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(66px,10vw,132px);line-height:.92;letter-spacing:-.055em;margin:22px 0 20px}
+h1 span{display:block}
+h1 span:last-child{color:var(--gold)}
+.dek{max-width:34em;font-size:clamp(17px,2vw,21px);line-height:1.65;color:var(--ink)}
+.dek em{font-style:normal;color:var(--muted)}
+.hero-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted)}
+.hero-meta span{display:flex;align-items:center;gap:7px}
+.hero-meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);padding:12px 18px;text-decoration:none;font-size:13px;letter-spacing:.04em;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:transparent;color:var(--ink);transform:translateY(-2px)}
+.link{color:var(--muted);font-size:13px;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.link:hover{color:var(--gold);border-color:var(--gold)}
+
+.specimen{position:relative;border:1px solid var(--line);background:var(--panel);padding:18px 18px 20px;box-shadow:var(--shadow)}
+.specimen::before,.specimen::after{content:"";position:absolute;width:18px;height:18px;border-color:var(--gold);border-style:solid}
+.specimen::before{left:8px;top:8px;border-width:1px 0 0 1px}
+.specimen::after{right:8px;bottom:8px;border-width:0 1px 1px 0}
+.specimen__head{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted);padding:2px 2px 12px}
+.specimen__head b{color:var(--gold);font-weight:500}
+.eye-wrap{position:relative;aspect-ratio:1/1;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line);overflow:hidden}
+.eye-wrap::before{content:"";position:absolute;inset:9%;border:1px dashed color-mix(in srgb,var(--gold) 55%,transparent);border-radius:50%;opacity:.55}
+.eye{width:82%;height:82%;filter:drop-shadow(0 14px 18px rgba(0,0,0,.28))}
+.specimen__foot{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;padding:14px 2px 0}
+.specimen__foot p{font-size:12px;line-height:1.65;color:var(--muted);max-width:18em}
+.specimen__foot b{display:block;color:var(--ink);font-weight:500;margin-bottom:3px}
+.specimen__stamp{font-family:var(--serif);font-size:12px;color:var(--clay);border:1px solid var(--clay);padding:5px 8px;transform:rotate(-4deg);white-space:nowrap}
+
+.factline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(34px,5vw,58px)}
+.factline div{padding:16px 18px 16px 0;border-right:1px solid var(--line)}
+.factline div:last-child{border-right:0;padding-left:18px}
+.factline div:not(:first-child){padding-left:18px}
+.factline small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted);margin-bottom:3px}
+.factline b{font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.4}
+
+/* ===== 时间轴 ===== */
+.timeline{padding:clamp(56px,8vw,104px) 0 clamp(44px,6vw,84px)}
+.sect-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.48fr);gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:30px}
+.section-no{font-family:var(--mono);font-size:10px;letter-spacing:.13em;color:var(--gold);margin-bottom:12px}
+.sect-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,54px);line-height:1.12;letter-spacing:-.03em}
+.sect-head p{font-size:14px;line-height:1.8;color:var(--muted);max-width:30em;justify-self:end}
+.legend{display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:clamp(34px,5vw,52px);font-size:12px;color:var(--muted)}
+.legend b{font-weight:500;color:var(--ink)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);display:inline-block}
+.legend i.solid{background:var(--gold)}
+.legend i.half{background:linear-gradient(90deg,var(--gold) 50%,transparent 50%)}
+.legend i.ring{background:transparent}
+
+.chapter{margin-bottom:clamp(30px,4vw,48px)}
+.chapter-head{display:grid;grid-template-columns:90px 46px minmax(0,1fr);align-items:center;gap:0;margin-bottom:8px}
+.chapter-year{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5vw,58px);line-height:1;color:var(--gold);text-align:right;padding-right:14px;letter-spacing:-.04em}
+.chapter-rule{position:relative;align-self:stretch;display:flex;justify-content:center}
+.chapter-rule::before{content:"";width:1px;background:var(--line);height:100%}
+.chapter-rule i{position:absolute;top:50%;width:13px;height:13px;border:1px solid var(--gold);background:var(--bg);transform:translateY(-50%) rotate(45deg)}
+.chapter-copy{padding-left:22px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.chapter-copy h3{font-family:var(--serif);font-size:clamp(19px,2.3vw,26px);font-weight:500;letter-spacing:.02em}
+.chapter-copy p{font-size:12px;color:var(--muted);line-height:1.7}
+
+.tl-row{display:grid;grid-template-columns:90px 46px minmax(0,1fr);align-items:stretch;padding:7px 0}
+.tl-date{text-align:right;padding:18px 14px 0 0;font-family:var(--mono);color:var(--muted);line-height:1.2}
+.tl-date b{display:block;font-size:14px;color:var(--ink);font-weight:500}
+.tl-date span{display:block;font-size:10px;letter-spacing:.04em;margin-top:4px}
+.tl-rail{position:relative;display:flex;justify-content:center}
+.tl-rail::before{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.tl-dot{position:relative;z-index:1;width:11px;height:11px;border-radius:50%;border:1px solid var(--gold);background:var(--bg);margin-top:23px}
+.tl-dot.solid{background:var(--gold)}
+.tl-dot.half{background:linear-gradient(90deg,var(--gold) 50%,var(--bg) 50%)}
+.tl-dot.ring{background:var(--bg)}
+.tl-card{border:1px solid var(--line);background:var(--panel);padding:20px 22px 18px;margin:0 0 0 22px;box-shadow:5px 5px 0 color-mix(in srgb,var(--line) 55%,transparent)}
+.tl-card:hover{border-color:color-mix(in srgb,var(--gold) 60%,var(--line))}
+.tl-top{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:2px 7px;border:1px solid currentColor}
+.tag--evidence{color:var(--jade)}
+.tag--report{color:var(--gold)}
+.tag--folk{color:var(--clay)}
+.tag--scene{color:var(--muted)}
+.tl-index{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.06em}
+.tl-card h3{font-family:var(--serif);font-weight:600;font-size:clamp(21px,2.5vw,29px);line-height:1.35;letter-spacing:-.015em;margin-bottom:8px}
+.tl-card p{font-size:14px;line-height:1.85;color:var(--muted);max-width:50em}
+.tl-card p b{color:var(--ink);font-weight:500}
+.mobile-date{display:none;font-family:var(--mono);font-size:10px;color:var(--gold);margin-bottom:5px}
+.note{display:flex;gap:10px;align-items:flex-start;border-top:1px solid var(--line);margin-top:14px;padding-top:10px;font-size:11px;line-height:1.65;color:var(--dim)}
+.note strong{flex:none;color:var(--muted);font-weight:500;font-family:var(--mono);font-size:10px;letter-spacing:.06em}
+.note a{color:var(--gold);text-decoration:none}
+.note a:hover{border-bottom:1px solid var(--gold)}
+.note a{margin-left:2px}
+.quote{border-left:2px solid var(--gold);margin:12px 0 0;padding:2px 0 2px 14px;font-family:var(--serif);font-size:16px;line-height:1.7;color:var(--ink)}
+.quote small{display:block;font-family:var(--body);font-size:11px;color:var(--muted);margin-top:4px}
+
+.figure-strip{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px;max-width:420px}
+.figure-strip figure{border:1px solid var(--line);background:var(--bg2);padding:6px}
+.figure-strip img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.figure-strip figcaption{font-size:10px;color:var(--muted);padding:5px 1px 0;display:flex;justify-content:space-between;gap:6px}
+.figure-strip figcaption span{font-family:var(--mono);font-size:9px;color:var(--dim)}
+
+.terminal{display:grid;grid-template-columns:90px 46px minmax(0,1fr);align-items:center;padding-top:12px}
+.terminal .tl-date{color:var(--gold)}
+.terminal .tl-rail::before{background:linear-gradient(var(--line),transparent)}
+.terminal .tl-dot{background:var(--clay);border-color:var(--clay);box-shadow:0 0 0 4px color-mix(in srgb,var(--clay) 18%,transparent)}
+.terminal-card{margin-left:22px;padding:8px 0 0}
+.terminal-card h3{font-family:var(--serif);font-size:clamp(20px,2.3vw,26px);font-weight:500}
+.terminal-card p{color:var(--muted);font-size:13px;max-width:36em}
+
+/* ===== 三种读法 ===== */
+.lenses{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(38px,6vw,68px) 0}
+.lenses__head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:26px;flex-wrap:wrap}
+.lenses h2{font-family:var(--serif);font-size:clamp(28px,3.8vw,44px);font-weight:600;line-height:1.15}
+.lenses__head p{color:var(--muted);font-size:13px;max-width:26em}
+.lens-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.lens{padding:4px 24px 4px 0;border-right:1px solid var(--line)}
+.lens:last-child{border-right:0;padding-right:0;padding-left:24px}
+.lens:nth-child(2){padding-left:24px}
+.lens small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--gold)}
+.lens h3{font-family:var(--serif);font-size:22px;font-weight:500;margin:8px 0 8px}
+.lens p{font-size:13px;line-height:1.8;color:var(--muted)}
+
+/* ===== 资料与边界 ===== */
+.sources{padding:clamp(42px,6vw,74px) 0 clamp(30px,4vw,46px)}
+.sources__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,6vw,72px);align-items:start}
+.sources h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:600;line-height:1.2;margin-bottom:12px}
+.boundary{border:1px solid var(--line);background:var(--panel2);padding:20px 22px}
+.boundary strong{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--clay);margin-bottom:7px}
+.boundary p{font-size:13px;line-height:1.85;color:var(--muted)}
+.boundary p+p{margin-top:8px}
+.sources ol{list-style:none;counter-reset:src;border-top:1px solid var(--line)}
+.sources li{scroll-margin-top:90px;counter-increment:src;display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.65;color:var(--muted)}
+.sources li::before{content:counter(src,decimal-leading-zero);font-family:var(--mono);font-size:10px;color:var(--gold);padding-top:2px}
+.sources li a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+.sources li a:hover{color:var(--gold);border-color:var(--gold)}
+.sources .meta{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:14px;line-height:1.7}
+
+/* ===== 尾声 ===== */
+.coda{padding:clamp(46px,7vw,86px) 0 clamp(54px,8vw,96px);text-align:center}
+.coda p.big{font-family:var(--serif);font-size:clamp(28px,4.8vw,52px);line-height:1.35;letter-spacing:-.03em;max-width:18em;margin:0 auto 18px}
+.coda p.big b{color:var(--gold);font-weight:600}
+.coda .small{color:var(--muted);font-size:13px;max-width:34em;margin:0 auto 26px}
+
+footer{border-top:1px solid var(--line);padding:24px 0 30px}
+.foot{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.foot p{font-size:12px;line-height:1.8;color:var(--muted);max-width:52em}
+.foot p a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.foot p a:hover{color:var(--gold);border-color:var(--gold)}
+.foot__meta{font-family:var(--mono);font-size:10px;line-height:1.8;color:var(--dim);text-align:right;white-space:nowrap}
+
+@media (max-width:880px){
+  .hero__grid{grid-template-columns:1fr}
+  .specimen{max-width:360px;margin-top:8px}
+  .sect-head{grid-template-columns:1fr;gap:14px}
+  .sect-head p{justify-self:start}
+  .chapter-head,.tl-row,.terminal{grid-template-columns:64px 32px minmax(0,1fr)}
+  .chapter-year{font-size:34px;padding-right:10px}
+  .chapter-copy{padding-left:14px}
+  .tl-date{padding-right:10px}
+  .tl-card{margin-left:14px;padding:18px 16px 16px;box-shadow:4px 4px 0 color-mix(in srgb,var(--line) 55%,transparent)}
+  .terminal-card{margin-left:14px}
+  .sources__grid{grid-template-columns:1fr}
+  .lens-grid{grid-template-columns:1fr}
+  .lens{padding:16px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .lens:nth-child(2),.lens:last-child{padding-left:0}
+  .lens:last-child{border-bottom:0}
+  .factline{grid-template-columns:1fr}
+  .factline div{border-right:0;border-bottom:1px solid var(--line);padding:12px 0}
+  .factline div:last-child{border-bottom:0;padding-left:0}
+  .factline div:not(:first-child){padding-left:0}
+  .foot__meta{text-align:left;white-space:normal}
+}
+@media (max-width:560px){
+  .nav{display:none}
+  .top__in{height:60px}
+  h1{font-size:clamp(58px,18vw,86px)}
+  .hero{padding-top:34px}
+  .chapter-head,.tl-row,.terminal{grid-template-columns:0 28px minmax(0,1fr)}
+  .chapter-year{display:none}
+  .chapter-copy{padding-left:12px}
+  .chapter-rule{grid-column:2}
+  .tl-date{display:none}
+  .mobile-date{display:block}
+  .tl-rail{grid-column:2}
+  .tl-card{margin-left:12px;box-shadow:none}
+  .terminal-card{margin-left:12px}
+  .specimen{max-width:none}
+  .specimen__foot{grid-template-columns:1fr;align-items:start}
+  .specimen__stamp{justify-self:start}
+  .figure-strip{grid-template-columns:1fr 1fr}
+  .coda{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-naiwa" viewBox="0 0 64 64"><path d="M32 8c12 0 21 8 21 20 0 11-9 18-21 18S11 39 11 20C11 8 20 2 32 2Z" fill="#FFD54F"/><circle cx="23" cy="23" r="7" fill="#66BB6A"/><circle cx="41" cy="23" r="7" fill="#66BB6A"/><circle cx="23" cy="23" r="3" fill="#14120c"/><circle cx="41" cy="23" r="3" fill="#14120c"/><ellipse cx="32" cy="43" rx="13" ry="10" fill="#F2E3BE"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top__in">
+    <a class="brand" href="index.html"><svg><use href="#i-naiwa" xlink:href="#i-naiwa"/></svg><b>奶蛙世界</b></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html#zones">聚落</a>
+      <a href="history.html" aria-current="page">简史</a>
+      <a href="index.html#today">今日</a>
+      <a href="index.html#collection">藏品滩</a>
+      <a href="https://nailoong-universe.pages.dev/" target="_blank" rel="noopener">艺术圣殿 ↗</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="切换明暗主题" aria-pressed="false">
+      <svg class="sun"><use href="#i-sun" xlink:href="#i-sun"/></svg>
+      <svg class="moon"><use href="#i-moon" xlink:href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <div class="eyebrow"><i></i>NAIWA CHRONICLE / 001 <span>非官方档案 · 民间考据</span></div>
+        <h1><span>奶蛙</span><span>简史</span></h1>
+        <p class="dek">从一次 AI 事故，到一所互联网民间大学。<br><em>它不是被设计出来的，是被一次次误读、转发和重画出来的。</em></p>
+        <div class="hero-meta"><span>2024.10.02 — 2026.11.20</span><span>一条仍在生长的注脚</span></div>
+        <div class="cta">
+          <a class="btn" href="#timeline">沿时间往下走 <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a>
+          <a class="link" href="index.html">回到奶蛙世界</a>
+        </div>
+      </div>
+
+      <aside class="specimen" aria-label="奶蛙眼型标本">
+        <div class="specimen__head"><span>FIG. 01 / 眼型档案</span><b>NAIWA</b></div>
+        <div class="eye-wrap">
+          <svg class="eye" viewBox="0 0 300 300" role="img" aria-label="奶蛙眼型：浅绿色眼圈包住竖直瞳孔">
+            <circle cx="150" cy="150" r="136" fill="#f7ebcf"/>
+            <circle cx="150" cy="150" r="136" fill="none" stroke="#d7bd8b" stroke-width="2"/>
+            <circle cx="150" cy="150" r="91" fill="#63a85b"/>
+            <circle cx="150" cy="150" r="91" fill="none" stroke="#2f6d39" stroke-width="3"/>
+            <ellipse cx="150" cy="150" rx="29" ry="58" fill="#17130c"/>
+            <circle cx="162" cy="122" r="9" fill="#fff7e2" opacity=".8"/>
+            <circle cx="137" cy="196" r="4" fill="#fff7e2" opacity=".45"/>
+          </svg>
+        </div>
+        <div class="specimen__foot">
+          <p><b>绿圈包竖瞳</b>官方奶龙是白眼球、绿虹膜、圆瞳。两者不是同一条演化线。</p>
+          <span class="specimen__stamp">观察对象<br>奶蛙 / NAIWA</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <div class="factline">
+        <div><small>出生记录</small><b>2024.10.02</b></div>
+        <div><small>最早证据</small><b>星野 App 智能体</b></div>
+        <div><small>身份</small><b>奶龙的民间变体</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline" id="timeline">
+    <div class="wrap">
+      <div class="sect-head">
+        <div>
+          <p class="section-no">01 / 时间轴</p>
+          <h2>一条从错误里<br>长出来的时间线</h2>
+        </div>
+        <p>这不是官方设定集。下面每个节点都标了证据强度：能定位到平台、日期和原始智能体的，是实证；主流媒体或公开报道，是报道；网友整理、口耳相传的，是民间考据。</p>
+      </div>
+
+      <div class="legend" aria-label="证据强度图例">
+        <b>读点</b>
+        <span><i class="solid"></i>实证</span>
+        <span><i class="half"></i>报道 / 交叉印证</span>
+        <span><i class="ring"></i>民间考据</span>
+      </div>
+
+      <!-- ===== 2024 ===== -->
+      <section class="chapter" aria-labelledby="y2024">
+        <div class="chapter-head">
+          <div class="chapter-year" id="y2024">2024</div>
+          <div class="chapter-rule" aria-hidden="true"><i></i></div>
+          <div class="chapter-copy"><h3>事故</h3><p>一切都从一个没有被正确理解的提示词开始。</p></div>
+        </div>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2024-10-02"><b>10.02</b><span>2024</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot solid"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2024.10.02</div>
+            <div class="tl-top"><span class="tag tag--evidence">实证</span><span class="tag tag--folk">民间考据</span><span class="tl-index">N° 01</span></div>
+            <h3>一次手滑，长出第一只奶蛙</h3>
+            <p>星野 App 用户「纲手[百豪]」想创建一个叫「奶龙」的智能体。平台把上传图重新 AI 化时，腹部被拉大、四肢变细、眼睛变成绿圈竖瞳。<b>它本该是一张失败的封面，却成了后来所有奶蛙的母本。</b>智能体 ID 为 <b>zNCvQDKfXy</b>。</p>
+            <div class="note"><strong>证据</strong><span>2026 年 8 月，B 站用户「雾蚀心忘症」、UP 主「看仙碎」等把这台智能体从星野里翻了出来。创建者后来删号，但平台机制让智能体留了下来。<a href="#s1">[1]</a><a href="#s2">[2]</a></span></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== 2025 ===== -->
+      <section class="chapter" aria-labelledby="y2025">
+        <div class="chapter-head">
+          <div class="chapter-year" id="y2025">2025</div>
+          <div class="chapter-rule" aria-hidden="true"><i></i></div>
+          <div class="chapter-copy"><h3>扩散</h3><p>没有作者，只有无数只手在转发同一张脸。</p></div>
+        </div>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2025"><b>全年</b><span>2025</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot ring"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2025 · 全年</div>
+            <div class="tl-top"><span class="tag tag--folk">民间</span><span class="tag tag--report">传播</span><span class="tl-index">N° 02</span></div>
+            <h3>从一张封面，变成一套表情</h3>
+            <p>「大笑奶龙」「变异奶龙」「奶蛙」等叫法在贴吧、QQ 群、B 站表情包里并行。形象的核心动作逐渐固定成<b>捧腹大笑</b>：仰头、弯腰、双手抱肚，笑到整个人都在抖。没有人能指认第一个 GIF 的作者，但动作开始统一。</p>
+            <div class="figure-strip">
+              <figure><img src="thumbs/laugh-gallery/奶蛙-仰头捧腹大笑.webp" alt="奶蛙仰头捧腹大笑" loading="lazy" width="480" height="480"><figcaption>馆藏 · 仰头捧腹大笑<span>LAUGH</span></figcaption></figure>
+              <figure><img src="thumbs/emotes/奶蛙-表情-01.webp" alt="奶蛙表情 01" loading="lazy" width="480" height="480"><figcaption>馆藏 · 表情 01<span>EMOTE</span></figcaption></figure>
+            </div>
+            <div class="note"><strong>读法</strong><span>这一年的具体日期很难坐实，但“捧腹大笑成为统一动作”可以在萌娘百科、媒体报道与馆藏表情里交叉印证。<a href="#s3">[3]</a><a href="#s4">[4]</a></span></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== 2026 ===== -->
+      <section class="chapter" aria-labelledby="y2026">
+        <div class="chapter-head">
+          <div class="chapter-year" id="y2026">2026</div>
+          <div class="chapter-rule" aria-hidden="true"><i></i></div>
+          <div class="chapter-copy"><h3>分裂、建馆与出海</h3><p>它先被官方推开，然后被校园、教材和博物馆接住。</p></div>
+        </div>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2026"><b>年初</b><span>2026</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot half"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2026 · 年初</div>
+            <div class="tl-top"><span class="tag tag--report">报道</span><span class="tag tag--folk">民间</span><span class="tl-index">N° 03</span></div>
+            <h3>AI 换脸与变声，把笑声推成全民梗</h3>
+            <p>「大笑奶龙」开始被 AI 换脸、变声和二创视频批量复用：军体拳、直播间笑声、游戏解说都被替换成那张黄脸。它不再只是一个表情，而是一套可以套在任何素材上的<b>情绪模板</b>。</p>
+            <div class="note"><strong>读法</strong><span>具体首发视频众说纷纭，这里只记录“AI 换脸 + 变声接力”这一传播机制。<a href="#s3">[3]</a></span></div>
+          </div>
+        </article>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2026-03"><b>03</b><span>2026</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot half"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2026.03</div>
+            <div class="tl-top"><span class="tag tag--report">报道</span><span class="tag tag--folk">考据</span><span class="tl-index">N° 04</span></div>
+            <h3>官方划清边界，反而完成了“独立”</h3>
+            <p>奶龙官方多次回应，呼吁停止丑化、恶搞奶龙的非官方表情包；按奶蛙考据资料，2026 年 3 月还出现了关闭评论区、批量拉黑发布者等动作。压力没有掐断梗，反而让奶蛙彻底脱离母体。</p>
+            <blockquote class="quote">“请勿发布丑化、恶搞奶龙的非官方表情包。奶龙的可爱形象需要大家共同守护。”<small>—— 奶龙官方回应，转引自萌娘百科与媒体报道</small></blockquote>
+            <div class="note"><strong>读法</strong><span>官方原话与“关评、拉黑”的时间点来自不同来源，本页把前者标为报道、后者标为考据。<a href="#s2">[2]</a><a href="#s3">[3]</a></span></div>
+          </div>
+        </article>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2026-06"><b>06</b><span>2026</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot half"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2026.06</div>
+            <div class="tl-top"><span class="tag tag--scene">现场</span><span class="tag tag--folk">考据</span><span class="tl-index">N° 05</span></div>
+            <h3>毕业典礼上的第一块立牌</h3>
+            <p>哈尔滨工业大学 2026 届毕业典礼上出现一块广为人知的奶蛙立牌。此后，全国高校开始“流动奶蛙”接力，宿舍、食堂、校门口都成了展位；海外高校的华人留学生也加入，甚至办起“最美校园奶蛙”评选。</p>
+            <div class="note"><strong>现场</strong><span>校园立牌没有统一官方统计，以下记录来自奶蛙考据汇编与媒体报道中的公开照片。<a href="#s2">[2]</a><a href="#s4">[4]</a></span></div>
+          </div>
+        </article>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2026-08"><b>08</b><span>2026</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot solid"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2026.08</div>
+            <div class="tl-top"><span class="tag tag--evidence">实证</span><span class="tl-index">N° 06</span></div>
+            <h3>考古学家找到了“出生证明”</h3>
+            <p>B 站用户「雾蚀心忘症」在星野 App 里找到符合奶蛙形象的智能体，随后 UP 主「看仙碎」等把日期、创建者、智能体 ID 和平台机制整理成完整证据链。<b>奶蛙第一次有了可以回溯的出生记录。</b></p>
+            <div class="note"><strong>证据链</strong><span>日期 2024.10.02；创建者「纲手[百豪]」；智能体 ID zNCvQDKfXy；创建者已删号；智能体仍可检索。<a href="#s1">[1]</a><a href="#s2">[2]</a></span></div>
+          </div>
+        </article>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2026-09"><b>09—10</b><span>2026</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot ring"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2026.09 — 10</div>
+            <div class="tl-top"><span class="tag tag--folk">再创作</span><span class="tag tag--report">报道</span><span class="tl-index">N° 07</span></div>
+            <h3>奶蛙学、博物馆与名画宇宙</h3>
+            <p>网友做出《奶蛙学》教材，设置“21 个学院、205 个专业”，并真的办起“2026—2027 学年期末考试”。另一边，线上“奶蛙博物馆 / 奶蛙艺术馆”把《蒙娜丽莎》《呐喊》《星空》等名画批量重绘，形成 <b>94 件、16 馆</b>的民间艺术史。</p>
+            <div class="figure-strip">
+              <figure><img src="thumbs/classic/奶蛙-蒙娜丽莎.webp" alt="奶蛙版蒙娜丽莎" loading="lazy" width="480" height="480"><figcaption>馆藏 · 蒙娜丽莎<span>CLASSIC</span></figcaption></figure>
+              <figure><img src="thumbs/classic/奶蛙-呐喊.webp" alt="奶蛙版呐喊" loading="lazy" width="480" height="480"><figcaption>馆藏 · 呐喊<span>CLASSIC</span></figcaption></figure>
+            </div>
+            <div class="note"><strong>读法</strong><span>“奶蛙学”与博物馆都属于网友自组织文本，不是教育或文物资质认定；这里记录的是它们的传播规模。<a href="#s5">[5]</a><a href="#s6">[6]</a></span></div>
+          </div>
+        </article>
+
+        <article class="tl-row">
+          <time class="tl-date" datetime="2026-11"><b>11</b><span>2026</span></time>
+          <div class="tl-rail" aria-hidden="true"><span class="tl-dot half"></span></div>
+          <div class="tl-card">
+            <div class="mobile-date">2026.11</div>
+            <div class="tl-top"><span class="tag tag--report">报道</span><span class="tag tag--scene">出海</span><span class="tl-index">N° 08</span></div>
+            <h3>从中文互联网，到海外校园</h3>
+            <p>南方网、21 世纪经济报道、潮新闻等媒体开始把它当成一种青年文化现象来报道；海外高校出现奶蛙立牌，外国网友在评论区追问这个黄色角色到底是谁，再由“奶家人”接手科普。</p>
+            <div class="note"><strong>报道</strong><span>这一节点有主流媒体交叉印证，但具体传播量、高校数量没有统一口径，不做精确排名。<a href="#s4">[4]</a><a href="#s6">[6]</a></span></div>
+          </div>
+        </article>
+      </section>
+
+      <div class="terminal">
+        <div class="tl-date"><b>现在</b><span>2026.11.20</span></div>
+        <div class="tl-rail" aria-hidden="true"><span class="tl-dot"></span></div>
+        <div class="terminal-card"><h3>档案仍在续写</h3><p>这份时间轴只记录已经能被交叉验证的部分。新的二创、新的展馆、新的误读还在发生；奶蛙的“正史”，大概永远不会由官方来写完。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lenses">
+    <div class="wrap">
+      <div class="lenses__head">
+        <div><p class="section-no">02 / 三种读法</p><h2>同一条时间线，<br>三种叙事</h2></div>
+        <p>它们不是三套互相矛盾的事实，而是同一件事的三个切面：技术、情绪、共同体。</p>
+      </div>
+      <div class="lens-grid">
+        <article class="lens"><small>01 / 技术</small><h3>一次 AI 事故</h3><p>低精度模型把“奶龙”理解成了“蛙形黄团”。没有这次误读，就没有奶蛙的身体：梨形、绿圈、竖瞳、过长的四肢。</p></article>
+        <article class="lens"><small>02 / 情绪</small><h3>一场大笑</h3><p>捧腹大笑是它真正的引擎。比起“可爱”，奶蛙提供的是解压、失控和冒犯感；官方越严肃，笑声越像出口。</p></article>
+        <article class="lens"><small>03 / 共同体</small><h3>一所民间大学</h3><p>校园立牌、奶蛙学、名画博物馆，把一只梗生物变成了可聚会、可授课、可展览的共同体符号。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sources">
+    <div class="wrap sources__grid">
+      <div>
+        <p class="section-no">03 / 资料与边界</p>
+        <h2>把“考据”<br>和“官方设定”分开</h2>
+        <div class="boundary">
+          <strong>READ THIS FIRST</strong>
+          <p>奶蛙不是第七印象的官方角色，也没有官方设定集。它是网友对“奶龙”的二次创作；本页记录的是网络传播史，不是版权归属声明。</p>
+          <p>实心点：能定位到平台、日期或原始智能体。半实心：有媒体报道或至少两个来源交叉印证。空心：网友整理、口耳相传，仍应继续核对。</p>
+        </div>
+      </div>
+      <div>
+        <ol>
+          <li id="s1"><a href="https://xn--fiq7v44hwtepyd969l.com/naiwa.php" target="_blank" rel="noopener noreferrer">《奶蛙档案》· 中国奶龙协会</a><br>民间考据站；记录 2024-10-02、星野 App、创建者「纲手[百豪]」与智能体 ID。</li>
+          <li id="s2"><a href="https://xn--psszg58c9c2281ajit.lol/files/history.pdf" target="_blank" rel="noopener noreferrer">《捧腹大笑思想与奶龙学概论》第一版</a><br>2026-09-29 的网友考据汇编；含出生、官方切割、校园立牌与组织史。</li>
+          <li id="s3"><a href="https://mzh.moegirl.org.cn/%E5%A5%B6%E9%BE%99" target="_blank" rel="noopener noreferrer">萌娘百科「奶龙 / 大笑奶龙」</a><br>社区条目；记录 2024-10 星野智能体、官方回应与 2026 年二创形态。</li>
+          <li id="s4"><a href="https://news.southcn.com/node_08203b6b14/5c38574ae9.shtml" target="_blank" rel="noopener noreferrer">南方网：奶龙被玩坏后刷屏全网</a><br>2026-11-19；AI 二创、校园立牌与海外传播。</li>
+          <li id="s5"><a href="https://finance.sina.com.cn/roll/2026-11-12/doc-iniynppc3872413.shtml.md" target="_blank" rel="noopener noreferrer">21 世纪经济报道：从奶龙到奶蛙</a><br>2026-11-12；AI 生成偏差、奶式家族与“奶蛙大学”说法。</li>
+          <li id="s6"><a href="https://m.tech.china.com/redian/2026/1112/112026_1977418.html" target="_blank" rel="noopener noreferrer">中华网：从国民萌宠到抽象顶流</a><br>2026-11-12；奶蛙学教材、期末考试、奶蛙博物馆与名画二创。</li>
+        </ol>
+        <p class="meta">最后核对：2026-11-20 · 页面会随新证据更新 · 本站不主张对奶龙原形象的任何权利</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="coda">
+    <div class="wrap">
+      <p class="big">奶蛙不是被设计出来的。<br>它是被<b>一次次误读</b>，<br>慢慢长成这样的。</p>
+      <p class="small">这条时间线只负责记住发生过什么，不负责替它编一个更漂亮的身世。</p>
+      <a class="btn" href="index.html">回到奶蛙世界 <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>奶蛙是民间二创形象，角色原型权利归原权利人。本页为传播史考据，不是官方设定；引用与图片仅用于说明。若你是权利人并认为某处不宜展示，请开 <a href="https://github.com/Nailong-Studio/NaiWa-Wallpaper/issues">Issue</a>，核实后调整。</p>
+    <div class="foot__meta">NAIWA CHRONICLE · v3.2.7<br>2026-11-20 / Nailong-Studio</div>
+  </div>
+</footer>
+
+<script>
+const root=document.documentElement;
+const themeBtn=document.getElementById('theme');
+function setTheme(t){
+  root.dataset.theme=t;
+  themeBtn.setAttribute('aria-pressed',t==='light'?'true':'false');
+  try{localStorage.setItem('naiwa-world-theme',t);}catch(e){}
+}
+setTheme(root.dataset.theme||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
+themeBtn.addEventListener('click',function(){setTheme(root.dataset.theme==='light'?'dark':'light');});
+</script>
+</body>
+</html>

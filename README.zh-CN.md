@@ -37,6 +37,8 @@
 
 **这个仓库仍然是取货窗口，不是展馆。** 只是门口换了一张手绘地图：九座聚落、406 件藏品、15 种分类——先逛地图，点开任意一件的展签，再取货。
 
+另有一页 [奶蛙简史](https://nailoong-wallpaper.pages.dev/history.html)：只记录传播史、证据强度与资料来源，不改变库房的登记职责。
+
 策展、布展、导览、沉浸式浏览都在展示仓 [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe) 里做。
 
 两边分工固定：库房只管**登记与交付**，展馆只管**讲故事**。
