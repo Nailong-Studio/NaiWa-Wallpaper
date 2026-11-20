@@ -1,6 +1,7 @@
 奶蛙-桌宠-忙碌帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-忙碌帧：抬手打招呼，像在说「我在忙，但可以为你暂停」。
+抬起一只手，朝前伸。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input

@@ -1,6 +1,7 @@
 奶蛙-桌宠-倾听帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-倾听帧：身体前倾、嘴角上扬，已经准备好笑出声。
+身体前倾，嘴角上扬。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input

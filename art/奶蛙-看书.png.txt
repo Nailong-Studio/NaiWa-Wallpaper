@@ -1,6 +1,6 @@
 奶蛙-看书 · 奶蛙艺术圣殿 · 艺术场景
 
-捧着一本小书，认真得像在考试——其实在看笑话集。
+捧着书，低头看页面。
 
 来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/study.png
 版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。

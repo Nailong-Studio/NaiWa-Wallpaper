@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """生成奶蛙世界首页（index.html），供 Cloudflare Pages 直接托管。
 
-定位：素材库不再只是取货窗口，而是一座由 410 件藏品长成的岛：
+定位：素材库现在也是一座由 406 件藏品长成的岛：
 九座聚落、今日三件、可搜索的藏品滩，以及留给开发者的取货口。
 
 用法：python3 scripts/build_site.py
@@ -16,31 +16,31 @@ items = manifest['items']
 
 ZONES = [
     dict(id='museum', name='名画圣殿', icon='frame', cats=['classic'],
-         desc='世界名画被奶蛙重新签了名。', x=22, y=23,
+         desc='名画里的主角，换成了奶蛙。', x=22, y=23,
          cover='classic/奶蛙-蒙娜丽莎.jpg'),
     dict(id='laugh', name='大笑山谷', icon='laugh', cats=['laugh-gallery'],
-         desc='笑声从山谷滚下来，捡一只带走。', x=49, y=17,
+         desc='笑声堆在山谷里，挑一只带走。', x=49, y=17,
          cover='laugh-gallery/奶蛙-仰头捧腹大笑.jpg'),
     dict(id='emotes', name='表情集市', icon='sticker', cats=['emotes'],
-         desc='摊位上摆着今天所有的心情。', x=77, y=25,
+         desc='表情包按心情摆，顺手挑一张。', x=77, y=25,
          cover='emotes/奶蛙-表情-妖娆模式.webp'),
     dict(id='poses', name='姿势花园', icon='pose', cats=['poses', 'poses-wall'],
-         desc='换装、道具、棚拍，站成一排。', x=15, y=51,
+         desc='换装、道具、棚拍，排成一排。', x=15, y=51,
          cover='poses/奶蛙-姿势-上班族.webp'),
     dict(id='pet', name='桌宠牧场', icon='paw', cats=['pet'],
-         desc='会动的小家伙，在屏幕上散步。', x=47, y=46,
+         desc='会动的小家伙，在屏幕上走来走去。', x=47, y=46,
          cover='pet/奶蛙-桌宠-大笑帧.png'),
     dict(id='art', name='奇想原野', icon='spark', cats=['art'],
-         desc='AI 长出的生活场景与怪点子。', x=82, y=53,
+         desc='模型生成的生活场景和怪点子。', x=82, y=53,
          cover='art/奶蛙-喝奶茶的小奶蛙.jpg'),
     dict(id='wall', name='壁纸海岸', icon='wave', cats=['hd', '4k', 'mobile'],
-         desc='横屏、竖屏、4K，把海贴到屏幕上。', x=24, y=78,
+         desc='横屏、竖屏、4K，海直接铺满屏幕。', x=24, y=78,
          cover='4k/奶蛙-4K-托腮沉思-04.jpg'),
     dict(id='film', name='圣影剧场', icon='film', cats=['frames', 'videos', 'fan-videos'],
-         desc='抽帧、短片、同人影像，循环放映。', x=55, y=81,
+         desc='抽帧、短片、同人影像，循环放着。', x=55, y=81,
          cover='frames/奶蛙-帧图-奶蛙的永恒-14s.png'),
     dict(id='archive', name='档案馆', icon='box', cats=['audio', 'assets'],
-         desc='logo、笑声与所有底片。', x=82, y=75,
+         desc='招牌、音效和品牌文件。', x=82, y=75,
          cover='assets/奶蛙-logo.jpg'),
 ]
 
@@ -107,13 +107,13 @@ HTML = r'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>奶蛙世界 · __TOTAL__ 件藏品长成的岛</title>
+<title>奶蛙世界 · __TOTAL__ 件藏品，九座聚落</title>
 <meta name="description" content="奶蛙世界：__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影，附机器可读清单。">
 <meta name="theme-color" content="#0d0c09" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f6efdd" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://nailoong-wallpaper.pages.dev/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="奶蛙世界 · __TOTAL__ 件藏品长成的岛">
+<meta property="og:title" content="奶蛙世界 · __TOTAL__ 件藏品，九座聚落">
 <meta property="og:description" content="__TOTAL__ 件奶蛙藏品长成的九座聚落，名画、表情、桌宠、壁纸与圣影。">
 <meta property="og:url" content="https://nailoong-wallpaper.pages.dev/">
 <meta property="og:image" content="https://nailoong-wallpaper.pages.dev/classic/%E5%A5%B6%E8%9B%99-%E4%B8%98%E6%AF%94%E7%89%B9%E4%B8%8E%E6%99%AE%E7%BB%AA%E5%85%8B.jpg">
@@ -440,7 +440,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
       <div class="hero__copy">
         <div class="kicker">奶蛙世界 · NAIWA WORLD</div>
         <h1><span>奶蛙</span><span>世界</span></h1>
-        <p class="lede">__TOTAL__ 件藏品没有锁在仓库里。它们长成了一座岛：九座聚落、十五种分类，从名画到桌宠，从表情到圣影。点一下地图，就落到你想去的那一滩。</p>
+        <p class="lede">__TOTAL__ 件藏品，按九座聚落、十五类摆在岛上。名画、表情、桌宠、壁纸、圣影，点地图就落到想去的那一滩。</p>
         <div class="stats" aria-label="世界概况">
           <div class="stat"><strong>__TOTAL__</strong><span>件藏品</span></div>
           <div class="stat"><strong>9</strong><span>座聚落</span></div>
@@ -532,7 +532,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
           <h2>九座<em>聚落</em></h2>
           <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <p>每座聚落按类别定居。点进去，下面的藏品滩会自动只留下这一类的居民。</p>
+        <p>每座聚落管一类。点进去，下面的藏品滩只留这一类。</p>
       </div>
       <div class="zone-grid" id="zoneGrid">__ZONE_CARDS__</div>
     </div>
@@ -545,7 +545,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
           <h2>今日<em>三件</em></h2>
           <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <p>每天从藏品里挑三件，按日期轮换。今天先看这几件，再决定从哪一滩开始。</p>
+        <p>每天按日期轮换三件。先看这三件，再决定从哪一滩逛。</p>
       </div>
       <div class="today-grid" id="todayGrid"></div>
     </div>

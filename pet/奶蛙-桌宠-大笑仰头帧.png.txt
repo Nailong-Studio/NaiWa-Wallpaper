@@ -1,6 +1,7 @@
 奶蛙-桌宠-大笑仰头帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-大笑帧 · 仰头：整个人向后折成一张弓，笑声先于身体到达。
+仰头，身体向后折，嘴张开。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input

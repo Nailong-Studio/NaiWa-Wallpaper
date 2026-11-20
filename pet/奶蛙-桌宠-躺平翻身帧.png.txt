@@ -1,6 +1,7 @@
 奶蛙-桌宠-躺平翻身帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-躺平帧 · 翻身：连翻身都懒得用力，眼睛还睁着。
+侧躺着翻身，眼睛睁着。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input

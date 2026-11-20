@@ -1,6 +1,7 @@
 奶蛙-最唐的晚餐-03 · 奶蛙艺术圣殿 · 圣典名画系列
 
-长桌两侧坐满奶蛙，中间那只摊开双手；面包和酒摆了一桌，谁出卖了谁还没定。
+长桌两边坐满奶蛙，中间那只摊开双手。桌上摆着面包和酒。
+
 来源：nit5607/naiwa-art-style（MIT）· https://github.com/nit5607/naiwa-art-style/blob/main/showcase/02_last_supper.jpg
 版权：nit5607/naiwa-art-style（MIT）
 许可：MIT

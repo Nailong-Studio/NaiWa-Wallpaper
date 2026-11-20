@@ -1,6 +1,6 @@
 奶蛙-向右爬行 · 奶蛙艺术圣殿 · 表情收藏
 
-换个方向继续爬，快乐不分左右。
+四肢着地，往右爬，肚子贴着地。
 
 来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/crawl-right.gif
 版权：sandytruant/codex-pet-naiwa（MIT）。

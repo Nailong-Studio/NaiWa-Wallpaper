@@ -1,6 +1,7 @@
 奶蛙-人类之子 · 奶蛙艺术圣殿 · 圣典名画系列
 
-黑衣圆顶礼帽的奶蛙站在矮墙前，脸前悬着一颗青苹果，把表情挡得刚好。
+黑衣圆顶礼帽的奶蛙站在矮墙前，脸前悬着一颗青苹果。
+
 来源：nit5607/naiwa-art-style（MIT）· https://github.com/nit5607/naiwa-art-style/blob/main/showcase/17_son_of_man.jpg
 版权：nit5607/naiwa-art-style（MIT）
 许可：MIT

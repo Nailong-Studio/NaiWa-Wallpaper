@@ -1,6 +1,6 @@
 奶蛙-眨眼卖萌 · 奶蛙艺术圣殿 · 表情收藏
 
-一只眼闭上，一只眼睁着——奶蛙式 wink，专治不开心。
+一只眼闭着，一只眼睁着，嘴角上扬。
 
 来源：TarelX/Milk-Frog（MIT）· https://github.com/TarelX/Milk-Frog/blob/main/assets/generated/young/blink-v2.png
 版权：Copyright © 2026 Ti（TarelX/Milk-Frog，MIT）。

@@ -1,6 +1,7 @@
 奶蛙-星月夜 · 奶蛙艺术圣殿 · 圣典名画系列
 
-夜空卷成漩涡，两颗巨大的绿圈眼睛浮在星云里，柏树在下方像火一样生长。
+夜空卷成漩涡，两颗巨大的绿圈眼睛浮在星云里，柏树在下方伸向天空。
+
 来源：nit5607/naiwa-art-style（MIT）· https://github.com/nit5607/naiwa-art-style/blob/main/showcase/11_starry_night.jpg
 版权：nit5607/naiwa-art-style（MIT）
 许可：MIT

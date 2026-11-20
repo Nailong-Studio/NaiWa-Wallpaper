@@ -1,6 +1,7 @@
 奶蛙-桌宠-待机帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-待机帧：站定、双手交叠在奶油色肚皮前，眼神无辜。
+站定，双手交叠在肚子前。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input

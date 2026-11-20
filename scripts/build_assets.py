@@ -48,7 +48,7 @@ def title_of(stem):
     return s.replace('-', ' · ').strip() or stem
 
 
-PROV = re.compile(r'^(来源|许可|版权|用途|署名|分辨率|格式)\s*[：:]')
+PROV = re.compile(r'^(来源|许可|版权|用途|署名|分辨率|格式|注|备注)\s*[：:]|^\d+(?:\.\d+)?\s*×\s*\d+')
 
 
 def narrative_of(p):

@@ -1,6 +1,7 @@
 奶蛙-桌宠-倾听大笑帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-倾听帧 · 大笑：听着听着没忍住，直接笑弯了腰。
+倾听帧之后，身体弯下去，嘴张开。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input

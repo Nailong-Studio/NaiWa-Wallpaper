@@ -1,6 +1,7 @@
 奶蛙-创造奶蛙-03 · 奶蛙艺术圣殿 · 圣典名画系列
 
-山崖上的奶蛙斜卧着伸出圆手，云端的老者探出指尖，两指将触未触。
+山崖上的奶蛙斜卧着伸出手，云端的老者伸出食指，两只指尖差一点碰上。
+
 来源：nit5607/naiwa-art-style（MIT）· https://github.com/nit5607/naiwa-art-style/blob/main/showcase/03_creation_of_adam.jpg
 版权：nit5607/naiwa-art-style（MIT）
 许可：MIT

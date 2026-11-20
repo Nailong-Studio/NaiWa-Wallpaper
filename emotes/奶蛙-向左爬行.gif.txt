@@ -1,6 +1,6 @@
 奶蛙-向左爬行 · 奶蛙艺术圣殿 · 表情收藏
 
-四肢着地，向左匍匐——奶蛙的潜行模式，目标：零食。
+四肢着地，往左爬，头抬起来看前方。
 
 来源：sandytruant/codex-pet-naiwa（MIT）· https://github.com/sandytruant/codex-pet-naiwa/blob/main/previews/crawl-left.gif
 版权：sandytruant/codex-pet-naiwa（MIT）。

@@ -1,6 +1,7 @@
 奶蛙-桌宠-忙碌挥手帧 · 奶蛙艺术圣殿 · 桌宠动作
 
-忙碌帧 · 挥手：整只蛙向后仰，挥手的幅度比身体还大。
+身体后仰，抬起一只手挥。
+
 180×180 透明 PNG，可直接用于桌宠、表情包或二次开发。
 
 来源：liaosongjie/Codex-Voice-Input（MIT）· https://github.com/liaosongjie/Codex-Voice-Input
