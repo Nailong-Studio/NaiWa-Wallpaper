@@ -604,7 +604,7 @@ dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}
           <h2>从哪一扇<em>门</em>进</h2>
           <svg class="squiggle" viewBox="0 0 112 8" aria-hidden="true"><path d="M2 5c14-6 22 6 36 0s22 6 36 0 22 6 36 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <p>每扇门后面是一页自己的内容；门口不放清单，也不铺 406 张卡。</p>
+        <p>每扇门后面是一页自己的内容；门口不放清单，也不铺 __TOTAL__ 张卡。</p>
       </div>
       <div class="door-list">__DOOR_LIST__</div>
       <p class="doors__note">还没想好从哪走？<a href="zones.html">先看九座聚落的目录</a>，或者沿地图点一个图钉。</p>
