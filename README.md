@@ -2,7 +2,7 @@
 
 # NaiWa Wallpaper · Asset Warehouse
 
-**406 assets, 15 categories, one machine-readable manifest. The single source of supply for the museum and the browser extension.**
+**408 assets, 15 categories, one machine-readable manifest. The single source of supply for the museum and the browser extension.**
 
 [![Stars](https://img.shields.io/github/stars/Nailong-Studio/NaiWa-Wallpaper?style=for-the-badge&label=Star&color=FFD700&logo=github)](https://github.com/Nailong-Studio/NaiWa-Wallpaper/stargazers)
 [![Live index](https://img.shields.io/badge/live%20index-nailoong--wallpaper.pages.dev-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://nailoong-wallpaper.pages.dev/)
@@ -23,7 +23,7 @@ licence record for every single file. Curation, storytelling and presentation
 happen in the museum repository, [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe).
 
 The split is deliberate: **this repo registers and delivers, that repo narrates.** The
-live index is now a nine-settlement island over the same 406 files — browse, read a
+live index is now a nine-settlement island over the same 408 files — browse, read a
 label, then take the file.
 
 A separate [NaiWa Chronicle](https://nailoong-wallpaper.pages.dev/history.html) records
@@ -76,7 +76,7 @@ touching this repository at all.
 | `poses-wall/` | 1080×1920 vertical wallpapers composed from those poses | 24 |
 | `mobile/` | 1080×1936 vertical scenes | 6 |
 | `pet/` | Desktop-pet loops and 3D frame-by-frame animation | 79 |
-| `art/` | Generated scenes and art experiments | 46 |
+| `art/` | Generated scenes and art experiments | 48 |
 | `hd/` | Desktop wallpapers | 22 |
 | `4k/` | 4K originals | 5 |
 | `frames/` | Frames extracted from the short films | 35 |
